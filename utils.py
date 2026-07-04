@@ -206,6 +206,9 @@ def parse_json_data(json_obj: dict):
                 "session_score": [session_score]
             }
         )
+
+        session_df["away_score"] = [int(txt.split(" - ")[0]) for txt in session_df["session_score"]]
+        session_df["home_score"] = [int(txt.split(" - ")[1]) for txt in session_df["session_score"]]
         sessions_df = pd.concat([sessions_df, session_df])
 
         holes = session["playByPlay"]
