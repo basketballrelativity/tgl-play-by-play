@@ -95,7 +95,7 @@ def process_shots(shot_df: pd.DataFrame) -> pd.DataFrame:
             end_location = end_match.group(1).strip().title()
             end_value = _parse_distance(end_match.group(2))
 
-        # putts: handle made putts and missed putts
+        # putts: handle made putts, missed putts, holing out, and chip shots
         putt_made_match = re.search(
             rf"makes? putt from\s*({distance_pattern})",
             text,
@@ -106,14 +106,32 @@ def process_shots(shot_df: pd.DataFrame) -> pd.DataFrame:
             text,
             re.IGNORECASE,
         )
+        hole_out_match = re.search(
+            rf"holes? out from\s*({distance_pattern})",
+            text,
+            re.IGNORECASE,
+        )
+        chip_match = re.search(
+            rf"chips? from\s*({distance_pattern})\s*,\s*({distance_pattern})\s*left to hole",
+            text,
+            re.IGNORECASE,
+        )
 
-        if putt_made_match:
+        if hole_out_match:
+            start_value = _parse_distance(hole_out_match.group(1))
+            end_value = 0.0
+            end_location = "Hole"
+        elif putt_made_match:
             start_value = _parse_distance(putt_made_match.group(1))
             end_value = 0.0
             end_location = "Hole"
         elif putt_miss_match:
             start_value = _parse_distance(putt_miss_match.group(1))
             end_value = _parse_distance(putt_miss_match.group(2))
+            end_location = "Green"
+        elif chip_match:
+            start_value = _parse_distance(chip_match.group(1))
+            end_value = _parse_distance(chip_match.group(2))
             end_location = "Green"
 
         # if we parsed a hit but not a landing location, try to capture a terminal terrain word
@@ -207,8 +225,8 @@ def parse_json_data(json_obj: dict):
             }
         )
 
-        session_df["away_score"] = [int(txt.split(" - ")[0]) for txt in session_df["session_score"]]
-        session_df["home_score"] = [int(txt.split(" - ")[1]) for txt in session_df["session_score"]]
+        session_df["away_score"] = [int(txt.split(" - ")[0]) if pd.notnull(txt) and " - " in txt else None for txt in session_df["session_score"]]
+        session_df["home_score"] = [int(txt.split(" - ")[1]) if pd.notnull(txt) and " - " in txt else None for txt in session_df["session_score"]]
         sessions_df = pd.concat([sessions_df, session_df])
 
         holes = session["playByPlay"]
@@ -217,11 +235,13 @@ def parse_json_data(json_obj: dict):
             hole_score = hole["holeScore"]
             winning_team_id = hole["holeWinningTeamId"]
             losing_team_id = hole["holeLosingTeamId"]
-            shot_df = pd.DataFrame(hole["timeline"]).sort_values("shot", ascending=True)
-            shot_df["hole_number"] = hole_number
-            shot_df["match_id"] = match_id
-            shot_df["season_year"] = season_year
-            shot_df = process_shots(shot_df)
+            shot_df = pd.DataFrame(hole["timeline"])
+            if len(shot_df) > 0:
+                shot_df = shot_df.sort_values("shot", ascending=True)
+                shot_df["hole_number"] = hole_number
+                shot_df["match_id"] = match_id
+                shot_df["season_year"] = season_year
+                shot_df = process_shots(shot_df)
 
             hole_df = pd.DataFrame(
                 {
