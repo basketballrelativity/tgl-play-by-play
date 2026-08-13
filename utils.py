@@ -5,6 +5,7 @@ TGL glof matches
 """
 import json
 import re
+import pickle
 
 import pandas as pd
 import numpy as np
@@ -277,3 +278,39 @@ def parse_json_data(json_obj: dict):
                 holes_info_df = pd.concat([holes_info_df, hole_info_df])
 
     return sessions_df, holes_df, shots_df, holes_info_df, team_df, players_df
+
+
+def get_drive_ex_strokes(shot_df: pd.DataFrame) -> pd.DataFrame:
+    """
+    This function extracts features from the shot-level data
+    to serve a downstream hole win probability model.
+
+    Args:
+        shot_df (pd.DataFrame): A DataFrame containing the shot-level data.
+    
+    Returns:
+        pd.DataFrame: A DataFrame with expected strokes
+            off the tee only
+    """
+
+    # Unpack drive models
+    # Just copying these from the notebook
+    drive_models = {
+        3: {"intercept": 2.5686469023363045, "slope": 0.00254143},
+        4: {"intercept": 3.187367319289582, "slope": 0.00192602},
+        5: {"intercept": 2.7921565590168576, "slope": 0.00326362} 
+    }
+
+    # Filter for drive shots (assuming drive shots are the first shot of each hole)
+    shot_df["ex_strokes"] = [
+        np.nan if pd.isnull(shot_number)
+        else np.nan if shot_number != 1
+        else drive_models[par]["intercept"] + drive_models[par]["slope"] * distance
+        for shot_number, par, distance in zip(
+            shot_df["shot_number"],
+            shot_df["hole_par"],
+            shot_df["yards"]
+        )
+    ]
+
+    return shot_df
