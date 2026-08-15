@@ -282,8 +282,8 @@ def parse_json_data(json_obj: dict):
 
 def get_drive_ex_strokes(shot_df: pd.DataFrame) -> pd.DataFrame:
     """
-    This function extracts features from the shot-level data
-    to serve a downstream hole win probability model.
+    This function derives the expected strokes from the shot-level data
+    for drives to serve a downstream hole win probability model.
 
     Args:
         shot_df (pd.DataFrame): A DataFrame containing the shot-level data.
@@ -302,7 +302,7 @@ def get_drive_ex_strokes(shot_df: pd.DataFrame) -> pd.DataFrame:
     }
 
     # Filter for drive shots (assuming drive shots are the first shot of each hole)
-    shot_df["ex_strokes"] = [
+    shot_df["drive_ex_strokes"] = [
         np.nan if pd.isnull(shot_number)
         else np.nan if shot_number != 1
         else drive_models[par]["intercept"] + drive_models[par]["slope"] * distance
@@ -312,5 +312,150 @@ def get_drive_ex_strokes(shot_df: pd.DataFrame) -> pd.DataFrame:
             shot_df["yards"]
         )
     ]
+
+    return shot_df
+
+
+def get_putt_ex_strokes(shot_df: pd.DataFrame) -> pd.DataFrame:
+    """
+    This function derives the expected strokes from the shot-level data
+    for putts to serve a downstream hole win probability model.
+
+    Args:
+        shot_df (pd.DataFrame): A DataFrame containing the shot-level data.
+    
+    Returns:
+        pd.DataFrame: A DataFrame with expected strokes
+            for putts only
+    """
+
+    # Unpack putt models
+    with open('putt_model.pkl', 'rb') as file:
+        putt_models = pickle.load(file)
+
+    def calc_ex_strokes(putt_models, distance):
+        """
+        Calculate expected strokes for a putt based on the distance.
+        """
+
+        distance_ft = distance * 3.0  # Convert yards to feet
+
+        # Unpack model parameters
+        intercept = putt_models["coef"]["Intercept"]
+        slope = putt_models["coef"]["distance_float"]
+        spline_coef = np.array(putt_models["coef"].iloc[2:])
+
+        # Transform distance using spline basis functions
+        distance_transformed = putt_models["splines"].transform(np.array(distance_ft).reshape(-1, 1))
+
+        # Calculate expected strokes
+        ex_strokes = intercept + (slope * distance_ft) + np.dot(spline_coef, distance_transformed.T)
+
+        return np.exp(ex_strokes)[0]
+        
+
+    # Filter for putt shots (assuming putts are the last shot of each hole)
+    shot_df["putt_ex_strokes"] = [
+        np.nan if shot_location != "Green"
+        else calc_ex_strokes(putt_models, distance)
+        for shot_location, distance in zip(
+            shot_df["shot_location"],
+            shot_df["end_distance"]
+            )
+    ]
+
+    return shot_df
+
+
+def get_approach_ex_strokes(shot_df: pd.DataFrame) -> pd.DataFrame:
+    """
+    This function derives the expected strokes from the shot-level data
+    for approach shots to serve a downstream hole win probability model.
+
+    Args:
+        shot_df (pd.DataFrame): A DataFrame containing the shot-level data.
+    
+    Returns:
+        pd.DataFrame: A DataFrame with expected strokes
+            for approach shots only
+    """
+
+    # Unpack approach models
+    with open('approach_objs.pkl', 'rb') as file:
+        approach_models = pickle.load(file)
+
+    approach_df = shot_df[
+        (shot_df["shot_location"].isin(["Fairway", "Rough", "Bunker"])) &
+        (shot_df["strokeType"] == "SHOT")
+    ]
+    features = ["distance_norm", "fairway", "rough", "bunker", "native_area", "other"]
+    approach_df["distance_norm"] = approach_models["distance_scaler"].transform(np.array(approach_df["end_distance"]).reshape(-1, 1))
+    approach_df["fairway"] = [1 if loc == "Fairway" else 0 for loc in approach_df["shot_location"]]
+    approach_df["rough"] = [1 if loc == "Rough" else 0 for loc in approach_df["shot_location"]]
+    approach_df["bunker"] = [1 if loc == "Bunker" else 0 for loc in approach_df["shot_location"]]
+    approach_df["native_area"] = [1 if loc == "Native Area" else 0 for loc in approach_df["shot_location"]]
+    approach_df["other"] = [1 if loc not in ["Fairway", "Rough", "Bunker", "Native Area"] else 0 for loc in approach_df["shot_location"]]
+
+    approach_df["approach_ex_strokes"] = approach_models["model"].predict(approach_df[features])
+
+    # Join back approach shots
+    shot_df = shot_df.merge(approach_df[
+        ["match_id", "hole_config_id", "hole_id", "hole_number",
+         "sequence", "shot_number", "playerId", "teamId", "approach_ex_strokes"]
+    ],
+    on=["match_id", "hole_config_id", "hole_id", "hole_number",
+        "sequence", "shot_number", "playerId", "teamId"],
+    how="left")
+
+    return shot_df
+
+
+def process_shot_data(shot_df: pd.DataFrame) -> pd.DataFrame:
+    """
+    This function processes the shot-level data to derive expected strokes
+    for drives, putts, and approach shots.
+
+    Args:
+        shot_df (pd.DataFrame): A DataFrame containing the shot-level data.
+    
+    Returns:
+        pd.DataFrame: A DataFrame with expected strokes for drives, putts, and approach shots.
+    """
+
+    shot_df = get_drive_ex_strokes(shot_df)
+    shot_df = get_putt_ex_strokes(shot_df)
+    shot_df = get_approach_ex_strokes(shot_df)
+
+    unique_holes = list(set(shot_df["hole_number"]))
+    strokes_df = pd.DataFrame()
+
+    for hole in unique_holes:
+        hole_shots = shot_df[shot_df["hole_number"] == hole]
+        hole_shots = hole_shots.sort_values("shot_number", ascending=True)
+        unique_teams = list(set(hole_shots["teamId"]))
+        for team in unique_teams:
+            team_shots = hole_shots[hole_shots["teamId"] == team]
+            ex_strokes = []
+            for _, shot in team_shots.iterrows():
+                if pd.notnull(shot["shot_number"]) and shot["shot_number"] == 1:
+                    ex_strokes.append(shot["drive_ex_strokes"])
+                    next_stroke = shot["approach_ex_strokes"] if pd.notnull(shot["approach_ex_strokes"]) else shot["putt_ex_strokes"]
+                else:
+                    ex_strokes.append(next_stroke)
+                    next_stroke = shot["approach_ex_strokes"] if pd.notnull(shot["approach_ex_strokes"]) else shot["putt_ex_strokes"]
+            team_hole_df = pd.DataFrame(
+                {
+                    "ex_strokes": ex_strokes
+                }
+            )
+            team_hole_df["teamId"] = team
+            team_hole_df["hole_number"] = hole
+            strokes_df = pd.concat([strokes_df, team_hole_df])
+
+    shot_df = shot_df.merge(
+        strokes_df,
+        on=["teamId", "hole_number"],
+        how="left"
+    )
 
     return shot_df
