@@ -28,6 +28,67 @@ def read_json_obj(file_path: str):
     return data
 
 
+def convert_distance_to_yards(distance_value):
+    """Convert a standardized golf distance string into yards.
+
+    Supported examples include:
+      - "120 yds" -> 120.0
+      - "79 ft 6 in." -> 26.5
+      - "5 ft 2 in" -> 1.722222...
+      - "18 in." -> 0.5
+      - "--" -> 0.0
+    """
+    if pd.isna(distance_value):
+        return np.nan
+
+    value = str(distance_value).strip()
+    if not value:
+        return np.nan
+
+    value = re.sub(r"\s+", " ", value)
+    value = value.rstrip(".")
+
+    if value in {"--", "-", "—"}:
+        return 0.0
+
+    yd_match = re.fullmatch(
+        r"(?P<yards>\d+(?:\.\d+)?)\s*(?:yd|yds)",
+        value,
+        re.IGNORECASE,
+    )
+    if yd_match:
+        return float(yd_match.group("yards"))
+
+    ft_in_match = re.fullmatch(
+        r"(?P<feet>\d+(?:\.\d+)?)\s*ft\s+(?P<inches>\d+(?:\.\d+)?)\s*in",
+        value,
+        re.IGNORECASE,
+    )
+    if ft_in_match:
+        feet = float(ft_in_match.group("feet"))
+        inches = float(ft_in_match.group("inches"))
+        return (feet + inches / 12.0) / 3.0
+
+    ft_match = re.fullmatch(r"(?P<feet>\d+(?:\.\d+)?)\s*ft", value, re.IGNORECASE)
+    if ft_match:
+        return float(ft_match.group("feet")) / 3.0
+
+    in_match = re.fullmatch(r"(?P<inches>\d+(?:\.\d+)?)\s*in", value, re.IGNORECASE)
+    if in_match:
+        return float(in_match.group("inches")) / 36.0
+
+    numeric_match = re.fullmatch(r"\d+(?:\.\d+)?", value)
+    if numeric_match:
+        return float(value)
+
+    return np.nan
+
+
+def convert_distance_column(distance_series: pd.Series) -> pd.Series:
+    """Apply the yard conversion to an entire distance column."""
+    return distance_series.apply(convert_distance_to_yards)
+
+
 def process_shots(shot_df: pd.DataFrame) -> pd.DataFrame:
     """
     This function processes the shot description to get
@@ -351,7 +412,7 @@ def get_putt_ex_strokes(shot_df: pd.DataFrame) -> pd.DataFrame:
         # Calculate expected strokes
         ex_strokes = intercept + (slope * distance_ft) + np.dot(spline_coef, distance_transformed.T)
 
-        return np.exp(ex_strokes)[0]
+        return np.exp(ex_strokes)[0] + 1  # Add 1 to account for the current putt
         
 
     # Filter for putt shots (assuming putts are the last shot of each hole)
@@ -385,12 +446,12 @@ def get_approach_ex_strokes(shot_df: pd.DataFrame) -> pd.DataFrame:
         approach_models = pickle.load(file)
 
     approach_df = shot_df[
-        (shot_df["shot_location"].isin(["Fairway", "Rough", "Bunker"])) &
+        (shot_df["shot_location"].isin(["Fairway", "Rough", "Bunker", "Free Drop Area"])) &
         (shot_df["strokeType"] == "SHOT")
     ]
     features = ["distance_norm", "fairway", "rough", "bunker", "native_area", "other"]
     approach_df["distance_norm"] = approach_models["distance_scaler"].transform(np.array(approach_df["end_distance"]).reshape(-1, 1))
-    approach_df["fairway"] = [1 if loc == "Fairway" else 0 for loc in approach_df["shot_location"]]
+    approach_df["fairway"] = [1 if loc in ["Fairway", "Free Drop Area"] else 0 for loc in approach_df["shot_location"]]
     approach_df["rough"] = [1 if loc == "Rough" else 0 for loc in approach_df["shot_location"]]
     approach_df["bunker"] = [1 if loc == "Bunker" else 0 for loc in approach_df["shot_location"]]
     approach_df["native_area"] = [1 if loc == "Native Area" else 0 for loc in approach_df["shot_location"]]
@@ -436,7 +497,9 @@ def process_shot_data(shot_df: pd.DataFrame) -> pd.DataFrame:
         for team in unique_teams:
             team_shots = hole_shots[hole_shots["teamId"] == team]
             ex_strokes = []
+            shot_number = []
             for _, shot in team_shots.iterrows():
+                shot_number.append(shot["shot_number"])
                 if pd.notnull(shot["shot_number"]) and shot["shot_number"] == 1:
                     ex_strokes.append(shot["drive_ex_strokes"])
                     next_stroke = shot["approach_ex_strokes"] if pd.notnull(shot["approach_ex_strokes"]) else shot["putt_ex_strokes"]
@@ -445,7 +508,8 @@ def process_shot_data(shot_df: pd.DataFrame) -> pd.DataFrame:
                     next_stroke = shot["approach_ex_strokes"] if pd.notnull(shot["approach_ex_strokes"]) else shot["putt_ex_strokes"]
             team_hole_df = pd.DataFrame(
                 {
-                    "ex_strokes": ex_strokes
+                    "ex_strokes": ex_strokes,
+                    "shot_number": shot_number
                 }
             )
             team_hole_df["teamId"] = team
@@ -454,7 +518,7 @@ def process_shot_data(shot_df: pd.DataFrame) -> pd.DataFrame:
 
     shot_df = shot_df.merge(
         strokes_df,
-        on=["teamId", "hole_number"],
+        on=["teamId", "hole_number", "shot_number"],
         how="left"
     )
 
