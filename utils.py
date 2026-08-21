@@ -446,7 +446,7 @@ def get_approach_ex_strokes(shot_df: pd.DataFrame) -> pd.DataFrame:
         approach_models = pickle.load(file)
 
     approach_df = shot_df[
-        (shot_df["shot_location"].isin(["Fairway", "Rough", "Bunker", "Free Drop Area"])) &
+        (shot_df["shot_location"].isin(["Fairway", "Rough", "Bunker", "Native Area", "Free Drop Area", "Penalty Area"])) &
         (shot_df["strokeType"] == "SHOT")
     ]
     features = ["distance_norm", "fairway", "rough", "bunker", "native_area", "other"]
@@ -455,14 +455,14 @@ def get_approach_ex_strokes(shot_df: pd.DataFrame) -> pd.DataFrame:
     approach_df["rough"] = [1 if loc == "Rough" else 0 for loc in approach_df["shot_location"]]
     approach_df["bunker"] = [1 if loc == "Bunker" else 0 for loc in approach_df["shot_location"]]
     approach_df["native_area"] = [1 if loc == "Native Area" else 0 for loc in approach_df["shot_location"]]
-    approach_df["other"] = [1 if loc not in ["Fairway", "Rough", "Bunker", "Native Area"] else 0 for loc in approach_df["shot_location"]]
+    approach_df["other"] = [1 if loc not in ["Fairway", "Rough", "Bunker", "Native Area", "Free Drop Area"] else 0 for loc in approach_df["shot_location"]]
 
     approach_df["approach_ex_strokes"] = approach_models["model"].predict(approach_df[features])
 
     # Join back approach shots
     shot_df = shot_df.merge(approach_df[
         ["match_id", "hole_config_id", "hole_id", "hole_number",
-         "sequence", "shot_number", "playerId", "teamId", "approach_ex_strokes"]
+         "sequence", "shot_number", "playerId", "teamId", "approach_ex_strokes", "distance_norm"]
     ],
     on=["match_id", "hole_config_id", "hole_id", "hole_number",
         "sequence", "shot_number", "playerId", "teamId"],
