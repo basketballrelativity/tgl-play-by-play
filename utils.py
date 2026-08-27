@@ -9,6 +9,7 @@ import pickle
 
 import pandas as pd
 import numpy as np
+from scipy.stats import skellam
 
 def read_json_obj(file_path: str):
     """
@@ -523,3 +524,9 @@ def process_shot_data(shot_df: pd.DataFrame) -> pd.DataFrame:
     )
 
     return shot_df
+
+
+def prob_x_greater_than_y_skellam(stroke_diff, mu1, mu2):
+    # Z = X - Y follows a Skellam distribution with parameters mu1 and mu2
+    # P(X > Y) = P(X - Y >= 1) = 1 - P(X - Y <= 0)
+    return 1 - skellam.cdf(stroke_diff, mu1, mu2)
