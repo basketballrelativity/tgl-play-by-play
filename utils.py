@@ -12,6 +12,12 @@ import numpy as np
 from scipy.stats import skellam, poisson
 from scipy.special import expit
 
+from sklearn.calibration import calibration_curve
+from sklearn.metrics import log_loss, brier_score_loss
+
+import matplotlib.pyplot as plt
+
+
 def read_json_obj(file_path: str):
     """
     Reads a JSON file and returns the parsed data.
@@ -876,3 +882,47 @@ def calculate_win_loss_tie_probability(shot: pd.Series) -> pd.Series:
         win_prob, loss_prob, tie_prob = np.nan, np.nan, np.nan
 
     return win_prob, loss_prob, tie_prob
+
+
+def visualize_calibration(data_df, result_type="win"):
+    """ This function visualizes calibration for the
+    hole win probability model
+
+    @param data_df (DataFrame): DataFrame containing
+        win, loss, and tie indicators and game time remaining
+    @param result_type (str): Type of result to visualize. Options are "win" or "tie".
+
+    Returns:
+
+        fig (plt.figure): Figure object of the win probability
+            visualization
+    """
+
+    # Narrow to valid predictions
+    data_df = data_df[pd.notnull(data_df[result_type + "_probability"])]
+    data_df = data_df[data_df["shot_number"] > 1]
+ 
+    prob_true, prob_pred = calibration_curve(data_df[result_type],
+                                             data_df[result_type + "_probability"], n_bins=10)
+
+    fig = plt.figure(0, figsize=(10, 10))
+    ax1 = plt.subplot2grid((3, 1), (0, 0), rowspan=2)
+    ax2 = plt.subplot2grid((3, 1), (2, 0))
+
+    ax1.plot([0, 1], [0, 1], "k:", label="Perfectly calibrated")
+
+    ax1.plot(prob_pred, prob_true, "s-",)
+
+    ax2.hist(data_df[result_type + "_probability"], range=(0, 1), bins=10,
+            histtype="step", lw=2)
+
+    ax1.set_ylim([-0.05, 1.05])
+    ax1.set_title("Hole Win Probability Calibration", fontsize=16)
+    ax2.set_xlabel("Predicted Probability", fontsize=14)
+    ax1.set_ylabel("Actual Probability", fontsize=14)
+    ax2.set_ylabel("Count", fontsize=14)
+    plt.xticks(fontsize=12)
+    plt.yticks(fontsize=12)
+
+    plt.savefig(f"hole_{result_type}_probability_calibration.png")
+    plt.close(fig)
