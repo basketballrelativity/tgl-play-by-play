@@ -11,9 +11,13 @@ import pandas as pd
 import numpy as np
 from scipy.stats import skellam, poisson
 from scipy.special import expit
+from sklearn.model_selection import train_test_split, GridSearchCV
+from sklearn.pipeline import Pipeline
+from sklearn.preprocessing import StandardScaler
+from sklearn.ensemble import GradientBoostingClassifier
 
 from sklearn.calibration import calibration_curve
-from sklearn.metrics import log_loss, brier_score_loss
+from statsmodels.miscmodels.ordinal_model import OrderedModel, OrderedResults
 
 import matplotlib.pyplot as plt
 
@@ -364,25 +368,32 @@ def get_drive_ex_strokes(shot_df: pd.DataFrame) -> pd.DataFrame:
 
     # Unpack drive models
     # Just copying these from the notebook
-    drive_models = {
-        3: {"intercept": 2.5686469023363045, "slope": 0.00254143},
-        4: {"intercept": 3.187367319289582, "slope": 0.00192602},
-        5: {"intercept": 2.7921565590168576, "slope": 0.00326362} 
-    }
+    with open('drive_models.pkl', 'rb') as file:
+        drive_models = pickle.load(file)
 
     # Filter for drive shots (assuming drive shots are the first shot of each hole)
-    shot_df["drive_ex_strokes"] = [
-        np.nan if pd.isnull(shot_number)
-        else np.nan if shot_number != 1
-        else drive_models[par]["intercept"] + drive_models[par]["slope"] * distance
-        for shot_number, par, distance in zip(
-            shot_df["shot_number"],
-            shot_df["hole_par"],
-            shot_df["yards"]
-        )
-    ]
+    par_dict = {}
+    alt_shot_df = pd.DataFrame()
+    for par in [3, 4, 5]:
+        par_df = shot_df[shot_df["hole_par"] == par]
+        par_df = par_df.rename({"yards" : "distance"}, axis=1)
+        preds = drive_models[f"par_{par}"].predict(par_df[["distance"]])
+        if par < 5:
+            strokes = np.array(range(1, len(preds.columns)+1))
+        else:
+            strokes = np.array(range(2, len(preds.columns)+2))
+        par_df["drive_ex_strokes"] = np.dot(preds.values, strokes)
+        for stroke in strokes:
+            if par < 5:
+                par_df[f"{stroke}_drive_stroke_prob"] = preds[stroke-1]
+            else:
+                par_df[f"{stroke}_drive_stroke_prob"] = preds[stroke-2]
+        par_dict[par] = par_df.copy()
+    
+    for par in [3, 4, 5]:
+        alt_shot_df = pd.concat([alt_shot_df, par_dict[par]])
 
-    return shot_df
+    return alt_shot_df
 
 
 def get_putt_ex_strokes(shot_df: pd.DataFrame) -> pd.DataFrame:
@@ -464,26 +475,30 @@ def get_approach_ex_strokes(shot_df: pd.DataFrame) -> pd.DataFrame:
 
     # Unpack approach models
     with open('approach_objs.pkl', 'rb') as file:
-        approach_models = pickle.load(file)
+            approach_model = pickle.load(file)
 
     approach_df = shot_df[
         (shot_df["shot_location"].isin(["Fairway", "Rough", "Bunker", "Native Area", "Free Drop Area", "Penalty Area"])) &
         (shot_df["strokeType"] == "SHOT")
     ]
     features = ["distance_norm", "fairway", "rough", "bunker", "native_area", "other"]
-    approach_df["distance_norm"] = approach_models["distance_scaler"].transform(np.array(approach_df["end_distance"]).reshape(-1, 1))
+    approach_df["distance_norm"] = approach_model["distance_scaler"].transform(np.array(approach_df["end_distance"]).reshape(-1, 1))
     approach_df["fairway"] = [1 if loc in ["Fairway", "Free Drop Area"] else 0 for loc in approach_df["shot_location"]]
     approach_df["rough"] = [1 if loc == "Rough" else 0 for loc in approach_df["shot_location"]]
     approach_df["bunker"] = [1 if loc == "Bunker" else 0 for loc in approach_df["shot_location"]]
     approach_df["native_area"] = [1 if loc == "Native Area" else 0 for loc in approach_df["shot_location"]]
     approach_df["other"] = [1 if loc not in ["Fairway", "Rough", "Bunker", "Native Area", "Free Drop Area"] else 0 for loc in approach_df["shot_location"]]
 
-    approach_df["approach_ex_strokes"] = approach_models["model"].predict(approach_df[features])
+    approach_df["approach_ex_strokes"] = approach_model["ex_strokes_model"].predict(approach_df[features])
 
-    # Join back approach shots
+    preds = approach_model["prob_model"].predict(approach_df[["approach_ex_strokes", "fairway", "bunker", "rough"]])
+    strokes = np.array(range(1, len(preds.columns)+1))
+    for stroke in strokes:
+        approach_df[f"{stroke}_app_stroke_prob"] = preds[stroke-1]
+
     shot_df = shot_df.merge(approach_df[
         ["match_id", "hole_config_id", "hole_id", "hole_number",
-         "sequence", "shot_number", "playerId", "teamId", "approach_ex_strokes", "distance_norm"]
+         "sequence", "shot_number", "playerId", "teamId", "approach_ex_strokes"] + [col for col in approach_df.columns if col.endswith('_app_stroke_prob')]
     ],
     on=["match_id", "hole_config_id", "hole_id", "hole_number",
         "sequence", "shot_number", "playerId", "teamId"],
@@ -521,22 +536,45 @@ def process_shot_data(shot_df: pd.DataFrame) -> pd.DataFrame:
             one_putt_prob = []
             three_putt_prob = []
             shot_number = []
+            stroke_prob_rows = []
             for _, shot in team_shots.iterrows():
                 shot_number.append(shot["shot_number"])
                 if pd.notnull(shot["shot_number"]) and shot["shot_number"] == 1:
+                    drive_prob_cols = list(dict.fromkeys(
+                        col for col in shot_df.columns if "drive_stroke_prob" in col
+                    ))
+                    app_prob_cols = list(dict.fromkeys(
+                        col for col in shot_df.columns if "app_stroke_prob" in col
+                    ))
                     ex_strokes.append(shot["drive_ex_strokes"])
                     one_putt_prob.append(np.nan)
                     three_putt_prob.append(np.nan)
                     next_stroke = shot["approach_ex_strokes"] if pd.notnull(shot["approach_ex_strokes"]) else shot["putt_ex_strokes"]
                     next_one_putt = np.nan if pd.notnull(shot["approach_ex_strokes"]) else shot["one_putt"]
                     next_three_putt = np.nan if pd.notnull(shot["approach_ex_strokes"]) else shot["three_putt"]
+                    stroke_prob_rows.append({
+                        col.replace("drive_", ""): shot[col]
+                        for col in drive_prob_cols
+                    })
+                    next_probs = {
+                        col.replace("app_", ""): shot[col]
+                        for col in app_prob_cols
+                    }
                 else:
                     ex_strokes.append(next_stroke)
                     one_putt_prob.append(next_one_putt)
                     three_putt_prob.append(next_three_putt)
+                    stroke_prob_rows.append(next_probs)
                     next_stroke = shot["approach_ex_strokes"] if pd.notnull(shot["approach_ex_strokes"]) else shot["putt_ex_strokes"]
                     next_one_putt = np.nan if pd.notnull(shot["approach_ex_strokes"]) else shot["one_putt"]
                     next_three_putt = np.nan if pd.notnull(shot["approach_ex_strokes"]) else shot["three_putt"]
+                    next_probs = {
+                        col.replace("app_", ""): shot[col]
+                        for col in app_prob_cols
+                    }
+
+
+            prob_df = pd.DataFrame(stroke_prob_rows)
 
             team_hole_df = pd.DataFrame(
                 {
@@ -548,8 +586,13 @@ def process_shot_data(shot_df: pd.DataFrame) -> pd.DataFrame:
             )
             team_hole_df["teamId"] = team
             team_hole_df["hole_number"] = hole
+            for col in prob_df.columns:
+                team_hole_df[col] = prob_df[col].values
             strokes_df = pd.concat([strokes_df, team_hole_df])
 
+    for col in prob_df.columns:
+        if col in shot_df.columns:
+            del shot_df[col]
     shot_df = shot_df.merge(
         strokes_df,
         on=["teamId", "hole_number", "shot_number"],
@@ -819,9 +862,9 @@ def calculate_mixed_green_probability(shot: pd.Series, on_green_team: str = "sho
             continue
 
         threshold = putts + diff
-        win_prob += p * poisson.sf(threshold, off_green_rate)
-        tie_prob += p * poisson.pmf(threshold, off_green_rate)
-        loss_prob += p * (1.0 - poisson.sf(threshold, off_green_rate) - poisson.pmf(threshold, off_green_rate))
+        win_prob += p * poisson.sf(threshold, off_green_rate - 1)
+        tie_prob += p * poisson.pmf(threshold, off_green_rate - 1)
+        loss_prob += p * (1.0 - poisson.sf(threshold, off_green_rate - 1) - poisson.pmf(threshold, off_green_rate - 1))
 
     total_prob = win_prob + loss_prob + tie_prob
     if total_prob > 0:
@@ -884,6 +927,83 @@ def calculate_win_loss_tie_probability(shot: pd.Series) -> pd.Series:
     return win_prob, loss_prob, tie_prob
 
 
+def build_gradient_boosting_model(df: pd.DataFrame, target_col: str = "result", test_size: float = 0.2, random_state: int = 42):
+    """
+    Fit a GradientBoostingClassifier using the requested features, with a
+    train/test split and cross-validated hyperparameter tuning.
+
+    Parameters:
+        df (pd.DataFrame): DataFrame containing the modeling features and target.
+        target_col (str): Column name for the target variable.
+        test_size (float): Fraction of rows reserved for the test set.
+        random_state (int): Random seed used for reproducibility.
+
+    Returns:
+        dict: A dictionary with the trained pipeline, best parameters, and test
+              split components.
+    """
+    feature_cols = [
+        "shooting_team_ex_strokes",
+        "shooting_team_strokes",
+        "strokes_diff",
+        "ex_strokes_diff",
+        "hole_par",
+        "shot_number",
+    ]
+
+    if not all(col in df.columns for col in feature_cols + [target_col]):
+        missing = [col for col in feature_cols + [target_col] if col not in df.columns]
+        raise ValueError(f"Missing required columns: {missing}")
+
+    X = df[feature_cols]
+    y = df[target_col]
+
+    X_train, X_test, y_train, y_test = train_test_split(
+        X,
+        y,
+        test_size=test_size,
+        random_state=random_state,
+        stratify=y,
+    )
+
+    estimator = Pipeline(
+        steps=[
+            ("scaler", StandardScaler()),
+            (
+                "model",
+                GradientBoostingClassifier(random_state=random_state),
+            ),
+        ]
+    )
+
+    param_grid = {
+        "model__learning_rate": [0.01, 0.05, 0.1],
+        "model__n_estimators": [100, 150, 200],
+        "model__max_depth": [4, 5, 6],
+        "model__min_samples_leaf": [100, 150, 200],
+    }
+
+    grid = GridSearchCV(
+        estimator=estimator,
+        param_grid=param_grid,
+        cv=5,
+        scoring="accuracy",
+        n_jobs=-1,
+    )
+
+    grid.fit(X_train, y_train)
+
+    return {
+        "pipeline": grid,
+        "best_params_": grid.best_params_,
+        "best_score_": grid.best_score_,
+        "X_train": X_train,
+        "X_test": X_test,
+        "y_train": y_train,
+        "y_test": y_test,
+    }
+
+
 def visualize_calibration(data_df, result_type="win"):
     """ This function visualizes calibration for the
     hole win probability model
@@ -917,7 +1037,7 @@ def visualize_calibration(data_df, result_type="win"):
             histtype="step", lw=2)
 
     ax1.set_ylim([-0.05, 1.05])
-    ax1.set_title("Hole Win Probability Calibration", fontsize=16)
+    ax1.set_title(f"Hole {result_type.title()} Probability Calibration", fontsize=16)
     ax2.set_xlabel("Predicted Probability", fontsize=14)
     ax1.set_ylabel("Actual Probability", fontsize=14)
     ax2.set_ylabel("Count", fontsize=14)
