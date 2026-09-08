@@ -644,55 +644,68 @@ def poisson_less_than_x(x, mu):
     return poisson.cdf(x - 1, mu)
 
 
-def calculate_on_green_fewer_strokes_probability(shot: pd.Series):
+def get_probability_vectors(shot: pd.Series, team: str):
+    """
+    This function calculates the probability vectors for the shooting team and the other team
+    based on the expected strokes and putt probabilities.
+
+    Args:
+        shot (pd.Series): A pandas Series containing the shot-level data for a specific shot.
+        team (string): One of "shooting" or "other"
+
+    Returns:
+        tuple: A tuple containing two lists:
+            - team_probs (list): Probability vector for the provided team.
+    """
+
+    if shot[f"{team}_team_ex_strokes"] == 0:
+        team_probs = [np.nan] * 10  # Already holed out
+    elif pd.notnull(shot[f"{team}_team_one_putt_prob"]):
+        two_putt_prob = 1 - shot[f"{team}_team_one_putt_prob"] - shot[f"{team}_team_three_putt_prob"]
+        team_probs = [
+            shot[f"{team}_team_one_putt_prob"],
+            two_putt_prob,
+            shot[f"{team}_team_three_putt_prob"],
+        ] + [0] * 7  # Fill the rest with zeros
+    else:
+        team_probs = []
+        for i in range(1, 11):
+            prob = shot.get(f"{team}_team_{i}_stroke_prob")
+            team_probs.append(prob if pd.notnull(prob) else 0)
+    
+    return team_probs
+
+
+def calculate_win_loss_tie_probability(shot: pd.Series):
     """
     Calculate the probability that one team finishes with fewer total strokes than
-    the other when both teams are on the green.
+    the other.
 
-    A team can finish in 1, 2, or 3 putts, with probabilities derived from the
-    corresponding one-putt and three-putt probabilities. If either team has
-    ex_strokes == 0, that team has already holed out and contributes a fixed final
-    total with no remaining putt distribution.
+    Args:
+        shot (pd.Series): A pandas Series containing the shot-level data for a specific shot.
+    
+    Returns:
+        tuple: A tuple containing the win, loss, and tie probabilities.
     """
-    shooting_team_one_putt_prob = shot.get("shooting_team_one_putt_prob")
-    other_team_one_putt_prob = shot.get("other_team_one_putt_prob")
-    shooting_team_ex_strokes = shot.get("shooting_team_ex_strokes")
-    other_team_ex_strokes = shot.get("other_team_ex_strokes")
 
-    if pd.isnull(shooting_team_one_putt_prob) or pd.isnull(other_team_one_putt_prob):
-        return np.nan, np.nan, np.nan
-
-    shooting_team_three_putt_prob = shot.get("shooting_team_three_putt_prob", 0)
-    other_team_three_putt_prob = shot.get("other_team_three_putt_prob", 0)
-
-    shooting_team_one_putt_prob = float(shooting_team_one_putt_prob)
-    other_team_one_putt_prob = float(other_team_one_putt_prob)
-    shooting_team_three_putt_prob = float(shooting_team_three_putt_prob)
-    other_team_three_putt_prob = float(other_team_three_putt_prob)
-
-    shooting_team_two_putt_prob = max(0.0, 1.0 - shooting_team_one_putt_prob - shooting_team_three_putt_prob)
-    other_team_two_putt_prob = max(0.0, 1.0 - other_team_one_putt_prob - other_team_three_putt_prob)
-
-    outcomes = {
-        "shooting": {1: shooting_team_one_putt_prob, 2: shooting_team_two_putt_prob, 3: shooting_team_three_putt_prob},
-        "other": {1: other_team_one_putt_prob, 2: other_team_two_putt_prob, 3: other_team_three_putt_prob},
-    }
+    shooting_team_probs = get_probability_vectors(shot, "shooting")
+    other_team_probs = get_probability_vectors(shot, "other")
 
     shooting_team_strokes = shot["shooting_team_strokes"]
     other_team_strokes = shot["other_team_strokes"]
 
-    if shooting_team_ex_strokes == 0 and other_team_ex_strokes == 0:
+    if shot["shooting_team_ex_strokes"] == 0 and shot["other_team_ex_strokes"] == 0:
         if shooting_team_strokes < other_team_strokes:
             return 1.0, 0.0, 0.0
         elif shooting_team_strokes > other_team_strokes:
             return 0.0, 1.0, 0.0
         return 0.0, 0.0, 1.0
 
-    if shooting_team_ex_strokes == 0:
+    if shot["shooting_team_ex_strokes"] == 0:
         win_prob = 0.0
         loss_prob = 0.0
         tie_prob = 0.0
-        for other_putts, other_prob in outcomes["other"].items():
+        for other_putts, other_prob in zip(range(1, 11), other_team_probs):
             if other_prob <= 0:
                 continue
             other_total = other_team_strokes + other_putts
@@ -709,11 +722,11 @@ def calculate_on_green_fewer_strokes_probability(shot: pd.Series):
             tie_prob /= total_prob
         return win_prob, loss_prob, tie_prob
 
-    if other_team_ex_strokes == 0:
+    if shot["other_team_ex_strokes"] == 0:
         win_prob = 0.0
         loss_prob = 0.0
         tie_prob = 0.0
-        for shooting_putts, shooting_prob in outcomes["shooting"].items():
+        for shooting_putts, shooting_prob in  zip(range(1, 11), shooting_team_probs):
             if shooting_prob <= 0:
                 continue
             shooting_total = shooting_team_strokes + shooting_putts
@@ -734,8 +747,8 @@ def calculate_on_green_fewer_strokes_probability(shot: pd.Series):
     loss_prob = 0.0
     tie_prob = 0.0
 
-    for shooting_putts, shooting_prob in outcomes["shooting"].items():
-        for other_putts, other_prob in outcomes["other"].items():
+    for shooting_putts, shooting_prob in  zip(range(1, 11), shooting_team_probs):
+        for other_putts, other_prob in  zip(range(1, 11), other_team_probs):
             if shooting_prob <= 0 and other_prob <= 0:
                 continue
 
@@ -754,175 +767,6 @@ def calculate_on_green_fewer_strokes_probability(shot: pd.Series):
         win_prob /= total_prob
         loss_prob /= total_prob
         tie_prob /= total_prob
-
-    return win_prob, loss_prob, tie_prob
-
-
-def calculate_mixed_green_probability(shot: pd.Series, on_green_team: str = "shooting"):
-    """
-    Calculate win/loss/tie probabilities when one team is on the green and the
-    other is not.
-
-    The off-green team is modeled with a Poisson distribution using ex_strokes as
-    the rate parameter. The on-green team is modeled with a discrete 1/2/3 putt
-    distribution built from one_putt_prob and three_putt_prob. If either team has
-    ex_strokes == 0, it has already holed out and contributes a fixed final total
-    rather than additional probability mass.
-
-    Returns probabilities for the shooting team in the same convention as the
-    rest of this module.
-    """
-    if on_green_team == "shooting":
-        on_green_one_putt_prob = shot.get("shooting_team_one_putt_prob")
-        on_green_three_putt_prob = shot.get("shooting_team_three_putt_prob", 0)
-        on_green_ex_strokes = shot.get("shooting_team_ex_strokes")
-        off_green_rate = shot.get("other_team_ex_strokes")
-        on_green_strokes = shot.get("shooting_team_strokes")
-        off_green_strokes = shot.get("other_team_strokes")
-    elif on_green_team == "other":
-        on_green_one_putt_prob = shot.get("other_team_one_putt_prob")
-        on_green_three_putt_prob = shot.get("other_team_three_putt_prob", 0)
-        on_green_ex_strokes = shot.get("other_team_ex_strokes")
-        off_green_rate = shot.get("shooting_team_ex_strokes")
-        on_green_strokes = shot.get("other_team_strokes")
-        off_green_strokes = shot.get("shooting_team_strokes")
-    else:
-        raise ValueError("on_green_team must be either 'shooting' or 'other'")
-
-    if pd.isnull(on_green_one_putt_prob) and pd.isnull(off_green_rate):
-        return np.nan, np.nan, np.nan
-
-    on_green_one_putt_prob = float(on_green_one_putt_prob)
-    on_green_three_putt_prob = float(on_green_three_putt_prob)
-    off_green_rate = float(off_green_rate)
-    on_green_two_putt_prob = max(0.0, 1.0 - on_green_one_putt_prob - on_green_three_putt_prob)
-
-    if on_green_ex_strokes == 0 and off_green_rate == 0:
-        if on_green_strokes < off_green_strokes:
-            win_prob, loss_prob, tie_prob = (1.0, 0.0, 0.0)
-        elif on_green_strokes > off_green_strokes:
-            win_prob, loss_prob, tie_prob = (0.0, 1.0, 0.0)
-        else:
-            win_prob, loss_prob, tie_prob = (0.0, 0.0, 1.0)
-        if on_green_team == "other":
-            return loss_prob, win_prob, tie_prob
-        return win_prob, loss_prob, tie_prob
-
-    if on_green_ex_strokes == 0:
-        fixed_total = float(on_green_strokes)
-        diff = fixed_total - float(off_green_strokes)
-
-        if diff < 0:
-            win_prob = 0.0
-            loss_prob = 1.0
-            tie_prob = 0.0
-        elif diff == 0:
-            win_prob = 0.0
-            tie_prob = poisson.pmf(0, off_green_rate)
-            loss_prob = 1.0 - tie_prob
-        else:
-            win_prob = poisson.sf(diff, off_green_rate)
-            tie_prob = poisson.pmf(diff, off_green_rate)
-            loss_prob = 1.0 - win_prob - tie_prob
-
-        if on_green_team == "other":
-            return loss_prob, win_prob, tie_prob
-        return win_prob, loss_prob, tie_prob
-
-    if off_green_rate == 0:
-        win_prob = 0.0
-        loss_prob = 0.0
-        tie_prob = 0.0
-        for putts, p in [(1, on_green_one_putt_prob), (2, on_green_two_putt_prob), (3, on_green_three_putt_prob)]:
-            if p <= 0:
-                continue
-            on_green_total = on_green_strokes + putts
-            if on_green_total < off_green_strokes:
-                win_prob += p
-            elif on_green_total > off_green_strokes:
-                loss_prob += p
-            else:
-                tie_prob += p
-        total_prob = win_prob + loss_prob + tie_prob
-        if total_prob > 0:
-            win_prob /= total_prob
-            loss_prob /= total_prob
-            tie_prob /= total_prob
-        if on_green_team == "other":
-            return loss_prob, win_prob, tie_prob
-        return win_prob, loss_prob, tie_prob
-
-    win_prob = 0.0
-    loss_prob = 0.0
-    tie_prob = 0.0
-    diff = on_green_strokes - off_green_strokes
-
-    for putts, p in [(1, on_green_one_putt_prob), (2, on_green_two_putt_prob), (3, on_green_three_putt_prob)]:
-        if p <= 0:
-            continue
-
-        threshold = putts + diff
-        win_prob += p * poisson.sf(threshold, off_green_rate - 1)
-        tie_prob += p * poisson.pmf(threshold, off_green_rate - 1)
-        loss_prob += p * (1.0 - poisson.sf(threshold, off_green_rate - 1) - poisson.pmf(threshold, off_green_rate - 1))
-
-    total_prob = win_prob + loss_prob + tie_prob
-    if total_prob > 0:
-        win_prob /= total_prob
-        loss_prob /= total_prob
-        tie_prob /= total_prob
-
-    if on_green_team == "other":
-        return loss_prob, win_prob, tie_prob
-
-    return win_prob, loss_prob, tie_prob
-
-
-def calculate_win_loss_tie_probability(shot: pd.Series) -> pd.Series:
-    """
-    Calculate the win, loss, and tie probabilities for a given shot.
-
-    Args:
-        shot (pd.Series): A Series containing the shot data.
-    
-    Returns:
-        tuple: A tuple containing the win, loss, and tie probabilities.
-    """
-    shooting_team_ex_strokes = shot["shooting_team_ex_strokes"]
-    other_team_ex_strokes = shot["other_team_ex_strokes"]
-
-    shooting_team_strokes = shot["shooting_team_strokes"]
-    other_team_strokes = shot["other_team_strokes"]
-
-    # Calculate the probability of winning, losing, and tying
-    if shooting_team_ex_strokes > 0 and other_team_ex_strokes > 0 and pd.isnull(shot["shooting_team_one_putt_prob"]) and pd.isnull(shot["other_team_one_putt_prob"]):
-        win_prob = prob_x_greater_than_y_skellam(
-            shooting_team_strokes - other_team_strokes,
-            other_team_ex_strokes - 1,
-            shooting_team_ex_strokes - 1
-        )
-        loss_prob = prob_x_greater_than_y_skellam(
-            other_team_strokes - shooting_team_strokes,
-            shooting_team_ex_strokes - 1,
-            other_team_ex_strokes - 1
-        )
-        tie_prob = 1 - win_prob - loss_prob
-    elif pd.notnull(shot["shooting_team_one_putt_prob"]) and pd.isnull(shot["other_team_one_putt_prob"]):
-        win_prob, loss_prob, tie_prob = calculate_mixed_green_probability(shot, on_green_team="shooting")
-    elif pd.notnull(shot["other_team_one_putt_prob"]) and pd.isnull(shot["shooting_team_one_putt_prob"]):
-        win_prob, loss_prob, tie_prob = calculate_mixed_green_probability(shot, on_green_team="other")
-    elif pd.notnull(shot["shooting_team_one_putt_prob"]) and pd.notnull(shot["other_team_one_putt_prob"]):
-        win_prob, loss_prob, tie_prob = calculate_on_green_fewer_strokes_probability(shot)
-    elif shooting_team_ex_strokes == 0 and pd.notnull(shot["other_team_one_putt_prob"]):
-        win_prob, loss_prob, tie_prob = calculate_on_green_fewer_strokes_probability(shot)
-    elif other_team_ex_strokes == 0 and pd.notnull(shot["shooting_team_one_putt_prob"]):
-        win_prob, loss_prob, tie_prob = calculate_on_green_fewer_strokes_probability(shot)
-    elif shooting_team_ex_strokes == 0 and pd.isnull(shot["other_team_one_putt_prob"]):
-        win_prob, loss_prob, tie_prob = calculate_mixed_green_probability(shot, on_green_team="shooting")
-    elif other_team_ex_strokes == 0 and pd.isnull(shot["shooting_team_one_putt_prob"]):
-        win_prob, loss_prob, tie_prob = calculate_mixed_green_probability(shot, on_green_team="other")
-    else:
-        win_prob, loss_prob, tie_prob = np.nan, np.nan, np.nan
 
     return win_prob, loss_prob, tie_prob
 
@@ -1020,7 +864,6 @@ def visualize_calibration(data_df, result_type="win"):
 
     # Narrow to valid predictions
     data_df = data_df[pd.notnull(data_df[result_type + "_probability"])]
-    data_df = data_df[data_df["shot_number"] > 1]
  
     prob_true, prob_pred = calibration_curve(data_df[result_type],
                                              data_df[result_type + "_probability"], n_bins=10)
