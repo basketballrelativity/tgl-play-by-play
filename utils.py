@@ -377,6 +377,7 @@ def get_drive_ex_strokes(shot_df: pd.DataFrame) -> pd.DataFrame:
     for par in [3, 4, 5]:
         par_df = shot_df[shot_df["hole_par"] == par]
         par_df = par_df.rename({"yards" : "distance"}, axis=1)
+        par_df["distance"] = pd.to_numeric(par_df["distance"])
         preds = drive_models[f"par_{par}"].predict(par_df[["distance"]])
         if par < 5:
             strokes = np.array(range(1, len(preds.columns)+1))
@@ -531,7 +532,7 @@ def process_shot_data(shot_df: pd.DataFrame) -> pd.DataFrame:
         hole_shots = hole_shots.sort_values("shot_number", ascending=True)
         unique_teams = list(set(hole_shots["teamId"]))
         for team in unique_teams:
-            team_shots = hole_shots[hole_shots["teamId"] == team]
+            team_shots = hole_shots[(hole_shots["teamId"] == team) & (hole_shots["strokeType"] != "PENALTY")]
             ex_strokes = []
             one_putt_prob = []
             three_putt_prob = []
@@ -549,9 +550,9 @@ def process_shot_data(shot_df: pd.DataFrame) -> pd.DataFrame:
                     ex_strokes.append(shot["drive_ex_strokes"])
                     one_putt_prob.append(np.nan)
                     three_putt_prob.append(np.nan)
-                    next_stroke = shot["approach_ex_strokes"] if pd.notnull(shot["approach_ex_strokes"]) else shot["putt_ex_strokes"]
-                    next_one_putt = np.nan if pd.notnull(shot["approach_ex_strokes"]) else shot["one_putt"]
-                    next_three_putt = np.nan if pd.notnull(shot["approach_ex_strokes"]) else shot["three_putt"]
+                    next_stroke = shot["approach_ex_strokes"] if pd.notnull(shot["approach_ex_strokes"]) else 0 if str(shot["shot_location"]) == "Hole" or str(shot["strokeType"])=="GIMME" else shot["putt_ex_strokes"]
+                    next_one_putt = np.nan if pd.notnull(shot["approach_ex_strokes"]) else 1 if str(shot["shot_location"]) == "Hole" or str(shot["strokeType"]) == "GIMME" else shot["one_putt"]
+                    next_three_putt = np.nan if pd.notnull(shot["approach_ex_strokes"]) else 0 if str(shot["shot_location"]) == "Hole" or str(shot["strokeType"]) == "GIMME" else shot["three_putt"]
                     stroke_prob_rows.append({
                         col.replace("drive_", ""): shot[col]
                         for col in drive_prob_cols
@@ -565,14 +566,13 @@ def process_shot_data(shot_df: pd.DataFrame) -> pd.DataFrame:
                     one_putt_prob.append(next_one_putt)
                     three_putt_prob.append(next_three_putt)
                     stroke_prob_rows.append(next_probs)
-                    next_stroke = shot["approach_ex_strokes"] if pd.notnull(shot["approach_ex_strokes"]) else shot["putt_ex_strokes"]
-                    next_one_putt = np.nan if pd.notnull(shot["approach_ex_strokes"]) else shot["one_putt"]
-                    next_three_putt = np.nan if pd.notnull(shot["approach_ex_strokes"]) else shot["three_putt"]
+                    next_stroke = shot["approach_ex_strokes"] if pd.notnull(shot["approach_ex_strokes"]) else 0 if str(shot["shot_location"]) == "Hole" or str(shot["strokeType"]) == "GIMME" else shot["putt_ex_strokes"]
+                    next_one_putt = np.nan if pd.notnull(shot["approach_ex_strokes"]) else 1 if str(shot["shot_location"]) == "Hole" or str(shot["strokeType"]) == "GIMME" else shot["one_putt"]
+                    next_three_putt = np.nan if pd.notnull(shot["approach_ex_strokes"]) else 0 if str(shot["shot_location"]) == "Hole" or str(shot["strokeType"]) == "GIMME" else shot["three_putt"]
                     next_probs = {
                         col.replace("app_", ""): shot[col]
                         for col in app_prob_cols
                     }
-
 
             prob_df = pd.DataFrame(stroke_prob_rows)
 
