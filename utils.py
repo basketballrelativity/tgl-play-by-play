@@ -16,11 +16,14 @@ from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import StandardScaler
 from sklearn.ensemble import GradientBoostingClassifier
 
+from pygam import LogisticGAM, te, s
+
 from sklearn.calibration import calibration_curve
 from statsmodels.miscmodels.ordinal_model import OrderedModel, OrderedResults
 
 import matplotlib.pyplot as plt
 
+import sg_data
 
 def read_json_obj(file_path: str):
     """
@@ -532,7 +535,7 @@ def process_shot_data(shot_df: pd.DataFrame) -> pd.DataFrame:
         hole_shots = hole_shots.sort_values("shot_number", ascending=True)
         unique_teams = list(set(hole_shots["teamId"]))
         for team in unique_teams:
-            team_shots = hole_shots[(hole_shots["teamId"] == team) & (hole_shots["strokeType"] != "PENALTY")]
+            team_shots = hole_shots[(hole_shots["teamId"] == team)]
             ex_strokes = []
             one_putt_prob = []
             three_putt_prob = []
@@ -566,13 +569,15 @@ def process_shot_data(shot_df: pd.DataFrame) -> pd.DataFrame:
                     one_putt_prob.append(next_one_putt)
                     three_putt_prob.append(next_three_putt)
                     stroke_prob_rows.append(next_probs)
-                    next_stroke = shot["approach_ex_strokes"] if pd.notnull(shot["approach_ex_strokes"]) else 0 if str(shot["shot_location"]) == "Hole" or str(shot["strokeType"]) == "GIMME" else shot["putt_ex_strokes"]
-                    next_one_putt = np.nan if pd.notnull(shot["approach_ex_strokes"]) else 1 if str(shot["shot_location"]) == "Hole" or str(shot["strokeType"]) == "GIMME" else shot["one_putt"]
-                    next_three_putt = np.nan if pd.notnull(shot["approach_ex_strokes"]) else 0 if str(shot["shot_location"]) == "Hole" or str(shot["strokeType"]) == "GIMME" else shot["three_putt"]
-                    next_probs = {
-                        col.replace("app_", ""): shot[col]
-                        for col in app_prob_cols
-                    }
+
+                    if shot["strokeType"] != "PENALTY":
+                        next_stroke = shot["approach_ex_strokes"] if pd.notnull(shot["approach_ex_strokes"]) else 0 if str(shot["shot_location"]) == "Hole" or str(shot["strokeType"]) == "GIMME" else shot["putt_ex_strokes"]
+                        next_one_putt = np.nan if pd.notnull(shot["approach_ex_strokes"]) else 1 if str(shot["shot_location"]) == "Hole" or str(shot["strokeType"]) == "GIMME" else shot["one_putt"]
+                        next_three_putt = np.nan if pd.notnull(shot["approach_ex_strokes"]) else 0 if str(shot["shot_location"]) == "Hole" or str(shot["strokeType"]) == "GIMME" else shot["three_putt"]
+                        next_probs = {
+                            col.replace("app_", ""): shot[col]
+                            for col in app_prob_cols
+                        }
 
             prob_df = pd.DataFrame(stroke_prob_rows)
 
@@ -771,7 +776,7 @@ def calculate_win_loss_tie_probability(shot: pd.Series):
     return win_prob, loss_prob, tie_prob
 
 
-def build_gradient_boosting_model(df: pd.DataFrame, target_col: str = "result", test_size: float = 0.2, random_state: int = 42):
+def build_hammer_gam(df: pd.DataFrame, target_col: str = "hammer_used_on_hole", test_size: float = 0.2, random_state: int = 42):
     """
     Fit a GradientBoostingClassifier using the requested features, with a
     train/test split and cross-validated hyperparameter tuning.
@@ -787,12 +792,9 @@ def build_gradient_boosting_model(df: pd.DataFrame, target_col: str = "result", 
               split components.
     """
     feature_cols = [
-        "shooting_team_ex_strokes",
-        "shooting_team_strokes",
-        "strokes_diff",
-        "ex_strokes_diff",
-        "hole_par",
-        "shot_number",
+        "score_diff",
+        "holes_remaining_prior",
+        "hammers_used_prior"
     ]
 
     if not all(col in df.columns for col in feature_cols + [target_col]):
@@ -810,37 +812,14 @@ def build_gradient_boosting_model(df: pd.DataFrame, target_col: str = "result", 
         stratify=y,
     )
 
-    estimator = Pipeline(
-        steps=[
-            ("scaler", StandardScaler()),
-            (
-                "model",
-                GradientBoostingClassifier(random_state=random_state),
-            ),
-        ]
-    )
-
-    param_grid = {
-        "model__learning_rate": [0.01, 0.05, 0.1],
-        "model__n_estimators": [100, 150, 200],
-        "model__max_depth": [4, 5, 6],
-        "model__min_samples_leaf": [100, 150, 200],
-    }
-
-    grid = GridSearchCV(
-        estimator=estimator,
-        param_grid=param_grid,
-        cv=5,
-        scoring="accuracy",
-        n_jobs=-1,
-    )
-
-    grid.fit(X_train, y_train)
+    gam = LogisticGAM(s(0, n_splines=15) +
+                     te(feature=(1, 2),
+                        n_splines=(15, 15),
+                        constraints=("monotonic_inc", "monotonic_dec")
+                        ), lam=0.6).fit(X_train[feature_cols], y_train)
 
     return {
-        "pipeline": grid,
-        "best_params_": grid.best_params_,
-        "best_score_": grid.best_score_,
+        "model": gam,
         "X_train": X_train,
         "X_test": X_test,
         "y_train": y_train,
@@ -889,3 +868,66 @@ def visualize_calibration(data_df, result_type="win"):
 
     plt.savefig(f"hole_{result_type}_probability_calibration.png")
     plt.close(fig)
+
+
+def analyze_hammer_usage(season: int):
+    """
+    This function analyzes hammer usage in TGL matches, namely
+        - Total hammer usage per match
+        - The expected value of a hammer in terms of hole win probability
+        - The expected value of accepting/declining a hammer
+
+    Note that this is at the hole level, not match level, so there is no consideration
+    of the value of having hammers remaining later in the match
+
+    Args:
+        season (int): Season in YYYY format
+    """
+
+    # Pull data and isolate to the seson of interest
+    hammer_df = sg_data.pull_hammer_data()
+    hammer_df = hammer_df[hammer_df["season_year"] == season]
+
+    # Get number of hammers used per hole
+    hammer_df["hammers_used"] = hammer_df.groupby(["match_id", "hole_number"])["actionType"].cumcount() + 1
+    accept_df = pd.DataFrame(hammer_df.groupby(["match_id", "hole_number"])["actionType"].agg(lambda x: (x == "HAD_HAMMER_ACCEPTED").sum())).reset_index()
+    accept_df = accept_df.rename(columns={"actionType": "hammers_accepted"})
+
+    hammer_df = hammer_df.merge(
+        accept_df,
+        on=["match_id", "hole_number"],
+        how="left"
+    )
+
+    # Calculate EV of throwing a hammer in a given spot
+    # This is the EV after the opposing team chooses to accept/decline
+    hammer_df["ev"] = [
+        hammers_used * (1 - x) if y == "HAD_HAMMER_DECLINED" else
+        (1 + hammers_used) * (x - (1 - x - z)) for x, y, z, hammers_used in zip(hammer_df["win_probability"], hammer_df["actionType"], hammer_df["tie_probability"], hammer_df["hammers_used"])
+    ]
+
+    # Should the other team accept?
+    hammer_df["accept_ev"] = [
+        hammers_used * (1 - x - z) - ((-hammers_used + (1 + hammers_used)*x)/(1 + hammers_used)) for
+        x, z, hammers_used in zip(hammer_df["win_probability"], hammer_df["tie_probability"], hammer_df["hammers_used"])
+    ]
+
+    # Hole value
+    hammer_df["hole_value"] = [
+        0 if pd.isnull(winning_team_id) else
+        hammers_used if pd.notnull(winning_team_id) and action_type == "HAD_HAMMER_DECLINED" else
+        hammers_accepted + 1 for winning_team_id, hammers_used, action_type, hammers_accepted in zip(
+            hammer_df["winning_team_id"],
+            hammer_df["hammers_used"],
+            hammer_df["actionType"],
+            hammer_df["hammers_accepted"]
+        )
+    ]
+
+    hammer_df["realized_value"] = [
+        0 if pd.isnull(winning_team_id) else
+        hole_value if team_id == winning_team_id else
+        -hole_value for winning_team_id, hole_value, team_id in zip(hammer_df["winning_team_id"], hammer_df["hole_value"], hammer_df["teamId"])
+    ]
+
+    return hammer_df
