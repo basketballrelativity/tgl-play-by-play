@@ -6,6 +6,7 @@ TGL glof matches
 import json
 import re
 import pickle
+from typing import List
 
 import pandas as pd
 import numpy as np
@@ -776,9 +777,9 @@ def calculate_win_loss_tie_probability(shot: pd.Series):
     return win_prob, loss_prob, tie_prob
 
 
-def build_hammer_gam(df: pd.DataFrame, target_col: str = "hammer_used_on_hole", test_size: float = 0.2, random_state: int = 42):
+def build_hammer_gam(df: pd.DataFrame, target_col: str = "hammer_used_on_hole", feature_cols: List = [], test_size: float = 0.2, random_state: int = 42):
     """
-    Fit a GradientBoostingClassifier using the requested features, with a
+    Fit a LogisticGAM using the requested features, with a
     train/test split and cross-validated hyperparameter tuning.
 
     Parameters:
@@ -788,14 +789,9 @@ def build_hammer_gam(df: pd.DataFrame, target_col: str = "hammer_used_on_hole", 
         random_state (int): Random seed used for reproducibility.
 
     Returns:
-        dict: A dictionary with the trained pipeline, best parameters, and test
+        dict: A dictionary with the trained model and test
               split components.
     """
-    feature_cols = [
-        "score_diff",
-        "holes_remaining_prior",
-        "hammers_used_prior"
-    ]
 
     if not all(col in df.columns for col in feature_cols + [target_col]):
         missing = [col for col in feature_cols + [target_col] if col not in df.columns]
@@ -812,10 +808,10 @@ def build_hammer_gam(df: pd.DataFrame, target_col: str = "hammer_used_on_hole", 
         stratify=y,
     )
 
-    gam = LogisticGAM(s(0, n_splines=15) +
+    gam = LogisticGAM(s(0, n_splines=15, constraints="monotonic_dec") +
                      te(feature=(1, 2),
                         n_splines=(15, 15),
-                        constraints=("monotonic_inc", "monotonic_dec")
+                        constraints=("monotonic_dec", "monotonic_inc")
                         ), lam=0.6).fit(X_train[feature_cols], y_train)
 
     return {
