@@ -380,20 +380,23 @@ def get_drive_ex_strokes(shot_df: pd.DataFrame) -> pd.DataFrame:
     alt_shot_df = pd.DataFrame()
     for par in [3, 4, 5]:
         par_df = shot_df[shot_df["hole_par"] == par]
-        par_df = par_df.rename({"yards" : "distance"}, axis=1)
-        par_df["distance"] = pd.to_numeric(par_df["distance"])
-        preds = drive_models[f"par_{par}"].predict(par_df[["distance"]])
-        if par < 5:
-            strokes = np.array(range(1, len(preds.columns)+1))
-        else:
-            strokes = np.array(range(2, len(preds.columns)+2))
-        par_df["drive_ex_strokes"] = np.dot(preds.values, strokes)
-        for stroke in strokes:
+        if len(par_df) > 0:
+            par_df = par_df.rename({"yards" : "distance"}, axis=1)
+            par_df["distance"] = pd.to_numeric(par_df["distance"])
+            preds = drive_models[f"par_{par}"].predict(par_df[["distance"]])
             if par < 5:
-                par_df[f"{stroke}_drive_stroke_prob"] = preds[stroke-1]
+                strokes = np.array(range(1, len(preds.columns)+1))
             else:
-                par_df[f"{stroke}_drive_stroke_prob"] = preds[stroke-2]
-        par_dict[par] = par_df.copy()
+                strokes = np.array(range(2, len(preds.columns)+2))
+            par_df["drive_ex_strokes"] = np.dot(preds.values, strokes)
+            for stroke in strokes:
+                if par < 5:
+                    par_df[f"{stroke}_drive_stroke_prob"] = preds[stroke-1]
+                else:
+                    par_df[f"{stroke}_drive_stroke_prob"] = preds[stroke-2]
+            par_dict[par] = par_df.copy()
+        else:
+            par_dict[par] = pd.DataFrame()
     
     for par in [3, 4, 5]:
         alt_shot_df = pd.concat([alt_shot_df, par_dict[par]])
@@ -811,7 +814,7 @@ def build_hammer_gam(df: pd.DataFrame, target_col: str = "hammer_used_on_hole", 
     gam = LogisticGAM(s(0, n_splines=15, constraints="monotonic_dec") +
                      te(feature=(1, 2),
                         n_splines=(15, 15),
-                        constraints=("monotonic_dec", "monotonic_inc")
+                        constraints=("monotonic_dec", "monotonic_dec")
                         ), lam=0.6).fit(X_train[feature_cols], y_train)
 
     return {
