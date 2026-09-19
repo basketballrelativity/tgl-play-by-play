@@ -904,11 +904,42 @@ def analyze_hammer_usage(season: int):
         hammers_used * (1 - x) if y == "HAD_HAMMER_DECLINED" else
         (1 + hammers_used) * (x - (1 - x - z)) for x, y, z, hammers_used in zip(hammer_df["win_probability"], hammer_df["actionType"], hammer_df["tie_probability"], hammer_df["hammers_used"])
     ]
+    hammer_df["win_ev"] = [
+        hammer_dec - no_hammer if y == "HAD_HAMMER_DECLINED" else
+        hammer_acc - no_hammer for no_hammer, hammer_dec, hammer_acc, y in zip(
+            hammer_df["shooting_win_probability_no_hammer"],
+            hammer_df["shooting_win_probability_hammer_declined"],
+            hammer_df["shooting_win_probability_hammer_accepted"],
+            hammer_df["actionType"]
+        )
+    ]
 
     # Should the other team accept?
     hammer_df["accept_ev"] = [
         hammers_used * (1 - x - z) - ((-hammers_used + (1 + hammers_used)*x)/(1 + hammers_used)) for
         x, z, hammers_used in zip(hammer_df["win_probability"], hammer_df["tie_probability"], hammer_df["hammers_used"])
+    ]
+    hammer_df["accept_win_ev"] = [
+        (1 - hammer_acc) - (1 - hammer_dec) for hammer_dec, hammer_acc in zip(
+            hammer_df["shooting_win_probability_hammer_declined"],
+            hammer_df["shooting_win_probability_hammer_accepted"]
+        )
+    ]
+    hammer_df["decision_ev"] = [
+        accept_win_ev if y == "HAD_HAMMER_ACCEPTED" else
+        -accept_win_ev for accept_win_ev, y in zip(
+            hammer_df["accept_win_ev"],
+            hammer_df["actionType"]
+        )
+    ]
+
+    # Should you throw the hammer?
+    hammer_df["throw_ev"] = [
+        min(hammer_acc, hammer_dec) - no_hammer for no_hammer, hammer_dec, hammer_acc in zip(
+            hammer_df["shooting_win_probability_no_hammer"],
+            hammer_df["shooting_win_probability_hammer_declined"],
+            hammer_df["shooting_win_probability_hammer_accepted"],
+        )
     ]
 
     # Hole value
