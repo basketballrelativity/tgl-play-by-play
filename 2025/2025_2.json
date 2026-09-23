@@ -1,0 +1,3276 @@
+{
+    "data": {
+        "matchDetailsGeoDetect": {
+            "isOvertime": false,
+            "matchId": 2,
+            "matchStatus": "Closed",
+            "seasonYear": 2025,
+            "sessions": [
+                {
+                    "format": "TRIPLES",
+                    "holes": [
+                        {
+                            "holeConfigId": 1,
+                            "holeConfigVideoId": null,
+                            "holeId": 186,
+                            "holeName": "The Plank",
+                            "holeNumber": 1,
+                            "holePar": 4,
+                            "holeSequence": 1,
+                            "holeValue": 2,
+                            "live": false,
+                            "teams": [
+                                {
+                                    "hammerUsed": 0,
+                                    "holeProbability": 9.0E-4,
+                                    "holeProbabilityTie": 0.9991,
+                                    "isConceded": false,
+                                    "playerSequence": [
+                                        {
+                                            "playerId": 15,
+                                            "sequence": 1,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        },
+                                        {
+                                            "playerId": 13,
+                                            "sequence": 2,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        },
+                                        {
+                                            "playerId": 14,
+                                            "sequence": 3,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        }
+                                    ],
+                                    "score": 0,
+                                    "stroke": 4,
+                                    "teamId": "lagc",
+                                    "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItem"
+                                },
+                                {
+                                    "hammerUsed": 1,
+                                    "holeProbability": 0.0,
+                                    "holeProbabilityTie": 0.9991,
+                                    "isConceded": false,
+                                    "playerSequence": [
+                                        {
+                                            "playerId": 9,
+                                            "sequence": 1,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        },
+                                        {
+                                            "playerId": 12,
+                                            "sequence": 2,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        },
+                                        {
+                                            "playerId": 10,
+                                            "sequence": 3,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        }
+                                    ],
+                                    "score": 0,
+                                    "stroke": 4,
+                                    "teamId": "tglflorida",
+                                    "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItem"
+                                }
+                            ],
+                            "yards": 376,
+                            "videos": {
+                                "prelive": {
+                                    "date": "2024-12-31T17:04:46.819Z",
+                                    "id": "6366579077112",
+                                    "thumbnail": "brightcove-video/v1/static/6415719604001/9978b903-63cb-4603-ae12-e906e06f1e37/7938ab39-83e1-4279-a72a-2434a00ee3f0/1280x720/match/image.jpg",
+                                    "videoDuration": 40192,
+                                    "__typename": "DataApiMatchesResSessionsItemHoleVideo"
+                                },
+                                "recap": {
+                                    "date": "2025-01-15T00:40:54.694Z",
+                                    "id": "6367103131112",
+                                    "thumbnail": "brightcove-video/v1/static/6415719604001/3402e19e-794f-4b4d-bb2a-b2f6a72910ce/23100f32-250b-4073-b138-feb3e695c57a/1280x720/match/image.jpg",
+                                    "videoDuration": 64832,
+                                    "__typename": "DataApiMatchesResSessionsItemHoleVideo"
+                                },
+                                "__typename": "DataApiMatchesResSessionsItemHoleVideos"
+                            },
+                            "__typename": "DataApiMatchesResSessionsItemHolesItem"
+                        },
+                        {
+                            "holeConfigId": 2,
+                            "holeConfigVideoId": null,
+                            "holeId": 187,
+                            "holeName": "Pick Yer Plunder",
+                            "holeNumber": 2,
+                            "holePar": 5,
+                            "holeSequence": 2,
+                            "holeValue": 1,
+                            "live": false,
+                            "teams": [
+                                {
+                                    "hammerUsed": 0,
+                                    "holeProbability": 0.9976,
+                                    "holeProbabilityTie": 0.0023999999999999577,
+                                    "isConceded": false,
+                                    "playerSequence": [
+                                        {
+                                            "playerId": 13,
+                                            "sequence": 1,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        },
+                                        {
+                                            "playerId": 14,
+                                            "sequence": 2,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        },
+                                        {
+                                            "playerId": 15,
+                                            "sequence": 3,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        }
+                                    ],
+                                    "score": 1,
+                                    "stroke": 6,
+                                    "teamId": "lagc",
+                                    "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItem"
+                                },
+                                {
+                                    "hammerUsed": 0,
+                                    "holeProbability": 0.0,
+                                    "holeProbabilityTie": 0.0023999999999999577,
+                                    "isConceded": true,
+                                    "playerSequence": [
+                                        {
+                                            "playerId": 12,
+                                            "sequence": 1,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        },
+                                        {
+                                            "playerId": 10,
+                                            "sequence": 2,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        },
+                                        {
+                                            "playerId": 9,
+                                            "sequence": 3,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        }
+                                    ],
+                                    "score": 0,
+                                    "stroke": 6,
+                                    "teamId": "tglflorida",
+                                    "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItem"
+                                }
+                            ],
+                            "yards": 582,
+                            "videos": {
+                                "prelive": {
+                                    "date": "2025-01-01T17:25:55.609Z",
+                                    "id": "6366602078112",
+                                    "thumbnail": "brightcove-video/v1/static/6415719604001/c84d9885-f3f1-44ad-a2e4-8c512570966c/44c550b4-9b4d-41d7-ac76-4cd1ffa09894/1280x720/match/image.jpg",
+                                    "videoDuration": 40533,
+                                    "__typename": "DataApiMatchesResSessionsItemHoleVideo"
+                                },
+                                "recap": {
+                                    "date": "2025-01-15T00:45:26.196Z",
+                                    "id": "6367103432112",
+                                    "thumbnail": "brightcove-video/v1/static/6415719604001/aaffc4ca-ec0e-4d14-ba1a-c9db663d9afc/7cb853d5-96e2-4da9-a2eb-37b02c9d00fc/1280x720/match/image.jpg",
+                                    "videoDuration": 107328,
+                                    "__typename": "DataApiMatchesResSessionsItemHoleVideo"
+                                },
+                                "__typename": "DataApiMatchesResSessionsItemHoleVideos"
+                            },
+                            "__typename": "DataApiMatchesResSessionsItemHolesItem"
+                        },
+                        {
+                            "holeConfigId": 3,
+                            "holeConfigVideoId": null,
+                            "holeId": 188,
+                            "holeName": "Set in Stone",
+                            "holeNumber": 3,
+                            "holePar": 3,
+                            "holeSequence": 3,
+                            "holeValue": 2,
+                            "live": false,
+                            "teams": [
+                                {
+                                    "hammerUsed": 1,
+                                    "holeProbability": 1.0,
+                                    "holeProbabilityTie": 0.0,
+                                    "isConceded": false,
+                                    "playerSequence": [
+                                        {
+                                            "playerId": 14,
+                                            "sequence": 1,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        },
+                                        {
+                                            "playerId": 15,
+                                            "sequence": 2,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        },
+                                        {
+                                            "playerId": 13,
+                                            "sequence": 3,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        }
+                                    ],
+                                    "score": 2,
+                                    "stroke": 2,
+                                    "teamId": "lagc",
+                                    "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItem"
+                                },
+                                {
+                                    "hammerUsed": 0,
+                                    "holeProbability": 0.0,
+                                    "holeProbabilityTie": 0.0,
+                                    "isConceded": true,
+                                    "playerSequence": [
+                                        {
+                                            "playerId": 10,
+                                            "sequence": 1,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        },
+                                        {
+                                            "playerId": 9,
+                                            "sequence": 2,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        },
+                                        {
+                                            "playerId": 12,
+                                            "sequence": 3,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        }
+                                    ],
+                                    "score": 0,
+                                    "stroke": 2,
+                                    "teamId": "tglflorida",
+                                    "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItem"
+                                }
+                            ],
+                            "yards": 188,
+                            "videos": {
+                                "prelive": {
+                                    "date": "2025-01-02T19:25:39.500Z",
+                                    "id": "6366628448112",
+                                    "thumbnail": "brightcove-video/v1/static/6415719604001/ecab1bc9-53a6-4abf-a6e2-329f0b5363d3/5ed87fbc-2bb9-40bf-ac69-4c5dc1adb8da/1280x720/match/image.jpg",
+                                    "videoDuration": 16853,
+                                    "__typename": "DataApiMatchesResSessionsItemHoleVideo"
+                                },
+                                "recap": {
+                                    "date": "2025-01-15T00:50:09.779Z",
+                                    "id": "6367102393112",
+                                    "thumbnail": "brightcove-video/v1/static/6415719604001/e2ab8283-93f4-4fbd-ae28-e5f71a2b8624/568bb908-cf7b-4aa8-af94-e4acb4ea49e2/1280x720/match/image.jpg",
+                                    "videoDuration": 56448,
+                                    "__typename": "DataApiMatchesResSessionsItemHoleVideo"
+                                },
+                                "__typename": "DataApiMatchesResSessionsItemHoleVideos"
+                            },
+                            "__typename": "DataApiMatchesResSessionsItemHolesItem"
+                        },
+                        {
+                            "holeConfigId": 4,
+                            "holeConfigVideoId": null,
+                            "holeId": 189,
+                            "holeName": "Boomerang",
+                            "holeNumber": 4,
+                            "holePar": 5,
+                            "holeSequence": 4,
+                            "holeValue": 2,
+                            "live": false,
+                            "teams": [
+                                {
+                                    "hammerUsed": 0,
+                                    "holeProbability": 0.9996,
+                                    "holeProbabilityTie": 3.9999999999995595E-4,
+                                    "isConceded": false,
+                                    "playerSequence": [
+                                        {
+                                            "playerId": 15,
+                                            "sequence": 1,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        },
+                                        {
+                                            "playerId": 13,
+                                            "sequence": 2,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        },
+                                        {
+                                            "playerId": 14,
+                                            "sequence": 3,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        }
+                                    ],
+                                    "score": 2,
+                                    "stroke": 5,
+                                    "teamId": "lagc",
+                                    "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItem"
+                                },
+                                {
+                                    "hammerUsed": 1,
+                                    "holeProbability": 0.0,
+                                    "holeProbabilityTie": 3.9999999999995595E-4,
+                                    "isConceded": true,
+                                    "playerSequence": [
+                                        {
+                                            "playerId": 9,
+                                            "sequence": 1,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        },
+                                        {
+                                            "playerId": 12,
+                                            "sequence": 2,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        },
+                                        {
+                                            "playerId": 10,
+                                            "sequence": 3,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        }
+                                    ],
+                                    "score": 0,
+                                    "stroke": 5,
+                                    "teamId": "tglflorida",
+                                    "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItem"
+                                }
+                            ],
+                            "yards": 582,
+                            "videos": {
+                                "prelive": {
+                                    "date": "2025-01-01T17:24:06.608Z",
+                                    "id": "6366602076112",
+                                    "thumbnail": "brightcove-video/v1/static/6415719604001/b5a35507-419a-4893-b113-120e0c440f14/6807932c-2024-414f-bad1-9a69273538e5/1280x720/match/image.jpg",
+                                    "videoDuration": 40427,
+                                    "__typename": "DataApiMatchesResSessionsItemHoleVideo"
+                                },
+                                "recap": {
+                                    "date": "2025-01-15T00:55:52.572Z",
+                                    "id": "6367102400112",
+                                    "thumbnail": "brightcove-video/v1/static/6415719604001/22b9e065-70c6-48c2-9d1d-d0332a17c992/9ecb8dfd-e3b6-4ad2-ba9e-4d39b0fc84b2/1280x720/match/image.jpg",
+                                    "videoDuration": 104341,
+                                    "__typename": "DataApiMatchesResSessionsItemHoleVideo"
+                                },
+                                "__typename": "DataApiMatchesResSessionsItemHoleVideos"
+                            },
+                            "__typename": "DataApiMatchesResSessionsItemHolesItem"
+                        },
+                        {
+                            "holeConfigId": 5,
+                            "holeConfigVideoId": null,
+                            "holeId": 190,
+                            "holeName": "Craic On",
+                            "holeNumber": 5,
+                            "holePar": 3,
+                            "holeSequence": 5,
+                            "holeValue": 1,
+                            "live": false,
+                            "teams": [
+                                {
+                                    "hammerUsed": 0,
+                                    "holeProbability": 0.0,
+                                    "holeProbabilityTie": 1.0,
+                                    "isConceded": false,
+                                    "playerSequence": [
+                                        {
+                                            "playerId": 13,
+                                            "sequence": 1,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        },
+                                        {
+                                            "playerId": 14,
+                                            "sequence": 2,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        },
+                                        {
+                                            "playerId": 15,
+                                            "sequence": 3,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        }
+                                    ],
+                                    "score": 0,
+                                    "stroke": 3,
+                                    "teamId": "lagc",
+                                    "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItem"
+                                },
+                                {
+                                    "hammerUsed": 0,
+                                    "holeProbability": 0.0,
+                                    "holeProbabilityTie": 1.0,
+                                    "isConceded": false,
+                                    "playerSequence": [
+                                        {
+                                            "playerId": 12,
+                                            "sequence": 1,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        },
+                                        {
+                                            "playerId": 10,
+                                            "sequence": 2,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        },
+                                        {
+                                            "playerId": 9,
+                                            "sequence": 3,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        }
+                                    ],
+                                    "score": 0,
+                                    "stroke": 3,
+                                    "teamId": "tglflorida",
+                                    "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItem"
+                                }
+                            ],
+                            "yards": 179,
+                            "videos": {
+                                "prelive": {
+                                    "date": "2025-01-02T19:26:09.215Z",
+                                    "id": "6366628051112",
+                                    "thumbnail": "brightcove-video/v1/static/6415719604001/f82677b2-875f-411e-a737-c03bb4402e7d/a3813f4b-e1a1-4e08-8456-8e9534c69e9c/1280x720/match/image.jpg",
+                                    "videoDuration": 24256,
+                                    "__typename": "DataApiMatchesResSessionsItemHoleVideo"
+                                },
+                                "recap": {
+                                    "date": "2025-01-15T01:03:50.222Z",
+                                    "id": "6367104042112",
+                                    "thumbnail": "brightcove-video/v1/static/6415719604001/0f20fc9c-66c5-4117-b005-af1953fcc6a8/8283a316-28a2-47c9-a55d-1c7a14a6c14a/1280x720/match/image.jpg",
+                                    "videoDuration": 68245,
+                                    "__typename": "DataApiMatchesResSessionsItemHoleVideo"
+                                },
+                                "__typename": "DataApiMatchesResSessionsItemHoleVideos"
+                            },
+                            "__typename": "DataApiMatchesResSessionsItemHolesItem"
+                        },
+                        {
+                            "holeConfigId": 6,
+                            "holeConfigVideoId": null,
+                            "holeId": 191,
+                            "holeName": "Bluebonnet",
+                            "holeNumber": 6,
+                            "holePar": 4,
+                            "holeSequence": 6,
+                            "holeValue": 1,
+                            "live": false,
+                            "teams": [
+                                {
+                                    "hammerUsed": 0,
+                                    "holeProbability": 2.0E-4,
+                                    "holeProbabilityTie": 0.007800000000000029,
+                                    "isConceded": true,
+                                    "playerSequence": [
+                                        {
+                                            "playerId": 14,
+                                            "sequence": 1,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        },
+                                        {
+                                            "playerId": 15,
+                                            "sequence": 2,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        },
+                                        {
+                                            "playerId": 13,
+                                            "sequence": 3,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        }
+                                    ],
+                                    "score": 0,
+                                    "stroke": 4,
+                                    "teamId": "lagc",
+                                    "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItem"
+                                },
+                                {
+                                    "hammerUsed": 0,
+                                    "holeProbability": 0.992,
+                                    "holeProbabilityTie": 0.0078000000000000074,
+                                    "isConceded": false,
+                                    "playerSequence": [
+                                        {
+                                            "playerId": 10,
+                                            "sequence": 1,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        },
+                                        {
+                                            "playerId": 9,
+                                            "sequence": 2,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        },
+                                        {
+                                            "playerId": 12,
+                                            "sequence": 3,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        }
+                                    ],
+                                    "score": 1,
+                                    "stroke": 2,
+                                    "teamId": "tglflorida",
+                                    "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItem"
+                                }
+                            ],
+                            "yards": 474,
+                            "videos": {
+                                "prelive": {
+                                    "date": "2025-01-01T15:48:31.497Z",
+                                    "id": "6366600458112",
+                                    "thumbnail": "brightcove-video/v1/jit/6415719604001/8b888a16-6638-423c-b823-c56ea1d71f52/main/1280x720/20s352ms/match/image.jpg",
+                                    "videoDuration": 40704,
+                                    "__typename": "DataApiMatchesResSessionsItemHoleVideo"
+                                },
+                                "recap": {
+                                    "date": "2025-01-15T01:09:27.964Z",
+                                    "id": "6367102890112",
+                                    "thumbnail": "brightcove-video/v1/static/6415719604001/4fd03a0d-9608-419a-9e02-a25bede4b068/f9c09552-d152-4d71-8592-64462fc28d3a/1280x720/match/image.jpg",
+                                    "videoDuration": 77291,
+                                    "__typename": "DataApiMatchesResSessionsItemHoleVideo"
+                                },
+                                "__typename": "DataApiMatchesResSessionsItemHoleVideos"
+                            },
+                            "__typename": "DataApiMatchesResSessionsItemHolesItem"
+                        },
+                        {
+                            "holeConfigId": 7,
+                            "holeConfigVideoId": null,
+                            "holeId": 192,
+                            "holeName": "Oh Chute",
+                            "holeNumber": 7,
+                            "holePar": 3,
+                            "holeSequence": 7,
+                            "holeValue": 1,
+                            "live": false,
+                            "teams": [
+                                {
+                                    "hammerUsed": 0,
+                                    "holeProbability": 6.0E-4,
+                                    "holeProbabilityTie": 0.9994,
+                                    "isConceded": false,
+                                    "playerSequence": [
+                                        {
+                                            "playerId": 15,
+                                            "sequence": 1,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        },
+                                        {
+                                            "playerId": 13,
+                                            "sequence": 2,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        },
+                                        {
+                                            "playerId": 14,
+                                            "sequence": 3,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        }
+                                    ],
+                                    "score": 0,
+                                    "stroke": 3,
+                                    "teamId": "lagc",
+                                    "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItem"
+                                },
+                                {
+                                    "hammerUsed": 0,
+                                    "holeProbability": 0.0,
+                                    "holeProbabilityTie": 0.9994,
+                                    "isConceded": false,
+                                    "playerSequence": [
+                                        {
+                                            "playerId": 9,
+                                            "sequence": 1,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        },
+                                        {
+                                            "playerId": 12,
+                                            "sequence": 2,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        },
+                                        {
+                                            "playerId": 10,
+                                            "sequence": 3,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        }
+                                    ],
+                                    "score": 0,
+                                    "stroke": 3,
+                                    "teamId": "tglflorida",
+                                    "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItem"
+                                }
+                            ],
+                            "yards": 235,
+                            "videos": {
+                                "prelive": {
+                                    "date": "2025-01-02T19:24:33.047Z",
+                                    "id": "6366627485112",
+                                    "thumbnail": "brightcove-video/v1/static/6415719604001/f0e19f70-b59d-4fdb-9d7d-cbbc52a81146/6850faa8-864a-4f16-9f5c-3c9508d076f5/1280x720/match/image.jpg",
+                                    "videoDuration": 17045,
+                                    "__typename": "DataApiMatchesResSessionsItemHoleVideo"
+                                },
+                                "recap": {
+                                    "date": "2025-01-15T01:12:49.379Z",
+                                    "id": "6367104055112",
+                                    "thumbnail": "brightcove-video/v1/static/6415719604001/ca758769-52b7-431b-b085-c3c5aa3e35fd/9931730c-f528-4f3e-8b62-4d01172d40eb/1280x720/match/image.jpg",
+                                    "videoDuration": 70635,
+                                    "__typename": "DataApiMatchesResSessionsItemHoleVideo"
+                                },
+                                "__typename": "DataApiMatchesResSessionsItemHoleVideos"
+                            },
+                            "__typename": "DataApiMatchesResSessionsItemHolesItem"
+                        },
+                        {
+                            "holeConfigId": 20,
+                            "holeConfigVideoId": null,
+                            "holeId": 193,
+                            "holeName": "The Claw",
+                            "holeNumber": 8,
+                            "holePar": 4,
+                            "holeSequence": 8,
+                            "holeValue": 1,
+                            "live": false,
+                            "teams": [
+                                {
+                                    "hammerUsed": 0,
+                                    "holeProbability": 1.0,
+                                    "holeProbabilityTie": 0.0,
+                                    "isConceded": false,
+                                    "playerSequence": [
+                                        {
+                                            "playerId": 13,
+                                            "sequence": 1,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        },
+                                        {
+                                            "playerId": 14,
+                                            "sequence": 2,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        },
+                                        {
+                                            "playerId": 15,
+                                            "sequence": 3,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        }
+                                    ],
+                                    "score": 1,
+                                    "stroke": 3,
+                                    "teamId": "lagc",
+                                    "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItem"
+                                },
+                                {
+                                    "hammerUsed": 0,
+                                    "holeProbability": 0.0,
+                                    "holeProbabilityTie": 0.0,
+                                    "isConceded": true,
+                                    "playerSequence": [
+                                        {
+                                            "playerId": 12,
+                                            "sequence": 1,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        },
+                                        {
+                                            "playerId": 10,
+                                            "sequence": 2,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        },
+                                        {
+                                            "playerId": 9,
+                                            "sequence": 3,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        }
+                                    ],
+                                    "score": 0,
+                                    "stroke": 3,
+                                    "teamId": "tglflorida",
+                                    "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItem"
+                                }
+                            ],
+                            "yards": 436,
+                            "videos": {
+                                "prelive": {
+                                    "date": "2025-01-11T15:22:09.324Z",
+                                    "id": "6366957109112",
+                                    "thumbnail": "brightcove-video/v1/static/6415719604001/ac8c0cd7-977b-4918-8619-1237191e44ff/f68ac932-40d6-4d9a-91f3-8413bdaab583/1280x720/match/image.jpg",
+                                    "videoDuration": 41365,
+                                    "__typename": "DataApiMatchesResSessionsItemHoleVideo"
+                                },
+                                "recap": {
+                                    "date": "2025-01-15T01:18:04.965Z",
+                                    "id": "6367104248112",
+                                    "thumbnail": "brightcove-video/v1/static/6415719604001/893336e3-7e7f-49f3-8aff-2b53293291e7/e2f9a857-e6a7-48ae-aca3-12e888fac49a/1280x720/match/image.jpg",
+                                    "videoDuration": 91072,
+                                    "__typename": "DataApiMatchesResSessionsItemHoleVideo"
+                                },
+                                "__typename": "DataApiMatchesResSessionsItemHoleVideos"
+                            },
+                            "__typename": "DataApiMatchesResSessionsItemHolesItem"
+                        },
+                        {
+                            "holeConfigId": 9,
+                            "holeConfigVideoId": null,
+                            "holeId": 194,
+                            "holeName": "The Spear",
+                            "holeNumber": 9,
+                            "holePar": 5,
+                            "holeSequence": 9,
+                            "holeValue": 2,
+                            "live": false,
+                            "teams": [
+                                {
+                                    "hammerUsed": 1,
+                                    "holeProbability": 0.9962,
+                                    "holeProbabilityTie": 0.0038000000000000256,
+                                    "isConceded": false,
+                                    "playerSequence": [
+                                        {
+                                            "playerId": 14,
+                                            "sequence": 1,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        },
+                                        {
+                                            "playerId": 15,
+                                            "sequence": 2,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        },
+                                        {
+                                            "playerId": 13,
+                                            "sequence": 3,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        }
+                                    ],
+                                    "score": 2,
+                                    "stroke": 5,
+                                    "teamId": "lagc",
+                                    "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItem"
+                                },
+                                {
+                                    "hammerUsed": 0,
+                                    "holeProbability": 0.0,
+                                    "holeProbabilityTie": 0.0038000000000000256,
+                                    "isConceded": true,
+                                    "playerSequence": [
+                                        {
+                                            "playerId": 10,
+                                            "sequence": 1,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        },
+                                        {
+                                            "playerId": 9,
+                                            "sequence": 2,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        },
+                                        {
+                                            "playerId": 12,
+                                            "sequence": 3,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        }
+                                    ],
+                                    "score": 0,
+                                    "stroke": 5,
+                                    "teamId": "tglflorida",
+                                    "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItem"
+                                }
+                            ],
+                            "yards": 586,
+                            "videos": {
+                                "prelive": {
+                                    "date": "2025-01-02T21:51:10.664Z",
+                                    "id": "6366631200112",
+                                    "thumbnail": "brightcove-video/v1/static/6415719604001/fec315a0-45fb-4128-be2a-59b602b2eb50/9347f2ac-6353-46fe-b3e4-d2a47defb713/1280x720/match/image.jpg",
+                                    "videoDuration": 33941,
+                                    "__typename": "DataApiMatchesResSessionsItemHoleVideo"
+                                },
+                                "recap": {
+                                    "date": "2025-01-15T01:27:41.242Z",
+                                    "id": "6367103980112",
+                                    "thumbnail": "brightcove-video/v1/static/6415719604001/1cb568fb-855d-43a5-895f-c5a5db634d6a/9dcdc6b4-452b-40f1-ab7a-f1c7c7160b80/1280x720/match/image.jpg",
+                                    "videoDuration": 122069,
+                                    "__typename": "DataApiMatchesResSessionsItemHoleVideo"
+                                },
+                                "__typename": "DataApiMatchesResSessionsItemHoleVideos"
+                            },
+                            "__typename": "DataApiMatchesResSessionsItemHolesItem"
+                        }
+                    ],
+                    "live": false,
+                    "sequence": 1,
+                    "sessionId": 16,
+                    "teams": [
+                        {
+                            "externalId": 4,
+                            "score": 8,
+                            "teamId": "lagc",
+                            "timeoutsRemaining": 1,
+                            "timeoutsUsed": 1,
+                            "__typename": "DataApiMatchesResSessionsItemTeamsItem"
+                        },
+                        {
+                            "externalId": 3,
+                            "score": 1,
+                            "teamId": "tglflorida",
+                            "timeoutsRemaining": 0,
+                            "timeoutsUsed": 2,
+                            "__typename": "DataApiMatchesResSessionsItemTeamsItem"
+                        }
+                    ],
+                    "timeoutsTotal": 2,
+                    "__typename": "DataApiMatchesResSessionsItem"
+                },
+                {
+                    "format": "SINGLES",
+                    "holes": [
+                        {
+                            "holeConfigId": 10,
+                            "holeConfigVideoId": null,
+                            "holeId": 195,
+                            "holeName": "Serpent",
+                            "holeNumber": 10,
+                            "holePar": 5,
+                            "holeSequence": 1,
+                            "holeValue": 3,
+                            "live": false,
+                            "teams": [
+                                {
+                                    "hammerUsed": 1,
+                                    "holeProbability": 0.00395646263511888,
+                                    "holeProbabilityTie": 0.9955080911224542,
+                                    "isConceded": false,
+                                    "playerSequence": [
+                                        {
+                                            "playerId": 15,
+                                            "sequence": 1,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        }
+                                    ],
+                                    "score": 0,
+                                    "stroke": 6,
+                                    "teamId": "lagc",
+                                    "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItem"
+                                },
+                                {
+                                    "hammerUsed": 1,
+                                    "holeProbability": 5.35446242427011E-4,
+                                    "holeProbabilityTie": 0.9955080911224542,
+                                    "isConceded": false,
+                                    "playerSequence": [
+                                        {
+                                            "playerId": 9,
+                                            "sequence": 1,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        }
+                                    ],
+                                    "score": 0,
+                                    "stroke": 6,
+                                    "teamId": "tglflorida",
+                                    "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItem"
+                                }
+                            ],
+                            "yards": 616,
+                            "videos": {
+                                "prelive": {
+                                    "date": "2025-01-01T17:24:59.310Z",
+                                    "id": "6366602369112",
+                                    "thumbnail": "brightcove-video/v1/static/6415719604001/3616cc2e-b571-46be-9b76-17c5b423ac99/a0a9ccb0-9560-4b9c-9073-e20e32dc9930/1280x720/match/image.jpg",
+                                    "videoDuration": 39445,
+                                    "__typename": "DataApiMatchesResSessionsItemHoleVideo"
+                                },
+                                "recap": {
+                                    "date": "2025-01-15T01:48:41.254Z",
+                                    "id": "6367105068112",
+                                    "thumbnail": "brightcove-video/v1/static/6415719604001/9676d6a3-bd25-4415-8021-0798ed184db6/4a9e9bc2-4582-4d78-9855-44bd4ef4c504/1280x720/match/image.jpg",
+                                    "videoDuration": 152448,
+                                    "__typename": "DataApiMatchesResSessionsItemHoleVideo"
+                                },
+                                "__typename": "DataApiMatchesResSessionsItemHoleVideos"
+                            },
+                            "__typename": "DataApiMatchesResSessionsItemHolesItem"
+                        },
+                        {
+                            "holeConfigId": 11,
+                            "holeConfigVideoId": null,
+                            "holeId": 196,
+                            "holeName": "Alpine",
+                            "holeNumber": 11,
+                            "holePar": 4,
+                            "holeSequence": 2,
+                            "holeValue": 1,
+                            "live": false,
+                            "teams": [
+                                {
+                                    "hammerUsed": 0,
+                                    "holeProbability": 0.999556659200567,
+                                    "holeProbabilityTie": 4.2369992844653334E-4,
+                                    "isConceded": false,
+                                    "playerSequence": [
+                                        {
+                                            "playerId": 13,
+                                            "sequence": 1,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        }
+                                    ],
+                                    "score": 1,
+                                    "stroke": 4,
+                                    "teamId": "lagc",
+                                    "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItem"
+                                },
+                                {
+                                    "hammerUsed": 0,
+                                    "holeProbability": 1.96408709864452E-5,
+                                    "holeProbabilityTie": 4.2369992844648596E-4,
+                                    "isConceded": false,
+                                    "playerSequence": [
+                                        {
+                                            "playerId": 12,
+                                            "sequence": 1,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        }
+                                    ],
+                                    "score": 0,
+                                    "stroke": 6,
+                                    "teamId": "tglflorida",
+                                    "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItem"
+                                }
+                            ],
+                            "yards": 535,
+                            "videos": {
+                                "prelive": {
+                                    "date": "2025-01-01T17:26:47.031Z",
+                                    "id": "6366601616112",
+                                    "thumbnail": "brightcove-video/v1/static/6415719604001/4c42b8cd-3525-40a8-9e31-4791c358488f/6864bdbb-e81e-419b-969e-42cb45e7e5cb/1280x720/match/image.jpg",
+                                    "videoDuration": 40875,
+                                    "__typename": "DataApiMatchesResSessionsItemHoleVideo"
+                                },
+                                "recap": {
+                                    "date": "2025-01-15T01:55:43.058Z",
+                                    "id": "6367103924112",
+                                    "thumbnail": "brightcove-video/v1/static/6415719604001/329cee52-9ce4-4d1b-8fe3-448088fe6b1a/db810b54-52a5-4493-969d-b0e20a7a792e/1280x720/match/image.jpg",
+                                    "videoDuration": 117035,
+                                    "__typename": "DataApiMatchesResSessionsItemHoleVideo"
+                                },
+                                "__typename": "DataApiMatchesResSessionsItemHoleVideos"
+                            },
+                            "__typename": "DataApiMatchesResSessionsItemHolesItem"
+                        },
+                        {
+                            "holeConfigId": 12,
+                            "holeConfigVideoId": null,
+                            "holeId": 197,
+                            "holeName": "Cliffhanger",
+                            "holeNumber": 12,
+                            "holePar": 3,
+                            "holeSequence": 3,
+                            "holeValue": 1,
+                            "live": false,
+                            "teams": [
+                                {
+                                    "hammerUsed": 0,
+                                    "holeProbability": 0.00381450654225024,
+                                    "holeProbabilityTie": 0.9924375021382554,
+                                    "isConceded": false,
+                                    "playerSequence": [
+                                        {
+                                            "playerId": 14,
+                                            "sequence": 1,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        }
+                                    ],
+                                    "score": 0,
+                                    "stroke": 4,
+                                    "teamId": "lagc",
+                                    "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItem"
+                                },
+                                {
+                                    "hammerUsed": 0,
+                                    "holeProbability": 0.00374799131949437,
+                                    "holeProbabilityTie": 0.9924375021382554,
+                                    "isConceded": false,
+                                    "playerSequence": [
+                                        {
+                                            "playerId": 10,
+                                            "sequence": 1,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        }
+                                    ],
+                                    "score": 0,
+                                    "stroke": 4,
+                                    "teamId": "tglflorida",
+                                    "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItem"
+                                }
+                            ],
+                            "yards": 200,
+                            "videos": {
+                                "prelive": {
+                                    "date": "2025-01-02T19:25:06.064Z",
+                                    "id": "6366628249112",
+                                    "thumbnail": "brightcove-video/v1/static/6415719604001/2081c1af-aea1-4567-b8af-b8197dfef316/825af80a-8a0f-4ecd-a06d-dcbecffc2511/1280x720/match/image.jpg",
+                                    "videoDuration": 20672,
+                                    "__typename": "DataApiMatchesResSessionsItemHoleVideo"
+                                },
+                                "recap": {
+                                    "date": "2025-01-15T01:59:37.453Z",
+                                    "id": "6367104991112",
+                                    "thumbnail": "brightcove-video/v1/static/6415719604001/32b3ded5-7c28-4713-b1d2-1277b6313e4e/436a5152-69ab-4fea-a32f-22b9117888ba/1280x720/match/image.jpg",
+                                    "videoDuration": 84117,
+                                    "__typename": "DataApiMatchesResSessionsItemHoleVideo"
+                                },
+                                "__typename": "DataApiMatchesResSessionsItemHoleVideos"
+                            },
+                            "__typename": "DataApiMatchesResSessionsItemHolesItem"
+                        },
+                        {
+                            "holeConfigId": 13,
+                            "holeConfigVideoId": null,
+                            "holeId": 198,
+                            "holeName": "Straight Up",
+                            "holeNumber": 13,
+                            "holePar": 4,
+                            "holeSequence": 4,
+                            "holeValue": 1,
+                            "live": false,
+                            "teams": [
+                                {
+                                    "hammerUsed": 0,
+                                    "holeProbability": 0.994823185519206,
+                                    "holeProbabilityTie": 0.005065761485993342,
+                                    "isConceded": false,
+                                    "playerSequence": [
+                                        {
+                                            "playerId": 15,
+                                            "sequence": 1,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        }
+                                    ],
+                                    "score": 1,
+                                    "stroke": 4,
+                                    "teamId": "lagc",
+                                    "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItem"
+                                },
+                                {
+                                    "hammerUsed": 0,
+                                    "holeProbability": 1.11052994800648E-4,
+                                    "holeProbabilityTie": 0.005065761485993359,
+                                    "isConceded": false,
+                                    "playerSequence": [
+                                        {
+                                            "playerId": 9,
+                                            "sequence": 1,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        }
+                                    ],
+                                    "score": 0,
+                                    "stroke": 6,
+                                    "teamId": "tglflorida",
+                                    "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItem"
+                                }
+                            ],
+                            "yards": 464,
+                            "videos": {
+                                "prelive": {
+                                    "date": "2025-01-01T15:49:21.710Z",
+                                    "id": "6366598524112",
+                                    "thumbnail": "brightcove-video/v1/static/6415719604001/7c2b2065-918f-49fb-a8ce-b1edd2f12b2f/d7bec591-4ff9-4941-a67f-df6aab58d17b/1280x720/match/image.jpg",
+                                    "videoDuration": 34688,
+                                    "__typename": "DataApiMatchesResSessionsItemHoleVideo"
+                                },
+                                "recap": {
+                                    "date": "2025-01-15T02:11:24.068Z",
+                                    "id": "6367105012112",
+                                    "thumbnail": "brightcove-video/v1/static/6415719604001/5440c38a-df99-4ccc-81dd-94b8c85024a8/c56dba07-d7e6-40b2-ab87-44d3ea31b1c3/1280x720/match/image.jpg",
+                                    "videoDuration": 93312,
+                                    "__typename": "DataApiMatchesResSessionsItemHoleVideo"
+                                },
+                                "__typename": "DataApiMatchesResSessionsItemHoleVideos"
+                            },
+                            "__typename": "DataApiMatchesResSessionsItemHolesItem"
+                        },
+                        {
+                            "holeConfigId": 14,
+                            "holeConfigVideoId": null,
+                            "holeId": 199,
+                            "holeName": "On The Rocks",
+                            "holeNumber": 14,
+                            "holePar": 3,
+                            "holeSequence": 5,
+                            "holeValue": 1,
+                            "live": false,
+                            "teams": [
+                                {
+                                    "hammerUsed": 0,
+                                    "holeProbability": 1.0,
+                                    "holeProbabilityTie": 0.0,
+                                    "isConceded": false,
+                                    "playerSequence": [
+                                        {
+                                            "playerId": 13,
+                                            "sequence": 1,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        }
+                                    ],
+                                    "score": 1,
+                                    "stroke": 3,
+                                    "teamId": "lagc",
+                                    "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItem"
+                                },
+                                {
+                                    "hammerUsed": 0,
+                                    "holeProbability": 0.0,
+                                    "holeProbabilityTie": 0.0,
+                                    "isConceded": false,
+                                    "playerSequence": [
+                                        {
+                                            "playerId": 12,
+                                            "sequence": 1,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        }
+                                    ],
+                                    "score": 0,
+                                    "stroke": 4,
+                                    "teamId": "tglflorida",
+                                    "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItem"
+                                }
+                            ],
+                            "yards": 135,
+                            "videos": {
+                                "prelive": {
+                                    "date": "2025-01-02T19:24:01.364Z",
+                                    "id": "6366627575112",
+                                    "thumbnail": "brightcove-video/v1/static/6415719604001/9b7f6b4e-4f35-465f-ac07-6381c489d4f4/781f0c69-368c-4a03-85f4-c239f439d4ad/1280x720/match/image.jpg",
+                                    "videoDuration": 16533,
+                                    "__typename": "DataApiMatchesResSessionsItemHoleVideo"
+                                },
+                                "recap": {
+                                    "date": "2025-01-15T02:19:10.185Z",
+                                    "id": "6367105691112",
+                                    "thumbnail": "brightcove-video/v1/static/6415719604001/300e067f-80ec-45f3-bf3b-4ff903311dda/dcad49b3-6844-4b89-9146-289544f7f9ab/1280x720/match/image.jpg",
+                                    "videoDuration": 74539,
+                                    "__typename": "DataApiMatchesResSessionsItemHoleVideo"
+                                },
+                                "__typename": "DataApiMatchesResSessionsItemHoleVideos"
+                            },
+                            "__typename": "DataApiMatchesResSessionsItemHolesItem"
+                        },
+                        {
+                            "holeConfigId": 15,
+                            "holeConfigVideoId": null,
+                            "holeId": 200,
+                            "holeName": "Quick Draw",
+                            "holeNumber": 15,
+                            "holePar": 5,
+                            "holeSequence": 6,
+                            "holeValue": 1,
+                            "live": false,
+                            "teams": [
+                                {
+                                    "hammerUsed": 0,
+                                    "holeProbability": 0.99997273754056,
+                                    "holeProbabilityTie": 2.623349618521747E-5,
+                                    "isConceded": false,
+                                    "playerSequence": [
+                                        {
+                                            "playerId": 14,
+                                            "sequence": 1,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        }
+                                    ],
+                                    "score": 1,
+                                    "stroke": 2,
+                                    "teamId": "lagc",
+                                    "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItem"
+                                },
+                                {
+                                    "hammerUsed": 0,
+                                    "holeProbability": 1.02896325474095E-6,
+                                    "holeProbabilityTie": 2.6233496185246175E-5,
+                                    "isConceded": true,
+                                    "playerSequence": [
+                                        {
+                                            "playerId": 10,
+                                            "sequence": 1,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        }
+                                    ],
+                                    "score": 0,
+                                    "stroke": 5,
+                                    "teamId": "tglflorida",
+                                    "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItem"
+                                }
+                            ],
+                            "yards": 729,
+                            "videos": {
+                                "prelive": {
+                                    "date": "2025-01-02T17:39:33.347Z",
+                                    "id": "6366624879112",
+                                    "thumbnail": "brightcove-video/v1/static/6415719604001/99ab4dc5-6ae2-4c89-a7a7-a16dff3b5721/518fc38a-79fa-4cc8-88e9-3907e9d4f976/1280x720/match/image.jpg",
+                                    "videoDuration": 38187,
+                                    "__typename": "DataApiMatchesResSessionsItemHoleVideo"
+                                },
+                                "recap": {
+                                    "date": "2025-01-15T02:23:44.375Z",
+                                    "id": "6367107066112",
+                                    "thumbnail": "brightcove-video/v1/static/6415719604001/1b65fd00-21e8-4de5-bffc-c4df6f29b9ef/13a1bad1-0736-4527-9dea-8e7b0df7002b/1280x720/match/image.jpg",
+                                    "videoDuration": 106923,
+                                    "__typename": "DataApiMatchesResSessionsItemHoleVideo"
+                                },
+                                "__typename": "DataApiMatchesResSessionsItemHoleVideos"
+                            },
+                            "__typename": "DataApiMatchesResSessionsItemHolesItem"
+                        }
+                    ],
+                    "live": false,
+                    "sequence": 2,
+                    "sessionId": 17,
+                    "teams": [
+                        {
+                            "externalId": 4,
+                            "score": 4,
+                            "teamId": "lagc",
+                            "timeoutsRemaining": 2,
+                            "timeoutsUsed": 0,
+                            "__typename": "DataApiMatchesResSessionsItemTeamsItem"
+                        },
+                        {
+                            "externalId": 3,
+                            "score": 0,
+                            "teamId": "tglflorida",
+                            "timeoutsRemaining": 2,
+                            "timeoutsUsed": 0,
+                            "__typename": "DataApiMatchesResSessionsItemTeamsItem"
+                        }
+                    ],
+                    "timeoutsTotal": 2,
+                    "__typename": "DataApiMatchesResSessionsItem"
+                }
+            ],
+            "startTime": "2025-01-15T00:00:00.000000Z",
+            "startDate": "2025-01-15",
+            "teams": [
+                {
+                    "designation": "Away",
+                    "hasHammer": false,
+                    "hammersPerTeam": null,
+                    "hammersUsed": null,
+                    "hammersRemaining": null,
+                    "isCeremonyWinner": false,
+                    "matchProbability": 1.0,
+                    "matchProbabilityTie": 0.0,
+                    "players": [
+                        {
+                            "firstName": "Justin",
+                            "isCaptain": true,
+                            "lastName": "Rose",
+                            "playerId": 15,
+                            "shortName": null,
+                            "__typename": "DataApiMatchesResTeamsItemPlayersItem"
+                        },
+                        {
+                            "firstName": "Collin",
+                            "isCaptain": false,
+                            "lastName": "Morikawa",
+                            "playerId": 13,
+                            "shortName": null,
+                            "__typename": "DataApiMatchesResTeamsItemPlayersItem"
+                        },
+                        {
+                            "firstName": "Sahith",
+                            "isCaptain": false,
+                            "lastName": "Theegala",
+                            "playerId": 14,
+                            "shortName": null,
+                            "__typename": "DataApiMatchesResTeamsItemPlayersItem"
+                        }
+                    ],
+                    "score": 12,
+                    "teamCode": "LA",
+                    "teamId": "lagc",
+                    "teamName": "Los Angeles Golf Club",
+                    "teamStandings": "4-0-1",
+                    "__typename": "DataApiMatchesResTeamsItem"
+                },
+                {
+                    "designation": "Home",
+                    "hasHammer": false,
+                    "hammersPerTeam": null,
+                    "hammersUsed": null,
+                    "hammersRemaining": null,
+                    "isCeremonyWinner": false,
+                    "matchProbability": 0.0,
+                    "matchProbabilityTie": 0.0,
+                    "players": [
+                        {
+                            "firstName": "Tiger",
+                            "isCaptain": true,
+                            "lastName": "Woods",
+                            "playerId": 9,
+                            "shortName": null,
+                            "__typename": "DataApiMatchesResTeamsItemPlayersItem"
+                        },
+                        {
+                            "firstName": "Kevin",
+                            "isCaptain": false,
+                            "lastName": "Kisner",
+                            "playerId": 12,
+                            "shortName": null,
+                            "__typename": "DataApiMatchesResTeamsItemPlayersItem"
+                        },
+                        {
+                            "firstName": "Max",
+                            "isCaptain": false,
+                            "lastName": "Homa",
+                            "playerId": 10,
+                            "shortName": null,
+                            "__typename": "DataApiMatchesResTeamsItemPlayersItem"
+                        }
+                    ],
+                    "score": 1,
+                    "teamCode": "JUP",
+                    "teamId": "tglflorida",
+                    "teamName": "Jupiter Links GC",
+                    "teamStandings": "1-4-0",
+                    "__typename": "DataApiMatchesResTeamsItem"
+                }
+            ],
+            "overtime": {
+                "teams": [
+                    {
+                        "teamId": "lagc",
+                        "points": 0,
+                        "__typename": "DataApiMatchesResOvertimeItemTeam"
+                    },
+                    {
+                        "teamId": "tglflorida",
+                        "points": 0,
+                        "__typename": "DataApiMatchesResOvertimeItemTeam"
+                    }
+                ],
+                "holes": [],
+                "__typename": "DataApiMatchesResOvertimeItem"
+            },
+            "currentTeamId": "tglflorida",
+            "currentPlayerId": 10,
+            "upcomingTeamId": null,
+            "upcomingPlayerId": null,
+            "__typename": "DataApiMatchesRes"
+        },
+        "playByPlayList": {
+            "matchId": 2,
+            "matchStatus": "Closed",
+            "sessions": [
+                {
+                    "sessionId": 17,
+                    "sequence": 2,
+                    "sessionScore": "12 - 1",
+                    "playByPlay": [
+                        {
+                            "holeNumber": 15,
+                            "holeScore": "1",
+                            "timeline": [
+                                {
+                                    "shot": 5,
+                                    "playerId": 10,
+                                    "timestamp": "2025-01-15T02:17:44.737000Z",
+                                    "teamId": "tglflorida",
+                                    "externalId": 3,
+                                    "pbpText": "Max Homa hits Sand Wedge 48 ft 11 in to Green, 14 ft 10 in left to hole.",
+                                    "club": "SAND_WEDGE",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 4,
+                                    "playerId": 10,
+                                    "timestamp": "2025-01-15T02:16:50.275000Z",
+                                    "teamId": "tglflorida",
+                                    "externalId": 3,
+                                    "pbpText": "Max Homa hits shot 86 yds to Bunker, 34 ft 9 in left to hole.",
+                                    "club": null,
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 2,
+                                    "playerId": 14,
+                                    "timestamp": "2025-01-15T02:16:14.693000Z",
+                                    "teamId": "lagc",
+                                    "externalId": 4,
+                                    "pbpText": "Sahith Theegala hits shot 212 yds to Green, 6 ft 6 in left to hole.",
+                                    "club": null,
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 3,
+                                    "playerId": 10,
+                                    "timestamp": "2025-01-15T02:15:25.530000Z",
+                                    "teamId": "tglflorida",
+                                    "externalId": 3,
+                                    "pbpText": "JUP is assessed a 1 stroke penalty.",
+                                    "club": null,
+                                    "strokeType": "PENALTY",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 2,
+                                    "playerId": 10,
+                                    "timestamp": "2025-01-15T02:15:21.496000Z",
+                                    "teamId": "tglflorida",
+                                    "externalId": 3,
+                                    "pbpText": "Max Homa hits shot 245 yds to penalty area, 77 yds left to hole.",
+                                    "club": null,
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 1,
+                                    "playerId": 10,
+                                    "timestamp": "2025-01-15T02:14:04.659000Z",
+                                    "teamId": "tglflorida",
+                                    "externalId": 3,
+                                    "pbpText": "Max Homa hits Driver 320 yds to Fairway, 212 yds left to hole.",
+                                    "club": "DRIVER",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 1,
+                                    "playerId": 14,
+                                    "timestamp": "2025-01-15T02:13:19.582000Z",
+                                    "teamId": "lagc",
+                                    "externalId": 4,
+                                    "pbpText": "Sahith Theegala hits Driver 323 yds to Fairway, 209 yds left to hole.",
+                                    "club": "DRIVER",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                }
+                            ],
+                            "holeWinningTeamId": "lagc",
+                            "holeLosingTeamId": "tglflorida",
+                            "holeEnd": {
+                                "pbpText": "LA wins hole by concession for 1 point.",
+                                "__typename": "DataApiPlayByPlayTimelineEventMessage"
+                            },
+                            "__typename": "DataApiPlayByPlayHole"
+                        },
+                        {
+                            "holeNumber": 14,
+                            "holeScore": "1",
+                            "timeline": [
+                                {
+                                    "shot": 3,
+                                    "playerId": 13,
+                                    "timestamp": "2025-01-15T02:11:37.347000Z",
+                                    "teamId": "lagc",
+                                    "externalId": 4,
+                                    "pbpText": "Collin Morikawa makes putt from 4 ft 4 in.",
+                                    "club": "PUTTER",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 2,
+                                    "playerId": 13,
+                                    "timestamp": "2025-01-15T02:10:53.633000Z",
+                                    "teamId": "lagc",
+                                    "externalId": 4,
+                                    "pbpText": "Collin Morikawa hits Sand Wedge 22 ft 8 in to Green, 4 ft 4 in left to hole.",
+                                    "club": "SAND_WEDGE",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 4,
+                                    "playerId": 12,
+                                    "timestamp": "2025-01-15T02:10:16.838000Z",
+                                    "teamId": "tglflorida",
+                                    "externalId": 3,
+                                    "pbpText": "LA concedes putt; Kevin Kisner receives a Gimme.",
+                                    "club": null,
+                                    "strokeType": "GIMME",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 3,
+                                    "playerId": 12,
+                                    "timestamp": "2025-01-15T02:10:16.612000Z",
+                                    "teamId": "tglflorida",
+                                    "externalId": 3,
+                                    "pbpText": "Kevin Kisner hits Sand Wedge 57 ft 6 in to Green, 2 ft 1 in left to hole.",
+                                    "club": "SAND_WEDGE",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 2,
+                                    "playerId": 12,
+                                    "timestamp": "2025-01-15T02:09:24.536000Z",
+                                    "teamId": "tglflorida",
+                                    "externalId": 3,
+                                    "pbpText": "Kevin Kisner hits Sand Wedge 68 ft 9 in to Rough, 56 ft 7 in left to hole.",
+                                    "club": "SAND_WEDGE",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 1,
+                                    "playerId": 12,
+                                    "timestamp": "2025-01-15T02:07:42.743000Z",
+                                    "teamId": "tglflorida",
+                                    "externalId": 3,
+                                    "pbpText": "Kevin Kisner hits shot 130 yds to Bunker, 17 ft 3 in left to hole.",
+                                    "club": null,
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 1,
+                                    "playerId": 13,
+                                    "timestamp": "2025-01-15T02:06:50.147000Z",
+                                    "teamId": "lagc",
+                                    "externalId": 4,
+                                    "pbpText": "Collin Morikawa hits shot 131 yds to Fairway, 18 ft 6 in left to hole.",
+                                    "club": null,
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                }
+                            ],
+                            "holeWinningTeamId": "lagc",
+                            "holeLosingTeamId": "tglflorida",
+                            "holeEnd": {
+                                "pbpText": "LA wins hole for 1 point.",
+                                "__typename": "DataApiPlayByPlayTimelineEventMessage"
+                            },
+                            "__typename": "DataApiPlayByPlayHole"
+                        },
+                        {
+                            "holeNumber": 13,
+                            "holeScore": "1",
+                            "timeline": [
+                                {
+                                    "shot": 4,
+                                    "playerId": 15,
+                                    "timestamp": "2025-01-15T02:05:35.312000Z",
+                                    "teamId": "lagc",
+                                    "externalId": 4,
+                                    "pbpText": "JUP concedes putt; Justin Rose receives a Gimme.",
+                                    "club": null,
+                                    "strokeType": "GIMME",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 3,
+                                    "playerId": 15,
+                                    "timestamp": "2025-01-15T02:05:21.942000Z",
+                                    "teamId": "lagc",
+                                    "externalId": 4,
+                                    "pbpText": "Justin Rose hits Sand Wedge 24 ft 9 in to Green, 6 ft 4 in left to hole.",
+                                    "club": "SAND_WEDGE",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 6,
+                                    "playerId": 9,
+                                    "timestamp": "2025-01-15T02:05:08.152000Z",
+                                    "teamId": "tglflorida",
+                                    "externalId": 3,
+                                    "pbpText": "LA concedes putt; Tiger Woods receives a Gimme.",
+                                    "club": null,
+                                    "strokeType": "GIMME",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 5,
+                                    "playerId": 9,
+                                    "timestamp": "2025-01-15T02:04:50.629000Z",
+                                    "teamId": "tglflorida",
+                                    "externalId": 3,
+                                    "pbpText": "Tiger Woods hits Sand Wedge 33 ft 8 in to Green, 2 ft 7 in left to hole.",
+                                    "club": "SAND_WEDGE",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 4,
+                                    "playerId": 9,
+                                    "timestamp": "2025-01-15T02:04:18.488000Z",
+                                    "teamId": "tglflorida",
+                                    "externalId": 3,
+                                    "pbpText": "Tiger Woods hits Sand Wedge 4 ft 1 in to Bunker, 31 ft 4 in left to hole.",
+                                    "club": "SAND_WEDGE",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 2,
+                                    "playerId": 15,
+                                    "timestamp": "2025-01-15T02:03:03.690000Z",
+                                    "teamId": "lagc",
+                                    "externalId": 4,
+                                    "pbpText": "Justin Rose hits shot 140 yds to Fairway, 18 ft 11 in left to hole.",
+                                    "club": null,
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 3,
+                                    "playerId": 9,
+                                    "timestamp": "2025-01-15T02:02:19.714000Z",
+                                    "teamId": "tglflorida",
+                                    "externalId": 3,
+                                    "pbpText": "Tiger Woods hits shot 184 yds to Bunker, 35 ft 0 in left to hole.",
+                                    "club": null,
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 2,
+                                    "playerId": 9,
+                                    "timestamp": "2025-01-15T02:01:05.529000Z",
+                                    "teamId": "tglflorida",
+                                    "externalId": 3,
+                                    "pbpText": "JUP is assessed a 1 stroke penalty.",
+                                    "club": null,
+                                    "strokeType": "PENALTY",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 1,
+                                    "playerId": 9,
+                                    "timestamp": "2025-01-15T02:01:00.964000Z",
+                                    "teamId": "tglflorida",
+                                    "externalId": 3,
+                                    "pbpText": "Tiger Woods hits Driver 277 yds to penalty area, 173 yds left to hole.",
+                                    "club": "DRIVER",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 1,
+                                    "playerId": 15,
+                                    "timestamp": "2025-01-15T02:00:04.960000Z",
+                                    "teamId": "lagc",
+                                    "externalId": 4,
+                                    "pbpText": "Justin Rose hits Driver 311 yds to Fairway, 145 yds left to hole.",
+                                    "club": "DRIVER",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                }
+                            ],
+                            "holeWinningTeamId": "lagc",
+                            "holeLosingTeamId": "tglflorida",
+                            "holeEnd": {
+                                "pbpText": "LA wins hole for 1 point.",
+                                "__typename": "DataApiPlayByPlayTimelineEventMessage"
+                            },
+                            "__typename": "DataApiPlayByPlayHole"
+                        },
+                        {
+                            "holeNumber": 12,
+                            "holeScore": "4",
+                            "timeline": [
+                                {
+                                    "shot": 4,
+                                    "playerId": 10,
+                                    "timestamp": "2025-01-15T01:54:59.342000Z",
+                                    "teamId": "tglflorida",
+                                    "externalId": 3,
+                                    "pbpText": "LA concedes putt; Max Homa receives a Gimme.",
+                                    "club": null,
+                                    "strokeType": "GIMME",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 3,
+                                    "playerId": 10,
+                                    "timestamp": "2025-01-15T01:54:59.089000Z",
+                                    "teamId": "tglflorida",
+                                    "externalId": 3,
+                                    "pbpText": "Max Homa putts from 7 ft 0 in, 2 ft 3 in left to hole.",
+                                    "club": "PUTTER",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 4,
+                                    "playerId": 14,
+                                    "timestamp": "2025-01-15T01:54:23.674000Z",
+                                    "teamId": "lagc",
+                                    "externalId": 4,
+                                    "pbpText": "JUP concedes putt; Sahith Theegala receives a Gimme.",
+                                    "club": null,
+                                    "strokeType": "GIMME",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 3,
+                                    "playerId": 14,
+                                    "timestamp": "2025-01-15T01:54:23.328000Z",
+                                    "teamId": "lagc",
+                                    "externalId": 4,
+                                    "pbpText": "Sahith Theegala putts from 12 ft 9 in, 20 in left to hole.",
+                                    "club": "PUTTER",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 2,
+                                    "playerId": 10,
+                                    "timestamp": "2025-01-15T01:53:30.438000Z",
+                                    "teamId": "tglflorida",
+                                    "externalId": 3,
+                                    "pbpText": "Max Homa putts from 34 ft 1 in, 7 ft 0 in left to hole.",
+                                    "club": "PUTTER",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 2,
+                                    "playerId": 14,
+                                    "timestamp": "2025-01-15T01:52:52.207000Z",
+                                    "teamId": "lagc",
+                                    "externalId": 4,
+                                    "pbpText": "Sahith Theegala hits Sand Wedge 94 ft 8 in to Green, 12 ft 9 in left to hole.",
+                                    "club": "SAND_WEDGE",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 1,
+                                    "playerId": 10,
+                                    "timestamp": "2025-01-15T01:51:13.191000Z",
+                                    "teamId": "tglflorida",
+                                    "externalId": 3,
+                                    "pbpText": "Max Homa hits shot 202 yds to Green, 34 ft 1 in left to hole.",
+                                    "club": null,
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 1,
+                                    "playerId": 14,
+                                    "timestamp": "2025-01-15T01:50:33.689000Z",
+                                    "teamId": "lagc",
+                                    "externalId": 4,
+                                    "pbpText": "Sahith Theegala hits shot 211 yds to Fairway, 82 ft 0 in left to hole.",
+                                    "club": null,
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                }
+                            ],
+                            "holeWinningTeamId": null,
+                            "holeLosingTeamId": null,
+                            "holeEnd": {
+                                "pbpText": "The hole ends in a tie.",
+                                "__typename": "DataApiPlayByPlayTimelineEventMessage"
+                            },
+                            "__typename": "DataApiPlayByPlayHole"
+                        },
+                        {
+                            "holeNumber": 11,
+                            "holeScore": "1",
+                            "timeline": [
+                                {
+                                    "shot": 4,
+                                    "playerId": 13,
+                                    "timestamp": "2025-01-15T01:49:04.945000Z",
+                                    "teamId": "lagc",
+                                    "externalId": 4,
+                                    "pbpText": "JUP concedes putt; Collin Morikawa receives a Gimme.",
+                                    "club": null,
+                                    "strokeType": "GIMME",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 6,
+                                    "playerId": 12,
+                                    "timestamp": "2025-01-15T01:48:45.894000Z",
+                                    "teamId": "tglflorida",
+                                    "externalId": 3,
+                                    "pbpText": "LA concedes putt; Kevin Kisner receives a Gimme.",
+                                    "club": null,
+                                    "strokeType": "GIMME",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 3,
+                                    "playerId": 13,
+                                    "timestamp": "2025-01-15T01:48:40.487000Z",
+                                    "teamId": "lagc",
+                                    "externalId": 4,
+                                    "pbpText": "Collin Morikawa hits Sand Wedge 46 ft 1 in to Green, 2 ft 8 in left to hole.",
+                                    "club": "SAND_WEDGE",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 5,
+                                    "playerId": 12,
+                                    "timestamp": "2025-01-15T01:47:50.395000Z",
+                                    "teamId": "tglflorida",
+                                    "externalId": 3,
+                                    "pbpText": "Kevin Kisner hits Sand Wedge 47 ft 0 in to Green, 7 ft 1 in left to hole.",
+                                    "club": "SAND_WEDGE",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 4,
+                                    "playerId": 12,
+                                    "timestamp": "2025-01-15T01:45:56.688000Z",
+                                    "teamId": "tglflorida",
+                                    "externalId": 3,
+                                    "pbpText": "Kevin Kisner hits shot 80 yds to Fairway, 53 ft 11 in left to hole.",
+                                    "club": null,
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 2,
+                                    "playerId": 13,
+                                    "timestamp": "2025-01-15T01:45:06.658000Z",
+                                    "teamId": "lagc",
+                                    "externalId": 4,
+                                    "pbpText": "Collin Morikawa hits shot 198 yds to Fairway, 46 ft 0 in left to hole.",
+                                    "club": null,
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 3,
+                                    "playerId": 12,
+                                    "timestamp": "2025-01-15T01:44:22.990000Z",
+                                    "teamId": "tglflorida",
+                                    "externalId": 3,
+                                    "pbpText": "Kevin Kisner hits shot 257 yds to Rough, 98 yds left to hole.",
+                                    "club": null,
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 2,
+                                    "playerId": 12,
+                                    "timestamp": "2025-01-15T01:43:15.003000Z",
+                                    "teamId": "tglflorida",
+                                    "externalId": 3,
+                                    "pbpText": "JUP is assessed a 1 stroke penalty.",
+                                    "club": null,
+                                    "strokeType": "PENALTY",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 1,
+                                    "playerId": 12,
+                                    "timestamp": "2025-01-15T01:43:09.464000Z",
+                                    "teamId": "tglflorida",
+                                    "externalId": 3,
+                                    "pbpText": "Kevin Kisner hits Driver 267 yds to penalty area, 351 yds left to hole.",
+                                    "club": "DRIVER",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 1,
+                                    "playerId": 13,
+                                    "timestamp": "2025-01-15T01:42:22.644000Z",
+                                    "teamId": "lagc",
+                                    "externalId": 4,
+                                    "pbpText": "Collin Morikawa hits Driver 327 yds to Fairway, 196 yds left to hole.",
+                                    "club": "DRIVER",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                }
+                            ],
+                            "holeWinningTeamId": "lagc",
+                            "holeLosingTeamId": "tglflorida",
+                            "holeEnd": {
+                                "pbpText": "LA wins hole for 1 point.",
+                                "__typename": "DataApiPlayByPlayTimelineEventMessage"
+                            },
+                            "__typename": "DataApiPlayByPlayHole"
+                        },
+                        {
+                            "holeNumber": 10,
+                            "holeScore": "6",
+                            "timeline": [
+                                {
+                                    "shot": 6,
+                                    "playerId": 15,
+                                    "timestamp": "2025-01-15T01:40:07.798000Z",
+                                    "teamId": "lagc",
+                                    "externalId": 4,
+                                    "pbpText": "JUP concedes putt; Justin Rose receives a Gimme.",
+                                    "club": null,
+                                    "strokeType": "GIMME",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 5,
+                                    "playerId": 15,
+                                    "timestamp": "2025-01-15T01:40:07.568000Z",
+                                    "teamId": "lagc",
+                                    "externalId": 4,
+                                    "pbpText": "Justin Rose putts from 5 ft 5 in, 16 in left to hole.",
+                                    "club": "PUTTER",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "actionType": "HAD_HAMMER_ACCEPTED",
+                                    "timestamp": "2025-01-15T01:39:16.488000Z",
+                                    "teamId": "lagc",
+                                    "externalId": 4,
+                                    "pbpText": "LA throws Hammer, JUP accepts. JUP now has possession of the hammer.",
+                                    "__typename": "DataApiPlayByPlayTimelineEventHoleAction"
+                                },
+                                {
+                                    "shot": 6,
+                                    "playerId": 9,
+                                    "timestamp": "2025-01-15T01:38:50.070000Z",
+                                    "teamId": "tglflorida",
+                                    "externalId": 3,
+                                    "pbpText": "LA concedes putt; Tiger Woods receives a Gimme.",
+                                    "club": null,
+                                    "strokeType": "GIMME",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 5,
+                                    "playerId": 9,
+                                    "timestamp": "2025-01-15T01:38:49.783000Z",
+                                    "teamId": "tglflorida",
+                                    "externalId": 3,
+                                    "pbpText": "Tiger Woods putts from 14 ft 9 in, 18 in left to hole.",
+                                    "club": "PUTTER",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 4,
+                                    "playerId": 15,
+                                    "timestamp": "2025-01-15T01:38:09.000000Z",
+                                    "teamId": "lagc",
+                                    "externalId": 4,
+                                    "pbpText": "Justin Rose putts from 29 ft 2 in, 5 ft 5 in left to hole.",
+                                    "club": "PUTTER",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 4,
+                                    "playerId": 9,
+                                    "timestamp": "2025-01-15T01:37:17.109000Z",
+                                    "teamId": "tglflorida",
+                                    "externalId": 3,
+                                    "pbpText": "Tiger Woods putts from 35 ft 3 in, 14 ft 9 in left to hole.",
+                                    "club": "PUTTER",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 3,
+                                    "playerId": 9,
+                                    "timestamp": "2025-01-15T01:35:35.564000Z",
+                                    "teamId": "tglflorida",
+                                    "externalId": 3,
+                                    "pbpText": "Tiger Woods hits shot 66 yds to Green, 35 ft 3 in left to hole.",
+                                    "club": null,
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 3,
+                                    "playerId": 15,
+                                    "timestamp": "2025-01-15T01:34:54.862000Z",
+                                    "teamId": "lagc",
+                                    "externalId": 4,
+                                    "pbpText": "Justin Rose hits shot 100 yds to Green, 29 ft 2 in left to hole.",
+                                    "club": null,
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 2,
+                                    "playerId": 9,
+                                    "timestamp": "2025-01-15T01:34:14.553000Z",
+                                    "teamId": "tglflorida",
+                                    "externalId": 3,
+                                    "pbpText": "Tiger Woods hits shot 243 yds to Fairway, 55 yds left to hole.",
+                                    "club": null,
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 2,
+                                    "playerId": 15,
+                                    "timestamp": "2025-01-15T01:33:30.773000Z",
+                                    "teamId": "lagc",
+                                    "externalId": 4,
+                                    "pbpText": "Justin Rose hits shot 222 yds to Fairway, 91 yds left to hole.",
+                                    "club": null,
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 1,
+                                    "playerId": 9,
+                                    "timestamp": "2025-01-15T01:32:31.242000Z",
+                                    "teamId": "tglflorida",
+                                    "externalId": 3,
+                                    "pbpText": "Tiger Woods hits Driver 303 yds to Rough, 296 yds left to hole.",
+                                    "club": "DRIVER",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 1,
+                                    "playerId": 15,
+                                    "timestamp": "2025-01-15T01:31:50.717000Z",
+                                    "teamId": "lagc",
+                                    "externalId": 4,
+                                    "pbpText": "Justin Rose hits shot 298 yds to Rough, 311 yds left to hole.",
+                                    "club": null,
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "actionType": "HAD_HAMMER_ACCEPTED",
+                                    "timestamp": "2025-01-15T01:31:02.023000Z",
+                                    "teamId": "tglflorida",
+                                    "externalId": 3,
+                                    "pbpText": "JUP throws Hammer, LA accepts. LA now has possession of the hammer.",
+                                    "__typename": "DataApiPlayByPlayTimelineEventHoleAction"
+                                }
+                            ],
+                            "holeWinningTeamId": null,
+                            "holeLosingTeamId": null,
+                            "holeEnd": {
+                                "pbpText": "The hole ends in a tie.",
+                                "__typename": "DataApiPlayByPlayTimelineEventMessage"
+                            },
+                            "__typename": "DataApiPlayByPlayHole"
+                        }
+                    ],
+                    "sessionEnd": {
+                        "pbpText": "Singles has ended.",
+                        "__typename": "DataApiPlayByPlayTimelineEventMessage"
+                    },
+                    "__typename": "DataApiPlayByPlaySession"
+                },
+                {
+                    "sessionId": 16,
+                    "sequence": 1,
+                    "sessionScore": "8 - 1",
+                    "playByPlay": [
+                        {
+                            "holeNumber": 9,
+                            "holeScore": "2",
+                            "timeline": [
+                                {
+                                    "shot": 5,
+                                    "playerId": 9,
+                                    "timestamp": "2025-01-15T01:22:41.388000Z",
+                                    "teamId": "tglflorida",
+                                    "externalId": 3,
+                                    "pbpText": "Tiger Woods putts from 8 ft 3 in, 3 ft 3 in left to hole.",
+                                    "club": "PUTTER",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "actionType": "CALLED_TIMEOUT",
+                                    "timestamp": "2025-01-15T01:21:49.122000Z",
+                                    "teamId": "tglflorida",
+                                    "externalId": 3,
+                                    "pbpText": "JUP calls timeout, no timeouts remaining.",
+                                    "__typename": "DataApiPlayByPlayTimelineEventHoleAction"
+                                },
+                                {
+                                    "shot": 5,
+                                    "playerId": 15,
+                                    "timestamp": "2025-01-15T01:21:16.290000Z",
+                                    "teamId": "lagc",
+                                    "externalId": 4,
+                                    "pbpText": "JUP concedes putt; Justin Rose receives a Gimme.",
+                                    "club": null,
+                                    "strokeType": "GIMME",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 4,
+                                    "playerId": 14,
+                                    "timestamp": "2025-01-15T01:21:16.021000Z",
+                                    "teamId": "lagc",
+                                    "externalId": 4,
+                                    "pbpText": "Sahith Theegala putts from 20 ft 11 in, 20 in left to hole.",
+                                    "club": "PUTTER",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 4,
+                                    "playerId": 10,
+                                    "timestamp": "2025-01-15T01:20:16.618000Z",
+                                    "teamId": "tglflorida",
+                                    "externalId": 3,
+                                    "pbpText": "Max Homa hits Sand Wedge 32 ft 11 in to Green, 8 ft 3 in left to hole.",
+                                    "club": "SAND_WEDGE",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 3,
+                                    "playerId": 13,
+                                    "timestamp": "2025-01-15T01:19:41.247000Z",
+                                    "teamId": "lagc",
+                                    "externalId": 4,
+                                    "pbpText": "Collin Morikawa hits Sand Wedge 19 ft 9 in to Green, 20 ft 11 in left to hole.",
+                                    "club": "SAND_WEDGE",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "actionType": "HAD_HAMMER_ACCEPTED",
+                                    "timestamp": "2025-01-15T01:19:03.811000Z",
+                                    "teamId": "lagc",
+                                    "externalId": 4,
+                                    "pbpText": "LA throws Hammer, JUP accepts. JUP now has possession of the hammer.",
+                                    "__typename": "DataApiPlayByPlayTimelineEventHoleAction"
+                                },
+                                {
+                                    "shot": 3,
+                                    "playerId": 12,
+                                    "timestamp": "2025-01-15T01:17:58.747000Z",
+                                    "teamId": "tglflorida",
+                                    "externalId": 3,
+                                    "pbpText": "Kevin Kisner hits shot 94 yds to Bunker, 37 ft 8 in left to hole.",
+                                    "club": null,
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 2,
+                                    "playerId": 15,
+                                    "timestamp": "2025-01-15T01:17:03.982000Z",
+                                    "teamId": "lagc",
+                                    "externalId": 4,
+                                    "pbpText": "Justin Rose hits shot 262 yds to Bunker, 40 ft 7 in left to hole.",
+                                    "club": null,
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 2,
+                                    "playerId": 9,
+                                    "timestamp": "2025-01-15T01:16:21.790000Z",
+                                    "teamId": "tglflorida",
+                                    "externalId": 3,
+                                    "pbpText": "Tiger Woods hits shot 171 yds to Fairway, 106 yds left to hole.",
+                                    "club": null,
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 1,
+                                    "playerId": 10,
+                                    "timestamp": "2025-01-15T01:15:15.098000Z",
+                                    "teamId": "tglflorida",
+                                    "externalId": 3,
+                                    "pbpText": "Max Homa hits Driver 315 yds to Rough, 276 yds left to hole.",
+                                    "club": "DRIVER",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 1,
+                                    "playerId": 14,
+                                    "timestamp": "2025-01-15T01:14:32.558000Z",
+                                    "teamId": "lagc",
+                                    "externalId": 4,
+                                    "pbpText": "Sahith Theegala hits Driver 334 yds to Fairway, 256 yds left to hole.",
+                                    "club": "DRIVER",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                }
+                            ],
+                            "holeWinningTeamId": "lagc",
+                            "holeLosingTeamId": "tglflorida",
+                            "holeEnd": {
+                                "pbpText": "LA wins hole by concession for 2 points.",
+                                "__typename": "DataApiPlayByPlayTimelineEventMessage"
+                            },
+                            "__typename": "DataApiPlayByPlayHole"
+                        },
+                        {
+                            "holeNumber": 8,
+                            "holeScore": "1",
+                            "timeline": [
+                                {
+                                    "shot": 3,
+                                    "playerId": 15,
+                                    "timestamp": "2025-01-15T01:12:31.103000Z",
+                                    "teamId": "lagc",
+                                    "externalId": 4,
+                                    "pbpText": "Justin Rose makes putt from 14 ft 3 in.",
+                                    "club": "PUTTER",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 3,
+                                    "playerId": 9,
+                                    "timestamp": "2025-01-15T01:11:37.848000Z",
+                                    "teamId": "tglflorida",
+                                    "externalId": 3,
+                                    "pbpText": "Tiger Woods hits Sand Wedge 35 ft 3 in to Green, 8 ft 2 in left to hole.",
+                                    "club": "SAND_WEDGE",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 2,
+                                    "playerId": 14,
+                                    "timestamp": "2025-01-15T01:10:30.184000Z",
+                                    "teamId": "lagc",
+                                    "externalId": 4,
+                                    "pbpText": "Sahith Theegala hits shot 152 yds to Green, 14 ft 3 in left to hole.",
+                                    "club": null,
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 2,
+                                    "playerId": 10,
+                                    "timestamp": "2025-01-15T01:09:38.742000Z",
+                                    "teamId": "tglflorida",
+                                    "externalId": 3,
+                                    "pbpText": "Max Homa hits shot 180 yds to Bunker, 27 ft 3 in left to hole.",
+                                    "club": null,
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 1,
+                                    "playerId": 13,
+                                    "timestamp": "2025-01-15T01:08:53.758000Z",
+                                    "teamId": "lagc",
+                                    "externalId": 4,
+                                    "pbpText": "Collin Morikawa hits Driver 306 yds to Fairway, 152 yds left to hole.",
+                                    "club": "DRIVER",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 1,
+                                    "playerId": 12,
+                                    "timestamp": "2025-01-15T01:08:15.673000Z",
+                                    "teamId": "tglflorida",
+                                    "externalId": 3,
+                                    "pbpText": "Kevin Kisner hits shot 259 yds to Fairway, 187 yds left to hole.",
+                                    "club": null,
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                }
+                            ],
+                            "holeWinningTeamId": "lagc",
+                            "holeLosingTeamId": "tglflorida",
+                            "holeEnd": {
+                                "pbpText": "LA wins hole by concession for 1 point.",
+                                "__typename": "DataApiPlayByPlayTimelineEventMessage"
+                            },
+                            "__typename": "DataApiPlayByPlayHole"
+                        },
+                        {
+                            "holeNumber": 7,
+                            "holeScore": "3",
+                            "timeline": [
+                                {
+                                    "shot": 3,
+                                    "playerId": 14,
+                                    "timestamp": "2025-01-15T01:05:49.705000Z",
+                                    "teamId": "lagc",
+                                    "externalId": 4,
+                                    "pbpText": "Sahith Theegala makes putt from 9 ft 0 in.",
+                                    "club": "PUTTER",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "actionType": "CALLED_TIMEOUT",
+                                    "timestamp": "2025-01-15T01:05:00.415000Z",
+                                    "teamId": "lagc",
+                                    "externalId": 4,
+                                    "pbpText": "LA calls timeout, 1 timeout remaining.",
+                                    "__typename": "DataApiPlayByPlayTimelineEventHoleAction"
+                                },
+                                {
+                                    "shot": 2,
+                                    "playerId": 13,
+                                    "timestamp": "2025-01-15T01:04:10.790000Z",
+                                    "teamId": "lagc",
+                                    "externalId": 4,
+                                    "pbpText": "Collin Morikawa hits Sand Wedge 50 ft 5 in to Green, 9 ft 0 in left to hole.",
+                                    "club": "SAND_WEDGE",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 3,
+                                    "playerId": 10,
+                                    "timestamp": "2025-01-15T01:03:40.127000Z",
+                                    "teamId": "tglflorida",
+                                    "externalId": 3,
+                                    "pbpText": "LA concedes putt; Max Homa receives a Gimme.",
+                                    "club": null,
+                                    "strokeType": "GIMME",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 2,
+                                    "playerId": 12,
+                                    "timestamp": "2025-01-15T01:03:39.877000Z",
+                                    "teamId": "tglflorida",
+                                    "externalId": 3,
+                                    "pbpText": "Kevin Kisner hits Sand Wedge 67 ft 2 in to Green, 15 in left to hole.",
+                                    "club": "SAND_WEDGE",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 1,
+                                    "playerId": 15,
+                                    "timestamp": "2025-01-15T01:02:33.111000Z",
+                                    "teamId": "lagc",
+                                    "externalId": 4,
+                                    "pbpText": "Justin Rose hits shot 237 yds, ball moved to free drop area, 41 ft 7 in left to hole.",
+                                    "club": null,
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 1,
+                                    "playerId": 9,
+                                    "timestamp": "2025-01-15T01:01:46.887000Z",
+                                    "teamId": "tglflorida",
+                                    "externalId": 3,
+                                    "pbpText": "Tiger Woods hits shot 257 yds, ball moved to free drop area, 66 ft 10 in left to hole.",
+                                    "club": null,
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                }
+                            ],
+                            "holeWinningTeamId": null,
+                            "holeLosingTeamId": null,
+                            "holeEnd": {
+                                "pbpText": "The hole ends in a tie.",
+                                "__typename": "DataApiPlayByPlayTimelineEventMessage"
+                            },
+                            "__typename": "DataApiPlayByPlayHole"
+                        },
+                        {
+                            "holeNumber": 6,
+                            "holeScore": "1",
+                            "timeline": [
+                                {
+                                    "shot": 4,
+                                    "playerId": 13,
+                                    "timestamp": "2025-01-15T00:55:41.370000Z",
+                                    "teamId": "lagc",
+                                    "externalId": 4,
+                                    "pbpText": "Collin Morikawa putts from 16 ft 4 in, 6 ft 4 in left to hole.",
+                                    "club": "PUTTER",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 2,
+                                    "playerId": 9,
+                                    "timestamp": "2025-01-15T00:54:30.072000Z",
+                                    "teamId": "tglflorida",
+                                    "externalId": 3,
+                                    "pbpText": "Tiger Woods hits shot 166 yds to Green, 9 ft 7 in left to hole.",
+                                    "club": null,
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 3,
+                                    "playerId": 15,
+                                    "timestamp": "2025-01-15T00:53:48.096000Z",
+                                    "teamId": "lagc",
+                                    "externalId": 4,
+                                    "pbpText": "Justin Rose hits shot 254 yds to Green, 16 ft 4 in left to hole.",
+                                    "club": null,
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 1,
+                                    "playerId": 10,
+                                    "timestamp": "2025-01-15T00:52:47.641000Z",
+                                    "teamId": "tglflorida",
+                                    "externalId": 3,
+                                    "pbpText": "Max Homa hits Driver 307 yds to Fairway, 162 yds left to hole.",
+                                    "club": "DRIVER",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 2,
+                                    "playerId": 14,
+                                    "timestamp": "2025-01-15T00:52:09.559000Z",
+                                    "teamId": "lagc",
+                                    "externalId": 4,
+                                    "pbpText": "LA is assessed a 1 stroke penalty.",
+                                    "club": null,
+                                    "strokeType": "PENALTY",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 1,
+                                    "playerId": 14,
+                                    "timestamp": "2025-01-15T00:52:03.160000Z",
+                                    "teamId": "lagc",
+                                    "externalId": 4,
+                                    "pbpText": "Sahith Theegala hits Driver 281 yds to penalty area, 247 yds left to hole.",
+                                    "club": "DRIVER",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                }
+                            ],
+                            "holeWinningTeamId": "tglflorida",
+                            "holeLosingTeamId": "lagc",
+                            "holeEnd": {
+                                "pbpText": "JUP wins hole by concession for 1 point.",
+                                "__typename": "DataApiPlayByPlayTimelineEventMessage"
+                            },
+                            "__typename": "DataApiPlayByPlayHole"
+                        },
+                        {
+                            "holeNumber": 5,
+                            "holeScore": "3",
+                            "timeline": [
+                                {
+                                    "shot": 3,
+                                    "playerId": 15,
+                                    "timestamp": "2025-01-15T00:50:03.317000Z",
+                                    "teamId": "lagc",
+                                    "externalId": 4,
+                                    "pbpText": "Justin Rose makes putt from 5 ft 10 in.",
+                                    "club": "PUTTER",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "actionType": "CALLED_TIMEOUT",
+                                    "timestamp": "2025-01-15T00:49:07.959000Z",
+                                    "teamId": "tglflorida",
+                                    "externalId": 3,
+                                    "pbpText": "JUP calls timeout, 1 timeout remaining.",
+                                    "__typename": "DataApiPlayByPlayTimelineEventHoleAction"
+                                },
+                                {
+                                    "shot": 3,
+                                    "playerId": 9,
+                                    "timestamp": "2025-01-15T00:48:34.740000Z",
+                                    "teamId": "tglflorida",
+                                    "externalId": 3,
+                                    "pbpText": "Tiger Woods makes putt from 8 ft 5 in.",
+                                    "club": "PUTTER",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 2,
+                                    "playerId": 14,
+                                    "timestamp": "2025-01-15T00:47:52.510000Z",
+                                    "teamId": "lagc",
+                                    "externalId": 4,
+                                    "pbpText": "Sahith Theegala putts from 45 ft 0 in, 5 ft 10 in left to hole.",
+                                    "club": "PUTTER",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 2,
+                                    "playerId": 10,
+                                    "timestamp": "2025-01-15T00:46:42.885000Z",
+                                    "teamId": "tglflorida",
+                                    "externalId": 3,
+                                    "pbpText": "Max Homa hits Sand Wedge 82 ft 7 in to Green, 8 ft 5 in left to hole.",
+                                    "club": "SAND_WEDGE",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 1,
+                                    "playerId": 12,
+                                    "timestamp": "2025-01-15T00:45:32.859000Z",
+                                    "teamId": "tglflorida",
+                                    "externalId": 3,
+                                    "pbpText": "Kevin Kisner hits shot 156 yds to Fairway, 74 ft 3 in left to hole.",
+                                    "club": null,
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 1,
+                                    "playerId": 13,
+                                    "timestamp": "2025-01-15T00:44:47.872000Z",
+                                    "teamId": "lagc",
+                                    "externalId": 4,
+                                    "pbpText": "Collin Morikawa hits shot 178 yds to Green, 45 ft 0 in left to hole.",
+                                    "club": null,
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                }
+                            ],
+                            "holeWinningTeamId": null,
+                            "holeLosingTeamId": null,
+                            "holeEnd": {
+                                "pbpText": "The hole ends in a tie.",
+                                "__typename": "DataApiPlayByPlayTimelineEventMessage"
+                            },
+                            "__typename": "DataApiPlayByPlayHole"
+                        },
+                        {
+                            "holeNumber": 4,
+                            "holeScore": "2",
+                            "timeline": [
+                                {
+                                    "shot": 5,
+                                    "playerId": 9,
+                                    "timestamp": "2025-01-15T00:43:02.836000Z",
+                                    "teamId": "tglflorida",
+                                    "externalId": 3,
+                                    "pbpText": "Tiger Woods putts from 7 ft 1 in, 2 ft 2 in left to hole.",
+                                    "club": "PUTTER",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 5,
+                                    "playerId": 13,
+                                    "timestamp": "2025-01-15T00:42:33.225000Z",
+                                    "teamId": "lagc",
+                                    "externalId": 4,
+                                    "pbpText": "JUP concedes putt; Collin Morikawa receives a Gimme.",
+                                    "club": null,
+                                    "strokeType": "GIMME",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 4,
+                                    "playerId": 15,
+                                    "timestamp": "2025-01-15T00:42:32.973000Z",
+                                    "teamId": "lagc",
+                                    "externalId": 4,
+                                    "pbpText": "Justin Rose putts from 16 ft 9 in, 15 in left to hole.",
+                                    "club": "PUTTER",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 4,
+                                    "playerId": 10,
+                                    "timestamp": "2025-01-15T00:41:20.146000Z",
+                                    "teamId": "tglflorida",
+                                    "externalId": 3,
+                                    "pbpText": "Max Homa hits Sand Wedge 80 ft 5 in to Green, 7 ft 1 in left to hole.",
+                                    "club": "SAND_WEDGE",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 3,
+                                    "playerId": 14,
+                                    "timestamp": "2025-01-15T00:40:27.757000Z",
+                                    "teamId": "lagc",
+                                    "externalId": 4,
+                                    "pbpText": "Sahith Theegala hits shot 128 yds to Green, 16 ft 9 in left to hole.",
+                                    "club": null,
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 3,
+                                    "playerId": 12,
+                                    "timestamp": "2025-01-15T00:39:38.762000Z",
+                                    "teamId": "tglflorida",
+                                    "externalId": 3,
+                                    "pbpText": "JUP is assessed a 1 stroke penalty.",
+                                    "club": null,
+                                    "strokeType": "PENALTY",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 2,
+                                    "playerId": 12,
+                                    "timestamp": "2025-01-15T00:39:34.374000Z",
+                                    "teamId": "tglflorida",
+                                    "externalId": 3,
+                                    "pbpText": "Kevin Kisner hits shot 239 yds to penalty area, 73 ft 4 in left to hole.",
+                                    "club": null,
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 2,
+                                    "playerId": 13,
+                                    "timestamp": "2025-01-15T00:38:41.735000Z",
+                                    "teamId": "lagc",
+                                    "externalId": 4,
+                                    "pbpText": "Collin Morikawa hits shot 186 yds to Fairway, 128 yds left to hole.",
+                                    "club": null,
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 1,
+                                    "playerId": 9,
+                                    "timestamp": "2025-01-15T00:37:50.275000Z",
+                                    "teamId": "tglflorida",
+                                    "externalId": 3,
+                                    "pbpText": "Tiger Woods hits Driver 299 yds to Fairway, 271 yds left to hole.",
+                                    "club": "DRIVER",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "actionType": "HAD_HAMMER_ACCEPTED",
+                                    "timestamp": "2025-01-15T00:37:20.935000Z",
+                                    "teamId": "tglflorida",
+                                    "externalId": 3,
+                                    "pbpText": "JUP throws Hammer, LA accepts. LA now has possession of the hammer.",
+                                    "__typename": "DataApiPlayByPlayTimelineEventHoleAction"
+                                },
+                                {
+                                    "shot": 1,
+                                    "playerId": 15,
+                                    "timestamp": "2025-01-15T00:36:53.383000Z",
+                                    "teamId": "lagc",
+                                    "externalId": 4,
+                                    "pbpText": "Justin Rose hits Driver 292 yds to Bunker, 273 yds left to hole.",
+                                    "club": "DRIVER",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                }
+                            ],
+                            "holeWinningTeamId": "lagc",
+                            "holeLosingTeamId": "tglflorida",
+                            "holeEnd": {
+                                "pbpText": "LA wins hole by concession for 2 points.",
+                                "__typename": "DataApiPlayByPlayTimelineEventMessage"
+                            },
+                            "__typename": "DataApiPlayByPlayHole"
+                        },
+                        {
+                            "holeNumber": 3,
+                            "holeScore": "2",
+                            "timeline": [
+                                {
+                                    "shot": 2,
+                                    "playerId": 15,
+                                    "timestamp": "2025-01-15T00:31:03.599000Z",
+                                    "teamId": "lagc",
+                                    "externalId": 4,
+                                    "pbpText": "Justin Rose makes putt from 10 ft 0 in.",
+                                    "club": "PUTTER",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "actionType": "HAD_HAMMER_ACCEPTED",
+                                    "timestamp": "2025-01-15T00:30:22.407000Z",
+                                    "teamId": "lagc",
+                                    "externalId": 4,
+                                    "pbpText": "LA throws Hammer, JUP accepts. JUP now has possession of the hammer.",
+                                    "__typename": "DataApiPlayByPlayTimelineEventHoleAction"
+                                },
+                                {
+                                    "shot": 2,
+                                    "playerId": 9,
+                                    "timestamp": "2025-01-15T00:29:38.409000Z",
+                                    "teamId": "tglflorida",
+                                    "externalId": 3,
+                                    "pbpText": "Tiger Woods putts from 42 ft 10 in, 7 ft 4 in left to hole.",
+                                    "club": "PUTTER",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 1,
+                                    "playerId": 10,
+                                    "timestamp": "2025-01-15T00:27:59.303000Z",
+                                    "teamId": "tglflorida",
+                                    "externalId": 3,
+                                    "pbpText": "Max Homa hits shot 189 yds to Green, 42 ft 10 in left to hole.",
+                                    "club": null,
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 1,
+                                    "playerId": 14,
+                                    "timestamp": "2025-01-15T00:27:21.710000Z",
+                                    "teamId": "lagc",
+                                    "externalId": 4,
+                                    "pbpText": "Sahith Theegala hits shot 191 yds to Green, 10 ft 0 in left to hole.",
+                                    "club": null,
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                }
+                            ],
+                            "holeWinningTeamId": "lagc",
+                            "holeLosingTeamId": "tglflorida",
+                            "holeEnd": {
+                                "pbpText": "LA wins hole by concession for 2 points.",
+                                "__typename": "DataApiPlayByPlayTimelineEventMessage"
+                            },
+                            "__typename": "DataApiPlayByPlayHole"
+                        },
+                        {
+                            "holeNumber": 2,
+                            "holeScore": "1",
+                            "timeline": [
+                                {
+                                    "shot": 6,
+                                    "playerId": 14,
+                                    "timestamp": "2025-01-15T00:25:38.700000Z",
+                                    "teamId": "lagc",
+                                    "externalId": 4,
+                                    "pbpText": "JUP concedes putt; Sahith Theegala receives a Gimme.",
+                                    "club": null,
+                                    "strokeType": "GIMME",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 5,
+                                    "playerId": 13,
+                                    "timestamp": "2025-01-15T00:25:38.423000Z",
+                                    "teamId": "lagc",
+                                    "externalId": 4,
+                                    "pbpText": "Collin Morikawa putts from 10 ft 9 in, 2 ft 3 in left to hole.",
+                                    "club": "PUTTER",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 6,
+                                    "playerId": 12,
+                                    "timestamp": "2025-01-15T00:24:52.502000Z",
+                                    "teamId": "tglflorida",
+                                    "externalId": 3,
+                                    "pbpText": "Kevin Kisner hits Sand Wedge 30 ft 5 in to Green, 7 ft 11 in left to hole.",
+                                    "club": "SAND_WEDGE",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 4,
+                                    "playerId": 15,
+                                    "timestamp": "2025-01-15T00:24:13.536000Z",
+                                    "teamId": "lagc",
+                                    "externalId": 4,
+                                    "pbpText": "Justin Rose hits Sand Wedge 93 ft 11 in to Green, 10 ft 9 in left to hole.",
+                                    "club": "SAND_WEDGE",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 5,
+                                    "playerId": 9,
+                                    "timestamp": "2025-01-15T00:22:42.346000Z",
+                                    "teamId": "tglflorida",
+                                    "externalId": 3,
+                                    "pbpText": "JUP is assessed a 1 stroke penalty.",
+                                    "club": null,
+                                    "strokeType": "PENALTY",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 4,
+                                    "playerId": 9,
+                                    "timestamp": "2025-01-15T00:22:37.939000Z",
+                                    "teamId": "tglflorida",
+                                    "externalId": 3,
+                                    "pbpText": "Tiger Woods hits shot 131 yds to penalty area, 38 ft 1 in left to hole.",
+                                    "club": null,
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 3,
+                                    "playerId": 14,
+                                    "timestamp": "2025-01-15T00:21:44.251000Z",
+                                    "teamId": "lagc",
+                                    "externalId": 4,
+                                    "pbpText": "LA is assessed a 1 stroke penalty.",
+                                    "club": null,
+                                    "strokeType": "PENALTY",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 2,
+                                    "playerId": 14,
+                                    "timestamp": "2025-01-15T00:21:39.175000Z",
+                                    "teamId": "lagc",
+                                    "externalId": 4,
+                                    "pbpText": "Sahith Theegala hits shot 289 yds to penalty area, 89 ft 7 in left to hole.",
+                                    "club": null,
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 3,
+                                    "playerId": 10,
+                                    "timestamp": "2025-01-15T00:20:49.571000Z",
+                                    "teamId": "tglflorida",
+                                    "externalId": 3,
+                                    "pbpText": "JUP is assessed a 1 stroke penalty.",
+                                    "club": null,
+                                    "strokeType": "PENALTY",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 2,
+                                    "playerId": 10,
+                                    "timestamp": "2025-01-15T00:20:43.177000Z",
+                                    "teamId": "tglflorida",
+                                    "externalId": 3,
+                                    "pbpText": "Max Homa hits shot 251 yds to penalty area, 101 yds left to hole.",
+                                    "club": null,
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 1,
+                                    "playerId": 13,
+                                    "timestamp": "2025-01-15T00:19:58.114000Z",
+                                    "teamId": "lagc",
+                                    "externalId": 4,
+                                    "pbpText": "Collin Morikawa hits Driver 291 yds to Fairway, 283 yds left to hole.",
+                                    "club": "DRIVER",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 1,
+                                    "playerId": 12,
+                                    "timestamp": "2025-01-15T00:19:17.012000Z",
+                                    "teamId": "tglflorida",
+                                    "externalId": 3,
+                                    "pbpText": "Kevin Kisner hits Driver 279 yds to Rough, 290 yds left to hole.",
+                                    "club": "DRIVER",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                }
+                            ],
+                            "holeWinningTeamId": "lagc",
+                            "holeLosingTeamId": "tglflorida",
+                            "holeEnd": {
+                                "pbpText": "LA wins hole by concession for 1 point.",
+                                "__typename": "DataApiPlayByPlayTimelineEventMessage"
+                            },
+                            "__typename": "DataApiPlayByPlayHole"
+                        },
+                        {
+                            "holeNumber": 1,
+                            "holeScore": "4",
+                            "timeline": [
+                                {
+                                    "shot": 4,
+                                    "playerId": 9,
+                                    "timestamp": "2025-01-15T00:17:38.343000Z",
+                                    "teamId": "tglflorida",
+                                    "externalId": 3,
+                                    "pbpText": "LA concedes putt; Tiger Woods receives a Gimme.",
+                                    "club": null,
+                                    "strokeType": "GIMME",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 4,
+                                    "playerId": 15,
+                                    "timestamp": "2025-01-15T00:17:27.124000Z",
+                                    "teamId": "lagc",
+                                    "externalId": 4,
+                                    "pbpText": "Justin Rose makes putt from 3 ft 8 in.",
+                                    "club": "PUTTER",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 3,
+                                    "playerId": 10,
+                                    "timestamp": "2025-01-15T00:16:57.995000Z",
+                                    "teamId": "tglflorida",
+                                    "externalId": 3,
+                                    "pbpText": "Max Homa hits Sand Wedge 18 ft 8 in to Green, 11 in left to hole.",
+                                    "club": "SAND_WEDGE",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 3,
+                                    "playerId": 14,
+                                    "timestamp": "2025-01-15T00:16:19.854000Z",
+                                    "teamId": "lagc",
+                                    "externalId": 4,
+                                    "pbpText": "Sahith Theegala hits Sand Wedge 36 ft 9 in to Green, 3 ft 8 in left to hole.",
+                                    "club": "SAND_WEDGE",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 2,
+                                    "playerId": 13,
+                                    "timestamp": "2025-01-15T00:15:09.390000Z",
+                                    "teamId": "lagc",
+                                    "externalId": 4,
+                                    "pbpText": "Collin Morikawa hits shot 124 yds, ball moved to free drop area, 33 ft 1 in left to hole.",
+                                    "club": null,
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 2,
+                                    "playerId": 12,
+                                    "timestamp": "2025-01-15T00:14:26.412000Z",
+                                    "teamId": "tglflorida",
+                                    "externalId": 3,
+                                    "pbpText": "Kevin Kisner hits shot 121 yds to Rough, 19 ft 5 in left to hole.",
+                                    "club": null,
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 1,
+                                    "playerId": 15,
+                                    "timestamp": "2025-01-15T00:13:24.030000Z",
+                                    "teamId": "lagc",
+                                    "externalId": 4,
+                                    "pbpText": "Justin Rose hits shot 278 yds to Fairway, 108 yds left to hole.",
+                                    "club": null,
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 1,
+                                    "playerId": 9,
+                                    "timestamp": "2025-01-15T00:12:34.296000Z",
+                                    "teamId": "tglflorida",
+                                    "externalId": 3,
+                                    "pbpText": "Tiger Woods hits shot 270 yds to Fairway, 116 yds left to hole.",
+                                    "club": null,
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "actionType": "HAD_HAMMER_ACCEPTED",
+                                    "timestamp": "2025-01-15T00:12:10.391000Z",
+                                    "teamId": "tglflorida",
+                                    "externalId": 3,
+                                    "pbpText": "JUP throws Hammer, LA accepts. LA now has possession of the hammer.",
+                                    "__typename": "DataApiPlayByPlayTimelineEventHoleAction"
+                                }
+                            ],
+                            "holeWinningTeamId": null,
+                            "holeLosingTeamId": null,
+                            "holeEnd": {
+                                "pbpText": "The hole ends in a tie.",
+                                "__typename": "DataApiPlayByPlayTimelineEventMessage"
+                            },
+                            "__typename": "DataApiPlayByPlayHole"
+                        }
+                    ],
+                    "sessionEnd": {
+                        "pbpText": "Triples has ended, LA leads the match 8-1.",
+                        "__typename": "DataApiPlayByPlayTimelineEventMessage"
+                    },
+                    "__typename": "DataApiPlayByPlaySession"
+                }
+            ],
+            "overtime": {
+                "playByPlay": [],
+                "__typename": "DataApiPlayByPlayOvertime"
+            },
+            "matchEnd": {
+                "pbpText": "Los Angeles Golf Club wins! LA 12 - JUP 1.",
+                "__typename": "DataApiPlayByPlayTimelineEventMessage"
+            },
+            "__typename": "DataApiPlayByPlay"
+        },
+        "matchById": {
+            "hideLineUp": false,
+            "hideLiveScoring": true,
+            "hideMatchRecap": false,
+            "hidePlayByPlay": false,
+            "hidePlayer": true,
+            "hideScoreboard": false,
+            "hideStats": false,
+            "hideTicker": false,
+            "hideProbStatsWebMobileApp": true,
+            "hideProbLiveHoleWebMobileApp": true,
+            "liveStreamId": null,
+            "matchName": "Los Angeles Golf Club vs Jupiter Links GC",
+            "recapBody": "[{\"type\":\"header\",\"children\":[{\"type\":\"text\",\"value\":\"Los Angeles Golf Club dominant in first match victory against Jupiter Links\",\"format\":{\"variants\":[\"bold\"]}}],\"style\":\"h2\",\"format\":{\"text-align\":\" center\"}},{\"type\":\"paragraph\",\"children\":[{\"type\":\"text\",\"value\":\"The lights dimmed and a red hue washed over SoFi Center as a familiar silhouette filled the entrance leading out to the field of play. As smoke poured out and the opening riff of “Eye of the Tiger” blared over the speakers, Tiger Woods entered the arena.\"}]},{\"type\":\"paragraph\",\"children\":[{\"type\":\"text\",\"value\":\"“You ready for this?” Woods shouted. The crowd roared and that set the tone for the second match of TGL presented by SoFi. \"}]},{\"type\":\"paragraph\",\"children\":[{\"type\":\"text\",\"value\":\"With all eyes on Woods from the start, it was Justin Rose, Collin Morikawa and Sahith Theegala who rose to the occasion for Los Angeles Golf Club with a 12-1 win over Woods, Kevin Kisner and Max Homa representing Jupiter Links Golf Club Tuesday in Palm Beach Gardens, Fla.\"}]},{\"type\":\"paragraph\",\"children\":[{\"type\":\"text\",\"value\":\"LAGC co-owner and 23-time Grand Slam singles tennis champion Serena Williams had a front-row seat for the action alongside husband and fellow co-owner, Alexis Ohanian. Williams joined the broadcast booth midway through Triples and admitted she was having a hard time rooting against Woods. But that didn’t stop her from chirping at the 15-time major winner when he made his first putt of the night at the fifth.\"}]},{\"type\":\"paragraph\",\"children\":[{\"type\":\"text\",\"value\":\"“It’s about time, Tiger!” Williams shouted.\"}]},{\"type\":\"paragraph\",\"children\":[{\"type\":\"text\",\"value\":\"Woods had his game face on from the second he arrived on the property, dressed in all black with a backwards hat ahead of his SoFi Center debut. He upped the stakes even more when he reached the hitting area for the opening tee shot, throwing the Hammer to make the first hole worth two points. Then he piped a 3-wood down the middle of the fairway.\"}]},{\"type\":\"paragraph\",\"children\":[{\"type\":\"text\",\"value\":\"“That was awesome. Seriously man, that was the best,” Woods said. “We got [SoFi Center] started. Got it hopping with a little Hammer. Let’s go.”\"}]},{\"type\":\"paragraph\",\"children\":[{\"type\":\"text\",\"value\":\"Fans in attendance included Woods’ 15-year-old son, Charlie Woods, and his mom, Kultida Woods, who flashed a big smile when Tiger drained a par putt to salvage a tie at the par-3 fifth hole – one of a few fun highlights on an otherwise long night for JLGC.\"}]},{\"type\":\"paragraph\",\"children\":[{\"type\":\"text\",\"value\":\"With JLGC trailing 6-1 through eight holes, Kisner looked up to the younger Woods for help.\"}]},{\"type\":\"paragraph\",\"children\":[{\"type\":\"text\",\"value\":\"“Charlie, you want to come play?” Kisner said. “Come sub in, man.”\"}]},{\"type\":\"paragraph\",\"children\":[{\"type\":\"text\",\"value\":\"Kisner later provided some much-needed comedic relief in Singles at the par-3 14\"},{\"type\":\"text\",\"value\":\"th\",\"format\":{\"variants\":[\"superscript\"]}},{\"type\":\"text\",\"value\":\" hole, On the Rocks. On his second shot from a back bunker, Kisner mishit the ball and launched a missile off the flagstick. \"}]},{\"type\":\"paragraph\",\"children\":[{\"type\":\"text\",\"value\":\"The ensuing sound and overall effect of the shot had Woods crying laughing, unable to gather himself for quite some time.\"}]},{\"type\":\"paragraph\",\"children\":[{\"type\":\"text\",\"value\":\"“That was one of the funniest moments I've ever seen, [Kisner] hitting that shot like that,” Woods said. “It was just one of those weird nights.”\"}]},{\"type\":\"paragraph\",\"children\":[{\"type\":\"text\",\"value\":\"LAGC increased its lead to 8-1 at the par-5 ninth hole, The Spear, earning two more points with a par after throwing the Hammer midway through the hole and essentially putting the match out of reach entering Singles.\"}]},{\"type\":\"paragraph\",\"children\":[{\"type\":\"text\",\"value\":\"Rose was dialed in with the flatstick all night, draining a 10-footer for birdie at the par-3 third hole, Set in Stone, to pick up two points. He also made a 14-footer for birdie at the eighth to make it 6-1 LAGC, despite plenty of JLGC supporters making a lot of noise from the stands.\"}]},{\"type\":\"paragraph\",\"children\":[{\"type\":\"text\",\"value\":\"“I’m a guy on the golf course that’s very much, ‘quiet, please,’ ‘still, please,’ ... for me, this was very, very different. I think it’s actually gonna be good for me to deal with this,” said Rose, who added that the experience playing against Woods’ team out of the gate could help later on in the season. “Your awareness is definitely keyed into the energy out there, what people are saying. You’re hearing it all. Then you’ve got to dial in and execute ... the rowdier, the more crazy it gets, then the more dialed in you have to be.”\"}]},{\"type\":\"paragraph\",\"children\":[{\"type\":\"text\",\"value\":\"Theegala came through for LAGC on several occasions as well – he made a pressure-packed 9-footer for par at the seventh to tie the hole and set the tone at No. 9 with a 334-yard drive that eventually led to another two-point win for his team. The 27-year-old had so much adrenalin in the environment he said he was hitting the ball a full club farther than normal. \"}]},{\"type\":\"paragraph\",\"children\":[{\"type\":\"text\",\"value\":\"“I am so amped up right now, it’s hard to control myself,” Theegala said, as his dad, Murli Theegala, watched on live from SoFi Center.\"}]},{\"type\":\"paragraph\",\"children\":[{\"type\":\"text\",\"value\":\"He was joined by a wide range of pro athletes and celebrities including U.S. soccer star Alex Morgan, six-time NFL Pro Bowl wide receiver Brandon Marshall, Florida Governor Ron DeSantis and fellow TGL stars Shane Lowry (The Bay Golf Club) and Keegan Bradley (Boston Common Golf). \"}]},{\"type\":\"paragraph\",\"children\":[{\"type\":\"text\",\"value\":\"LAGC picked up two points in the SoFi Cup Standings with the regulation win and is now tied for first place alongside The Bay Golf Club.\"}]},{\"type\":\"paragraph\",\"children\":[{\"type\":\"text\",\"value\":\"JLGC will look to earn its first points of the year at 6:30 p.m. ET on Jan. 27 against Boston Common Golf, while LAGC returns to action at 9 p.m. Feb. 4 against Boston Common Golf.\"}]}]",
+            "recapTopVideo": {
+                "id": "6367108969112",
+                "hideAd": false,
+                "path": "/videos/2025/01/15/match-highlights--lagc-vs--jupiter-links",
+                "videoTitle": "Match Highlights: LAGC vs. Jupiter Links",
+                "shortTitle": null,
+                "videoDescription": null,
+                "shortDescription": "All the best moments from LAGC's big win over Jupiter Links GC at SoFi Center.",
+                "videoImage": "brightcove-video/v1/static/6415719604001/5f55fe75-b45f-4fa9-b90c-8fae295a69e0/58ebc98f-2846-433b-839c-6e1af9ce4749/1280x720/match/image.jpg",
+                "date": "2025-01-15T04:22:31.030Z",
+                "duration": 162261,
+                "tags": [
+                    {
+                        "id": "tgl:teams/lagc",
+                        "title": "Los Angeles Golf Club",
+                        "__typename": "Tag"
+                    },
+                    {
+                        "id": "tgl:teams/florida",
+                        "title": "Jupiter Links Golf Club",
+                        "__typename": "Tag"
+                    },
+                    {
+                        "id": "tgl:leagues/tgl",
+                        "title": "TGL",
+                        "__typename": "Tag"
+                    },
+                    {
+                        "id": "tgl:playlist/2025/2---la-v-jup",
+                        "title": "2 - LA v JUP",
+                        "__typename": "Tag"
+                    }
+                ],
+                "__typename": "Video"
+            },
+            "headerInfoCards": [],
+            "afterTeamRosterContent": [],
+            "__typename": "Match"
+        },
+        "liveTeamsStats": {
+            "matchId": 2,
+            "teams": [
+                {
+                    "teamId": "lagc",
+                    "abbreviation": "LA",
+                    "designation": "Away",
+                    "stats": [
+                        {
+                            "statName": "hammerWinCount",
+                            "statNameAlias": "HAMMERS WON",
+                            "value": "3",
+                            "__typename": "DataApiLiveTeamsStat"
+                        },
+                        {
+                            "statName": "avgDriverBallSpeedMph",
+                            "statNameAlias": "AVG DRIVER BALL SPEED (MPH)",
+                            "value": "176.1",
+                            "__typename": "DataApiLiveTeamsStat"
+                        },
+                        {
+                            "statName": "highestDriverBallSpeedMph",
+                            "statNameAlias": "max speed",
+                            "value": "184.4",
+                            "__typename": "DataApiLiveTeamsStat"
+                        },
+                        {
+                            "statName": "avgDriverTotalYards",
+                            "statNameAlias": "AVG DRIVER DISTANCE (YDS)",
+                            "value": "308.2",
+                            "__typename": "DataApiLiveTeamsStat"
+                        },
+                        {
+                            "statName": "longestDriverTotalYards",
+                            "statNameAlias": "max distance",
+                            "value": "334.1",
+                            "__typename": "DataApiLiveTeamsStat"
+                        },
+                        {
+                            "statName": "avgDriverClubSpeedMph",
+                            "statNameAlias": "AVG DRIVER SWING SPEED (MPH)",
+                            "value": "122.3",
+                            "__typename": "DataApiLiveTeamsStat"
+                        },
+                        {
+                            "statName": "highestDriverClubSpeedMph",
+                            "statNameAlias": "max speed",
+                            "value": "125.8",
+                            "__typename": "DataApiLiveTeamsStat"
+                        },
+                        {
+                            "statName": "firConsistency",
+                            "statNameAlias": "FAIRWAY CONSISTENCY",
+                            "value": "70.0 %",
+                            "__typename": "DataApiLiveTeamsStat"
+                        },
+                        {
+                            "statName": "scramblingCapability",
+                            "statNameAlias": "SCRAMBLING",
+                            "value": "62.5 %",
+                            "__typename": "DataApiLiveTeamsStat"
+                        },
+                        {
+                            "statName": "girConsistency",
+                            "statNameAlias": "GREEN CONSISTENCY",
+                            "value": "46.7 %",
+                            "__typename": "DataApiLiveTeamsStat"
+                        },
+                        {
+                            "statName": "avgDistanceToPinFromSandFeet",
+                            "statNameAlias": "SAND SAVES",
+                            "value": "20.9 FEET",
+                            "__typename": "DataApiLiveTeamsStat"
+                        },
+                        {
+                            "statName": "shortPuttEfficiency",
+                            "statNameAlias": "SHORT PUTTS (0-10 FT)",
+                            "value": "80.0 %",
+                            "__typename": "DataApiLiveTeamsStat"
+                        },
+                        {
+                            "statName": "midPuttEfficiency",
+                            "statNameAlias": "MEDIUM PUTTS (10-30 FT)",
+                            "value": "25.0 %",
+                            "__typename": "DataApiLiveTeamsStat"
+                        },
+                        {
+                            "statName": "longPuttEfficiency",
+                            "statNameAlias": "LONG PUTTS (>30 FT)",
+                            "value": "0.0 %",
+                            "__typename": "DataApiLiveTeamsStat"
+                        },
+                        {
+                            "statName": "shotClockPenaltyCount",
+                            "statNameAlias": "SHOT CLOCK VIOLATIONS",
+                            "value": "0",
+                            "__typename": "DataApiLiveTeamsStat"
+                        },
+                        {
+                            "statName": "timeoutsUsed",
+                            "statNameAlias": "TIMEOUTS USED",
+                            "value": "0",
+                            "__typename": "DataApiLiveTeamsStat"
+                        },
+                        {
+                            "statName": "timeoutsRemaining",
+                            "statNameAlias": "TIMEOUTS REMAINING",
+                            "value": "2",
+                            "__typename": "DataApiLiveTeamsStat"
+                        }
+                    ],
+                    "__typename": "DataApiLiveTeamsStatsTeam"
+                },
+                {
+                    "teamId": "tglflorida",
+                    "abbreviation": "JUP",
+                    "designation": "Home",
+                    "stats": [
+                        {
+                            "statName": "hammerWinCount",
+                            "statNameAlias": "HAMMERS WON",
+                            "value": "0",
+                            "__typename": "DataApiLiveTeamsStat"
+                        },
+                        {
+                            "statName": "avgDriverBallSpeedMph",
+                            "statNameAlias": "AVG DRIVER BALL SPEED (MPH)",
+                            "value": "171.6",
+                            "__typename": "DataApiLiveTeamsStat"
+                        },
+                        {
+                            "statName": "highestDriverBallSpeedMph",
+                            "statNameAlias": "max speed",
+                            "value": "180.2",
+                            "__typename": "DataApiLiveTeamsStat"
+                        },
+                        {
+                            "statName": "avgDriverTotalYards",
+                            "statNameAlias": "AVG DRIVER DISTANCE (YDS)",
+                            "value": "295.8",
+                            "__typename": "DataApiLiveTeamsStat"
+                        },
+                        {
+                            "statName": "longestDriverTotalYards",
+                            "statNameAlias": "max distance",
+                            "value": "320.0",
+                            "__typename": "DataApiLiveTeamsStat"
+                        },
+                        {
+                            "statName": "avgDriverClubSpeedMph",
+                            "statNameAlias": "AVG DRIVER SWING SPEED (MPH)",
+                            "value": "118.9",
+                            "__typename": "DataApiLiveTeamsStat"
+                        },
+                        {
+                            "statName": "highestDriverClubSpeedMph",
+                            "statNameAlias": "max speed",
+                            "value": "124.3",
+                            "__typename": "DataApiLiveTeamsStat"
+                        },
+                        {
+                            "statName": "firConsistency",
+                            "statNameAlias": "FAIRWAY CONSISTENCY",
+                            "value": "50.0 %",
+                            "__typename": "DataApiLiveTeamsStat"
+                        },
+                        {
+                            "statName": "scramblingCapability",
+                            "statNameAlias": "SCRAMBLING",
+                            "value": "27.3 %",
+                            "__typename": "DataApiLiveTeamsStat"
+                        },
+                        {
+                            "statName": "girConsistency",
+                            "statNameAlias": "GREEN CONSISTENCY",
+                            "value": "26.7 %",
+                            "__typename": "DataApiLiveTeamsStat"
+                        },
+                        {
+                            "statName": "avgDistanceToPinFromSandFeet",
+                            "statNameAlias": "SAND SAVES",
+                            "value": "20.3 FEET",
+                            "__typename": "DataApiLiveTeamsStat"
+                        },
+                        {
+                            "statName": "shortPuttEfficiency",
+                            "statNameAlias": "SHORT PUTTS (0-10 FT)",
+                            "value": "25.0 %",
+                            "__typename": "DataApiLiveTeamsStat"
+                        },
+                        {
+                            "statName": "midPuttEfficiency",
+                            "statNameAlias": "MEDIUM PUTTS (10-30 FT)",
+                            "value": "0.0 %",
+                            "__typename": "DataApiLiveTeamsStat"
+                        },
+                        {
+                            "statName": "longPuttEfficiency",
+                            "statNameAlias": "LONG PUTTS (>30 FT)",
+                            "value": "0.0 %",
+                            "__typename": "DataApiLiveTeamsStat"
+                        },
+                        {
+                            "statName": "shotClockPenaltyCount",
+                            "statNameAlias": "SHOT CLOCK VIOLATIONS",
+                            "value": "0",
+                            "__typename": "DataApiLiveTeamsStat"
+                        },
+                        {
+                            "statName": "timeoutsUsed",
+                            "statNameAlias": "TIMEOUTS USED",
+                            "value": "0",
+                            "__typename": "DataApiLiveTeamsStat"
+                        },
+                        {
+                            "statName": "timeoutsRemaining",
+                            "statNameAlias": "TIMEOUTS REMAINING",
+                            "value": "2",
+                            "__typename": "DataApiLiveTeamsStat"
+                        }
+                    ],
+                    "__typename": "DataApiLiveTeamsStatsTeam"
+                }
+            ],
+            "__typename": "DataApiLiveTeamsStats"
+        },
+        "scoringSponsor": null,
+        "__typename": "Query"
+    }
+}

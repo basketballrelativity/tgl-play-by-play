@@ -1,0 +1,2900 @@
+{
+    "data": {
+        "matchDetailsGeoDetect": {
+            "isOvertime": false,
+            "matchId": 7,
+            "matchStatus": "Closed",
+            "seasonYear": 2025,
+            "sessions": [
+                {
+                    "format": "TRIPLES",
+                    "holes": [
+                        {
+                            "holeConfigId": 157,
+                            "holeConfigVideoId": null,
+                            "holeId": 495,
+                            "holeName": "Flex",
+                            "holeNumber": 1,
+                            "holePar": 4,
+                            "holeSequence": 1,
+                            "holeValue": 1,
+                            "live": false,
+                            "teams": [
+                                {
+                                    "hammerUsed": 0,
+                                    "holeProbability": 0.0,
+                                    "holeProbabilityTie": 1.0,
+                                    "isConceded": false,
+                                    "playerSequence": [
+                                        {
+                                            "playerId": 2,
+                                            "sequence": 1,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        },
+                                        {
+                                            "playerId": 4,
+                                            "sequence": 2,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        },
+                                        {
+                                            "playerId": 1,
+                                            "sequence": 3,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        }
+                                    ],
+                                    "score": 0,
+                                    "stroke": 4,
+                                    "teamId": "tglatlanta",
+                                    "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItem"
+                                },
+                                {
+                                    "hammerUsed": 0,
+                                    "holeProbability": 0.0,
+                                    "holeProbabilityTie": 1.0,
+                                    "isConceded": false,
+                                    "playerSequence": [
+                                        {
+                                            "playerId": 22,
+                                            "sequence": 1,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        },
+                                        {
+                                            "playerId": 21,
+                                            "sequence": 2,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        },
+                                        {
+                                            "playerId": 23,
+                                            "sequence": 3,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        }
+                                    ],
+                                    "score": 0,
+                                    "stroke": 4,
+                                    "teamId": "tglsanfrancisco",
+                                    "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItem"
+                                }
+                            ],
+                            "yards": 496,
+                            "videos": {
+                                "prelive": {
+                                    "date": "2025-01-01T15:49:49.126Z",
+                                    "id": "6366599296112",
+                                    "thumbnail": "brightcove-video/v1/static/6415719604001/24f0c439-d331-4797-bdeb-3d26331582d5/b0f6a4af-23c4-4833-9449-f9620466f4fa/1280x720/match/image.jpg",
+                                    "videoDuration": 36437,
+                                    "__typename": "DataApiMatchesResSessionsItemHoleVideo"
+                                },
+                                "recap": null,
+                                "__typename": "DataApiMatchesResSessionsItemHoleVideos"
+                            },
+                            "__typename": "DataApiMatchesResSessionsItemHolesItem"
+                        },
+                        {
+                            "holeConfigId": 142,
+                            "holeConfigVideoId": null,
+                            "holeId": 496,
+                            "holeName": "Navigator",
+                            "holeNumber": 2,
+                            "holePar": 5,
+                            "holeSequence": 2,
+                            "holeValue": 1,
+                            "live": false,
+                            "teams": [
+                                {
+                                    "hammerUsed": 0,
+                                    "holeProbability": 0.0,
+                                    "holeProbabilityTie": 0.0,
+                                    "isConceded": true,
+                                    "playerSequence": [
+                                        {
+                                            "playerId": 4,
+                                            "sequence": 1,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        },
+                                        {
+                                            "playerId": 1,
+                                            "sequence": 2,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        },
+                                        {
+                                            "playerId": 2,
+                                            "sequence": 3,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        }
+                                    ],
+                                    "score": 0,
+                                    "stroke": 4,
+                                    "teamId": "tglatlanta",
+                                    "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItem"
+                                },
+                                {
+                                    "hammerUsed": 0,
+                                    "holeProbability": 1.0,
+                                    "holeProbabilityTie": 0.0,
+                                    "isConceded": false,
+                                    "playerSequence": [
+                                        {
+                                            "playerId": 21,
+                                            "sequence": 1,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        },
+                                        {
+                                            "playerId": 23,
+                                            "sequence": 2,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        },
+                                        {
+                                            "playerId": 22,
+                                            "sequence": 3,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        }
+                                    ],
+                                    "score": 1,
+                                    "stroke": 4,
+                                    "teamId": "tglsanfrancisco",
+                                    "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItem"
+                                }
+                            ],
+                            "yards": 553,
+                            "videos": {
+                                "prelive": {
+                                    "date": "2025-01-18T00:00:15.215Z",
+                                    "id": "6367265887112",
+                                    "thumbnail": "brightcove-video/v1/static/6415719604001/44a6d6f3-ac0b-4349-83ac-b4d18a1ff384/76f6d7d7-49d2-4257-ae17-7186c883cfed/1280x720/match/image.jpg",
+                                    "videoDuration": 38336,
+                                    "__typename": "DataApiMatchesResSessionsItemHoleVideo"
+                                },
+                                "recap": null,
+                                "__typename": "DataApiMatchesResSessionsItemHoleVideos"
+                            },
+                            "__typename": "DataApiMatchesResSessionsItemHolesItem"
+                        },
+                        {
+                            "holeConfigId": 143,
+                            "holeConfigVideoId": null,
+                            "holeId": 497,
+                            "holeName": "On The Rocks",
+                            "holeNumber": 3,
+                            "holePar": 3,
+                            "holeSequence": 3,
+                            "holeValue": 1,
+                            "live": false,
+                            "teams": [
+                                {
+                                    "hammerUsed": 0,
+                                    "holeProbability": 0.0,
+                                    "holeProbabilityTie": 0.0,
+                                    "isConceded": true,
+                                    "playerSequence": [
+                                        {
+                                            "playerId": 1,
+                                            "sequence": 1,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        },
+                                        {
+                                            "playerId": 2,
+                                            "sequence": 2,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        },
+                                        {
+                                            "playerId": 4,
+                                            "sequence": 3,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        }
+                                    ],
+                                    "score": 0,
+                                    "stroke": 1,
+                                    "teamId": "tglatlanta",
+                                    "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItem"
+                                },
+                                {
+                                    "hammerUsed": 1,
+                                    "holeProbability": 1.0,
+                                    "holeProbabilityTie": 0.0,
+                                    "isConceded": false,
+                                    "playerSequence": [
+                                        {
+                                            "playerId": 23,
+                                            "sequence": 1,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        },
+                                        {
+                                            "playerId": 22,
+                                            "sequence": 2,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        },
+                                        {
+                                            "playerId": 21,
+                                            "sequence": 3,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        }
+                                    ],
+                                    "score": 1,
+                                    "stroke": 2,
+                                    "teamId": "tglsanfrancisco",
+                                    "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItem"
+                                }
+                            ],
+                            "yards": 156,
+                            "videos": {
+                                "prelive": {
+                                    "date": "2025-01-02T19:24:01.364Z",
+                                    "id": "6366627575112",
+                                    "thumbnail": "brightcove-video/v1/static/6415719604001/9b7f6b4e-4f35-465f-ac07-6381c489d4f4/781f0c69-368c-4a03-85f4-c239f439d4ad/1280x720/match/image.jpg",
+                                    "videoDuration": 16533,
+                                    "__typename": "DataApiMatchesResSessionsItemHoleVideo"
+                                },
+                                "recap": null,
+                                "__typename": "DataApiMatchesResSessionsItemHoleVideos"
+                            },
+                            "__typename": "DataApiMatchesResSessionsItemHolesItem"
+                        },
+                        {
+                            "holeConfigId": 144,
+                            "holeConfigVideoId": null,
+                            "holeId": 498,
+                            "holeName": "Sidewinder",
+                            "holeNumber": 4,
+                            "holePar": 5,
+                            "holeSequence": 4,
+                            "holeValue": 1,
+                            "live": false,
+                            "teams": [
+                                {
+                                    "hammerUsed": 0,
+                                    "holeProbability": 0.0,
+                                    "holeProbabilityTie": 0.0,
+                                    "isConceded": false,
+                                    "playerSequence": [
+                                        {
+                                            "playerId": 2,
+                                            "sequence": 1,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        },
+                                        {
+                                            "playerId": 4,
+                                            "sequence": 2,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        },
+                                        {
+                                            "playerId": 1,
+                                            "sequence": 3,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        }
+                                    ],
+                                    "score": 0,
+                                    "stroke": 4,
+                                    "teamId": "tglatlanta",
+                                    "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItem"
+                                },
+                                {
+                                    "hammerUsed": 0,
+                                    "holeProbability": 1.0,
+                                    "holeProbabilityTie": 0.0,
+                                    "isConceded": false,
+                                    "playerSequence": [
+                                        {
+                                            "playerId": 22,
+                                            "sequence": 1,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        },
+                                        {
+                                            "playerId": 21,
+                                            "sequence": 2,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        },
+                                        {
+                                            "playerId": 23,
+                                            "sequence": 3,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        }
+                                    ],
+                                    "score": 1,
+                                    "stroke": 3,
+                                    "teamId": "tglsanfrancisco",
+                                    "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItem"
+                                }
+                            ],
+                            "yards": 571,
+                            "videos": {
+                                "prelive": {
+                                    "date": "2025-01-17T23:48:57.460Z",
+                                    "id": "6367264692112",
+                                    "thumbnail": "brightcove-video/v1/static/6415719604001/05a37f14-d788-47ee-a8df-c5703c8ffa47/6e3f9b43-d666-4ea4-8775-c8498eff4f70/1280x720/match/image.jpg",
+                                    "videoDuration": 39936,
+                                    "__typename": "DataApiMatchesResSessionsItemHoleVideo"
+                                },
+                                "recap": null,
+                                "__typename": "DataApiMatchesResSessionsItemHoleVideos"
+                            },
+                            "__typename": "DataApiMatchesResSessionsItemHolesItem"
+                        },
+                        {
+                            "holeConfigId": 145,
+                            "holeConfigVideoId": null,
+                            "holeId": 499,
+                            "holeName": "Oh Chute",
+                            "holeNumber": 5,
+                            "holePar": 3,
+                            "holeSequence": 5,
+                            "holeValue": 2,
+                            "live": false,
+                            "teams": [
+                                {
+                                    "hammerUsed": 1,
+                                    "holeProbability": 1.0,
+                                    "holeProbabilityTie": 0.0,
+                                    "isConceded": false,
+                                    "playerSequence": [
+                                        {
+                                            "playerId": 4,
+                                            "sequence": 1,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        },
+                                        {
+                                            "playerId": 1,
+                                            "sequence": 2,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        },
+                                        {
+                                            "playerId": 2,
+                                            "sequence": 3,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        }
+                                    ],
+                                    "score": 2,
+                                    "stroke": 2,
+                                    "teamId": "tglatlanta",
+                                    "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItem"
+                                },
+                                {
+                                    "hammerUsed": 0,
+                                    "holeProbability": 0.0,
+                                    "holeProbabilityTie": 0.0,
+                                    "isConceded": false,
+                                    "playerSequence": [
+                                        {
+                                            "playerId": 21,
+                                            "sequence": 1,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        },
+                                        {
+                                            "playerId": 23,
+                                            "sequence": 2,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        },
+                                        {
+                                            "playerId": 22,
+                                            "sequence": 3,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        }
+                                    ],
+                                    "score": 0,
+                                    "stroke": 3,
+                                    "teamId": "tglsanfrancisco",
+                                    "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItem"
+                                }
+                            ],
+                            "yards": 200,
+                            "videos": {
+                                "prelive": {
+                                    "date": "2025-01-02T19:24:33.047Z",
+                                    "id": "6366627485112",
+                                    "thumbnail": "brightcove-video/v1/static/6415719604001/f0e19f70-b59d-4fdb-9d7d-cbbc52a81146/6850faa8-864a-4f16-9f5c-3c9508d076f5/1280x720/match/image.jpg",
+                                    "videoDuration": 17045,
+                                    "__typename": "DataApiMatchesResSessionsItemHoleVideo"
+                                },
+                                "recap": null,
+                                "__typename": "DataApiMatchesResSessionsItemHoleVideos"
+                            },
+                            "__typename": "DataApiMatchesResSessionsItemHolesItem"
+                        },
+                        {
+                            "holeConfigId": 146,
+                            "holeConfigVideoId": null,
+                            "holeId": 500,
+                            "holeName": "Straight Up",
+                            "holeNumber": 6,
+                            "holePar": 4,
+                            "holeSequence": 6,
+                            "holeValue": 2,
+                            "live": false,
+                            "teams": [
+                                {
+                                    "hammerUsed": 1,
+                                    "holeProbability": 0.0,
+                                    "holeProbabilityTie": 1.0,
+                                    "isConceded": false,
+                                    "playerSequence": [
+                                        {
+                                            "playerId": 1,
+                                            "sequence": 1,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        },
+                                        {
+                                            "playerId": 2,
+                                            "sequence": 2,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        },
+                                        {
+                                            "playerId": 4,
+                                            "sequence": 3,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        }
+                                    ],
+                                    "score": 0,
+                                    "stroke": 4,
+                                    "teamId": "tglatlanta",
+                                    "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItem"
+                                },
+                                {
+                                    "hammerUsed": 0,
+                                    "holeProbability": 0.0,
+                                    "holeProbabilityTie": 1.0,
+                                    "isConceded": false,
+                                    "playerSequence": [
+                                        {
+                                            "playerId": 23,
+                                            "sequence": 1,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        },
+                                        {
+                                            "playerId": 22,
+                                            "sequence": 2,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        },
+                                        {
+                                            "playerId": 21,
+                                            "sequence": 3,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        }
+                                    ],
+                                    "score": 0,
+                                    "stroke": 4,
+                                    "teamId": "tglsanfrancisco",
+                                    "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItem"
+                                }
+                            ],
+                            "yards": 297,
+                            "videos": {
+                                "prelive": {
+                                    "date": "2025-01-01T15:49:21.710Z",
+                                    "id": "6366598524112",
+                                    "thumbnail": "brightcove-video/v1/static/6415719604001/7c2b2065-918f-49fb-a8ce-b1edd2f12b2f/d7bec591-4ff9-4941-a67f-df6aab58d17b/1280x720/match/image.jpg",
+                                    "videoDuration": 34688,
+                                    "__typename": "DataApiMatchesResSessionsItemHoleVideo"
+                                },
+                                "recap": null,
+                                "__typename": "DataApiMatchesResSessionsItemHoleVideos"
+                            },
+                            "__typename": "DataApiMatchesResSessionsItemHolesItem"
+                        },
+                        {
+                            "holeConfigId": 147,
+                            "holeConfigVideoId": null,
+                            "holeId": 501,
+                            "holeName": "Craic On",
+                            "holeNumber": 7,
+                            "holePar": 3,
+                            "holeSequence": 7,
+                            "holeValue": 1,
+                            "live": false,
+                            "teams": [
+                                {
+                                    "hammerUsed": 0,
+                                    "holeProbability": 0.0,
+                                    "holeProbabilityTie": 0.0,
+                                    "isConceded": true,
+                                    "playerSequence": [
+                                        {
+                                            "playerId": 2,
+                                            "sequence": 1,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        },
+                                        {
+                                            "playerId": 4,
+                                            "sequence": 2,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        },
+                                        {
+                                            "playerId": 1,
+                                            "sequence": 3,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        }
+                                    ],
+                                    "score": 0,
+                                    "stroke": 4,
+                                    "teamId": "tglatlanta",
+                                    "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItem"
+                                },
+                                {
+                                    "hammerUsed": 0,
+                                    "holeProbability": 1.0,
+                                    "holeProbabilityTie": 0.0,
+                                    "isConceded": false,
+                                    "playerSequence": [
+                                        {
+                                            "playerId": 22,
+                                            "sequence": 1,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        },
+                                        {
+                                            "playerId": 21,
+                                            "sequence": 2,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        },
+                                        {
+                                            "playerId": 23,
+                                            "sequence": 3,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        }
+                                    ],
+                                    "score": 1,
+                                    "stroke": 1,
+                                    "teamId": "tglsanfrancisco",
+                                    "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItem"
+                                }
+                            ],
+                            "yards": 174,
+                            "videos": {
+                                "prelive": {
+                                    "date": "2025-01-02T19:26:09.215Z",
+                                    "id": "6366628051112",
+                                    "thumbnail": "brightcove-video/v1/static/6415719604001/f82677b2-875f-411e-a737-c03bb4402e7d/a3813f4b-e1a1-4e08-8456-8e9534c69e9c/1280x720/match/image.jpg",
+                                    "videoDuration": 24256,
+                                    "__typename": "DataApiMatchesResSessionsItemHoleVideo"
+                                },
+                                "recap": null,
+                                "__typename": "DataApiMatchesResSessionsItemHoleVideos"
+                            },
+                            "__typename": "DataApiMatchesResSessionsItemHolesItem"
+                        },
+                        {
+                            "holeConfigId": 148,
+                            "holeConfigVideoId": null,
+                            "holeId": 502,
+                            "holeName": "Bluebonnet",
+                            "holeNumber": 8,
+                            "holePar": 4,
+                            "holeSequence": 8,
+                            "holeValue": 1,
+                            "live": false,
+                            "teams": [
+                                {
+                                    "hammerUsed": 0,
+                                    "holeProbability": 0.0,
+                                    "holeProbabilityTie": 1.0,
+                                    "isConceded": false,
+                                    "playerSequence": [
+                                        {
+                                            "playerId": 4,
+                                            "sequence": 1,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        },
+                                        {
+                                            "playerId": 1,
+                                            "sequence": 2,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        },
+                                        {
+                                            "playerId": 2,
+                                            "sequence": 3,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        }
+                                    ],
+                                    "score": 0,
+                                    "stroke": 4,
+                                    "teamId": "tglatlanta",
+                                    "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItem"
+                                },
+                                {
+                                    "hammerUsed": 0,
+                                    "holeProbability": 0.0,
+                                    "holeProbabilityTie": 1.0,
+                                    "isConceded": false,
+                                    "playerSequence": [
+                                        {
+                                            "playerId": 21,
+                                            "sequence": 1,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        },
+                                        {
+                                            "playerId": 23,
+                                            "sequence": 2,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        },
+                                        {
+                                            "playerId": 22,
+                                            "sequence": 3,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        }
+                                    ],
+                                    "score": 0,
+                                    "stroke": 4,
+                                    "teamId": "tglsanfrancisco",
+                                    "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItem"
+                                }
+                            ],
+                            "yards": 474,
+                            "videos": {
+                                "prelive": {
+                                    "date": "2025-01-01T15:48:31.497Z",
+                                    "id": "6366600458112",
+                                    "thumbnail": "brightcove-video/v1/jit/6415719604001/8b888a16-6638-423c-b823-c56ea1d71f52/main/1280x720/20s352ms/match/image.jpg",
+                                    "videoDuration": 40704,
+                                    "__typename": "DataApiMatchesResSessionsItemHoleVideo"
+                                },
+                                "recap": null,
+                                "__typename": "DataApiMatchesResSessionsItemHoleVideos"
+                            },
+                            "__typename": "DataApiMatchesResSessionsItemHolesItem"
+                        },
+                        {
+                            "holeConfigId": 149,
+                            "holeConfigVideoId": null,
+                            "holeId": 503,
+                            "holeName": "Pin Oak",
+                            "holeNumber": 9,
+                            "holePar": 5,
+                            "holeSequence": 9,
+                            "holeValue": 1,
+                            "live": false,
+                            "teams": [
+                                {
+                                    "hammerUsed": 0,
+                                    "holeProbability": 1.0,
+                                    "holeProbabilityTie": 0.0,
+                                    "isConceded": false,
+                                    "playerSequence": [
+                                        {
+                                            "playerId": 1,
+                                            "sequence": 1,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        },
+                                        {
+                                            "playerId": 2,
+                                            "sequence": 2,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        },
+                                        {
+                                            "playerId": 4,
+                                            "sequence": 3,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        }
+                                    ],
+                                    "score": 1,
+                                    "stroke": 3,
+                                    "teamId": "tglatlanta",
+                                    "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItem"
+                                },
+                                {
+                                    "hammerUsed": 0,
+                                    "holeProbability": 0.0,
+                                    "holeProbabilityTie": 0.0,
+                                    "isConceded": true,
+                                    "playerSequence": [
+                                        {
+                                            "playerId": 23,
+                                            "sequence": 1,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        },
+                                        {
+                                            "playerId": 22,
+                                            "sequence": 2,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        },
+                                        {
+                                            "playerId": 21,
+                                            "sequence": 3,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        }
+                                    ],
+                                    "score": 0,
+                                    "stroke": 3,
+                                    "teamId": "tglsanfrancisco",
+                                    "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItem"
+                                }
+                            ],
+                            "yards": 579,
+                            "videos": {
+                                "prelive": {
+                                    "date": "2025-01-17T23:47:32.088Z",
+                                    "id": "6367264293112",
+                                    "thumbnail": "brightcove-video/v1/static/6415719604001/a917c649-5571-4b7b-aea9-a35642616cf9/fd2b7c8a-8c4c-4e6e-a160-bbba76f7ab1e/1280x720/match/image.jpg",
+                                    "videoDuration": 38677,
+                                    "__typename": "DataApiMatchesResSessionsItemHoleVideo"
+                                },
+                                "recap": null,
+                                "__typename": "DataApiMatchesResSessionsItemHoleVideos"
+                            },
+                            "__typename": "DataApiMatchesResSessionsItemHolesItem"
+                        }
+                    ],
+                    "live": false,
+                    "sequence": 1,
+                    "sessionId": 42,
+                    "teams": [
+                        {
+                            "externalId": 1,
+                            "score": 3,
+                            "teamId": "tglatlanta",
+                            "timeoutsRemaining": 1,
+                            "timeoutsUsed": 1,
+                            "__typename": "DataApiMatchesResSessionsItemTeamsItem"
+                        },
+                        {
+                            "externalId": 6,
+                            "score": 4,
+                            "teamId": "tglsanfrancisco",
+                            "timeoutsRemaining": 1,
+                            "timeoutsUsed": 1,
+                            "__typename": "DataApiMatchesResSessionsItemTeamsItem"
+                        }
+                    ],
+                    "timeoutsTotal": 2,
+                    "__typename": "DataApiMatchesResSessionsItem"
+                },
+                {
+                    "format": "SINGLES",
+                    "holes": [
+                        {
+                            "holeConfigId": 150,
+                            "holeConfigVideoId": null,
+                            "holeId": 504,
+                            "holeName": "Sterling",
+                            "holeNumber": 10,
+                            "holePar": 5,
+                            "holeSequence": 1,
+                            "holeValue": 1,
+                            "live": false,
+                            "teams": [
+                                {
+                                    "hammerUsed": 0,
+                                    "holeProbability": 0.0,
+                                    "holeProbabilityTie": 0.0,
+                                    "isConceded": false,
+                                    "playerSequence": [
+                                        {
+                                            "playerId": 2,
+                                            "sequence": 1,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        }
+                                    ],
+                                    "score": 0,
+                                    "stroke": 5,
+                                    "teamId": "tglatlanta",
+                                    "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItem"
+                                },
+                                {
+                                    "hammerUsed": 0,
+                                    "holeProbability": 1.0,
+                                    "holeProbabilityTie": 0.0,
+                                    "isConceded": false,
+                                    "playerSequence": [
+                                        {
+                                            "playerId": 22,
+                                            "sequence": 1,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        }
+                                    ],
+                                    "score": 1,
+                                    "stroke": 4,
+                                    "teamId": "tglsanfrancisco",
+                                    "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItem"
+                                }
+                            ],
+                            "yards": 554,
+                            "videos": {
+                                "prelive": {
+                                    "date": "2025-01-17T23:48:28.190Z",
+                                    "id": "6367265074112",
+                                    "thumbnail": "brightcove-video/v1/static/6415719604001/b27e0875-8996-460d-b303-67f563e17b24/6eaac078-6538-4c8c-a3db-15fde28703b2/1280x720/match/image.jpg",
+                                    "videoDuration": 40341,
+                                    "__typename": "DataApiMatchesResSessionsItemHoleVideo"
+                                },
+                                "recap": null,
+                                "__typename": "DataApiMatchesResSessionsItemHoleVideos"
+                            },
+                            "__typename": "DataApiMatchesResSessionsItemHolesItem"
+                        },
+                        {
+                            "holeConfigId": 151,
+                            "holeConfigVideoId": null,
+                            "holeId": 505,
+                            "holeName": "The Plank",
+                            "holeNumber": 11,
+                            "holePar": 4,
+                            "holeSequence": 2,
+                            "holeValue": 1,
+                            "live": false,
+                            "teams": [
+                                {
+                                    "hammerUsed": 0,
+                                    "holeProbability": 0.0,
+                                    "holeProbabilityTie": 1.0,
+                                    "isConceded": false,
+                                    "playerSequence": [
+                                        {
+                                            "playerId": 4,
+                                            "sequence": 1,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        }
+                                    ],
+                                    "score": 0,
+                                    "stroke": 4,
+                                    "teamId": "tglatlanta",
+                                    "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItem"
+                                },
+                                {
+                                    "hammerUsed": 0,
+                                    "holeProbability": 0.0,
+                                    "holeProbabilityTie": 1.0,
+                                    "isConceded": false,
+                                    "playerSequence": [
+                                        {
+                                            "playerId": 21,
+                                            "sequence": 1,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        }
+                                    ],
+                                    "score": 0,
+                                    "stroke": 4,
+                                    "teamId": "tglsanfrancisco",
+                                    "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItem"
+                                }
+                            ],
+                            "yards": 376,
+                            "videos": {
+                                "prelive": {
+                                    "date": "2024-12-31T17:04:46.819Z",
+                                    "id": "6366579077112",
+                                    "thumbnail": "brightcove-video/v1/static/6415719604001/9978b903-63cb-4603-ae12-e906e06f1e37/7938ab39-83e1-4279-a72a-2434a00ee3f0/1280x720/match/image.jpg",
+                                    "videoDuration": 40192,
+                                    "__typename": "DataApiMatchesResSessionsItemHoleVideo"
+                                },
+                                "recap": null,
+                                "__typename": "DataApiMatchesResSessionsItemHoleVideos"
+                            },
+                            "__typename": "DataApiMatchesResSessionsItemHolesItem"
+                        },
+                        {
+                            "holeConfigId": 152,
+                            "holeConfigVideoId": null,
+                            "holeId": 506,
+                            "holeName": "Set in Stone",
+                            "holeNumber": 12,
+                            "holePar": 3,
+                            "holeSequence": 3,
+                            "holeValue": 2,
+                            "live": false,
+                            "teams": [
+                                {
+                                    "hammerUsed": 1,
+                                    "holeProbability": 1.0,
+                                    "holeProbabilityTie": 0.0,
+                                    "isConceded": false,
+                                    "playerSequence": [
+                                        {
+                                            "playerId": 1,
+                                            "sequence": 1,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        }
+                                    ],
+                                    "score": 2,
+                                    "stroke": 2,
+                                    "teamId": "tglatlanta",
+                                    "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItem"
+                                },
+                                {
+                                    "hammerUsed": 0,
+                                    "holeProbability": 0.0,
+                                    "holeProbabilityTie": 0.0,
+                                    "isConceded": false,
+                                    "playerSequence": [
+                                        {
+                                            "playerId": 23,
+                                            "sequence": 1,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        }
+                                    ],
+                                    "score": 0,
+                                    "stroke": 3,
+                                    "teamId": "tglsanfrancisco",
+                                    "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItem"
+                                }
+                            ],
+                            "yards": 170,
+                            "videos": {
+                                "prelive": {
+                                    "date": "2025-01-02T19:25:39.500Z",
+                                    "id": "6366628448112",
+                                    "thumbnail": "brightcove-video/v1/static/6415719604001/ecab1bc9-53a6-4abf-a6e2-329f0b5363d3/5ed87fbc-2bb9-40bf-ac69-4c5dc1adb8da/1280x720/match/image.jpg",
+                                    "videoDuration": 16853,
+                                    "__typename": "DataApiMatchesResSessionsItemHoleVideo"
+                                },
+                                "recap": null,
+                                "__typename": "DataApiMatchesResSessionsItemHoleVideos"
+                            },
+                            "__typename": "DataApiMatchesResSessionsItemHolesItem"
+                        },
+                        {
+                            "holeConfigId": 153,
+                            "holeConfigVideoId": null,
+                            "holeId": 507,
+                            "holeName": "Temple",
+                            "holeNumber": 13,
+                            "holePar": 4,
+                            "holeSequence": 4,
+                            "holeValue": 1,
+                            "live": false,
+                            "teams": [
+                                {
+                                    "hammerUsed": 0,
+                                    "holeProbability": 0.0146493367406614,
+                                    "holeProbabilityTie": 0.28205783103575965,
+                                    "isConceded": true,
+                                    "playerSequence": [
+                                        {
+                                            "playerId": 2,
+                                            "sequence": 1,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        }
+                                    ],
+                                    "score": 0,
+                                    "stroke": 2,
+                                    "teamId": "tglatlanta",
+                                    "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItem"
+                                },
+                                {
+                                    "hammerUsed": 1,
+                                    "holeProbability": 0.703292832223579,
+                                    "holeProbabilityTie": 0.28205783103575965,
+                                    "isConceded": false,
+                                    "playerSequence": [
+                                        {
+                                            "playerId": 22,
+                                            "sequence": 1,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        }
+                                    ],
+                                    "score": 1,
+                                    "stroke": 2,
+                                    "teamId": "tglsanfrancisco",
+                                    "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItem"
+                                }
+                            ],
+                            "yards": 481,
+                            "videos": {
+                                "prelive": {
+                                    "date": "2025-01-16T16:13:05.245Z",
+                                    "id": "6367181534112",
+                                    "thumbnail": "brightcove-video/v1/static/6415719604001/79ef843e-cb37-421c-bb6d-0c2260de0b20/2bc86995-f6a5-47c3-961a-90371897fb01/1280x720/match/image.jpg",
+                                    "videoDuration": 40107,
+                                    "__typename": "DataApiMatchesResSessionsItemHoleVideo"
+                                },
+                                "recap": null,
+                                "__typename": "DataApiMatchesResSessionsItemHoleVideos"
+                            },
+                            "__typename": "DataApiMatchesResSessionsItemHolesItem"
+                        },
+                        {
+                            "holeConfigId": 154,
+                            "holeConfigVideoId": null,
+                            "holeId": 508,
+                            "holeName": "Cliffhanger",
+                            "holeNumber": 14,
+                            "holePar": 3,
+                            "holeSequence": 5,
+                            "holeValue": 1,
+                            "live": false,
+                            "teams": [
+                                {
+                                    "hammerUsed": 0,
+                                    "holeProbability": 0.0,
+                                    "holeProbabilityTie": 1.0,
+                                    "isConceded": false,
+                                    "playerSequence": [
+                                        {
+                                            "playerId": 4,
+                                            "sequence": 1,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        }
+                                    ],
+                                    "score": 0,
+                                    "stroke": 2,
+                                    "teamId": "tglatlanta",
+                                    "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItem"
+                                },
+                                {
+                                    "hammerUsed": 0,
+                                    "holeProbability": 0.0,
+                                    "holeProbabilityTie": 1.0,
+                                    "isConceded": false,
+                                    "playerSequence": [
+                                        {
+                                            "playerId": 21,
+                                            "sequence": 1,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        }
+                                    ],
+                                    "score": 0,
+                                    "stroke": 2,
+                                    "teamId": "tglsanfrancisco",
+                                    "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItem"
+                                }
+                            ],
+                            "yards": 148,
+                            "videos": {
+                                "prelive": {
+                                    "date": "2025-01-02T19:25:06.064Z",
+                                    "id": "6366628249112",
+                                    "thumbnail": "brightcove-video/v1/static/6415719604001/2081c1af-aea1-4567-b8af-b8197dfef316/825af80a-8a0f-4ecd-a06d-dcbecffc2511/1280x720/match/image.jpg",
+                                    "videoDuration": 20672,
+                                    "__typename": "DataApiMatchesResSessionsItemHoleVideo"
+                                },
+                                "recap": null,
+                                "__typename": "DataApiMatchesResSessionsItemHoleVideos"
+                            },
+                            "__typename": "DataApiMatchesResSessionsItemHolesItem"
+                        },
+                        {
+                            "holeConfigId": 155,
+                            "holeConfigVideoId": null,
+                            "holeId": 509,
+                            "holeName": "Boomerang",
+                            "holeNumber": 15,
+                            "holePar": 5,
+                            "holeSequence": 6,
+                            "holeValue": 1,
+                            "live": false,
+                            "teams": [
+                                {
+                                    "hammerUsed": 0,
+                                    "holeProbability": 0.0,
+                                    "holeProbabilityTie": 1.0,
+                                    "isConceded": false,
+                                    "playerSequence": [
+                                        {
+                                            "playerId": 1,
+                                            "sequence": 1,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        }
+                                    ],
+                                    "score": 0,
+                                    "stroke": 4,
+                                    "teamId": "tglatlanta",
+                                    "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItem"
+                                },
+                                {
+                                    "hammerUsed": 0,
+                                    "holeProbability": 0.0,
+                                    "holeProbabilityTie": 1.0,
+                                    "isConceded": false,
+                                    "playerSequence": [
+                                        {
+                                            "playerId": 23,
+                                            "sequence": 1,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        }
+                                    ],
+                                    "score": 0,
+                                    "stroke": 4,
+                                    "teamId": "tglsanfrancisco",
+                                    "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItem"
+                                }
+                            ],
+                            "yards": 574,
+                            "videos": {
+                                "prelive": {
+                                    "date": "2025-01-01T17:24:06.608Z",
+                                    "id": "6366602076112",
+                                    "thumbnail": "brightcove-video/v1/static/6415719604001/b5a35507-419a-4893-b113-120e0c440f14/6807932c-2024-414f-bad1-9a69273538e5/1280x720/match/image.jpg",
+                                    "videoDuration": 40427,
+                                    "__typename": "DataApiMatchesResSessionsItemHoleVideo"
+                                },
+                                "recap": null,
+                                "__typename": "DataApiMatchesResSessionsItemHoleVideos"
+                            },
+                            "__typename": "DataApiMatchesResSessionsItemHolesItem"
+                        }
+                    ],
+                    "live": false,
+                    "sequence": 2,
+                    "sessionId": 43,
+                    "teams": [
+                        {
+                            "externalId": 1,
+                            "score": 2,
+                            "teamId": "tglatlanta",
+                            "timeoutsRemaining": 0,
+                            "timeoutsUsed": 2,
+                            "__typename": "DataApiMatchesResSessionsItemTeamsItem"
+                        },
+                        {
+                            "externalId": 6,
+                            "score": 2,
+                            "teamId": "tglsanfrancisco",
+                            "timeoutsRemaining": 2,
+                            "timeoutsUsed": 0,
+                            "__typename": "DataApiMatchesResSessionsItemTeamsItem"
+                        }
+                    ],
+                    "timeoutsTotal": 2,
+                    "__typename": "DataApiMatchesResSessionsItem"
+                }
+            ],
+            "startTime": "2025-02-17T21:00:00.000000Z",
+            "startDate": "2025-02-17",
+            "teams": [
+                {
+                    "designation": "Away",
+                    "hasHammer": false,
+                    "hammersPerTeam": 3,
+                    "hammersUsed": 3,
+                    "hammersRemaining": 0,
+                    "isCeremonyWinner": false,
+                    "matchProbability": 0.0,
+                    "matchProbabilityTie": 0.0,
+                    "players": [
+                        {
+                            "firstName": "Patrick",
+                            "isCaptain": false,
+                            "lastName": "Cantlay",
+                            "playerId": 2,
+                            "shortName": null,
+                            "__typename": "DataApiMatchesResTeamsItemPlayersItem"
+                        },
+                        {
+                            "firstName": "Lucas",
+                            "isCaptain": false,
+                            "lastName": "Glover",
+                            "playerId": 4,
+                            "shortName": null,
+                            "__typename": "DataApiMatchesResTeamsItemPlayersItem"
+                        },
+                        {
+                            "firstName": "Justin",
+                            "isCaptain": true,
+                            "lastName": "Thomas",
+                            "playerId": 1,
+                            "shortName": null,
+                            "__typename": "DataApiMatchesResTeamsItemPlayersItem"
+                        }
+                    ],
+                    "score": 5,
+                    "teamCode": "ATL",
+                    "teamId": "tglatlanta",
+                    "teamName": "Atlanta Drive GC",
+                    "teamStandings": "4-1-0",
+                    "__typename": "DataApiMatchesResTeamsItem"
+                },
+                {
+                    "designation": "Home",
+                    "hasHammer": false,
+                    "hammersPerTeam": 3,
+                    "hammersUsed": 2,
+                    "hammersRemaining": 1,
+                    "isCeremonyWinner": false,
+                    "matchProbability": 1.0,
+                    "matchProbabilityTie": 0.0,
+                    "players": [
+                        {
+                            "firstName": "Wyndham",
+                            "isCaptain": true,
+                            "lastName": "Clark",
+                            "playerId": 22,
+                            "shortName": null,
+                            "__typename": "DataApiMatchesResTeamsItemPlayersItem"
+                        },
+                        {
+                            "firstName": "Ludvig",
+                            "isCaptain": false,
+                            "lastName": "Åberg",
+                            "playerId": 21,
+                            "shortName": null,
+                            "__typename": "DataApiMatchesResTeamsItemPlayersItem"
+                        },
+                        {
+                            "firstName": "Min Woo",
+                            "isCaptain": false,
+                            "lastName": "Lee",
+                            "playerId": 23,
+                            "shortName": null,
+                            "__typename": "DataApiMatchesResTeamsItemPlayersItem"
+                        }
+                    ],
+                    "score": 6,
+                    "teamCode": "BAY",
+                    "teamId": "tglsanfrancisco",
+                    "teamName": "The Bay Golf Club",
+                    "teamStandings": "4-1-0",
+                    "__typename": "DataApiMatchesResTeamsItem"
+                }
+            ],
+            "overtime": {
+                "teams": [
+                    {
+                        "teamId": "tglatlanta",
+                        "points": 0,
+                        "__typename": "DataApiMatchesResOvertimeItemTeam"
+                    },
+                    {
+                        "teamId": "tglsanfrancisco",
+                        "points": 0,
+                        "__typename": "DataApiMatchesResOvertimeItemTeam"
+                    }
+                ],
+                "holes": [],
+                "__typename": "DataApiMatchesResOvertimeItem"
+            },
+            "currentTeamId": "tglatlanta",
+            "currentPlayerId": 1,
+            "upcomingTeamId": null,
+            "upcomingPlayerId": null,
+            "__typename": "DataApiMatchesRes"
+        },
+        "playByPlayList": {
+            "matchId": 7,
+            "matchStatus": "Closed",
+            "sessions": [
+                {
+                    "sessionId": 43,
+                    "sequence": 2,
+                    "sessionScore": "5 - 6",
+                    "playByPlay": [
+                        {
+                            "holeNumber": 15,
+                            "holeScore": "4",
+                            "timeline": [
+                                {
+                                    "shot": 4,
+                                    "playerId": 1,
+                                    "timestamp": "2025-02-17T22:44:21.053000Z",
+                                    "teamId": "tglatlanta",
+                                    "externalId": 1,
+                                    "pbpText": "BAY concedes putt; Justin Thomas receives a Gimme.",
+                                    "club": null,
+                                    "strokeType": "GIMME",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 3,
+                                    "playerId": 1,
+                                    "timestamp": "2025-02-17T22:44:20.802000Z",
+                                    "teamId": "tglatlanta",
+                                    "externalId": 1,
+                                    "pbpText": "Justin Thomas putts from 22 ft 2 in, 5 in left to hole.",
+                                    "club": "PUTTER",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "actionType": "CALLED_TIMEOUT",
+                                    "timestamp": "2025-02-17T22:43:08.156000Z",
+                                    "teamId": "tglatlanta",
+                                    "externalId": 1,
+                                    "pbpText": "ATL calls timeout, no timeouts remaining.",
+                                    "__typename": "DataApiPlayByPlayTimelineEventHoleAction"
+                                },
+                                {
+                                    "shot": 4,
+                                    "playerId": 23,
+                                    "timestamp": "2025-02-17T22:42:17.493000Z",
+                                    "teamId": "tglsanfrancisco",
+                                    "externalId": 6,
+                                    "pbpText": "ATL concedes putt; Min Woo Lee receives a Gimme.",
+                                    "club": null,
+                                    "strokeType": "GIMME",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 3,
+                                    "playerId": 23,
+                                    "timestamp": "2025-02-17T22:42:17.249000Z",
+                                    "teamId": "tglsanfrancisco",
+                                    "externalId": 6,
+                                    "pbpText": "Min Woo Lee hits Sand Wedge 42 ft 2 in to Green, 2 ft 4 in left to hole.",
+                                    "club": "SAND_WEDGE",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 2,
+                                    "playerId": 1,
+                                    "timestamp": "2025-02-17T22:40:56.497000Z",
+                                    "teamId": "tglatlanta",
+                                    "externalId": 1,
+                                    "pbpText": "Justin Thomas hits shot 243 yds to Green, 22 ft 2 in left to hole.",
+                                    "club": null,
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 2,
+                                    "playerId": 23,
+                                    "timestamp": "2025-02-17T22:40:26.948000Z",
+                                    "teamId": "tglsanfrancisco",
+                                    "externalId": 6,
+                                    "pbpText": "Min Woo Lee hits shot 230 yds to Fairway, 40 ft 3 in left to hole.",
+                                    "club": null,
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 1,
+                                    "playerId": 1,
+                                    "timestamp": "2025-02-17T22:39:40.294000Z",
+                                    "teamId": "tglatlanta",
+                                    "externalId": 1,
+                                    "pbpText": "Justin Thomas hits Driver 327 yds to Fairway, 234 yds left to hole.",
+                                    "club": "DRIVER",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 1,
+                                    "playerId": 23,
+                                    "timestamp": "2025-02-17T22:39:01.940000Z",
+                                    "teamId": "tglsanfrancisco",
+                                    "externalId": 6,
+                                    "pbpText": "Min Woo Lee hits Driver 322 yds to Fairway, 237 yds left to hole.",
+                                    "club": "DRIVER",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                }
+                            ],
+                            "holeWinningTeamId": null,
+                            "holeLosingTeamId": null,
+                            "holeEnd": {
+                                "pbpText": "The hole ends in a tie.",
+                                "__typename": "DataApiPlayByPlayTimelineEventMessage"
+                            },
+                            "__typename": "DataApiPlayByPlayHole"
+                        },
+                        {
+                            "holeNumber": 14,
+                            "holeScore": "2",
+                            "timeline": [
+                                {
+                                    "shot": 2,
+                                    "playerId": 21,
+                                    "timestamp": "2025-02-17T22:36:51.740000Z",
+                                    "teamId": "tglsanfrancisco",
+                                    "externalId": 6,
+                                    "pbpText": "Ludvig Åberg makes putt from 3 ft 3 in.",
+                                    "club": "PUTTER",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 2,
+                                    "playerId": 4,
+                                    "timestamp": "2025-02-17T22:36:26.691000Z",
+                                    "teamId": "tglatlanta",
+                                    "externalId": 1,
+                                    "pbpText": "Lucas Glover makes putt from 4 ft 11 in.",
+                                    "club": "PUTTER",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "actionType": "CALLED_TIMEOUT",
+                                    "timestamp": "2025-02-17T22:35:47.502000Z",
+                                    "teamId": "tglatlanta",
+                                    "externalId": 1,
+                                    "pbpText": "ATL calls timeout, 1 timeout remaining.",
+                                    "__typename": "DataApiPlayByPlayTimelineEventHoleAction"
+                                },
+                                {
+                                    "shot": 1,
+                                    "playerId": 4,
+                                    "timestamp": "2025-02-17T22:34:34.802000Z",
+                                    "teamId": "tglatlanta",
+                                    "externalId": 1,
+                                    "pbpText": "Lucas Glover hits shot 150 yds to Green, 4 ft 11 in left to hole.",
+                                    "club": null,
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 1,
+                                    "playerId": 21,
+                                    "timestamp": "2025-02-17T22:33:46.550000Z",
+                                    "teamId": "tglsanfrancisco",
+                                    "externalId": 6,
+                                    "pbpText": "Ludvig Åberg hits shot 148 yds to Green, 3 ft 3 in left to hole.",
+                                    "club": null,
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                }
+                            ],
+                            "holeWinningTeamId": null,
+                            "holeLosingTeamId": null,
+                            "holeEnd": {
+                                "pbpText": "The hole ends in a tie.",
+                                "__typename": "DataApiPlayByPlayTimelineEventMessage"
+                            },
+                            "__typename": "DataApiPlayByPlayHole"
+                        },
+                        {
+                            "holeNumber": 13,
+                            "holeScore": "1",
+                            "timeline": [
+                                {
+                                    "actionType": "HAD_HAMMER_DECLINED",
+                                    "timestamp": "2025-02-17T22:32:13.986000Z",
+                                    "teamId": "tglsanfrancisco",
+                                    "externalId": 6,
+                                    "pbpText": "BAY throws Hammer, ATL declines.",
+                                    "__typename": "DataApiPlayByPlayTimelineEventHoleAction"
+                                },
+                                {
+                                    "shot": 2,
+                                    "playerId": 22,
+                                    "timestamp": "2025-02-17T22:31:27.220000Z",
+                                    "teamId": "tglsanfrancisco",
+                                    "externalId": 6,
+                                    "pbpText": "Wyndham Clark hits shot 178 yds to Green, 8 ft 1 in left to hole.",
+                                    "club": null,
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 2,
+                                    "playerId": 2,
+                                    "timestamp": "2025-02-17T22:30:38.457000Z",
+                                    "teamId": "tglatlanta",
+                                    "externalId": 1,
+                                    "pbpText": "Patrick Cantlay hits shot 184 yds to Bunker, 27 ft 11 in left to hole.",
+                                    "club": null,
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 1,
+                                    "playerId": 22,
+                                    "timestamp": "2025-02-17T22:29:58.446000Z",
+                                    "teamId": "tglsanfrancisco",
+                                    "externalId": 6,
+                                    "pbpText": "Wyndham Clark hits Driver 317 yds to Fairway, 175 yds left to hole.",
+                                    "club": "DRIVER",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 1,
+                                    "playerId": 2,
+                                    "timestamp": "2025-02-17T22:29:24.031000Z",
+                                    "teamId": "tglatlanta",
+                                    "externalId": 1,
+                                    "pbpText": "Patrick Cantlay hits Driver 310 yds to Fairway, 178 yds left to hole.",
+                                    "club": "DRIVER",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                }
+                            ],
+                            "holeWinningTeamId": "tglsanfrancisco",
+                            "holeLosingTeamId": "tglatlanta",
+                            "holeEnd": {
+                                "pbpText": "BAY wins hole by concession for 1 point.",
+                                "__typename": "DataApiPlayByPlayTimelineEventMessage"
+                            },
+                            "__typename": "DataApiPlayByPlayHole"
+                        },
+                        {
+                            "holeNumber": 12,
+                            "holeScore": "2",
+                            "timeline": [
+                                {
+                                    "shot": 2,
+                                    "playerId": 1,
+                                    "timestamp": "2025-02-17T22:23:13.226000Z",
+                                    "teamId": "tglatlanta",
+                                    "externalId": 1,
+                                    "pbpText": "Justin Thomas makes putt from 7 ft 11 in.",
+                                    "club": "PUTTER",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 3,
+                                    "playerId": 23,
+                                    "timestamp": "2025-02-17T22:22:30.282000Z",
+                                    "teamId": "tglsanfrancisco",
+                                    "externalId": 6,
+                                    "pbpText": "ATL concedes putt; Min Woo Lee receives a Gimme.",
+                                    "club": null,
+                                    "strokeType": "GIMME",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 2,
+                                    "playerId": 23,
+                                    "timestamp": "2025-02-17T22:22:30.038000Z",
+                                    "teamId": "tglsanfrancisco",
+                                    "externalId": 6,
+                                    "pbpText": "Min Woo Lee hits Sand Wedge 14 ft 2 in to Green, 19 in left to hole.",
+                                    "club": "SAND_WEDGE",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 1,
+                                    "playerId": 1,
+                                    "timestamp": "2025-02-17T22:21:08.806000Z",
+                                    "teamId": "tglatlanta",
+                                    "externalId": 1,
+                                    "pbpText": "Justin Thomas hits shot 174 yds to Green, 7 ft 11 in left to hole.",
+                                    "club": null,
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 1,
+                                    "playerId": 23,
+                                    "timestamp": "2025-02-17T22:20:32.972000Z",
+                                    "teamId": "tglsanfrancisco",
+                                    "externalId": 6,
+                                    "pbpText": "Min Woo Lee hits shot 174 yds to Fairway, 15 ft 8 in left to hole.",
+                                    "club": null,
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "actionType": "HAD_HAMMER_ACCEPTED",
+                                    "timestamp": "2025-02-17T22:19:55.963000Z",
+                                    "teamId": "tglatlanta",
+                                    "externalId": 1,
+                                    "pbpText": "ATL throws Hammer, BAY accepts.",
+                                    "__typename": "DataApiPlayByPlayTimelineEventHoleAction"
+                                }
+                            ],
+                            "holeWinningTeamId": "tglatlanta",
+                            "holeLosingTeamId": "tglsanfrancisco",
+                            "holeEnd": {
+                                "pbpText": "ATL wins hole for 2 points.",
+                                "__typename": "DataApiPlayByPlayTimelineEventMessage"
+                            },
+                            "__typename": "DataApiPlayByPlayHole"
+                        },
+                        {
+                            "holeNumber": 11,
+                            "holeScore": "4",
+                            "timeline": [
+                                {
+                                    "shot": 4,
+                                    "playerId": 4,
+                                    "timestamp": "2025-02-17T22:18:25.781000Z",
+                                    "teamId": "tglatlanta",
+                                    "externalId": 1,
+                                    "pbpText": "Lucas Glover makes putt from 8 ft 5 in.",
+                                    "club": "PUTTER",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 4,
+                                    "playerId": 21,
+                                    "timestamp": "2025-02-17T22:16:34.279000Z",
+                                    "teamId": "tglsanfrancisco",
+                                    "externalId": 6,
+                                    "pbpText": "ATL concedes putt; Ludvig Åberg receives a Gimme.",
+                                    "club": null,
+                                    "strokeType": "GIMME",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 3,
+                                    "playerId": 21,
+                                    "timestamp": "2025-02-17T22:16:34.040000Z",
+                                    "teamId": "tglsanfrancisco",
+                                    "externalId": 6,
+                                    "pbpText": "Ludvig Åberg putts from 12 ft 9 in, 2 ft 4 in left to hole.",
+                                    "club": "PUTTER",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 3,
+                                    "playerId": 4,
+                                    "timestamp": "2025-02-17T22:15:39.542000Z",
+                                    "teamId": "tglatlanta",
+                                    "externalId": 1,
+                                    "pbpText": "Lucas Glover hits Sand Wedge 39 ft 7 in to Green, 8 ft 5 in left to hole.",
+                                    "club": "SAND_WEDGE",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 2,
+                                    "playerId": 4,
+                                    "timestamp": "2025-02-17T22:14:37.095000Z",
+                                    "teamId": "tglatlanta",
+                                    "externalId": 1,
+                                    "pbpText": "Lucas Glover hits shot 108 yds to Bunker, 31 ft 9 in left to hole.",
+                                    "club": null,
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 2,
+                                    "playerId": 21,
+                                    "timestamp": "2025-02-17T22:14:06.266000Z",
+                                    "teamId": "tglsanfrancisco",
+                                    "externalId": 6,
+                                    "pbpText": "Ludvig Åberg hits shot 101 yds to Green, 12 ft 9 in left to hole.",
+                                    "club": null,
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 1,
+                                    "playerId": 4,
+                                    "timestamp": "2025-02-17T22:13:29.245000Z",
+                                    "teamId": "tglatlanta",
+                                    "externalId": 1,
+                                    "pbpText": "Lucas Glover hits Driver 286 yds to Fairway, 97 yds left to hole.",
+                                    "club": "DRIVER",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 1,
+                                    "playerId": 21,
+                                    "timestamp": "2025-02-17T22:13:05.985000Z",
+                                    "teamId": "tglsanfrancisco",
+                                    "externalId": 6,
+                                    "pbpText": "Ludvig Åberg hits shot 282 yds to Fairway, 101 yds left to hole.",
+                                    "club": null,
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                }
+                            ],
+                            "holeWinningTeamId": null,
+                            "holeLosingTeamId": null,
+                            "holeEnd": {
+                                "pbpText": "The hole ends in a tie.",
+                                "__typename": "DataApiPlayByPlayTimelineEventMessage"
+                            },
+                            "__typename": "DataApiPlayByPlayHole"
+                        },
+                        {
+                            "holeNumber": 10,
+                            "holeScore": "1",
+                            "timeline": [
+                                {
+                                    "shot": 4,
+                                    "playerId": 22,
+                                    "timestamp": "2025-02-17T22:11:18.921000Z",
+                                    "teamId": "tglsanfrancisco",
+                                    "externalId": 6,
+                                    "pbpText": "ATL concedes putt; Wyndham Clark receives a Gimme.",
+                                    "club": null,
+                                    "strokeType": "GIMME",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 3,
+                                    "playerId": 22,
+                                    "timestamp": "2025-02-17T22:11:18.710000Z",
+                                    "teamId": "tglsanfrancisco",
+                                    "externalId": 6,
+                                    "pbpText": "Wyndham Clark putts from 17 ft 6 in, 15 in left to hole.",
+                                    "club": "PUTTER",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 5,
+                                    "playerId": 2,
+                                    "timestamp": "2025-02-17T22:10:43.773000Z",
+                                    "teamId": "tglatlanta",
+                                    "externalId": 1,
+                                    "pbpText": "BAY concedes putt; Patrick Cantlay receives a Gimme.",
+                                    "club": null,
+                                    "strokeType": "GIMME",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 4,
+                                    "playerId": 2,
+                                    "timestamp": "2025-02-17T22:10:43.507000Z",
+                                    "teamId": "tglatlanta",
+                                    "externalId": 1,
+                                    "pbpText": "Patrick Cantlay hits Sand Wedge 22 ft 6 in to Green, 15 in left to hole.",
+                                    "club": "SAND_WEDGE",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 3,
+                                    "playerId": 2,
+                                    "timestamp": "2025-02-17T22:10:21.346000Z",
+                                    "teamId": "tglatlanta",
+                                    "externalId": 1,
+                                    "pbpText": "Patrick Cantlay hits Sand Wedge 9 ft 10 in to Fairway, 22 ft 8 in left to hole.",
+                                    "club": "SAND_WEDGE",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 2,
+                                    "playerId": 22,
+                                    "timestamp": "2025-02-17T22:09:30.130000Z",
+                                    "teamId": "tglsanfrancisco",
+                                    "externalId": 6,
+                                    "pbpText": "Wyndham Clark hits shot 224 yds to Fairway, 17 ft 6 in left to hole.",
+                                    "club": null,
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 2,
+                                    "playerId": 2,
+                                    "timestamp": "2025-02-17T22:08:55.393000Z",
+                                    "teamId": "tglatlanta",
+                                    "externalId": 1,
+                                    "pbpText": "Patrick Cantlay hits shot 237 yds to Fairway, 32 ft 5 in left to hole.",
+                                    "club": null,
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 1,
+                                    "playerId": 22,
+                                    "timestamp": "2025-02-17T22:08:10.150000Z",
+                                    "teamId": "tglsanfrancisco",
+                                    "externalId": 6,
+                                    "pbpText": "Wyndham Clark hits Driver 322 yds to Fairway, 228 yds left to hole.",
+                                    "club": "DRIVER",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 1,
+                                    "playerId": 2,
+                                    "timestamp": "2025-02-17T22:07:28.412000Z",
+                                    "teamId": "tglatlanta",
+                                    "externalId": 1,
+                                    "pbpText": "Patrick Cantlay hits Driver 304 yds to Fairway, 246 yds left to hole.",
+                                    "club": "DRIVER",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                }
+                            ],
+                            "holeWinningTeamId": "tglsanfrancisco",
+                            "holeLosingTeamId": "tglatlanta",
+                            "holeEnd": {
+                                "pbpText": "BAY wins hole for 1 point.",
+                                "__typename": "DataApiPlayByPlayTimelineEventMessage"
+                            },
+                            "__typename": "DataApiPlayByPlayHole"
+                        }
+                    ],
+                    "sessionEnd": {
+                        "pbpText": "Singles has ended.",
+                        "__typename": "DataApiPlayByPlayTimelineEventMessage"
+                    },
+                    "__typename": "DataApiPlayByPlaySession"
+                },
+                {
+                    "sessionId": 42,
+                    "sequence": 1,
+                    "sessionScore": "3 - 4",
+                    "playByPlay": [
+                        {
+                            "holeNumber": 9,
+                            "holeScore": "1",
+                            "timeline": [
+                                {
+                                    "shot": 3,
+                                    "playerId": 21,
+                                    "timestamp": "2025-02-17T21:57:28.106000Z",
+                                    "teamId": "tglsanfrancisco",
+                                    "externalId": 6,
+                                    "pbpText": "Ludvig Åberg putts from 18 ft 2 in, 20 in left to hole.",
+                                    "club": "PUTTER",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 3,
+                                    "playerId": 4,
+                                    "timestamp": "2025-02-17T21:56:33.600000Z",
+                                    "teamId": "tglatlanta",
+                                    "externalId": 1,
+                                    "pbpText": "Lucas Glover holes out from 27 ft 5 in.",
+                                    "club": "SAND_WEDGE",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 2,
+                                    "playerId": 22,
+                                    "timestamp": "2025-02-17T21:55:40.499000Z",
+                                    "teamId": "tglsanfrancisco",
+                                    "externalId": 6,
+                                    "pbpText": "Wyndham Clark hits shot 237 yds to Green, 18 ft 2 in left to hole.",
+                                    "club": null,
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 2,
+                                    "playerId": 2,
+                                    "timestamp": "2025-02-17T21:54:51.983000Z",
+                                    "teamId": "tglatlanta",
+                                    "externalId": 1,
+                                    "pbpText": "Patrick Cantlay hits shot 240 yds to Fairway, 27 ft 5 in left to hole.",
+                                    "club": null,
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 1,
+                                    "playerId": 1,
+                                    "timestamp": "2025-02-17T21:53:51.948000Z",
+                                    "teamId": "tglatlanta",
+                                    "externalId": 1,
+                                    "pbpText": "Justin Thomas hits Driver 329 yds to Rough, 247 yds left to hole.",
+                                    "club": "DRIVER",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 1,
+                                    "playerId": 23,
+                                    "timestamp": "2025-02-17T21:53:11.167000Z",
+                                    "teamId": "tglsanfrancisco",
+                                    "externalId": 6,
+                                    "pbpText": "Min Woo Lee hits Driver 338 yds to Fairway, 237 yds left to hole.",
+                                    "club": "DRIVER",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                }
+                            ],
+                            "holeWinningTeamId": "tglatlanta",
+                            "holeLosingTeamId": "tglsanfrancisco",
+                            "holeEnd": {
+                                "pbpText": "ATL wins hole by concession for 1 point.",
+                                "__typename": "DataApiPlayByPlayTimelineEventMessage"
+                            },
+                            "__typename": "DataApiPlayByPlayHole"
+                        },
+                        {
+                            "holeNumber": 8,
+                            "holeScore": "4",
+                            "timeline": [
+                                {
+                                    "shot": 4,
+                                    "playerId": 21,
+                                    "timestamp": "2025-02-17T21:51:35.330000Z",
+                                    "teamId": "tglsanfrancisco",
+                                    "externalId": 6,
+                                    "pbpText": "Ludvig Åberg makes putt from 4 ft 6 in.",
+                                    "club": "PUTTER",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 3,
+                                    "playerId": 22,
+                                    "timestamp": "2025-02-17T21:51:04.453000Z",
+                                    "teamId": "tglsanfrancisco",
+                                    "externalId": 6,
+                                    "pbpText": "Wyndham Clark putts from 40 ft 5 in, 4 ft 6 in left to hole.",
+                                    "club": "PUTTER",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 4,
+                                    "playerId": 4,
+                                    "timestamp": "2025-02-17T21:50:22.506000Z",
+                                    "teamId": "tglatlanta",
+                                    "externalId": 1,
+                                    "pbpText": "BAY concedes putt; Lucas Glover receives a Gimme.",
+                                    "club": null,
+                                    "strokeType": "GIMME",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 3,
+                                    "playerId": 2,
+                                    "timestamp": "2025-02-17T21:50:22.257000Z",
+                                    "teamId": "tglatlanta",
+                                    "externalId": 1,
+                                    "pbpText": "Patrick Cantlay putts from 43 ft 7 in, 9 in left to hole.",
+                                    "club": "PUTTER",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 2,
+                                    "playerId": 23,
+                                    "timestamp": "2025-02-17T21:48:52.368000Z",
+                                    "teamId": "tglsanfrancisco",
+                                    "externalId": 6,
+                                    "pbpText": "Min Woo Lee hits shot 168 yds to Green, 40 ft 5 in left to hole.",
+                                    "club": null,
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 2,
+                                    "playerId": 1,
+                                    "timestamp": "2025-02-17T21:48:12.849000Z",
+                                    "teamId": "tglatlanta",
+                                    "externalId": 1,
+                                    "pbpText": "Justin Thomas hits shot 168 yds to Green, 43 ft 7 in left to hole.",
+                                    "club": null,
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 1,
+                                    "playerId": 4,
+                                    "timestamp": "2025-02-17T21:47:12.650000Z",
+                                    "teamId": "tglatlanta",
+                                    "externalId": 1,
+                                    "pbpText": "Lucas Glover hits Driver 293 yds to Fairway, 170 yds left to hole.",
+                                    "club": "DRIVER",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 1,
+                                    "playerId": 21,
+                                    "timestamp": "2025-02-17T21:46:43.164000Z",
+                                    "teamId": "tglsanfrancisco",
+                                    "externalId": 6,
+                                    "pbpText": "Ludvig Åberg hits Driver 313 yds to Fairway, 160 yds left to hole.",
+                                    "club": "DRIVER",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                }
+                            ],
+                            "holeWinningTeamId": null,
+                            "holeLosingTeamId": null,
+                            "holeEnd": {
+                                "pbpText": "The hole ends in a tie.",
+                                "__typename": "DataApiPlayByPlayTimelineEventMessage"
+                            },
+                            "__typename": "DataApiPlayByPlayHole"
+                        },
+                        {
+                            "holeNumber": 7,
+                            "holeScore": "1",
+                            "timeline": [
+                                {
+                                    "shot": 4,
+                                    "playerId": 2,
+                                    "timestamp": "2025-02-17T21:45:13.564000Z",
+                                    "teamId": "tglatlanta",
+                                    "externalId": 1,
+                                    "pbpText": "BAY concedes putt; Patrick Cantlay receives a Gimme.",
+                                    "club": null,
+                                    "strokeType": "GIMME",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 3,
+                                    "playerId": 1,
+                                    "timestamp": "2025-02-17T21:45:13.338000Z",
+                                    "teamId": "tglatlanta",
+                                    "externalId": 1,
+                                    "pbpText": "Justin Thomas hits Sand Wedge 14 ft 1 in to Green, 3 ft 1 in left to hole.",
+                                    "club": "SAND_WEDGE",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 2,
+                                    "playerId": 4,
+                                    "timestamp": "2025-02-17T21:44:27.841000Z",
+                                    "teamId": "tglatlanta",
+                                    "externalId": 1,
+                                    "pbpText": "Lucas Glover hits Sand Wedge 8 ft 9 in to Rough, 17 ft 2 in left to hole.",
+                                    "club": "SAND_WEDGE",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 1,
+                                    "playerId": 22,
+                                    "timestamp": "2025-02-17T21:43:36.362000Z",
+                                    "teamId": "tglsanfrancisco",
+                                    "externalId": 6,
+                                    "pbpText": "Wyndham Clark hits shot 171 yds to Green, 11 ft 9 in left to hole.",
+                                    "club": null,
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 1,
+                                    "playerId": 2,
+                                    "timestamp": "2025-02-17T21:42:54.382000Z",
+                                    "teamId": "tglatlanta",
+                                    "externalId": 1,
+                                    "pbpText": "Patrick Cantlay hits shot 183 yds to Bunker, 25 ft 9 in left to hole.",
+                                    "club": null,
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                }
+                            ],
+                            "holeWinningTeamId": "tglsanfrancisco",
+                            "holeLosingTeamId": "tglatlanta",
+                            "holeEnd": {
+                                "pbpText": "BAY wins hole by concession for 1 point.",
+                                "__typename": "DataApiPlayByPlayTimelineEventMessage"
+                            },
+                            "__typename": "DataApiPlayByPlayHole"
+                        },
+                        {
+                            "holeNumber": 6,
+                            "holeScore": "4",
+                            "timeline": [
+                                {
+                                    "shot": 4,
+                                    "playerId": 1,
+                                    "timestamp": "2025-02-17T21:38:11.322000Z",
+                                    "teamId": "tglatlanta",
+                                    "externalId": 1,
+                                    "pbpText": "BAY concedes putt; Justin Thomas receives a Gimme.",
+                                    "club": null,
+                                    "strokeType": "GIMME",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 3,
+                                    "playerId": 4,
+                                    "timestamp": "2025-02-17T21:38:11.036000Z",
+                                    "teamId": "tglatlanta",
+                                    "externalId": 1,
+                                    "pbpText": "Lucas Glover putts from 7 ft 5 in, 2 ft 5 in left to hole.",
+                                    "club": "PUTTER",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "actionType": "HAD_HAMMER_ACCEPTED",
+                                    "timestamp": "2025-02-17T21:37:27.886000Z",
+                                    "teamId": "tglatlanta",
+                                    "externalId": 1,
+                                    "pbpText": "ATL throws Hammer, BAY accepts.",
+                                    "__typename": "DataApiPlayByPlayTimelineEventHoleAction"
+                                },
+                                {
+                                    "shot": 4,
+                                    "playerId": 23,
+                                    "timestamp": "2025-02-17T21:36:44.760000Z",
+                                    "teamId": "tglsanfrancisco",
+                                    "externalId": 6,
+                                    "pbpText": "ATL concedes putt; Min Woo Lee receives a Gimme.",
+                                    "club": null,
+                                    "strokeType": "GIMME",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 3,
+                                    "playerId": 21,
+                                    "timestamp": "2025-02-17T21:36:44.468000Z",
+                                    "teamId": "tglsanfrancisco",
+                                    "externalId": 6,
+                                    "pbpText": "Ludvig Åberg putts from 15 ft 1 in, 19 in left to hole.",
+                                    "club": "PUTTER",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 2,
+                                    "playerId": 2,
+                                    "timestamp": "2025-02-17T21:36:02.754000Z",
+                                    "teamId": "tglatlanta",
+                                    "externalId": 1,
+                                    "pbpText": "Patrick Cantlay hits Sand Wedge 54 ft 11 in to Green, 7 ft 5 in left to hole.",
+                                    "club": "SAND_WEDGE",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 2,
+                                    "playerId": 22,
+                                    "timestamp": "2025-02-17T21:35:27.501000Z",
+                                    "teamId": "tglsanfrancisco",
+                                    "externalId": 6,
+                                    "pbpText": "Wyndham Clark hits Sand Wedge 86 ft 3 in to Green, 15 ft 1 in left to hole.",
+                                    "club": "SAND_WEDGE",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 1,
+                                    "playerId": 23,
+                                    "timestamp": "2025-02-17T21:34:18.676000Z",
+                                    "teamId": "tglsanfrancisco",
+                                    "externalId": 6,
+                                    "pbpText": "Min Woo Lee hits shot 291 yds to Fairway, 34 yds left to hole.",
+                                    "club": null,
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 1,
+                                    "playerId": 1,
+                                    "timestamp": "2025-02-17T21:33:28.296000Z",
+                                    "teamId": "tglatlanta",
+                                    "externalId": 1,
+                                    "pbpText": "Justin Thomas hits shot 286 yds to Rough, 49 ft 2 in left to hole.",
+                                    "club": null,
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "actionType": "CALLED_TIMEOUT",
+                                    "timestamp": "2025-02-17T21:32:37.351000Z",
+                                    "teamId": "tglatlanta",
+                                    "externalId": 1,
+                                    "pbpText": "ATL calls timeout, 1 timeout remaining.",
+                                    "__typename": "DataApiPlayByPlayTimelineEventHoleAction"
+                                }
+                            ],
+                            "holeWinningTeamId": null,
+                            "holeLosingTeamId": null,
+                            "holeEnd": {
+                                "pbpText": "The hole ends in a tie.",
+                                "__typename": "DataApiPlayByPlayTimelineEventMessage"
+                            },
+                            "__typename": "DataApiPlayByPlayHole"
+                        },
+                        {
+                            "holeNumber": 5,
+                            "holeScore": "2",
+                            "timeline": [
+                                {
+                                    "shot": 2,
+                                    "playerId": 1,
+                                    "timestamp": "2025-02-17T21:30:34.163000Z",
+                                    "teamId": "tglatlanta",
+                                    "externalId": 1,
+                                    "pbpText": "Justin Thomas makes putt from 13 ft 4 in.",
+                                    "club": "PUTTER",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "actionType": "HAD_HAMMER_ACCEPTED",
+                                    "timestamp": "2025-02-17T21:29:55.686000Z",
+                                    "teamId": "tglatlanta",
+                                    "externalId": 1,
+                                    "pbpText": "ATL throws Hammer, BAY accepts.",
+                                    "__typename": "DataApiPlayByPlayTimelineEventHoleAction"
+                                },
+                                {
+                                    "shot": 3,
+                                    "playerId": 22,
+                                    "timestamp": "2025-02-17T21:29:43.856000Z",
+                                    "teamId": "tglsanfrancisco",
+                                    "externalId": 6,
+                                    "pbpText": "ATL concedes putt; Wyndham Clark receives a Gimme.",
+                                    "club": null,
+                                    "strokeType": "GIMME",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 2,
+                                    "playerId": 23,
+                                    "timestamp": "2025-02-17T21:29:43.578000Z",
+                                    "teamId": "tglsanfrancisco",
+                                    "externalId": 6,
+                                    "pbpText": "Min Woo Lee hits Sand Wedge 19 ft 2 in to Green, 7 in left to hole.",
+                                    "club": "SAND_WEDGE",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 1,
+                                    "playerId": 4,
+                                    "timestamp": "2025-02-17T21:28:18.608000Z",
+                                    "teamId": "tglatlanta",
+                                    "externalId": 1,
+                                    "pbpText": "Lucas Glover hits shot 197 yds to Green, 13 ft 4 in left to hole.",
+                                    "club": null,
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 1,
+                                    "playerId": 21,
+                                    "timestamp": "2025-02-17T21:27:44.139000Z",
+                                    "teamId": "tglsanfrancisco",
+                                    "externalId": 6,
+                                    "pbpText": "Ludvig Åberg hits shot 207 yds to Fairway, 19 ft 5 in left to hole.",
+                                    "club": null,
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                }
+                            ],
+                            "holeWinningTeamId": "tglatlanta",
+                            "holeLosingTeamId": "tglsanfrancisco",
+                            "holeEnd": {
+                                "pbpText": "ATL wins hole for 2 points.",
+                                "__typename": "DataApiPlayByPlayTimelineEventMessage"
+                            },
+                            "__typename": "DataApiPlayByPlayHole"
+                        },
+                        {
+                            "holeNumber": 4,
+                            "holeScore": "1",
+                            "timeline": [
+                                {
+                                    "shot": 3,
+                                    "playerId": 23,
+                                    "timestamp": "2025-02-17T21:25:43.615000Z",
+                                    "teamId": "tglsanfrancisco",
+                                    "externalId": 6,
+                                    "pbpText": "Min Woo Lee holes out from 22 ft 5 in.",
+                                    "club": "SAND_WEDGE",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "actionType": "CALLED_TIMEOUT",
+                                    "timestamp": "2025-02-17T21:25:00.390000Z",
+                                    "teamId": "tglsanfrancisco",
+                                    "externalId": 6,
+                                    "pbpText": "BAY calls timeout, 1 timeout remaining.",
+                                    "__typename": "DataApiPlayByPlayTimelineEventHoleAction"
+                                },
+                                {
+                                    "shot": 4,
+                                    "playerId": 2,
+                                    "timestamp": "2025-02-17T21:24:17.520000Z",
+                                    "teamId": "tglatlanta",
+                                    "externalId": 1,
+                                    "pbpText": "BAY concedes putt; Patrick Cantlay receives a Gimme.",
+                                    "club": null,
+                                    "strokeType": "GIMME",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 3,
+                                    "playerId": 1,
+                                    "timestamp": "2025-02-17T21:24:17.249000Z",
+                                    "teamId": "tglatlanta",
+                                    "externalId": 1,
+                                    "pbpText": "Justin Thomas hits Sand Wedge 35 ft 3 in to Green, 23 in left to hole.",
+                                    "club": "SAND_WEDGE",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 2,
+                                    "playerId": 21,
+                                    "timestamp": "2025-02-17T21:23:10.176000Z",
+                                    "teamId": "tglsanfrancisco",
+                                    "externalId": 6,
+                                    "pbpText": "Ludvig Åberg hits shot 234 yds to Fairway, 22 ft 5 in left to hole.",
+                                    "club": null,
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 2,
+                                    "playerId": 4,
+                                    "timestamp": "2025-02-17T21:22:32.022000Z",
+                                    "teamId": "tglatlanta",
+                                    "externalId": 1,
+                                    "pbpText": "Lucas Glover hits shot 253 yds, ball moved to free drop area, 34 ft 2 in left to hole.",
+                                    "club": null,
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 1,
+                                    "playerId": 2,
+                                    "timestamp": "2025-02-17T21:21:40.217000Z",
+                                    "teamId": "tglatlanta",
+                                    "externalId": 1,
+                                    "pbpText": "Patrick Cantlay hits Driver 315 yds to Fairway, 252 yds left to hole.",
+                                    "club": "DRIVER",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 1,
+                                    "playerId": 22,
+                                    "timestamp": "2025-02-17T21:21:08.138000Z",
+                                    "teamId": "tglsanfrancisco",
+                                    "externalId": 6,
+                                    "pbpText": "Wyndham Clark hits Driver 337 yds to Fairway, 225 yds left to hole.",
+                                    "club": "DRIVER",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                }
+                            ],
+                            "holeWinningTeamId": "tglsanfrancisco",
+                            "holeLosingTeamId": "tglatlanta",
+                            "holeEnd": {
+                                "pbpText": "BAY wins hole for 1 point.",
+                                "__typename": "DataApiPlayByPlayTimelineEventMessage"
+                            },
+                            "__typename": "DataApiPlayByPlayHole"
+                        },
+                        {
+                            "holeNumber": 3,
+                            "holeScore": "1",
+                            "timeline": [
+                                {
+                                    "actionType": "HAD_HAMMER_DECLINED",
+                                    "timestamp": "2025-02-17T21:15:58.564000Z",
+                                    "teamId": "tglsanfrancisco",
+                                    "externalId": 6,
+                                    "pbpText": "BAY throws Hammer, ATL declines.",
+                                    "__typename": "DataApiPlayByPlayTimelineEventHoleAction"
+                                },
+                                {
+                                    "shot": 2,
+                                    "playerId": 22,
+                                    "timestamp": "2025-02-17T21:15:39.120000Z",
+                                    "teamId": "tglsanfrancisco",
+                                    "externalId": 6,
+                                    "pbpText": "Wyndham Clark makes putt from 20 ft 1 in.",
+                                    "club": "PUTTER",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 1,
+                                    "playerId": 1,
+                                    "timestamp": "2025-02-17T21:14:24.450000Z",
+                                    "teamId": "tglatlanta",
+                                    "externalId": 1,
+                                    "pbpText": "Justin Thomas hits shot 161 yds to Green, 16 ft 2 in left to hole.",
+                                    "club": null,
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 1,
+                                    "playerId": 23,
+                                    "timestamp": "2025-02-17T21:13:37.542000Z",
+                                    "teamId": "tglsanfrancisco",
+                                    "externalId": 6,
+                                    "pbpText": "Min Woo Lee hits shot 162 yds to Green, 20 ft 1 in left to hole.",
+                                    "club": null,
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                }
+                            ],
+                            "holeWinningTeamId": "tglsanfrancisco",
+                            "holeLosingTeamId": "tglatlanta",
+                            "holeEnd": {
+                                "pbpText": "BAY wins hole by concession for 1 point.",
+                                "__typename": "DataApiPlayByPlayTimelineEventMessage"
+                            },
+                            "__typename": "DataApiPlayByPlayHole"
+                        },
+                        {
+                            "holeNumber": 2,
+                            "holeScore": "1",
+                            "timeline": [
+                                {
+                                    "shot": 4,
+                                    "playerId": 4,
+                                    "timestamp": "2025-02-17T21:11:36.054000Z",
+                                    "teamId": "tglatlanta",
+                                    "externalId": 1,
+                                    "pbpText": "Lucas Glover putts from 6 ft 7 in, 2 ft 4 in left to hole.",
+                                    "club": "PUTTER",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 4,
+                                    "playerId": 21,
+                                    "timestamp": "2025-02-17T21:10:50.085000Z",
+                                    "teamId": "tglsanfrancisco",
+                                    "externalId": 6,
+                                    "pbpText": "ATL concedes putt; Ludvig Åberg receives a Gimme.",
+                                    "club": null,
+                                    "strokeType": "GIMME",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 3,
+                                    "playerId": 22,
+                                    "timestamp": "2025-02-17T21:10:49.828000Z",
+                                    "teamId": "tglsanfrancisco",
+                                    "externalId": 6,
+                                    "pbpText": "Wyndham Clark hits Sand Wedge 33 ft 7 in to Green, 2 ft 0 in left to hole.",
+                                    "club": "SAND_WEDGE",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 3,
+                                    "playerId": 2,
+                                    "timestamp": "2025-02-17T21:10:16.121000Z",
+                                    "teamId": "tglatlanta",
+                                    "externalId": 1,
+                                    "pbpText": "Patrick Cantlay hits Sand Wedge 68 ft 3 in to Green, 6 ft 7 in left to hole.",
+                                    "club": "SAND_WEDGE",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 2,
+                                    "playerId": 23,
+                                    "timestamp": "2025-02-17T21:09:16.204000Z",
+                                    "teamId": "tglsanfrancisco",
+                                    "externalId": 6,
+                                    "pbpText": "Min Woo Lee hits shot 225 yds to Bunker, 35 ft 2 in left to hole.",
+                                    "club": null,
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 2,
+                                    "playerId": 1,
+                                    "timestamp": "2025-02-17T21:08:34.396000Z",
+                                    "teamId": "tglatlanta",
+                                    "externalId": 1,
+                                    "pbpText": "Justin Thomas hits shot 263 yds to Fairway, 61 ft 8 in left to hole.",
+                                    "club": null,
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 1,
+                                    "playerId": 4,
+                                    "timestamp": "2025-02-17T21:07:38.088000Z",
+                                    "teamId": "tglatlanta",
+                                    "externalId": 1,
+                                    "pbpText": "Lucas Glover hits Driver 293 yds to Fairway, 266 yds left to hole.",
+                                    "club": "DRIVER",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 1,
+                                    "playerId": 21,
+                                    "timestamp": "2025-02-17T21:07:06.777000Z",
+                                    "teamId": "tglsanfrancisco",
+                                    "externalId": 6,
+                                    "pbpText": "Ludvig Åberg hits Driver 317 yds to Fairway, 234 yds left to hole.",
+                                    "club": "DRIVER",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                }
+                            ],
+                            "holeWinningTeamId": "tglsanfrancisco",
+                            "holeLosingTeamId": "tglatlanta",
+                            "holeEnd": {
+                                "pbpText": "BAY wins hole by concession for 1 point.",
+                                "__typename": "DataApiPlayByPlayTimelineEventMessage"
+                            },
+                            "__typename": "DataApiPlayByPlayHole"
+                        },
+                        {
+                            "holeNumber": 1,
+                            "holeScore": "4",
+                            "timeline": [
+                                {
+                                    "shot": 4,
+                                    "playerId": 22,
+                                    "timestamp": "2025-02-17T21:06:00.532000Z",
+                                    "teamId": "tglsanfrancisco",
+                                    "externalId": 6,
+                                    "pbpText": "Wyndham Clark makes putt from 5 ft 1 in.",
+                                    "club": "PUTTER",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 4,
+                                    "playerId": 2,
+                                    "timestamp": "2025-02-17T21:05:21.201000Z",
+                                    "teamId": "tglatlanta",
+                                    "externalId": 1,
+                                    "pbpText": "BAY concedes putt; Patrick Cantlay receives a Gimme.",
+                                    "club": null,
+                                    "strokeType": "GIMME",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 3,
+                                    "playerId": 1,
+                                    "timestamp": "2025-02-17T21:05:20.605000Z",
+                                    "teamId": "tglatlanta",
+                                    "externalId": 1,
+                                    "pbpText": "Justin Thomas putts from 5 ft 5 in, 2 ft 6 in left to hole.",
+                                    "club": "PUTTER",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 3,
+                                    "playerId": 23,
+                                    "timestamp": "2025-02-17T21:04:28.203000Z",
+                                    "teamId": "tglsanfrancisco",
+                                    "externalId": 6,
+                                    "pbpText": "Min Woo Lee hits Sand Wedge 36 ft 8 in to Green, 5 ft 1 in left to hole.",
+                                    "club": "SAND_WEDGE",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 2,
+                                    "playerId": 21,
+                                    "timestamp": "2025-02-17T21:03:33.579000Z",
+                                    "teamId": "tglsanfrancisco",
+                                    "externalId": 6,
+                                    "pbpText": "Ludvig Åberg hits shot 127 yds to Fairway, 31 ft 9 in left to hole.",
+                                    "club": null,
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 2,
+                                    "playerId": 4,
+                                    "timestamp": "2025-02-17T21:02:59.755000Z",
+                                    "teamId": "tglatlanta",
+                                    "externalId": 1,
+                                    "pbpText": "Lucas Glover hits shot 137 yds to Green, 5 ft 5 in left to hole.",
+                                    "club": null,
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 1,
+                                    "playerId": 2,
+                                    "timestamp": "2025-02-17T21:02:05.069000Z",
+                                    "teamId": "tglatlanta",
+                                    "externalId": 1,
+                                    "pbpText": "Patrick Cantlay hits Driver 305 yds to Fairway, 135 yds left to hole.",
+                                    "club": "DRIVER",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 1,
+                                    "playerId": 22,
+                                    "timestamp": "2025-02-17T21:01:31.924000Z",
+                                    "teamId": "tglsanfrancisco",
+                                    "externalId": 6,
+                                    "pbpText": "Wyndham Clark hits Driver 322 yds to Fairway, 119 yds left to hole.",
+                                    "club": "DRIVER",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                }
+                            ],
+                            "holeWinningTeamId": null,
+                            "holeLosingTeamId": null,
+                            "holeEnd": {
+                                "pbpText": "The hole ends in a tie.",
+                                "__typename": "DataApiPlayByPlayTimelineEventMessage"
+                            },
+                            "__typename": "DataApiPlayByPlayHole"
+                        }
+                    ],
+                    "sessionEnd": {
+                        "pbpText": "Triples has ended, BAY leads the match 4-3.",
+                        "__typename": "DataApiPlayByPlayTimelineEventMessage"
+                    },
+                    "__typename": "DataApiPlayByPlaySession"
+                }
+            ],
+            "overtime": {
+                "playByPlay": [],
+                "__typename": "DataApiPlayByPlayOvertime"
+            },
+            "matchEnd": {
+                "pbpText": "The Bay Golf Club wins! BAY 6 - ATL 5.",
+                "__typename": "DataApiPlayByPlayTimelineEventMessage"
+            },
+            "__typename": "DataApiPlayByPlay"
+        },
+        "matchById": {
+            "hideLineUp": false,
+            "hideLiveScoring": true,
+            "hideMatchRecap": false,
+            "hidePlayByPlay": false,
+            "hidePlayer": true,
+            "hideScoreboard": false,
+            "hideStats": false,
+            "hideTicker": false,
+            "hideProbStatsWebMobileApp": false,
+            "hideProbLiveHoleWebMobileApp": false,
+            "liveStreamId": null,
+            "matchName": "Atlanta Drive vs The Bay Golf Club",
+            "recapBody": "[{\"type\":\"header\",\"children\":[{\"type\":\"text\",\"value\":\"The Bay Wins On Final Hole, Hands Atlanta Its First Loss\"}],\"style\":\"h2\",\"format\":{\"text-align\":\" center\"}},{\"type\":\"paragraph\",\"children\":[{\"type\":\"text\",\"value\":\"Min Woo Lee thrived in his debut, Ludvig Åberg didn’t miss a beat and Wyndham Clark did it all Monday as The Bay Golf Club scored a 6-5 victory over Atlanta Drive GC in the second match of a Presidents Day tripleheader.\"}]},{\"type\":\"paragraph\",\"children\":[{\"type\":\"text\",\"value\":\"With the match tied at five through 12 holes and Clark holding the upper-hand over Atlanta’s Patrick Cantlay in their Singles matchup, The Bay threw the Hammer figuring it would be declined. They were correct, with Atlanta forfeiting one point and handing The Bay a 6-5 lead it wouldn’t relinquish.\"}]},{\"type\":\"paragraph\",\"children\":[{\"type\":\"text\",\"value\":\"Lee was a welcome addition to the West Coast squad, with the 26-year-old Australian chipping in for eagle at No. 4 to give The Bay a 3-0 lead. Credit Clark with the assist – realizing Lee did not have the correct club, Clark called a timeout and ran back to the hitting area to fetch the proper tool for his teammate.\"}]},{\"type\":\"paragraph\",\"children\":[{\"type\":\"text\",\"value\":\"Lee took care of the rest, knocking it in to get the fans on their feet and provide a glimpse of his prowess with a wedge in hand.\"}]},{\"type\":\"paragraph\",\"children\":[{\"type\":\"text\",\"value\":\"“It seems like every time we miss the green, he just gets a big smile and tries to chip it in,” Åberg said.\"}]},{\"type\":\"paragraph\",\"children\":[{\"type\":\"text\",\"value\":\"Lee also set a new TGL ball speed record, reaching 191 mph off the tee at No. 9.\"}]},{\"type\":\"paragraph\",\"children\":[{\"type\":\"text\",\"value\":\"The Bay showed up for the first of its back-to-back matches in style, with Clark rolling up to SoFi Center in a Brandon Aiyuk San Francisco 49ers jersey. Lee opted for a No. 32 throwback Ricky Watters jersey, while Åberg went with The Bay’s light green colored windbreaker just a few hours after the biggest victory of his young career.\"}]},{\"type\":\"paragraph\",\"children\":[{\"type\":\"text\",\"value\":\"The 25-year-old Swede made birdie at the final hole to win at Torrey Pines late Sunday on the PGA TOUR and said he didn’t get to bed until roughly 3:30 a.m. ET Monday after flying back from La Jolla, California.\"}]},{\"type\":\"paragraph\",\"children\":[{\"type\":\"text\",\"value\":\"“I’m still sort of in that competitive mindset,” Åberg said ahead of the match. “It wasn’t that long ago we played the last hole.”\"}]},{\"type\":\"paragraph\",\"children\":[{\"type\":\"text\",\"value\":\"Atlanta, meanwhile, was less than an hour removed from a wild Overtime comeback win over Los Angeles Golf Club in the first match of the day at SoFi Center.\"}]},{\"type\":\"paragraph\",\"children\":[{\"type\":\"text\",\"value\":\"“I’m tired again,” Thomas said early in the second match. “But, you know, you just kind of plod your way around and it’s very similar to a (tournament) where you kind of get in the ebb and flow of the round.”\"}]},{\"type\":\"paragraph\",\"children\":[{\"type\":\"text\",\"value\":\"A heavily-caffeinated Thomas still brought the energy early at No. 5, betting on himself by throwing the Hammer prior to a 13-foot birdie attempt with The Bay already in for a conceded par and leading 3-0. Thomas drained the putt to make it 3-2 and later made a clutch putt for a two-point swing at No. 12, tying the match 5-5 midway through Singles.\"}]},{\"type\":\"paragraph\",\"children\":[{\"type\":\"text\",\"value\":\"After the match was over and players were shaking hands, he dropped a nice sarcastic one-liner to Åberg on the way out.\"}]},{\"type\":\"paragraph\",\"children\":[{\"type\":\"text\",\"value\":\"“Glad you finally won something,” Thomas said. “Happy for you.”\"}]},{\"type\":\"paragraph\",\"children\":[{\"type\":\"text\",\"value\":\"The Bay improved to 2-0 ahead of its evening match against Boston Common Golf to conclude the Tripleheader, moving into a tie for second place with Atlanta in the SoFi Cup Standings at four points on the season.\"}]},{\"type\":\"paragraph\",\"children\":[{\"type\":\"text\",\"value\":\"Atlanta will look to bounce back from its first loss of the year when it takes on Boston at 9 p.m. ET on Monday, Feb. 24.\"}]}]",
+            "recapTopVideo": {
+                "id": "6368976158112",
+                "hideAd": false,
+                "path": "/videos/2025/02/18/match-highlights--atlanta-drive-vs-the-bay",
+                "videoTitle": "Match Highlights: Atlanta Drive vs The Bay",
+                "shortTitle": null,
+                "videoDescription": null,
+                "shortDescription": "The Bay Golf Club comes out on top in a 6-5 win over Atlanta Drive GC. ",
+                "videoImage": "brightcove-video/v1/static/6415719604001/b5a08e5e-47e9-492c-9cb7-60c8decf3afc/b5ef7129-1acf-484a-a8a1-b34947ab9244/1280x720/match/image.jpg",
+                "date": "2025-02-18T00:06:47.564Z",
+                "duration": 129024,
+                "tags": [
+                    {
+                        "id": "tgl:teams/the-bay-golf-club",
+                        "title": "The Bay Golf Club",
+                        "__typename": "Tag"
+                    },
+                    {
+                        "id": "tgl:teams/Boston",
+                        "title": "Boston Common Golf",
+                        "__typename": "Tag"
+                    },
+                    {
+                        "id": "tgl:leagues/tgl",
+                        "title": "TGL",
+                        "__typename": "Tag"
+                    },
+                    {
+                        "id": "tgl:playlist/2025/7---atl-v-bay",
+                        "title": "7 - ATL v BAY",
+                        "__typename": "Tag"
+                    }
+                ],
+                "__typename": "Video"
+            },
+            "headerInfoCards": [],
+            "afterTeamRosterContent": [],
+            "__typename": "Match"
+        },
+        "liveTeamsStats": {
+            "matchId": 7,
+            "teams": [
+                {
+                    "teamId": "tglatlanta",
+                    "abbreviation": "ATL",
+                    "designation": "Away",
+                    "stats": [
+                        {
+                            "statName": "hammerWinCount",
+                            "statNameAlias": "HAMMERS WON",
+                            "value": "2",
+                            "__typename": "DataApiLiveTeamsStat"
+                        },
+                        {
+                            "statName": "avgDriverBallSpeedMph",
+                            "statNameAlias": "AVG DRIVER BALL SPEED (MPH)",
+                            "value": "174.3",
+                            "__typename": "DataApiLiveTeamsStat"
+                        },
+                        {
+                            "statName": "highestDriverBallSpeedMph",
+                            "statNameAlias": "max speed",
+                            "value": "180.5",
+                            "__typename": "DataApiLiveTeamsStat"
+                        },
+                        {
+                            "statName": "avgDriverTotalYards",
+                            "statNameAlias": "AVG DRIVER DISTANCE (YDS)",
+                            "value": "306.7",
+                            "__typename": "DataApiLiveTeamsStat"
+                        },
+                        {
+                            "statName": "longestDriverTotalYards",
+                            "statNameAlias": "max distance",
+                            "value": "328.5",
+                            "__typename": "DataApiLiveTeamsStat"
+                        },
+                        {
+                            "statName": "avgDriverClubSpeedMph",
+                            "statNameAlias": "AVG DRIVER SWING SPEED (MPH)",
+                            "value": "118.4",
+                            "__typename": "DataApiLiveTeamsStat"
+                        },
+                        {
+                            "statName": "highestDriverClubSpeedMph",
+                            "statNameAlias": "max speed",
+                            "value": "122.6",
+                            "__typename": "DataApiLiveTeamsStat"
+                        },
+                        {
+                            "statName": "firConsistency",
+                            "statNameAlias": "FAIRWAY CONSISTENCY",
+                            "value": "80.0 %",
+                            "__typename": "DataApiLiveTeamsStat"
+                        },
+                        {
+                            "statName": "scramblingCapability",
+                            "statNameAlias": "SCRAMBLING",
+                            "value": "50.0 %",
+                            "__typename": "DataApiLiveTeamsStat"
+                        },
+                        {
+                            "statName": "girConsistency",
+                            "statNameAlias": "GREEN CONSISTENCY",
+                            "value": "71.4 %",
+                            "__typename": "DataApiLiveTeamsStat"
+                        },
+                        {
+                            "statName": "avgDistanceToPinFromSandFeet",
+                            "statNameAlias": "SAND SAVES",
+                            "value": "12.8 FEET",
+                            "__typename": "DataApiLiveTeamsStat"
+                        },
+                        {
+                            "statName": "shortPuttEfficiency",
+                            "statNameAlias": "SHORT PUTTS (0-10 FT)",
+                            "value": "50.0 %",
+                            "__typename": "DataApiLiveTeamsStat"
+                        },
+                        {
+                            "statName": "midPuttEfficiency",
+                            "statNameAlias": "MEDIUM PUTTS (10-30 FT)",
+                            "value": "50.0 %",
+                            "__typename": "DataApiLiveTeamsStat"
+                        },
+                        {
+                            "statName": "longPuttEfficiency",
+                            "statNameAlias": "LONG PUTTS (>30 FT)",
+                            "value": "0.0 %",
+                            "__typename": "DataApiLiveTeamsStat"
+                        },
+                        {
+                            "statName": "shotClockPenaltyCount",
+                            "statNameAlias": "SHOT CLOCK VIOLATIONS",
+                            "value": "0",
+                            "__typename": "DataApiLiveTeamsStat"
+                        },
+                        {
+                            "statName": "timeoutsUsed",
+                            "statNameAlias": "TIMEOUTS USED",
+                            "value": "1",
+                            "__typename": "DataApiLiveTeamsStat"
+                        },
+                        {
+                            "statName": "timeoutsRemaining",
+                            "statNameAlias": "TIMEOUTS REMAINING",
+                            "value": "1",
+                            "__typename": "DataApiLiveTeamsStat"
+                        }
+                    ],
+                    "__typename": "DataApiLiveTeamsStatsTeam"
+                },
+                {
+                    "teamId": "tglsanfrancisco",
+                    "abbreviation": "BAY",
+                    "designation": "Home",
+                    "stats": [
+                        {
+                            "statName": "hammerWinCount",
+                            "statNameAlias": "HAMMERS WON",
+                            "value": "2",
+                            "__typename": "DataApiLiveTeamsStat"
+                        },
+                        {
+                            "statName": "avgDriverBallSpeedMph",
+                            "statNameAlias": "AVG DRIVER BALL SPEED (MPH)",
+                            "value": "186.1",
+                            "__typename": "DataApiLiveTeamsStat"
+                        },
+                        {
+                            "statName": "highestDriverBallSpeedMph",
+                            "statNameAlias": "max speed",
+                            "value": "190.9",
+                            "__typename": "DataApiLiveTeamsStat"
+                        },
+                        {
+                            "statName": "avgDriverTotalYards",
+                            "statNameAlias": "AVG DRIVER DISTANCE (YDS)",
+                            "value": "323.4",
+                            "__typename": "DataApiLiveTeamsStat"
+                        },
+                        {
+                            "statName": "longestDriverTotalYards",
+                            "statNameAlias": "max distance",
+                            "value": "337.5",
+                            "__typename": "DataApiLiveTeamsStat"
+                        },
+                        {
+                            "statName": "avgDriverClubSpeedMph",
+                            "statNameAlias": "AVG DRIVER SWING SPEED (MPH)",
+                            "value": "127.8",
+                            "__typename": "DataApiLiveTeamsStat"
+                        },
+                        {
+                            "statName": "highestDriverClubSpeedMph",
+                            "statNameAlias": "max speed",
+                            "value": "131.2",
+                            "__typename": "DataApiLiveTeamsStat"
+                        },
+                        {
+                            "statName": "firConsistency",
+                            "statNameAlias": "FAIRWAY CONSISTENCY",
+                            "value": "100.0 %",
+                            "__typename": "DataApiLiveTeamsStat"
+                        },
+                        {
+                            "statName": "scramblingCapability",
+                            "statNameAlias": "SCRAMBLING",
+                            "value": "100.0 %",
+                            "__typename": "DataApiLiveTeamsStat"
+                        },
+                        {
+                            "statName": "girConsistency",
+                            "statNameAlias": "GREEN CONSISTENCY",
+                            "value": "71.4 %",
+                            "__typename": "DataApiLiveTeamsStat"
+                        },
+                        {
+                            "statName": "avgDistanceToPinFromSandFeet",
+                            "statNameAlias": "SAND SAVES",
+                            "value": "2.0 FEET",
+                            "__typename": "DataApiLiveTeamsStat"
+                        },
+                        {
+                            "statName": "shortPuttEfficiency",
+                            "statNameAlias": "SHORT PUTTS (0-10 FT)",
+                            "value": "100.0 %",
+                            "__typename": "DataApiLiveTeamsStat"
+                        },
+                        {
+                            "statName": "midPuttEfficiency",
+                            "statNameAlias": "MEDIUM PUTTS (10-30 FT)",
+                            "value": "25.0 %",
+                            "__typename": "DataApiLiveTeamsStat"
+                        },
+                        {
+                            "statName": "longPuttEfficiency",
+                            "statNameAlias": "LONG PUTTS (>30 FT)",
+                            "value": "0.0 %",
+                            "__typename": "DataApiLiveTeamsStat"
+                        },
+                        {
+                            "statName": "shotClockPenaltyCount",
+                            "statNameAlias": "SHOT CLOCK VIOLATIONS",
+                            "value": "0",
+                            "__typename": "DataApiLiveTeamsStat"
+                        },
+                        {
+                            "statName": "timeoutsUsed",
+                            "statNameAlias": "TIMEOUTS USED",
+                            "value": "0",
+                            "__typename": "DataApiLiveTeamsStat"
+                        },
+                        {
+                            "statName": "timeoutsRemaining",
+                            "statNameAlias": "TIMEOUTS REMAINING",
+                            "value": "2",
+                            "__typename": "DataApiLiveTeamsStat"
+                        }
+                    ],
+                    "__typename": "DataApiLiveTeamsStatsTeam"
+                }
+            ],
+            "__typename": "DataApiLiveTeamsStats"
+        },
+        "scoringSponsor": null,
+        "__typename": "Query"
+    }
+}

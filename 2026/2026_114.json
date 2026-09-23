@@ -1,0 +1,2993 @@
+{
+    "data": {
+        "matchDetailsGeoDetect": {
+            "isOvertime": false,
+            "matchId": 114,
+            "matchStatus": "Closed",
+            "seasonYear": 2026,
+            "sessions": [
+                {
+                    "format": "TRIPLES",
+                    "holes": [
+                        {
+                            "holeConfigId": 812,
+                            "holeConfigVideoId": null,
+                            "holeId": 1784,
+                            "holeName": "The Plank",
+                            "holeNumber": 1,
+                            "holePar": 4,
+                            "holeSequence": 1,
+                            "holeValue": 1,
+                            "live": false,
+                            "teams": [
+                                {
+                                    "hammerUsed": 1,
+                                    "holeProbability": 1.0,
+                                    "holeProbabilityTie": 0.0,
+                                    "isConceded": false,
+                                    "playerSequence": [
+                                        {
+                                            "playerId": 15,
+                                            "sequence": 1,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        },
+                                        {
+                                            "playerId": 16,
+                                            "sequence": 2,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        },
+                                        {
+                                            "playerId": 13,
+                                            "sequence": 3,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        }
+                                    ],
+                                    "score": 1,
+                                    "stroke": 2,
+                                    "teamId": "lagc",
+                                    "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItem"
+                                },
+                                {
+                                    "hammerUsed": 0,
+                                    "holeProbability": 0.0,
+                                    "holeProbabilityTie": 0.0,
+                                    "isConceded": true,
+                                    "playerSequence": [
+                                        {
+                                            "playerId": 18,
+                                            "sequence": 1,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        },
+                                        {
+                                            "playerId": 17,
+                                            "sequence": 2,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        },
+                                        {
+                                            "playerId": 20,
+                                            "sequence": 3,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        }
+                                    ],
+                                    "score": 0,
+                                    "stroke": 4,
+                                    "teamId": "tglnyc",
+                                    "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItem"
+                                }
+                            ],
+                            "yards": 398,
+                            "videos": {
+                                "prelive": {
+                                    "date": "2024-12-31T17:04:46.819Z",
+                                    "id": "6366579077112",
+                                    "thumbnail": "brightcove-video/v1/static/6415719604001/9978b903-63cb-4603-ae12-e906e06f1e37/7938ab39-83e1-4279-a72a-2434a00ee3f0/1280x720/match/image.jpg",
+                                    "videoDuration": 40192,
+                                    "__typename": "DataApiMatchesResSessionsItemHoleVideo"
+                                },
+                                "recap": {
+                                    "date": "2026-03-03T00:10:08.289Z",
+                                    "id": "6390286458112",
+                                    "thumbnail": "brightcove-video/v1/static/6415719604001/6b176d31-3ca4-48c1-9e54-ed2394f73300/e3ef1234-0172-4179-babb-e3f9f2a08059/1280x720/match/image.jpg",
+                                    "videoDuration": 126026,
+                                    "__typename": "DataApiMatchesResSessionsItemHoleVideo"
+                                },
+                                "__typename": "DataApiMatchesResSessionsItemHoleVideos"
+                            },
+                            "__typename": "DataApiMatchesResSessionsItemHolesItem"
+                        },
+                        {
+                            "holeConfigId": 813,
+                            "holeConfigVideoId": null,
+                            "holeId": 1785,
+                            "holeName": "Caverns",
+                            "holeNumber": 2,
+                            "holePar": 5,
+                            "holeSequence": 2,
+                            "holeValue": 1,
+                            "live": false,
+                            "teams": [
+                                {
+                                    "hammerUsed": 0,
+                                    "holeProbability": 0.0,
+                                    "holeProbabilityTie": 0.0,
+                                    "isConceded": true,
+                                    "playerSequence": [
+                                        {
+                                            "playerId": 16,
+                                            "sequence": 1,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        },
+                                        {
+                                            "playerId": 13,
+                                            "sequence": 2,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        },
+                                        {
+                                            "playerId": 15,
+                                            "sequence": 3,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        }
+                                    ],
+                                    "score": 0,
+                                    "stroke": 6,
+                                    "teamId": "lagc",
+                                    "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItem"
+                                },
+                                {
+                                    "hammerUsed": 0,
+                                    "holeProbability": 1.0,
+                                    "holeProbabilityTie": 0.0,
+                                    "isConceded": false,
+                                    "playerSequence": [
+                                        {
+                                            "playerId": 17,
+                                            "sequence": 1,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        },
+                                        {
+                                            "playerId": 20,
+                                            "sequence": 2,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        },
+                                        {
+                                            "playerId": 18,
+                                            "sequence": 3,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        }
+                                    ],
+                                    "score": 1,
+                                    "stroke": 3,
+                                    "teamId": "tglnyc",
+                                    "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItem"
+                                }
+                            ],
+                            "yards": 542,
+                            "videos": {
+                                "prelive": {
+                                    "date": "2026-02-20T17:47:41.394Z",
+                                    "id": "6389632661112",
+                                    "thumbnail": "brightcove-video/v1/static/6415719604001/22beff26-4975-46e7-9897-8805a92ff52e/cbb20fa1-5134-4a02-a3cd-0809a433b079/1280x720/match/image.jpg",
+                                    "videoDuration": 63808,
+                                    "__typename": "DataApiMatchesResSessionsItemHoleVideo"
+                                },
+                                "recap": {
+                                    "date": "2026-03-03T00:18:50.551Z",
+                                    "id": "6390287926112",
+                                    "thumbnail": "brightcove-video/v1/static/6415719604001/f1ca3e30-7a88-4e37-b822-7b5fef82aa3d/30cc356c-8da3-4b94-94cd-486730a86753/1280x720/match/image.jpg",
+                                    "videoDuration": 124725,
+                                    "__typename": "DataApiMatchesResSessionsItemHoleVideo"
+                                },
+                                "__typename": "DataApiMatchesResSessionsItemHoleVideos"
+                            },
+                            "__typename": "DataApiMatchesResSessionsItemHolesItem"
+                        },
+                        {
+                            "holeConfigId": 814,
+                            "holeConfigVideoId": null,
+                            "holeId": 1786,
+                            "holeName": "The Last Toll",
+                            "holeNumber": 3,
+                            "holePar": 3,
+                            "holeSequence": 3,
+                            "holeValue": 1,
+                            "live": false,
+                            "teams": [
+                                {
+                                    "hammerUsed": 0,
+                                    "holeProbability": 0.0,
+                                    "holeProbabilityTie": 1.0,
+                                    "isConceded": false,
+                                    "playerSequence": [
+                                        {
+                                            "playerId": 13,
+                                            "sequence": 1,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        },
+                                        {
+                                            "playerId": 15,
+                                            "sequence": 2,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        },
+                                        {
+                                            "playerId": 16,
+                                            "sequence": 3,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        }
+                                    ],
+                                    "score": 0,
+                                    "stroke": 3,
+                                    "teamId": "lagc",
+                                    "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItem"
+                                },
+                                {
+                                    "hammerUsed": 0,
+                                    "holeProbability": 0.0,
+                                    "holeProbabilityTie": 1.0,
+                                    "isConceded": false,
+                                    "playerSequence": [
+                                        {
+                                            "playerId": 20,
+                                            "sequence": 1,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        },
+                                        {
+                                            "playerId": 18,
+                                            "sequence": 2,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        },
+                                        {
+                                            "playerId": 17,
+                                            "sequence": 3,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        }
+                                    ],
+                                    "score": 0,
+                                    "stroke": 3,
+                                    "teamId": "tglnyc",
+                                    "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItem"
+                                }
+                            ],
+                            "yards": 205,
+                            "videos": {
+                                "prelive": {
+                                    "date": "2026-01-16T18:23:46.742Z",
+                                    "id": "6387822546112",
+                                    "thumbnail": "brightcove-video/v1/static/6415719604001/5fcb9b27-70d8-4fe5-a7fe-09cd31f1948a/528e3c7d-d870-4075-8c5e-5bf62c554fe8/1280x720/match/image.jpg",
+                                    "videoDuration": 13440,
+                                    "__typename": "DataApiMatchesResSessionsItemHoleVideo"
+                                },
+                                "recap": {
+                                    "date": "2026-03-03T00:24:48.455Z",
+                                    "id": "6390286257112",
+                                    "thumbnail": "brightcove-video/v1/static/6415719604001/0831b858-fb62-4286-afcb-771aad125675/2b063229-87c9-4b0d-a3b1-2001b0b8de63/1280x720/match/image.jpg",
+                                    "videoDuration": 86086,
+                                    "__typename": "DataApiMatchesResSessionsItemHoleVideo"
+                                },
+                                "__typename": "DataApiMatchesResSessionsItemHoleVideos"
+                            },
+                            "__typename": "DataApiMatchesResSessionsItemHolesItem"
+                        },
+                        {
+                            "holeConfigId": 815,
+                            "holeConfigVideoId": null,
+                            "holeId": 1787,
+                            "holeName": "Showtime",
+                            "holeNumber": 4,
+                            "holePar": 5,
+                            "holeSequence": 4,
+                            "holeValue": 1,
+                            "live": false,
+                            "teams": [
+                                {
+                                    "hammerUsed": 0,
+                                    "holeProbability": 0.0,
+                                    "holeProbabilityTie": 1.0,
+                                    "isConceded": false,
+                                    "playerSequence": [
+                                        {
+                                            "playerId": 15,
+                                            "sequence": 1,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        },
+                                        {
+                                            "playerId": 16,
+                                            "sequence": 2,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        },
+                                        {
+                                            "playerId": 13,
+                                            "sequence": 3,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        }
+                                    ],
+                                    "score": 0,
+                                    "stroke": 4,
+                                    "teamId": "lagc",
+                                    "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItem"
+                                },
+                                {
+                                    "hammerUsed": 0,
+                                    "holeProbability": 0.0,
+                                    "holeProbabilityTie": 1.0,
+                                    "isConceded": false,
+                                    "playerSequence": [
+                                        {
+                                            "playerId": 18,
+                                            "sequence": 1,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        },
+                                        {
+                                            "playerId": 17,
+                                            "sequence": 2,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        },
+                                        {
+                                            "playerId": 20,
+                                            "sequence": 3,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        }
+                                    ],
+                                    "score": 0,
+                                    "stroke": 4,
+                                    "teamId": "tglnyc",
+                                    "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItem"
+                                }
+                            ],
+                            "yards": 588,
+                            "videos": {
+                                "prelive": {
+                                    "date": "2025-12-30T17:39:23.333Z",
+                                    "id": "6387075566112",
+                                    "thumbnail": "brightcove-video/v1/static/6415719604001/dcf1916c-dbe0-4e42-b9dc-5c253c4afa28/c6d0f788-0e2c-42ba-b7dd-cba5980f3335/1280x720/match/image.jpg",
+                                    "videoDuration": 15040,
+                                    "__typename": "DataApiMatchesResSessionsItemHoleVideo"
+                                },
+                                "recap": {
+                                    "date": "2026-03-03T00:38:47.948Z",
+                                    "id": "6390290406112",
+                                    "thumbnail": "brightcove-video/v1/static/6415719604001/76a4fefc-3f53-454f-be66-92157ef1365f/acbc25c2-1a41-4334-8dfe-8ab0f111ad0d/1280x720/match/image.jpg",
+                                    "videoDuration": 137204,
+                                    "__typename": "DataApiMatchesResSessionsItemHoleVideo"
+                                },
+                                "__typename": "DataApiMatchesResSessionsItemHoleVideos"
+                            },
+                            "__typename": "DataApiMatchesResSessionsItemHolesItem"
+                        },
+                        {
+                            "holeConfigId": 816,
+                            "holeConfigVideoId": null,
+                            "holeId": 1788,
+                            "holeName": "Oh Chute",
+                            "holeNumber": 5,
+                            "holePar": 3,
+                            "holeSequence": 5,
+                            "holeValue": 1,
+                            "live": false,
+                            "teams": [
+                                {
+                                    "hammerUsed": 0,
+                                    "holeProbability": 0.0,
+                                    "holeProbabilityTie": 1.0,
+                                    "isConceded": false,
+                                    "playerSequence": [
+                                        {
+                                            "playerId": 16,
+                                            "sequence": 1,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        },
+                                        {
+                                            "playerId": 13,
+                                            "sequence": 2,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        },
+                                        {
+                                            "playerId": 15,
+                                            "sequence": 3,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        }
+                                    ],
+                                    "score": 0,
+                                    "stroke": 3,
+                                    "teamId": "lagc",
+                                    "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItem"
+                                },
+                                {
+                                    "hammerUsed": 0,
+                                    "holeProbability": 0.0,
+                                    "holeProbabilityTie": 1.0,
+                                    "isConceded": false,
+                                    "playerSequence": [
+                                        {
+                                            "playerId": 17,
+                                            "sequence": 1,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        },
+                                        {
+                                            "playerId": 20,
+                                            "sequence": 2,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        },
+                                        {
+                                            "playerId": 18,
+                                            "sequence": 3,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        }
+                                    ],
+                                    "score": 0,
+                                    "stroke": 3,
+                                    "teamId": "tglnyc",
+                                    "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItem"
+                                }
+                            ],
+                            "yards": 168,
+                            "videos": {
+                                "prelive": {
+                                    "date": "2025-01-02T19:24:33.047Z",
+                                    "id": "6366627485112",
+                                    "thumbnail": "brightcove-video/v1/static/6415719604001/f0e19f70-b59d-4fdb-9d7d-cbbc52a81146/6850faa8-864a-4f16-9f5c-3c9508d076f5/1280x720/match/image.jpg",
+                                    "videoDuration": 17045,
+                                    "__typename": "DataApiMatchesResSessionsItemHoleVideo"
+                                },
+                                "recap": {
+                                    "date": "2026-03-03T00:43:50.563Z",
+                                    "id": "6390290418112",
+                                    "thumbnail": "brightcove-video/v1/static/6415719604001/c2285356-53a4-4ea0-9d06-51da388f6e93/c54d6373-a7ce-4e44-8da0-d6a5cd89eff1/1280x720/match/image.jpg",
+                                    "videoDuration": 67267,
+                                    "__typename": "DataApiMatchesResSessionsItemHoleVideo"
+                                },
+                                "__typename": "DataApiMatchesResSessionsItemHoleVideos"
+                            },
+                            "__typename": "DataApiMatchesResSessionsItemHolesItem"
+                        },
+                        {
+                            "holeConfigId": 817,
+                            "holeConfigVideoId": null,
+                            "holeId": 1789,
+                            "holeName": "Temple",
+                            "holeNumber": 6,
+                            "holePar": 4,
+                            "holeSequence": 6,
+                            "holeValue": 1,
+                            "live": false,
+                            "teams": [
+                                {
+                                    "hammerUsed": 0,
+                                    "holeProbability": 1.0,
+                                    "holeProbabilityTie": 0.0,
+                                    "isConceded": false,
+                                    "playerSequence": [
+                                        {
+                                            "playerId": 13,
+                                            "sequence": 1,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        },
+                                        {
+                                            "playerId": 15,
+                                            "sequence": 2,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        },
+                                        {
+                                            "playerId": 16,
+                                            "sequence": 3,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        }
+                                    ],
+                                    "score": 1,
+                                    "stroke": 3,
+                                    "teamId": "lagc",
+                                    "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItem"
+                                },
+                                {
+                                    "hammerUsed": 0,
+                                    "holeProbability": 0.0,
+                                    "holeProbabilityTie": 0.0,
+                                    "isConceded": true,
+                                    "playerSequence": [
+                                        {
+                                            "playerId": 20,
+                                            "sequence": 1,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        },
+                                        {
+                                            "playerId": 18,
+                                            "sequence": 2,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        },
+                                        {
+                                            "playerId": 17,
+                                            "sequence": 3,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        }
+                                    ],
+                                    "score": 0,
+                                    "stroke": 6,
+                                    "teamId": "tglnyc",
+                                    "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItem"
+                                }
+                            ],
+                            "yards": 473,
+                            "videos": {
+                                "prelive": {
+                                    "date": "2025-01-16T16:13:05.245Z",
+                                    "id": "6367181534112",
+                                    "thumbnail": "brightcove-video/v1/static/6415719604001/79ef843e-cb37-421c-bb6d-0c2260de0b20/2bc86995-f6a5-47c3-961a-90371897fb01/1280x720/match/image.jpg",
+                                    "videoDuration": 40107,
+                                    "__typename": "DataApiMatchesResSessionsItemHoleVideo"
+                                },
+                                "recap": {
+                                    "date": "2026-03-03T00:48:02.604Z",
+                                    "id": "6390289272112",
+                                    "thumbnail": "brightcove-video/v1/static/6415719604001/c4efac28-fa50-4965-9e35-e68cd6c41bd8/e62cdaf5-b02d-4f44-a86a-7ff249336e46/1280x720/match/image.jpg",
+                                    "videoDuration": 116885,
+                                    "__typename": "DataApiMatchesResSessionsItemHoleVideo"
+                                },
+                                "__typename": "DataApiMatchesResSessionsItemHoleVideos"
+                            },
+                            "__typename": "DataApiMatchesResSessionsItemHolesItem"
+                        },
+                        {
+                            "holeConfigId": 818,
+                            "holeConfigVideoId": null,
+                            "holeId": 1790,
+                            "holeName": "Cliffhanger",
+                            "holeNumber": 7,
+                            "holePar": 3,
+                            "holeSequence": 7,
+                            "holeValue": 1,
+                            "live": false,
+                            "teams": [
+                                {
+                                    "hammerUsed": 0,
+                                    "holeProbability": 1.0,
+                                    "holeProbabilityTie": 0.0,
+                                    "isConceded": false,
+                                    "playerSequence": [
+                                        {
+                                            "playerId": 15,
+                                            "sequence": 1,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        },
+                                        {
+                                            "playerId": 16,
+                                            "sequence": 2,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        },
+                                        {
+                                            "playerId": 13,
+                                            "sequence": 3,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        }
+                                    ],
+                                    "score": 1,
+                                    "stroke": 2,
+                                    "teamId": "lagc",
+                                    "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItem"
+                                },
+                                {
+                                    "hammerUsed": 0,
+                                    "holeProbability": 0.0,
+                                    "holeProbabilityTie": 0.0,
+                                    "isConceded": true,
+                                    "playerSequence": [
+                                        {
+                                            "playerId": 18,
+                                            "sequence": 1,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        },
+                                        {
+                                            "playerId": 17,
+                                            "sequence": 2,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        },
+                                        {
+                                            "playerId": 20,
+                                            "sequence": 3,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        }
+                                    ],
+                                    "score": 0,
+                                    "stroke": 2,
+                                    "teamId": "tglnyc",
+                                    "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItem"
+                                }
+                            ],
+                            "yards": 151,
+                            "videos": {
+                                "prelive": {
+                                    "date": "2025-01-02T19:25:06.064Z",
+                                    "id": "6366628249112",
+                                    "thumbnail": "brightcove-video/v1/static/6415719604001/2081c1af-aea1-4567-b8af-b8197dfef316/825af80a-8a0f-4ecd-a06d-dcbecffc2511/1280x720/match/image.jpg",
+                                    "videoDuration": 20672,
+                                    "__typename": "DataApiMatchesResSessionsItemHoleVideo"
+                                },
+                                "recap": {
+                                    "date": "2026-03-03T00:56:12.382Z",
+                                    "id": "6390291346112",
+                                    "thumbnail": "brightcove-video/v1/static/6415719604001/f0b80636-61e3-4db5-a14a-2794c0adb321/e6558fac-35a1-4c6b-91ac-784d8b4bd65d/1280x720/match/image.jpg",
+                                    "videoDuration": 70504,
+                                    "__typename": "DataApiMatchesResSessionsItemHoleVideo"
+                                },
+                                "__typename": "DataApiMatchesResSessionsItemHoleVideos"
+                            },
+                            "__typename": "DataApiMatchesResSessionsItemHolesItem"
+                        },
+                        {
+                            "holeConfigId": 819,
+                            "holeConfigVideoId": null,
+                            "holeId": 1791,
+                            "holeName": "Stinger",
+                            "holeNumber": 8,
+                            "holePar": 4,
+                            "holeSequence": 8,
+                            "holeValue": 1,
+                            "live": false,
+                            "teams": [
+                                {
+                                    "hammerUsed": 1,
+                                    "holeProbability": 1.0,
+                                    "holeProbabilityTie": 0.0,
+                                    "isConceded": false,
+                                    "playerSequence": [
+                                        {
+                                            "playerId": 16,
+                                            "sequence": 1,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        },
+                                        {
+                                            "playerId": 13,
+                                            "sequence": 2,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        },
+                                        {
+                                            "playerId": 15,
+                                            "sequence": 3,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        }
+                                    ],
+                                    "score": 1,
+                                    "stroke": 2,
+                                    "teamId": "lagc",
+                                    "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItem"
+                                },
+                                {
+                                    "hammerUsed": 0,
+                                    "holeProbability": 0.0,
+                                    "holeProbabilityTie": 0.0,
+                                    "isConceded": true,
+                                    "playerSequence": [
+                                        {
+                                            "playerId": 17,
+                                            "sequence": 1,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        },
+                                        {
+                                            "playerId": 20,
+                                            "sequence": 2,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        },
+                                        {
+                                            "playerId": 18,
+                                            "sequence": 3,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        }
+                                    ],
+                                    "score": 0,
+                                    "stroke": 3,
+                                    "teamId": "tglnyc",
+                                    "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItem"
+                                }
+                            ],
+                            "yards": 416,
+                            "videos": {
+                                "prelive": {
+                                    "date": "2025-12-23T02:39:15.322Z",
+                                    "id": "6386850858112",
+                                    "thumbnail": "brightcove-video/v1/static/6415719604001/cf03d3a0-bb5a-4b02-af2d-cf7fc940a439/244a611f-b964-460f-8b45-713034d151fc/1280x720/match/image.jpg",
+                                    "videoDuration": 15168,
+                                    "__typename": "DataApiMatchesResSessionsItemHoleVideo"
+                                },
+                                "recap": {
+                                    "date": "2026-03-03T01:06:48.967Z",
+                                    "id": "6390289781112",
+                                    "thumbnail": "brightcove-video/v1/static/6415719604001/9c05ee84-b8d7-4cc3-8944-9bef2e5aefc3/1899264c-cab2-4605-a5a8-8850757551ab/1280x720/match/image.jpg",
+                                    "videoDuration": 133467,
+                                    "__typename": "DataApiMatchesResSessionsItemHoleVideo"
+                                },
+                                "__typename": "DataApiMatchesResSessionsItemHoleVideos"
+                            },
+                            "__typename": "DataApiMatchesResSessionsItemHolesItem"
+                        },
+                        {
+                            "holeConfigId": 820,
+                            "holeConfigVideoId": null,
+                            "holeId": 1792,
+                            "holeName": "Big Apple",
+                            "holeNumber": 9,
+                            "holePar": 5,
+                            "holeSequence": 9,
+                            "holeValue": 2,
+                            "live": false,
+                            "teams": [
+                                {
+                                    "hammerUsed": 0,
+                                    "holeProbability": 0.0,
+                                    "holeProbabilityTie": 1.0,
+                                    "isConceded": false,
+                                    "playerSequence": [
+                                        {
+                                            "playerId": 13,
+                                            "sequence": 1,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        },
+                                        {
+                                            "playerId": 15,
+                                            "sequence": 2,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        },
+                                        {
+                                            "playerId": 16,
+                                            "sequence": 3,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        }
+                                    ],
+                                    "score": 0,
+                                    "stroke": 4,
+                                    "teamId": "lagc",
+                                    "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItem"
+                                },
+                                {
+                                    "hammerUsed": 1,
+                                    "holeProbability": 0.0,
+                                    "holeProbabilityTie": 1.0,
+                                    "isConceded": false,
+                                    "playerSequence": [
+                                        {
+                                            "playerId": 20,
+                                            "sequence": 1,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        },
+                                        {
+                                            "playerId": 18,
+                                            "sequence": 2,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        },
+                                        {
+                                            "playerId": 17,
+                                            "sequence": 3,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        }
+                                    ],
+                                    "score": 0,
+                                    "stroke": 4,
+                                    "teamId": "tglnyc",
+                                    "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItem"
+                                }
+                            ],
+                            "yards": 604,
+                            "videos": {
+                                "prelive": {
+                                    "date": "2025-12-23T02:55:43.353Z",
+                                    "id": "6386850113112",
+                                    "thumbnail": "brightcove-video/v1/static/6415719604001/72fe7cb3-2dea-420f-81a6-9477cc3eabe1/c59da499-b797-463a-b1e0-67e314044795/1280x720/match/image.jpg",
+                                    "videoDuration": 18453,
+                                    "__typename": "DataApiMatchesResSessionsItemHoleVideo"
+                                },
+                                "recap": {
+                                    "date": "2026-03-03T01:10:53.679Z",
+                                    "id": "6390292234112",
+                                    "thumbnail": "brightcove-video/v1/static/6415719604001/35bc6354-9dfc-4b97-9d43-37730d350cd6/6f82484b-1501-48e5-9d43-a6266b788085/1280x720/match/image.jpg",
+                                    "videoDuration": 167367,
+                                    "__typename": "DataApiMatchesResSessionsItemHoleVideo"
+                                },
+                                "__typename": "DataApiMatchesResSessionsItemHoleVideos"
+                            },
+                            "__typename": "DataApiMatchesResSessionsItemHolesItem"
+                        }
+                    ],
+                    "live": false,
+                    "sequence": 1,
+                    "sessionId": 248,
+                    "teams": [
+                        {
+                            "externalId": 4,
+                            "score": 4,
+                            "teamId": "lagc",
+                            "timeoutsRemaining": 1,
+                            "timeoutsUsed": 1,
+                            "__typename": "DataApiMatchesResSessionsItemTeamsItem"
+                        },
+                        {
+                            "externalId": 5,
+                            "score": 1,
+                            "teamId": "tglnyc",
+                            "timeoutsRemaining": 2,
+                            "timeoutsUsed": 0,
+                            "__typename": "DataApiMatchesResSessionsItemTeamsItem"
+                        }
+                    ],
+                    "timeoutsTotal": 2,
+                    "__typename": "DataApiMatchesResSessionsItem"
+                },
+                {
+                    "format": "SINGLES",
+                    "holes": [
+                        {
+                            "holeConfigId": 821,
+                            "holeConfigVideoId": null,
+                            "holeId": 1793,
+                            "holeName": "Pick Yer Plunder",
+                            "holeNumber": 10,
+                            "holePar": 5,
+                            "holeSequence": 1,
+                            "holeValue": 1,
+                            "live": false,
+                            "teams": [
+                                {
+                                    "hammerUsed": 0,
+                                    "holeProbability": 0.0,
+                                    "holeProbabilityTie": 0.0,
+                                    "isConceded": true,
+                                    "playerSequence": [
+                                        {
+                                            "playerId": 15,
+                                            "sequence": 1,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        }
+                                    ],
+                                    "score": 0,
+                                    "stroke": 1,
+                                    "teamId": "lagc",
+                                    "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItem"
+                                },
+                                {
+                                    "hammerUsed": 1,
+                                    "holeProbability": 1.0,
+                                    "holeProbabilityTie": 0.0,
+                                    "isConceded": false,
+                                    "playerSequence": [
+                                        {
+                                            "playerId": 18,
+                                            "sequence": 1,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        }
+                                    ],
+                                    "score": 1,
+                                    "stroke": 2,
+                                    "teamId": "tglnyc",
+                                    "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItem"
+                                }
+                            ],
+                            "yards": 570,
+                            "videos": {
+                                "prelive": {
+                                    "date": "2025-01-01T17:25:55.609Z",
+                                    "id": "6366602078112",
+                                    "thumbnail": "brightcove-video/v1/static/6415719604001/c84d9885-f3f1-44ad-a2e4-8c512570966c/44c550b4-9b4d-41d7-ac76-4cd1ffa09894/1280x720/match/image.jpg",
+                                    "videoDuration": 40533,
+                                    "__typename": "DataApiMatchesResSessionsItemHoleVideo"
+                                },
+                                "recap": {
+                                    "date": "2026-03-03T01:29:08.054Z",
+                                    "id": "6390291895112",
+                                    "thumbnail": "brightcove-video/v1/static/6415719604001/f90b649d-ff00-4c65-bdf3-77d0a2f3b449/b91f51fb-4a0f-4a27-9a58-de285b3cfbc3/1280x720/match/image.jpg",
+                                    "videoDuration": 110016,
+                                    "__typename": "DataApiMatchesResSessionsItemHoleVideo"
+                                },
+                                "__typename": "DataApiMatchesResSessionsItemHoleVideos"
+                            },
+                            "__typename": "DataApiMatchesResSessionsItemHolesItem"
+                        },
+                        {
+                            "holeConfigId": 822,
+                            "holeConfigVideoId": null,
+                            "holeId": 1794,
+                            "holeName": "Bluebonnet",
+                            "holeNumber": 11,
+                            "holePar": 4,
+                            "holeSequence": 2,
+                            "holeValue": 1,
+                            "live": false,
+                            "teams": [
+                                {
+                                    "hammerUsed": 0,
+                                    "holeProbability": 0.0,
+                                    "holeProbabilityTie": 1.0,
+                                    "isConceded": false,
+                                    "playerSequence": [
+                                        {
+                                            "playerId": 16,
+                                            "sequence": 1,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        }
+                                    ],
+                                    "score": 0,
+                                    "stroke": 3,
+                                    "teamId": "lagc",
+                                    "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItem"
+                                },
+                                {
+                                    "hammerUsed": 0,
+                                    "holeProbability": 0.0,
+                                    "holeProbabilityTie": 1.0,
+                                    "isConceded": false,
+                                    "playerSequence": [
+                                        {
+                                            "playerId": 17,
+                                            "sequence": 1,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        }
+                                    ],
+                                    "score": 0,
+                                    "stroke": 3,
+                                    "teamId": "tglnyc",
+                                    "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItem"
+                                }
+                            ],
+                            "yards": 306,
+                            "videos": {
+                                "prelive": {
+                                    "date": "2025-01-01T15:48:31.497Z",
+                                    "id": "6366600458112",
+                                    "thumbnail": "brightcove-video/v1/jit/6415719604001/8b888a16-6638-423c-b823-c56ea1d71f52/main/1280x720/20s352ms/match/image.jpg",
+                                    "videoDuration": 40704,
+                                    "__typename": "DataApiMatchesResSessionsItemHoleVideo"
+                                },
+                                "recap": {
+                                    "date": "2026-03-03T01:30:25.499Z",
+                                    "id": "6390292277112",
+                                    "thumbnail": "brightcove-video/v1/static/6415719604001/4e4c8b9c-f5a7-4cab-8117-3d56a86c91c6/c0ade840-a438-4072-9f3b-4bf5d43560a6/1280x720/match/image.jpg",
+                                    "videoDuration": 97297,
+                                    "__typename": "DataApiMatchesResSessionsItemHoleVideo"
+                                },
+                                "__typename": "DataApiMatchesResSessionsItemHoleVideos"
+                            },
+                            "__typename": "DataApiMatchesResSessionsItemHolesItem"
+                        },
+                        {
+                            "holeConfigId": 823,
+                            "holeConfigVideoId": null,
+                            "holeId": 1795,
+                            "holeName": "Fallen Pine",
+                            "holeNumber": 12,
+                            "holePar": 3,
+                            "holeSequence": 3,
+                            "holeValue": 1,
+                            "live": false,
+                            "teams": [
+                                {
+                                    "hammerUsed": 0,
+                                    "holeProbability": 0.0,
+                                    "holeProbabilityTie": 1.0,
+                                    "isConceded": false,
+                                    "playerSequence": [
+                                        {
+                                            "playerId": 13,
+                                            "sequence": 1,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        }
+                                    ],
+                                    "score": 0,
+                                    "stroke": 3,
+                                    "teamId": "lagc",
+                                    "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItem"
+                                },
+                                {
+                                    "hammerUsed": 0,
+                                    "holeProbability": 0.0,
+                                    "holeProbabilityTie": 1.0,
+                                    "isConceded": false,
+                                    "playerSequence": [
+                                        {
+                                            "playerId": 20,
+                                            "sequence": 1,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        }
+                                    ],
+                                    "score": 0,
+                                    "stroke": 3,
+                                    "teamId": "tglnyc",
+                                    "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItem"
+                                }
+                            ],
+                            "yards": 182,
+                            "videos": {
+                                "prelive": {
+                                    "date": "2025-01-02T18:26:46.911Z",
+                                    "id": "6366626468112",
+                                    "thumbnail": "brightcove-video/v1/static/6415719604001/a54b04f7-9533-4055-8074-2b10f13b6302/725402d3-eb73-4498-9c17-f006bc67eae5/1280x720/match/image.jpg",
+                                    "videoDuration": 17429,
+                                    "__typename": "DataApiMatchesResSessionsItemHoleVideo"
+                                },
+                                "recap": {
+                                    "date": "2026-03-03T01:35:06.383Z",
+                                    "id": "6390292193112",
+                                    "thumbnail": "brightcove-video/v1/static/6415719604001/30174d10-afd9-4b1b-b8c4-8e126356ae12/01921be3-d9f1-4b7d-a774-42dee0257c9a/1280x720/match/image.jpg",
+                                    "videoDuration": 92326,
+                                    "__typename": "DataApiMatchesResSessionsItemHoleVideo"
+                                },
+                                "__typename": "DataApiMatchesResSessionsItemHoleVideos"
+                            },
+                            "__typename": "DataApiMatchesResSessionsItemHolesItem"
+                        },
+                        {
+                            "holeConfigId": 824,
+                            "holeConfigVideoId": null,
+                            "holeId": 1796,
+                            "holeName": "Lavender Lane",
+                            "holeNumber": 13,
+                            "holePar": 4,
+                            "holeSequence": 4,
+                            "holeValue": 1,
+                            "live": false,
+                            "teams": [
+                                {
+                                    "hammerUsed": 0,
+                                    "holeProbability": 0.0,
+                                    "holeProbabilityTie": 1.0,
+                                    "isConceded": false,
+                                    "playerSequence": [
+                                        {
+                                            "playerId": 15,
+                                            "sequence": 1,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        }
+                                    ],
+                                    "score": 0,
+                                    "stroke": 4,
+                                    "teamId": "lagc",
+                                    "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItem"
+                                },
+                                {
+                                    "hammerUsed": 0,
+                                    "holeProbability": 0.0,
+                                    "holeProbabilityTie": 1.0,
+                                    "isConceded": false,
+                                    "playerSequence": [
+                                        {
+                                            "playerId": 18,
+                                            "sequence": 1,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        }
+                                    ],
+                                    "score": 0,
+                                    "stroke": 4,
+                                    "teamId": "tglnyc",
+                                    "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItem"
+                                }
+                            ],
+                            "yards": 452,
+                            "videos": {
+                                "prelive": {
+                                    "date": "2026-02-20T14:01:20.617Z",
+                                    "id": "6389624180112",
+                                    "thumbnail": "brightcove-video/v1/static/6415719604001/e01cee56-0a6e-4c8d-9e95-e3430ed9bcb7/ea1a8274-d870-4d7a-8c66-9f7ceece9471/1280x720/match/image.jpg",
+                                    "videoDuration": 13803,
+                                    "__typename": "DataApiMatchesResSessionsItemHoleVideo"
+                                },
+                                "recap": {
+                                    "date": "2026-03-03T01:45:36.698Z",
+                                    "id": "6390292106112",
+                                    "thumbnail": "brightcove-video/v1/static/6415719604001/2f30401d-ba9a-42d6-8152-287a9f0b3500/6ec69129-dd15-401c-a0d4-85340f23a1eb/1280x720/match/image.jpg",
+                                    "videoDuration": 114648,
+                                    "__typename": "DataApiMatchesResSessionsItemHoleVideo"
+                                },
+                                "__typename": "DataApiMatchesResSessionsItemHoleVideos"
+                            },
+                            "__typename": "DataApiMatchesResSessionsItemHolesItem"
+                        },
+                        {
+                            "holeConfigId": 825,
+                            "holeConfigVideoId": null,
+                            "holeId": 1797,
+                            "holeName": "Cenote",
+                            "holeNumber": 14,
+                            "holePar": 3,
+                            "holeSequence": 5,
+                            "holeValue": 1,
+                            "live": false,
+                            "teams": [
+                                {
+                                    "hammerUsed": 0,
+                                    "holeProbability": 0.0,
+                                    "holeProbabilityTie": 0.0,
+                                    "isConceded": true,
+                                    "playerSequence": [
+                                        {
+                                            "playerId": 16,
+                                            "sequence": 1,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        }
+                                    ],
+                                    "score": 0,
+                                    "stroke": 2,
+                                    "teamId": "lagc",
+                                    "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItem"
+                                },
+                                {
+                                    "hammerUsed": 0,
+                                    "holeProbability": 1.0,
+                                    "holeProbabilityTie": 0.0,
+                                    "isConceded": false,
+                                    "playerSequence": [
+                                        {
+                                            "playerId": 17,
+                                            "sequence": 1,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        }
+                                    ],
+                                    "score": 1,
+                                    "stroke": 2,
+                                    "teamId": "tglnyc",
+                                    "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItem"
+                                }
+                            ],
+                            "yards": 260,
+                            "videos": {
+                                "prelive": {
+                                    "date": "2025-12-23T02:24:23.722Z",
+                                    "id": "6386849869112",
+                                    "thumbnail": "brightcove-video/v1/static/6415719604001/d4fa1043-b880-404c-8306-d45bd74e3b9e/d4fb26ab-8f82-42d4-8ad7-8a656025cb13/1280x720/match/image.jpg",
+                                    "videoDuration": 80512,
+                                    "__typename": "DataApiMatchesResSessionsItemHoleVideo"
+                                },
+                                "recap": {
+                                    "date": "2026-03-03T01:49:07.073Z",
+                                    "id": "6390293076112",
+                                    "thumbnail": "brightcove-video/v1/static/6415719604001/9a0075b0-d2b6-4527-b4a1-121e05f16c0d/81ad0fed-bfe3-4b14-ab70-19c04b86e05a/1280x720/match/image.jpg",
+                                    "videoDuration": 57257,
+                                    "__typename": "DataApiMatchesResSessionsItemHoleVideo"
+                                },
+                                "__typename": "DataApiMatchesResSessionsItemHoleVideos"
+                            },
+                            "__typename": "DataApiMatchesResSessionsItemHolesItem"
+                        },
+                        {
+                            "holeConfigId": 826,
+                            "holeConfigVideoId": null,
+                            "holeId": 1798,
+                            "holeName": "Quick Draw",
+                            "holeNumber": 15,
+                            "holePar": 5,
+                            "holeSequence": 6,
+                            "holeValue": 2,
+                            "live": false,
+                            "teams": [
+                                {
+                                    "hammerUsed": 0,
+                                    "holeProbability": 1.0,
+                                    "holeProbabilityTie": 0.0,
+                                    "isConceded": false,
+                                    "playerSequence": [
+                                        {
+                                            "playerId": 13,
+                                            "sequence": 1,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        }
+                                    ],
+                                    "score": 2,
+                                    "stroke": 2,
+                                    "teamId": "lagc",
+                                    "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItem"
+                                },
+                                {
+                                    "hammerUsed": 1,
+                                    "holeProbability": 0.0,
+                                    "holeProbabilityTie": 0.0,
+                                    "isConceded": true,
+                                    "playerSequence": [
+                                        {
+                                            "playerId": 20,
+                                            "sequence": 1,
+                                            "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItemPlayerSequenceItem"
+                                        }
+                                    ],
+                                    "score": 0,
+                                    "stroke": 4,
+                                    "teamId": "tglnyc",
+                                    "__typename": "DataApiMatchesResSessionsItemHolesItemTeamsItem"
+                                }
+                            ],
+                            "yards": 671,
+                            "videos": {
+                                "prelive": {
+                                    "date": "2025-01-02T17:39:33.347Z",
+                                    "id": "6366624879112",
+                                    "thumbnail": "brightcove-video/v1/static/6415719604001/99ab4dc5-6ae2-4c89-a7a7-a16dff3b5721/518fc38a-79fa-4cc8-88e9-3907e9d4f976/1280x720/match/image.jpg",
+                                    "videoDuration": 38187,
+                                    "__typename": "DataApiMatchesResSessionsItemHoleVideo"
+                                },
+                                "recap": {
+                                    "date": "2026-03-03T01:55:31.597Z",
+                                    "id": "6390292503112",
+                                    "thumbnail": "brightcove-video/v1/static/6415719604001/0de1dc50-4c35-4118-9fa8-1fb3feaca80d/41f4bc53-1773-42cd-8ef5-a6bb05c3660e/1280x720/match/image.jpg",
+                                    "videoDuration": 131413,
+                                    "__typename": "DataApiMatchesResSessionsItemHoleVideo"
+                                },
+                                "__typename": "DataApiMatchesResSessionsItemHoleVideos"
+                            },
+                            "__typename": "DataApiMatchesResSessionsItemHolesItem"
+                        }
+                    ],
+                    "live": false,
+                    "sequence": 2,
+                    "sessionId": 249,
+                    "teams": [
+                        {
+                            "externalId": 4,
+                            "score": 2,
+                            "teamId": "lagc",
+                            "timeoutsRemaining": 2,
+                            "timeoutsUsed": 0,
+                            "__typename": "DataApiMatchesResSessionsItemTeamsItem"
+                        },
+                        {
+                            "externalId": 5,
+                            "score": 2,
+                            "teamId": "tglnyc",
+                            "timeoutsRemaining": 1,
+                            "timeoutsUsed": 1,
+                            "__typename": "DataApiMatchesResSessionsItemTeamsItem"
+                        }
+                    ],
+                    "timeoutsTotal": 2,
+                    "__typename": "DataApiMatchesResSessionsItem"
+                }
+            ],
+            "startTime": "2026-03-03T00:00:00.000000Z",
+            "startDate": "2026-03-02",
+            "teams": [
+                {
+                    "designation": "Away",
+                    "hasHammer": false,
+                    "hammersPerTeam": 3,
+                    "hammersUsed": 2,
+                    "hammersRemaining": 1,
+                    "isCeremonyWinner": false,
+                    "matchProbability": 0.9048,
+                    "matchProbabilityTie": -5.551115123125783E-17,
+                    "players": [
+                        {
+                            "firstName": "Justin",
+                            "isCaptain": true,
+                            "lastName": "Rose",
+                            "playerId": 15,
+                            "shortName": null,
+                            "__typename": "DataApiMatchesResTeamsItemPlayersItem"
+                        },
+                        {
+                            "firstName": "Tommy",
+                            "isCaptain": false,
+                            "lastName": "Fleetwood",
+                            "playerId": 16,
+                            "shortName": null,
+                            "__typename": "DataApiMatchesResTeamsItemPlayersItem"
+                        },
+                        {
+                            "firstName": "Collin",
+                            "isCaptain": false,
+                            "lastName": "Morikawa",
+                            "playerId": 13,
+                            "shortName": null,
+                            "__typename": "DataApiMatchesResTeamsItemPlayersItem"
+                        }
+                    ],
+                    "score": 6,
+                    "teamCode": "LA",
+                    "teamId": "lagc",
+                    "teamName": "Los Angeles Golf Club",
+                    "teamStandings": null,
+                    "__typename": "DataApiMatchesResTeamsItem"
+                },
+                {
+                    "designation": "Home",
+                    "hasHammer": false,
+                    "hammersPerTeam": 3,
+                    "hammersUsed": 3,
+                    "hammersRemaining": 0,
+                    "isCeremonyWinner": false,
+                    "matchProbability": 0.0952,
+                    "matchProbabilityTie": 0.0,
+                    "players": [
+                        {
+                            "firstName": "Rickie",
+                            "isCaptain": true,
+                            "lastName": "Fowler",
+                            "playerId": 18,
+                            "shortName": null,
+                            "__typename": "DataApiMatchesResTeamsItemPlayersItem"
+                        },
+                        {
+                            "firstName": "Matt",
+                            "isCaptain": false,
+                            "lastName": "Fitzpatrick",
+                            "playerId": 17,
+                            "shortName": null,
+                            "__typename": "DataApiMatchesResTeamsItemPlayersItem"
+                        },
+                        {
+                            "firstName": "Cameron",
+                            "isCaptain": false,
+                            "lastName": "Young",
+                            "playerId": 20,
+                            "shortName": null,
+                            "__typename": "DataApiMatchesResTeamsItemPlayersItem"
+                        }
+                    ],
+                    "score": 3,
+                    "teamCode": "NY",
+                    "teamId": "tglnyc",
+                    "teamName": "New York Golf Club",
+                    "teamStandings": null,
+                    "__typename": "DataApiMatchesResTeamsItem"
+                }
+            ],
+            "overtime": {
+                "teams": [
+                    {
+                        "teamId": "lagc",
+                        "points": 0,
+                        "__typename": "DataApiMatchesResOvertimeItemTeam"
+                    },
+                    {
+                        "teamId": "tglnyc",
+                        "points": 0,
+                        "__typename": "DataApiMatchesResOvertimeItemTeam"
+                    }
+                ],
+                "holes": [],
+                "__typename": "DataApiMatchesResOvertimeItem"
+            },
+            "currentTeamId": "tglnyc",
+            "currentPlayerId": 20,
+            "upcomingTeamId": null,
+            "upcomingPlayerId": null,
+            "__typename": "DataApiMatchesRes"
+        },
+        "playByPlayList": {
+            "matchId": 114,
+            "matchStatus": "Closed",
+            "sessions": [
+                {
+                    "sessionId": 249,
+                    "sequence": 2,
+                    "sessionScore": "6 - 3",
+                    "playByPlay": [
+                        {
+                            "holeNumber": 15,
+                            "holeScore": "2",
+                            "timeline": [
+                                {
+                                    "shot": 4,
+                                    "playerId": 20,
+                                    "timestamp": "2026-03-03T01:50:48.130000Z",
+                                    "teamId": "tglnyc",
+                                    "externalId": 5,
+                                    "pbpText": "Cameron Young putts from 33 ft 6 in, 3 ft 3 in left to hole.",
+                                    "club": "PUTTER",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 2,
+                                    "playerId": 13,
+                                    "timestamp": "2026-03-03T01:49:45.778000Z",
+                                    "teamId": "lagc",
+                                    "externalId": 4,
+                                    "pbpText": "Collin Morikawa hits 6-Iron 202 yds to Green, 8 ft 2 in left to hole.",
+                                    "club": "6_IRON",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 3,
+                                    "playerId": 20,
+                                    "timestamp": "2026-03-03T01:49:12.094000Z",
+                                    "teamId": "tglnyc",
+                                    "externalId": 5,
+                                    "pbpText": "Cameron Young hits 4-Iron 224 yds to Green, 33 ft 6 in left to hole.",
+                                    "club": "4_IRON",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 1,
+                                    "playerId": 13,
+                                    "timestamp": "2026-03-03T01:48:37.704000Z",
+                                    "teamId": "lagc",
+                                    "externalId": 4,
+                                    "pbpText": "Collin Morikawa hits Driver 324 yds to Fairway, 200 yds left to hole.",
+                                    "club": "DRIVER",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 2,
+                                    "playerId": 20,
+                                    "timestamp": "2026-03-03T01:48:05.942000Z",
+                                    "teamId": "tglnyc",
+                                    "externalId": 5,
+                                    "pbpText": "NY is assessed a 1 stroke penalty.",
+                                    "club": null,
+                                    "strokeType": "PENALTY",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 1,
+                                    "playerId": 20,
+                                    "timestamp": "2026-03-03T01:48:02.375000Z",
+                                    "teamId": "tglnyc",
+                                    "externalId": 5,
+                                    "pbpText": "Cameron Young hits Driver 308 yds to penalty area, 217 yds left to hole.",
+                                    "club": "DRIVER",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "actionType": "CALLED_TIMEOUT",
+                                    "timestamp": "2026-03-03T01:47:10.501000Z",
+                                    "teamId": "tglnyc",
+                                    "externalId": 5,
+                                    "pbpText": "NY calls timeout, 1 timeout remaining.",
+                                    "__typename": "DataApiPlayByPlayTimelineEventHoleAction"
+                                },
+                                {
+                                    "actionType": "HAD_HAMMER_ACCEPTED",
+                                    "timestamp": "2026-03-03T01:46:34.842000Z",
+                                    "teamId": "tglnyc",
+                                    "externalId": 5,
+                                    "pbpText": "NY throws Hammer, LA accepts.",
+                                    "__typename": "DataApiPlayByPlayTimelineEventHoleAction"
+                                }
+                            ],
+                            "holeWinningTeamId": "lagc",
+                            "holeLosingTeamId": "tglnyc",
+                            "holeEnd": {
+                                "pbpText": "LA wins hole by concession for 2 points.",
+                                "__typename": "DataApiPlayByPlayTimelineEventMessage"
+                            },
+                            "__typename": "DataApiPlayByPlayHole"
+                        },
+                        {
+                            "holeNumber": 14,
+                            "holeScore": "1",
+                            "timeline": [
+                                {
+                                    "shot": 2,
+                                    "playerId": 17,
+                                    "timestamp": "2026-03-03T01:45:25.497000Z",
+                                    "teamId": "tglnyc",
+                                    "externalId": 5,
+                                    "pbpText": "Matt Fitzpatrick holes out from 23 ft 8 in.",
+                                    "club": "PUTTER",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 2,
+                                    "playerId": 16,
+                                    "timestamp": "2026-03-03T01:44:50.772000Z",
+                                    "teamId": "lagc",
+                                    "externalId": 4,
+                                    "pbpText": "Tommy Fleetwood hits Sand Wedge 46 ft 4 in to Green, 4 ft 4 in left to hole.",
+                                    "club": "SAND_WEDGE",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 1,
+                                    "playerId": 16,
+                                    "timestamp": "2026-03-03T01:43:19.607000Z",
+                                    "teamId": "lagc",
+                                    "externalId": 4,
+                                    "pbpText": "Tommy Fleetwood hits Driver 264 yds to Rough, 42 ft 0 in left to hole.",
+                                    "club": "DRIVER",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 1,
+                                    "playerId": 17,
+                                    "timestamp": "2026-03-03T01:42:32.063000Z",
+                                    "teamId": "tglnyc",
+                                    "externalId": 5,
+                                    "pbpText": "Matt Fitzpatrick hits Driver 264 yds to Rough, 23 ft 8 in left to hole.",
+                                    "club": "DRIVER",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                }
+                            ],
+                            "holeWinningTeamId": "tglnyc",
+                            "holeLosingTeamId": "lagc",
+                            "holeEnd": {
+                                "pbpText": "NY wins hole by concession for 1 point.",
+                                "__typename": "DataApiPlayByPlayTimelineEventMessage"
+                            },
+                            "__typename": "DataApiPlayByPlayHole"
+                        },
+                        {
+                            "holeNumber": 13,
+                            "holeScore": "4",
+                            "timeline": [
+                                {
+                                    "shot": 4,
+                                    "playerId": 18,
+                                    "timestamp": "2026-03-03T01:40:59.703000Z",
+                                    "teamId": "tglnyc",
+                                    "externalId": 5,
+                                    "pbpText": "LA concedes putt; Rickie Fowler receives a Gimme.",
+                                    "club": null,
+                                    "strokeType": "GIMME",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 3,
+                                    "playerId": 18,
+                                    "timestamp": "2026-03-03T01:40:59.438000Z",
+                                    "teamId": "tglnyc",
+                                    "externalId": 5,
+                                    "pbpText": "Rickie Fowler putts from 13 ft 0 in, 15 in left to hole.",
+                                    "club": "PUTTER",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 4,
+                                    "playerId": 15,
+                                    "timestamp": "2026-03-03T01:40:16.391000Z",
+                                    "teamId": "lagc",
+                                    "externalId": 4,
+                                    "pbpText": "NY concedes putt; Justin Rose receives a Gimme.",
+                                    "club": null,
+                                    "strokeType": "GIMME",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 3,
+                                    "playerId": 15,
+                                    "timestamp": "2026-03-03T01:40:16.110000Z",
+                                    "teamId": "lagc",
+                                    "externalId": 4,
+                                    "pbpText": "Justin Rose putts from 23 ft 7 in, 11 in left to hole.",
+                                    "club": "PUTTER",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 2,
+                                    "playerId": 18,
+                                    "timestamp": "2026-03-03T01:38:58.533000Z",
+                                    "teamId": "tglnyc",
+                                    "externalId": 5,
+                                    "pbpText": "Rickie Fowler hits 8-Iron 160 yds to Green, 13 ft 0 in left to hole.",
+                                    "club": "8_IRON",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 2,
+                                    "playerId": 15,
+                                    "timestamp": "2026-03-03T01:38:24.867000Z",
+                                    "teamId": "lagc",
+                                    "externalId": 4,
+                                    "pbpText": "Justin Rose hits 7-Iron 186 yds to Green, 23 ft 7 in left to hole.",
+                                    "club": "7_IRON",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 1,
+                                    "playerId": 15,
+                                    "timestamp": "2026-03-03T01:37:25.908000Z",
+                                    "teamId": "lagc",
+                                    "externalId": 4,
+                                    "pbpText": "Justin Rose hits 3-Wood 280 yds to Fairway, 185 yds left to hole.",
+                                    "club": "3_WOOD",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 1,
+                                    "playerId": 18,
+                                    "timestamp": "2026-03-03T01:36:41.838000Z",
+                                    "teamId": "tglnyc",
+                                    "externalId": 5,
+                                    "pbpText": "Rickie Fowler hits Driver 294 yds to Fairway, 163 yds left to hole.",
+                                    "club": "DRIVER",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                }
+                            ],
+                            "holeWinningTeamId": null,
+                            "holeLosingTeamId": null,
+                            "holeEnd": {
+                                "pbpText": "The hole ends in a tie.",
+                                "__typename": "DataApiPlayByPlayTimelineEventMessage"
+                            },
+                            "__typename": "DataApiPlayByPlayHole"
+                        },
+                        {
+                            "holeNumber": 12,
+                            "holeScore": "3",
+                            "timeline": [
+                                {
+                                    "shot": 3,
+                                    "playerId": 20,
+                                    "timestamp": "2026-03-03T01:30:06.792000Z",
+                                    "teamId": "tglnyc",
+                                    "externalId": 5,
+                                    "pbpText": "Cameron Young makes putt from 4 ft 2 in.",
+                                    "club": "PUTTER",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 3,
+                                    "playerId": 13,
+                                    "timestamp": "2026-03-03T01:29:41.228000Z",
+                                    "teamId": "lagc",
+                                    "externalId": 4,
+                                    "pbpText": "NY concedes putt; Collin Morikawa receives a Gimme.",
+                                    "club": null,
+                                    "strokeType": "GIMME",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 2,
+                                    "playerId": 13,
+                                    "timestamp": "2026-03-03T01:29:40.935000Z",
+                                    "teamId": "lagc",
+                                    "externalId": 4,
+                                    "pbpText": "Collin Morikawa putts from 18 ft 6 in, 2 ft 3 in left to hole.",
+                                    "club": "PUTTER",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 2,
+                                    "playerId": 20,
+                                    "timestamp": "2026-03-03T01:29:11.898000Z",
+                                    "teamId": "tglnyc",
+                                    "externalId": 5,
+                                    "pbpText": "Cameron Young putts from 31 ft 5 in, 4 ft 2 in left to hole.",
+                                    "club": "PUTTER",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 1,
+                                    "playerId": 13,
+                                    "timestamp": "2026-03-03T01:28:13.704000Z",
+                                    "teamId": "lagc",
+                                    "externalId": 4,
+                                    "pbpText": "Collin Morikawa hits 7-Iron 177 yds to Green, 18 ft 6 in left to hole.",
+                                    "club": "7_IRON",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 1,
+                                    "playerId": 20,
+                                    "timestamp": "2026-03-03T01:27:43.755000Z",
+                                    "teamId": "tglnyc",
+                                    "externalId": 5,
+                                    "pbpText": "Cameron Young hits 7-Iron 181 yds to Green, 31 ft 5 in left to hole.",
+                                    "club": "7_IRON",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                }
+                            ],
+                            "holeWinningTeamId": null,
+                            "holeLosingTeamId": null,
+                            "holeEnd": {
+                                "pbpText": "The hole ends in a tie.",
+                                "__typename": "DataApiPlayByPlayTimelineEventMessage"
+                            },
+                            "__typename": "DataApiPlayByPlayHole"
+                        },
+                        {
+                            "holeNumber": 11,
+                            "holeScore": "3",
+                            "timeline": [
+                                {
+                                    "shot": 3,
+                                    "playerId": 16,
+                                    "timestamp": "2026-03-03T01:25:51.323000Z",
+                                    "teamId": "lagc",
+                                    "externalId": 4,
+                                    "pbpText": "Tommy Fleetwood makes putt from 6 ft 2 in.",
+                                    "club": "PUTTER",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 3,
+                                    "playerId": 17,
+                                    "timestamp": "2026-03-03T01:25:16.159000Z",
+                                    "teamId": "tglnyc",
+                                    "externalId": 5,
+                                    "pbpText": "LA concedes putt; Matt Fitzpatrick receives a Gimme.",
+                                    "club": null,
+                                    "strokeType": "GIMME",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 2,
+                                    "playerId": 17,
+                                    "timestamp": "2026-03-03T01:25:15.889000Z",
+                                    "teamId": "tglnyc",
+                                    "externalId": 5,
+                                    "pbpText": "Matt Fitzpatrick hits Sand Wedge 63 ft 3 in to Green, 17 in left to hole.",
+                                    "club": "SAND_WEDGE",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 2,
+                                    "playerId": 16,
+                                    "timestamp": "2026-03-03T01:24:38.926000Z",
+                                    "teamId": "lagc",
+                                    "externalId": 4,
+                                    "pbpText": "Tommy Fleetwood hits Sand Wedge 70 ft 2 in to Green, 6 ft 2 in left to hole.",
+                                    "club": "SAND_WEDGE",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 1,
+                                    "playerId": 16,
+                                    "timestamp": "2026-03-03T01:22:59.947000Z",
+                                    "teamId": "lagc",
+                                    "externalId": 4,
+                                    "pbpText": "Tommy Fleetwood hits Driver 314 yds, ball moved to free drop area, 65 ft 3 in left to hole.",
+                                    "club": "DRIVER",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 1,
+                                    "playerId": 17,
+                                    "timestamp": "2026-03-03T01:20:51.536000Z",
+                                    "teamId": "tglnyc",
+                                    "externalId": 5,
+                                    "pbpText": "Matt Fitzpatrick hits Driver 295 yds to Rough, 63 ft 0 in left to hole.",
+                                    "club": "DRIVER",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                }
+                            ],
+                            "holeWinningTeamId": null,
+                            "holeLosingTeamId": null,
+                            "holeEnd": {
+                                "pbpText": "The hole ends in a tie.",
+                                "__typename": "DataApiPlayByPlayTimelineEventMessage"
+                            },
+                            "__typename": "DataApiPlayByPlayHole"
+                        },
+                        {
+                            "holeNumber": 10,
+                            "holeScore": "1",
+                            "timeline": [
+                                {
+                                    "actionType": "HAD_HAMMER_DECLINED",
+                                    "timestamp": "2026-03-03T01:18:32.658000Z",
+                                    "teamId": "tglnyc",
+                                    "externalId": 5,
+                                    "pbpText": "NY throws Hammer, LA declines.",
+                                    "__typename": "DataApiPlayByPlayTimelineEventHoleAction"
+                                },
+                                {
+                                    "shot": 2,
+                                    "playerId": 18,
+                                    "timestamp": "2026-03-03T01:18:06.862000Z",
+                                    "teamId": "tglnyc",
+                                    "externalId": 5,
+                                    "pbpText": "Rickie Fowler hits 7-Iron 183 yds to Green, 8 ft 5 in left to hole.",
+                                    "club": "7_IRON",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 1,
+                                    "playerId": 18,
+                                    "timestamp": "2026-03-03T01:17:10.420000Z",
+                                    "teamId": "tglnyc",
+                                    "externalId": 5,
+                                    "pbpText": "Rickie Fowler hits Driver 345 yds to Fairway, 186 yds left to hole.",
+                                    "club": "DRIVER",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 1,
+                                    "playerId": 15,
+                                    "timestamp": "2026-03-03T01:16:36.492000Z",
+                                    "teamId": "lagc",
+                                    "externalId": 4,
+                                    "pbpText": "Justin Rose hits Driver 354 yds to Fairway, 177 yds left to hole.",
+                                    "club": "DRIVER",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                }
+                            ],
+                            "holeWinningTeamId": "tglnyc",
+                            "holeLosingTeamId": "lagc",
+                            "holeEnd": {
+                                "pbpText": "NY wins hole by concession for 1 point.",
+                                "__typename": "DataApiPlayByPlayTimelineEventMessage"
+                            },
+                            "__typename": "DataApiPlayByPlayHole"
+                        }
+                    ],
+                    "sessionEnd": {
+                        "pbpText": "Singles has ended.",
+                        "__typename": "DataApiPlayByPlayTimelineEventMessage"
+                    },
+                    "__typename": "DataApiPlayByPlaySession"
+                },
+                {
+                    "sessionId": 248,
+                    "sequence": 1,
+                    "sessionScore": "6 - 3",
+                    "playByPlay": [
+                        {
+                            "holeNumber": 9,
+                            "holeScore": "4",
+                            "timeline": [
+                                {
+                                    "shot": 4,
+                                    "playerId": 13,
+                                    "timestamp": "2026-03-03T01:04:40.793000Z",
+                                    "teamId": "lagc",
+                                    "externalId": 4,
+                                    "pbpText": "Collin Morikawa makes putt from 5 ft 7 in.",
+                                    "club": "PUTTER",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 4,
+                                    "playerId": 20,
+                                    "timestamp": "2026-03-03T01:04:20.695000Z",
+                                    "teamId": "tglnyc",
+                                    "externalId": 5,
+                                    "pbpText": "LA concedes putt; Cameron Young receives a Gimme.",
+                                    "club": null,
+                                    "strokeType": "GIMME",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 3,
+                                    "playerId": 17,
+                                    "timestamp": "2026-03-03T01:04:20.381000Z",
+                                    "teamId": "tglnyc",
+                                    "externalId": 5,
+                                    "pbpText": "Matt Fitzpatrick hits Putter 15 ft 3 in to Green, 13 in left to hole.",
+                                    "club": "PUTTER",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 3,
+                                    "playerId": 16,
+                                    "timestamp": "2026-03-03T01:03:21.725000Z",
+                                    "teamId": "lagc",
+                                    "externalId": 4,
+                                    "pbpText": "Tommy Fleetwood hits Sand Wedge 78 yds to Green, 5 ft 7 in left to hole.",
+                                    "club": "SAND_WEDGE",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 2,
+                                    "playerId": 18,
+                                    "timestamp": "2026-03-03T01:02:47.793000Z",
+                                    "teamId": "tglnyc",
+                                    "externalId": 5,
+                                    "pbpText": "Rickie Fowler hits 3-Wood 254 yds to Fairway, 15 ft 10 in left to hole.",
+                                    "club": "3_WOOD",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 2,
+                                    "playerId": 15,
+                                    "timestamp": "2026-03-03T01:02:14.752000Z",
+                                    "teamId": "lagc",
+                                    "externalId": 4,
+                                    "pbpText": "Justin Rose hits 8-Iron 192 yds to Fairway, 80 yds left to hole.",
+                                    "club": "8_IRON",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 1,
+                                    "playerId": 20,
+                                    "timestamp": "2026-03-03T01:01:19.345000Z",
+                                    "teamId": "tglnyc",
+                                    "externalId": 5,
+                                    "pbpText": "Cameron Young hits Driver 336 yds to Fairway, 258 yds left to hole.",
+                                    "club": "DRIVER",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "actionType": "HAD_HAMMER_ACCEPTED",
+                                    "timestamp": "2026-03-03T01:00:52.383000Z",
+                                    "teamId": "tglnyc",
+                                    "externalId": 5,
+                                    "pbpText": "NY throws Hammer, LA accepts.",
+                                    "__typename": "DataApiPlayByPlayTimelineEventHoleAction"
+                                },
+                                {
+                                    "shot": 1,
+                                    "playerId": 13,
+                                    "timestamp": "2026-03-03T00:59:57.807000Z",
+                                    "teamId": "lagc",
+                                    "externalId": 4,
+                                    "pbpText": "Collin Morikawa hits Driver 321 yds to Rough, 272 yds left to hole.",
+                                    "club": "DRIVER",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "actionType": "CALLED_TIMEOUT",
+                                    "timestamp": "2026-03-03T00:59:09.769000Z",
+                                    "teamId": "lagc",
+                                    "externalId": 4,
+                                    "pbpText": "LA calls timeout, 1 timeout remaining.",
+                                    "__typename": "DataApiPlayByPlayTimelineEventHoleAction"
+                                }
+                            ],
+                            "holeWinningTeamId": null,
+                            "holeLosingTeamId": null,
+                            "holeEnd": {
+                                "pbpText": "The hole ends in a tie.",
+                                "__typename": "DataApiPlayByPlayTimelineEventMessage"
+                            },
+                            "__typename": "DataApiPlayByPlayHole"
+                        },
+                        {
+                            "holeNumber": 8,
+                            "holeScore": "1",
+                            "timeline": [
+                                {
+                                    "actionType": "HAD_HAMMER_DECLINED",
+                                    "timestamp": "2026-03-03T00:57:37.648000Z",
+                                    "teamId": "lagc",
+                                    "externalId": 4,
+                                    "pbpText": "LA throws Hammer, NY declines.",
+                                    "__typename": "DataApiPlayByPlayTimelineEventHoleAction"
+                                },
+                                {
+                                    "shot": 3,
+                                    "playerId": 18,
+                                    "timestamp": "2026-03-03T00:57:16.189000Z",
+                                    "teamId": "tglnyc",
+                                    "externalId": 5,
+                                    "pbpText": "Rickie Fowler putts from 18 ft 3 in, 3 ft 7 in left to hole.",
+                                    "club": "PUTTER",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 2,
+                                    "playerId": 20,
+                                    "timestamp": "2026-03-03T00:56:01.423000Z",
+                                    "teamId": "tglnyc",
+                                    "externalId": 5,
+                                    "pbpText": "Cameron Young hits Sand Wedge 108 yds to Green, 18 ft 3 in left to hole.",
+                                    "club": "SAND_WEDGE",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 2,
+                                    "playerId": 13,
+                                    "timestamp": "2026-03-03T00:55:27.653000Z",
+                                    "teamId": "lagc",
+                                    "externalId": 4,
+                                    "pbpText": "Collin Morikawa hits Sand Wedge 111 yds to Green, 5 ft 4 in left to hole.",
+                                    "club": "SAND_WEDGE",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 1,
+                                    "playerId": 17,
+                                    "timestamp": "2026-03-03T00:54:35.348000Z",
+                                    "teamId": "tglnyc",
+                                    "externalId": 5,
+                                    "pbpText": "Matt Fitzpatrick hits Driver 319 yds to Fairway, 107 yds left to hole.",
+                                    "club": "DRIVER",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 1,
+                                    "playerId": 16,
+                                    "timestamp": "2026-03-03T00:53:50.384000Z",
+                                    "teamId": "lagc",
+                                    "externalId": 4,
+                                    "pbpText": "Tommy Fleetwood hits Driver 317 yds to Fairway, 110 yds left to hole.",
+                                    "club": "DRIVER",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                }
+                            ],
+                            "holeWinningTeamId": "lagc",
+                            "holeLosingTeamId": "tglnyc",
+                            "holeEnd": {
+                                "pbpText": "LA wins hole by concession for 1 point.",
+                                "__typename": "DataApiPlayByPlayTimelineEventMessage"
+                            },
+                            "__typename": "DataApiPlayByPlayHole"
+                        },
+                        {
+                            "holeNumber": 7,
+                            "holeScore": "1",
+                            "timeline": [
+                                {
+                                    "shot": 2,
+                                    "playerId": 17,
+                                    "timestamp": "2026-03-03T00:51:41.318000Z",
+                                    "teamId": "tglnyc",
+                                    "externalId": 5,
+                                    "pbpText": "Matt Fitzpatrick hits Putter 18 ft 0 in to Green, 21 in left to hole.",
+                                    "club": "PUTTER",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 2,
+                                    "playerId": 16,
+                                    "timestamp": "2026-03-03T00:51:11.849000Z",
+                                    "teamId": "lagc",
+                                    "externalId": 4,
+                                    "pbpText": "NY concedes putt; Tommy Fleetwood receives a Gimme.",
+                                    "club": null,
+                                    "strokeType": "GIMME",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 1,
+                                    "playerId": 18,
+                                    "timestamp": "2026-03-03T00:50:22.863000Z",
+                                    "teamId": "tglnyc",
+                                    "externalId": 5,
+                                    "pbpText": "Rickie Fowler hits Pitching Wedge 146 yds to Fairway, 16 ft 4 in left to hole.",
+                                    "club": "PITCHING_WEDGE",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 1,
+                                    "playerId": 15,
+                                    "timestamp": "2026-03-03T00:49:27.606000Z",
+                                    "teamId": "lagc",
+                                    "externalId": 4,
+                                    "pbpText": "Justin Rose hits 9-Iron 150 yds to Green, 2 ft 3 in left to hole.",
+                                    "club": "9_IRON",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                }
+                            ],
+                            "holeWinningTeamId": "lagc",
+                            "holeLosingTeamId": "tglnyc",
+                            "holeEnd": {
+                                "pbpText": "LA wins hole by concession for 1 point.",
+                                "__typename": "DataApiPlayByPlayTimelineEventMessage"
+                            },
+                            "__typename": "DataApiPlayByPlayHole"
+                        },
+                        {
+                            "holeNumber": 6,
+                            "holeScore": "1",
+                            "timeline": [
+                                {
+                                    "shot": 6,
+                                    "playerId": 18,
+                                    "timestamp": "2026-03-03T00:42:53.857000Z",
+                                    "teamId": "tglnyc",
+                                    "externalId": 5,
+                                    "pbpText": "LA concedes putt; Rickie Fowler receives a Gimme.",
+                                    "club": null,
+                                    "strokeType": "GIMME",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 5,
+                                    "playerId": 20,
+                                    "timestamp": "2026-03-03T00:42:53.555000Z",
+                                    "teamId": "tglnyc",
+                                    "externalId": 5,
+                                    "pbpText": "Cameron Young hits Putter 14 ft 11 in to Green, 2 ft 9 in left to hole.",
+                                    "club": "PUTTER",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 3,
+                                    "playerId": 16,
+                                    "timestamp": "2026-03-03T00:42:17.410000Z",
+                                    "teamId": "lagc",
+                                    "externalId": 4,
+                                    "pbpText": "Tommy Fleetwood hits Sand Wedge 35 ft 4 in to Green, 3 ft 4 in left to hole.",
+                                    "club": "SAND_WEDGE",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 4,
+                                    "playerId": 17,
+                                    "timestamp": "2026-03-03T00:41:21.083000Z",
+                                    "teamId": "tglnyc",
+                                    "externalId": 5,
+                                    "pbpText": "Matt Fitzpatrick hits Sand Wedge 53 yds to Fairway, 12 ft 3 in left to hole.",
+                                    "club": "SAND_WEDGE",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 2,
+                                    "playerId": 15,
+                                    "timestamp": "2026-03-03T00:40:47.869000Z",
+                                    "teamId": "lagc",
+                                    "externalId": 4,
+                                    "pbpText": "Justin Rose hits 8-Iron 176 yds to Fairway, 32 ft 5 in left to hole.",
+                                    "club": "8_IRON",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 3,
+                                    "playerId": 18,
+                                    "timestamp": "2026-03-03T00:40:04.228000Z",
+                                    "teamId": "tglnyc",
+                                    "externalId": 5,
+                                    "pbpText": "NY is assessed a 1 stroke penalty.",
+                                    "club": null,
+                                    "strokeType": "PENALTY",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 2,
+                                    "playerId": 18,
+                                    "timestamp": "2026-03-03T00:39:59.805000Z",
+                                    "teamId": "tglnyc",
+                                    "externalId": 5,
+                                    "pbpText": "Rickie Fowler hits 7-Iron 163 yds to penalty area, 50 yds left to hole.",
+                                    "club": "7_IRON",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 1,
+                                    "playerId": 13,
+                                    "timestamp": "2026-03-03T00:39:27.341000Z",
+                                    "teamId": "lagc",
+                                    "externalId": 4,
+                                    "pbpText": "Collin Morikawa hits Driver 314 yds to Fairway, 168 yds left to hole.",
+                                    "club": "DRIVER",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 1,
+                                    "playerId": 20,
+                                    "timestamp": "2026-03-03T00:38:54.121000Z",
+                                    "teamId": "tglnyc",
+                                    "externalId": 5,
+                                    "pbpText": "Cameron Young hits Driver 315 yds to Rough, 172 yds left to hole.",
+                                    "club": "DRIVER",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                }
+                            ],
+                            "holeWinningTeamId": "lagc",
+                            "holeLosingTeamId": "tglnyc",
+                            "holeEnd": {
+                                "pbpText": "LA wins hole by concession for 1 point.",
+                                "__typename": "DataApiPlayByPlayTimelineEventMessage"
+                            },
+                            "__typename": "DataApiPlayByPlayHole"
+                        },
+                        {
+                            "holeNumber": 5,
+                            "holeScore": "3",
+                            "timeline": [
+                                {
+                                    "shot": 3,
+                                    "playerId": 15,
+                                    "timestamp": "2026-03-03T00:37:40.161000Z",
+                                    "teamId": "lagc",
+                                    "externalId": 4,
+                                    "pbpText": "NY concedes putt; Justin Rose receives a Gimme.",
+                                    "club": null,
+                                    "strokeType": "GIMME",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 2,
+                                    "playerId": 13,
+                                    "timestamp": "2026-03-03T00:37:39.931000Z",
+                                    "teamId": "lagc",
+                                    "externalId": 4,
+                                    "pbpText": "Collin Morikawa putts from 4 ft 0 in, 3 ft 0 in left to hole.",
+                                    "club": "PUTTER",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 3,
+                                    "playerId": 18,
+                                    "timestamp": "2026-03-03T00:37:03.851000Z",
+                                    "teamId": "tglnyc",
+                                    "externalId": 5,
+                                    "pbpText": "LA concedes putt; Rickie Fowler receives a Gimme.",
+                                    "club": null,
+                                    "strokeType": "GIMME",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 2,
+                                    "playerId": 20,
+                                    "timestamp": "2026-03-03T00:37:03.644000Z",
+                                    "teamId": "tglnyc",
+                                    "externalId": 5,
+                                    "pbpText": "Cameron Young putts from 8 ft 11 in, 15 in left to hole.",
+                                    "club": "PUTTER",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 1,
+                                    "playerId": 16,
+                                    "timestamp": "2026-03-03T00:35:51.731000Z",
+                                    "teamId": "lagc",
+                                    "externalId": 4,
+                                    "pbpText": "Tommy Fleetwood hits 8-Iron 168 yds to Green, 4 ft 0 in left to hole.",
+                                    "club": "8_IRON",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 1,
+                                    "playerId": 17,
+                                    "timestamp": "2026-03-03T00:35:11.140000Z",
+                                    "teamId": "tglnyc",
+                                    "externalId": 5,
+                                    "pbpText": "Matt Fitzpatrick hits 8-Iron 169 yds to Green, 8 ft 11 in left to hole.",
+                                    "club": "8_IRON",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                }
+                            ],
+                            "holeWinningTeamId": null,
+                            "holeLosingTeamId": null,
+                            "holeEnd": {
+                                "pbpText": "The hole ends in a tie.",
+                                "__typename": "DataApiPlayByPlayTimelineEventMessage"
+                            },
+                            "__typename": "DataApiPlayByPlayHole"
+                        },
+                        {
+                            "holeNumber": 4,
+                            "holeScore": "4",
+                            "timeline": [
+                                {
+                                    "shot": 4,
+                                    "playerId": 15,
+                                    "timestamp": "2026-03-03T00:33:00.213000Z",
+                                    "teamId": "lagc",
+                                    "externalId": 4,
+                                    "pbpText": "Justin Rose makes putt from 6 ft 1 in.",
+                                    "club": "PUTTER",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 4,
+                                    "playerId": 18,
+                                    "timestamp": "2026-03-03T00:32:17.495000Z",
+                                    "teamId": "tglnyc",
+                                    "externalId": 5,
+                                    "pbpText": "LA concedes putt; Rickie Fowler receives a Gimme.",
+                                    "club": null,
+                                    "strokeType": "GIMME",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 3,
+                                    "playerId": 20,
+                                    "timestamp": "2026-03-03T00:32:17.217000Z",
+                                    "teamId": "tglnyc",
+                                    "externalId": 5,
+                                    "pbpText": "Cameron Young hits Sand Wedge 22 ft 3 in to Green, 11 in left to hole.",
+                                    "club": "SAND_WEDGE",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 3,
+                                    "playerId": 13,
+                                    "timestamp": "2026-03-03T00:31:45.948000Z",
+                                    "teamId": "lagc",
+                                    "externalId": 4,
+                                    "pbpText": "Collin Morikawa putts from 38 ft 2 in, 6 ft 1 in left to hole.",
+                                    "club": "PUTTER",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 2,
+                                    "playerId": 16,
+                                    "timestamp": "2026-03-03T00:30:00.552000Z",
+                                    "teamId": "lagc",
+                                    "externalId": 4,
+                                    "pbpText": "Tommy Fleetwood hits 5-Wood 225 yds to Green, 38 ft 2 in left to hole.",
+                                    "club": "5_WOOD",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 2,
+                                    "playerId": 17,
+                                    "timestamp": "2026-03-03T00:29:18.360000Z",
+                                    "teamId": "tglnyc",
+                                    "externalId": 5,
+                                    "pbpText": "Matt Fitzpatrick hits 3-Wood 275 yds to Bunker, 21 ft 5 in left to hole.",
+                                    "club": "3_WOOD",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 1,
+                                    "playerId": 15,
+                                    "timestamp": "2026-03-03T00:28:45.384000Z",
+                                    "teamId": "lagc",
+                                    "externalId": 4,
+                                    "pbpText": "Justin Rose hits Driver 335 yds to Fairway, 223 yds left to hole.",
+                                    "club": "DRIVER",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 1,
+                                    "playerId": 18,
+                                    "timestamp": "2026-03-03T00:27:59.552000Z",
+                                    "teamId": "tglnyc",
+                                    "externalId": 5,
+                                    "pbpText": "Rickie Fowler hits Driver 310 yds to Fairway, 280 yds left to hole.",
+                                    "club": "DRIVER",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                }
+                            ],
+                            "holeWinningTeamId": null,
+                            "holeLosingTeamId": null,
+                            "holeEnd": {
+                                "pbpText": "The hole ends in a tie.",
+                                "__typename": "DataApiPlayByPlayTimelineEventMessage"
+                            },
+                            "__typename": "DataApiPlayByPlayHole"
+                        },
+                        {
+                            "holeNumber": 3,
+                            "holeScore": "3",
+                            "timeline": [
+                                {
+                                    "shot": 3,
+                                    "playerId": 17,
+                                    "timestamp": "2026-03-03T00:19:50.982000Z",
+                                    "teamId": "tglnyc",
+                                    "externalId": 5,
+                                    "pbpText": "Matt Fitzpatrick makes putt from 3 ft 8 in.",
+                                    "club": "PUTTER",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 3,
+                                    "playerId": 16,
+                                    "timestamp": "2026-03-03T00:19:34.429000Z",
+                                    "teamId": "lagc",
+                                    "externalId": 4,
+                                    "pbpText": "Tommy Fleetwood makes putt from 4 ft 7 in.",
+                                    "club": "PUTTER",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 2,
+                                    "playerId": 15,
+                                    "timestamp": "2026-03-03T00:18:41.590000Z",
+                                    "teamId": "lagc",
+                                    "externalId": 4,
+                                    "pbpText": "Justin Rose hits Sand Wedge 38 ft 1 in to Green, 4 ft 7 in left to hole.",
+                                    "club": "SAND_WEDGE",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 2,
+                                    "playerId": 18,
+                                    "timestamp": "2026-03-03T00:18:16.644000Z",
+                                    "teamId": "tglnyc",
+                                    "externalId": 5,
+                                    "pbpText": "Rickie Fowler hits Sand Wedge 61 ft 4 in to Green, 3 ft 8 in left to hole.",
+                                    "club": "SAND_WEDGE",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 1,
+                                    "playerId": 13,
+                                    "timestamp": "2026-03-03T00:17:16.170000Z",
+                                    "teamId": "lagc",
+                                    "externalId": 4,
+                                    "pbpText": "Collin Morikawa hits 6-Iron 210 yds to Bunker, 33 ft 7 in left to hole.",
+                                    "club": "6_IRON",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 1,
+                                    "playerId": 20,
+                                    "timestamp": "2026-03-03T00:16:40.920000Z",
+                                    "teamId": "tglnyc",
+                                    "externalId": 5,
+                                    "pbpText": "Cameron Young hits 7-Iron 208 yds to Fairway, 64 ft 0 in left to hole.",
+                                    "club": "7_IRON",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                }
+                            ],
+                            "holeWinningTeamId": null,
+                            "holeLosingTeamId": null,
+                            "holeEnd": {
+                                "pbpText": "The hole ends in a tie.",
+                                "__typename": "DataApiPlayByPlayTimelineEventMessage"
+                            },
+                            "__typename": "DataApiPlayByPlayHole"
+                        },
+                        {
+                            "holeNumber": 2,
+                            "holeScore": "1",
+                            "timeline": [
+                                {
+                                    "shot": 6,
+                                    "playerId": 15,
+                                    "timestamp": "2026-03-03T00:14:11.844000Z",
+                                    "teamId": "lagc",
+                                    "externalId": 4,
+                                    "pbpText": "NY concedes putt; Justin Rose receives a Gimme.",
+                                    "club": null,
+                                    "strokeType": "GIMME",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 5,
+                                    "playerId": 13,
+                                    "timestamp": "2026-03-03T00:14:11.558000Z",
+                                    "teamId": "lagc",
+                                    "externalId": 4,
+                                    "pbpText": "Collin Morikawa putts from 6 ft 11 in, 3 ft 0 in left to hole.",
+                                    "club": "PUTTER",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 4,
+                                    "playerId": 16,
+                                    "timestamp": "2026-03-03T00:13:16.901000Z",
+                                    "teamId": "lagc",
+                                    "externalId": 4,
+                                    "pbpText": "Tommy Fleetwood hits Sand Wedge 12 ft 2 in to Green, 6 ft 11 in left to hole.",
+                                    "club": "SAND_WEDGE",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 3,
+                                    "playerId": 18,
+                                    "timestamp": "2026-03-03T00:12:47.110000Z",
+                                    "teamId": "tglnyc",
+                                    "externalId": 5,
+                                    "pbpText": "Rickie Fowler hits Sand Wedge 28 ft 2 in to Green, 6 ft 4 in left to hole.",
+                                    "club": "SAND_WEDGE",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 3,
+                                    "playerId": 15,
+                                    "timestamp": "2026-03-03T00:12:18.410000Z",
+                                    "teamId": "lagc",
+                                    "externalId": 4,
+                                    "pbpText": "Justin Rose hits Sand Wedge 25 ft 7 in to Bunker, 19 ft 1 in left to hole.",
+                                    "club": "SAND_WEDGE",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 2,
+                                    "playerId": 20,
+                                    "timestamp": "2026-03-03T00:11:08.033000Z",
+                                    "teamId": "tglnyc",
+                                    "externalId": 5,
+                                    "pbpText": "Cameron Young hits 4-Iron 250 yds to Fairway, 34 ft 6 in left to hole.",
+                                    "club": "4_IRON",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 2,
+                                    "playerId": 13,
+                                    "timestamp": "2026-03-03T00:10:29.808000Z",
+                                    "teamId": "lagc",
+                                    "externalId": 4,
+                                    "pbpText": "Collin Morikawa hits 3-Wood 238 yds to Fairway, 44 ft 6 in left to hole.",
+                                    "club": "3_WOOD",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 1,
+                                    "playerId": 17,
+                                    "timestamp": "2026-03-03T00:09:40.688000Z",
+                                    "teamId": "tglnyc",
+                                    "externalId": 5,
+                                    "pbpText": "Matt Fitzpatrick hits Driver 316 yds to Fairway, 243 yds left to hole.",
+                                    "club": "DRIVER",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 1,
+                                    "playerId": 16,
+                                    "timestamp": "2026-03-03T00:09:09.895000Z",
+                                    "teamId": "lagc",
+                                    "externalId": 4,
+                                    "pbpText": "Tommy Fleetwood hits Driver 313 yds to Fairway, 244 yds left to hole.",
+                                    "club": "DRIVER",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                }
+                            ],
+                            "holeWinningTeamId": "tglnyc",
+                            "holeLosingTeamId": "lagc",
+                            "holeEnd": {
+                                "pbpText": "NY wins hole by concession for 1 point.",
+                                "__typename": "DataApiPlayByPlayTimelineEventMessage"
+                            },
+                            "__typename": "DataApiPlayByPlayHole"
+                        },
+                        {
+                            "holeNumber": 1,
+                            "holeScore": "1",
+                            "timeline": [
+                                {
+                                    "actionType": "HAD_HAMMER_DECLINED",
+                                    "timestamp": "2026-03-03T00:05:27.310000Z",
+                                    "teamId": "lagc",
+                                    "externalId": 4,
+                                    "pbpText": "LA throws Hammer, NY declines.",
+                                    "__typename": "DataApiPlayByPlayTimelineEventHoleAction"
+                                },
+                                {
+                                    "shot": 4,
+                                    "playerId": 18,
+                                    "timestamp": "2026-03-03T00:04:37.547000Z",
+                                    "teamId": "tglnyc",
+                                    "externalId": 5,
+                                    "pbpText": "LA concedes putt; Rickie Fowler receives a Gimme.",
+                                    "club": null,
+                                    "strokeType": "GIMME",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 3,
+                                    "playerId": 20,
+                                    "timestamp": "2026-03-03T00:04:37.237000Z",
+                                    "teamId": "tglnyc",
+                                    "externalId": 5,
+                                    "pbpText": "Cameron Young putts from 10 ft 0 in, 4 in left to hole.",
+                                    "club": "PUTTER",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 2,
+                                    "playerId": 16,
+                                    "timestamp": "2026-03-03T00:03:33.339000Z",
+                                    "teamId": "lagc",
+                                    "externalId": 4,
+                                    "pbpText": "Tommy Fleetwood hits Sand Wedge 89 yds to Green, 6 ft 8 in left to hole.",
+                                    "club": "SAND_WEDGE",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 2,
+                                    "playerId": 17,
+                                    "timestamp": "2026-03-03T00:02:57.672000Z",
+                                    "teamId": "tglnyc",
+                                    "externalId": 5,
+                                    "pbpText": "Matt Fitzpatrick hits Sand Wedge 116 yds to Green, 10 ft 0 in left to hole.",
+                                    "club": "SAND_WEDGE",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 1,
+                                    "playerId": 15,
+                                    "timestamp": "2026-03-03T00:02:20.299000Z",
+                                    "teamId": "lagc",
+                                    "externalId": 4,
+                                    "pbpText": "Justin Rose hits Driver 308 yds to Fairway, 87 yds left to hole.",
+                                    "club": "DRIVER",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                },
+                                {
+                                    "shot": 1,
+                                    "playerId": 18,
+                                    "timestamp": "2026-03-03T00:01:36.313000Z",
+                                    "teamId": "tglnyc",
+                                    "externalId": 5,
+                                    "pbpText": "Rickie Fowler hits Driver 284 yds to Bunker, 118 yds left to hole.",
+                                    "club": "DRIVER",
+                                    "strokeType": "SHOT",
+                                    "__typename": "DataApiPlayByPlayTimelineEventStroke"
+                                }
+                            ],
+                            "holeWinningTeamId": "lagc",
+                            "holeLosingTeamId": "tglnyc",
+                            "holeEnd": {
+                                "pbpText": "LA wins hole by concession for 1 point.",
+                                "__typename": "DataApiPlayByPlayTimelineEventMessage"
+                            },
+                            "__typename": "DataApiPlayByPlayHole"
+                        }
+                    ],
+                    "sessionEnd": {
+                        "pbpText": "Triples has ended, LA leads the match 6-3.",
+                        "__typename": "DataApiPlayByPlayTimelineEventMessage"
+                    },
+                    "__typename": "DataApiPlayByPlaySession"
+                }
+            ],
+            "overtime": {
+                "playByPlay": [],
+                "__typename": "DataApiPlayByPlayOvertime"
+            },
+            "matchEnd": {
+                "pbpText": "Los Angeles Golf Club wins! LA 6 - NY 3.",
+                "__typename": "DataApiPlayByPlayTimelineEventMessage"
+            },
+            "__typename": "DataApiPlayByPlay"
+        },
+        "matchById": {
+            "hideLineUp": false,
+            "hideLiveScoring": true,
+            "hideMatchRecap": false,
+            "hidePlayByPlay": false,
+            "hidePlayer": false,
+            "hideScoreboard": false,
+            "hideStats": false,
+            "hideTicker": false,
+            "hideProbStatsWebMobileApp": false,
+            "hideProbLiveHoleWebMobileApp": false,
+            "liveStreamId": null,
+            "matchName": "Los Angeles Golf Club vs. New York Golf Club",
+            "recapBody": "[{\"type\":\"header\",\"children\":[{\"type\":\"text\",\"value\":\"LA wins last hole thriller to qualify for playoffs\",\"format\":{\"variants\":[\"bold\"]}}],\"style\":\"h3\",\"data\":{\"class\":\"p1\"},\"format\":{\"text-align\":\" center\"}},{\"type\":\"paragraph\",\"children\":[{\"type\":\"text\",\"value\":\"Date published: March 2, 2026\",\"format\":{\"variants\":[\"bold\"]}}],\"format\":{\"text-align\":\" center\"}},{\"type\":\"paragraph\",\"children\":[{\"type\":\"text\",\"value\":\"Los Angeles Golf Club is heading back to the postseason. Tommy Fleetwood, Justin Rose and Collin Morikawa made sure of that with a 6-3 win over New York Golf Club Monday at SoFi Center, eliminating New York from playoff contention.\"}],\"data\":{\"class\":\"p1\"}},{\"type\":\"paragraph\",\"children\":[{\"type\":\"text\",\"value\":\"RELATED: \",\"format\":{\"variants\":[\"bold\"]}},{\"type\":\"link\",\"children\":[{\"type\":\"text\",\"value\":\"State Of The Playoff Race\",\"format\":{\"variants\":[\"bold\"]}}],\"data\":{\"href\":\"https://tglgolf.com/articles/2026/02/playoffs/state-of-the-playoff-race\"}}],\"data\":{\"class\":\"p1\"}},{\"type\":\"paragraph\",\"children\":[{\"type\":\"text\",\"value\":\"LAGC also jumped into the No. 2 seed with the victory and will be back in action for the Semifinals on March 17.\"}],\"data\":{\"class\":\"p1\"}},{\"type\":\"header\",\"children\":[{\"type\":\"text\",\"value\":\"KEY MOMENTS \",\"format\":{\"variants\":[\"bold\"]}}],\"style\":\"h4\",\"data\":{\"class\":\"p1\"}},{\"type\":\"paragraph\",\"children\":[{\"type\":\"text\",\"value\":\"PLAYOFF BOUND:\",\"format\":{\"variants\":[\"bold\"]}},{\"type\":\"text\",\"value\":\" Los Angeles is officially on to the Semifinals after taking care of business Monday. They also served up some revenge by eliminating New York from contention – Los Angeles earned the No. 1 overall seed in Season 1 and was upset by No. 4-seeded New York in the Semifinals last year. Their win also raises the stakes for Tuesday’s regular season finale, with The Bay Golf Club and Jupiter Links Golf Club going head-to-head for the fourth and final playoff spot.\"}],\"data\":{\"class\":\"p1\"}},{\"type\":\"paragraph\",\"children\":[{\"__typename\":\"Video\",\"path\":\"/videos/2026/03/03/morikawa-s-approach-helps-lagc-clinch-match\",\"id\":\"6390293775112\",\"title\":\"Morikawa's Approach Helps LAGC Clinch Match\",\"image\":\"brightcove-video/v1/static/6415719604001/1da92da1-d217-458d-ac6a-a367a3edb300/87221487-3240-450a-9036-28c3626b78a0/1280x720/match/image.jpg\",\"duration\":23403,\"shortTitle\":null,\"description\":null,\"shortDescription\":\"LAGC is heading to the playoffs again after an impressive win over New York Golf Club at SoFi Center.\",\"date\":\"2026-03-03T01:57:06.154Z\",\"tags\":[{\"__typename\":\"Tag\",\"id\":\"tgl:players/collin-morikawa\",\"title\":\"Collin Morikawa\"},{\"__typename\":\"Tag\",\"id\":\"tgl:teams/lagc\",\"title\":\"Los Angeles Golf Club\"},{\"__typename\":\"Tag\",\"id\":\"tgl:franchise/highlights\",\"title\":\"Highlights\"},{\"__typename\":\"Tag\",\"id\":\"tgl:leagues/tgl\",\"title\":\"TGL\"}],\"hideSponsor\":true,\"hideAD\":false,\"metadata\":{\"description\":\"The official site of TGL, featuring TGL news and video highlights, match day coverage, schedules, stats, scores, teams and rosters.\",\"keywords\":\"TGL, TGL golf, TGL golf league, The Golf League, TGL news, TGL highlights, TGL schedule, TGL teams, TGL videos, TGL Championship, TGL playoffs, TGL shop, TGL standings, TGL stats, TGL scores\"},\"type\":\"video\"}],\"data\":{\"class\":\"p1\"}},{\"type\":\"paragraph\",\"children\":[{\"type\":\"text\",\"value\":\"FIGHT TO THE FINISH:\",\"format\":{\"variants\":[\"bold\"]}},{\"type\":\"text\",\"value\":\" Having already been eliminated from playoff contention by not winning enough holes in Triples, New York refused to quit. Down 4-2 with two to play, Matt Fitzpatrick chipped in from 23 feet at No. 14 to give them a chance for a comeback victory. Those hopes vanished when Cameron Young’s tee shot sailed into the penalty area at the 15\"},{\"type\":\"span\",\"children\":[{\"type\":\"text\",\"value\":\"th\",\"format\":{\"variants\":[\"superscript\"]}}],\"data\":{\"class\":\"s1\"}},{\"type\":\"text\",\"value\":\", as Los Angeles went on to win the hole with the Hammer in play to secure the victory.\"}],\"data\":{\"class\":\"p1\"}},{\"type\":\"paragraph\",\"children\":[{\"type\":\"text\",\"value\":\"PLAYOFF TICKET PRESALE\",\"format\":{\"variants\":[\"bold\"]}},{\"type\":\"text\",\"value\":\": \"},{\"type\":\"link\",\"children\":[{\"type\":\"text\",\"value\":\"Sign Up To Get Access To Playoff Tickets\",\"format\":{\"variants\":[\"bold\"]}}],\"data\":{\"href\":\"https://tglgolf.com/subscription-forms/playoff-tickets-folder/playoff-tickets\"}}],\"data\":{\"class\":\"p1\"}},{\"type\":\"paragraph\",\"children\":[{\"type\":\"text\",\"value\":\"KICKING IT WITH KELCE:\",\"format\":{\"variants\":[\"bold\"]}},{\"type\":\"text\",\"value\":\" Former Philadelphia Eagles center and Super Bowl champion Jason Kelce has linked up with TGL to serve as special guest announcer over the final three matches of the regular season. Not only did he get eyes on SoFi Center for the first time, he took fans on a whirlwind tour over the first two matches, from underneath the Green to the bar to the top of the Screen and everywhere in between. He did keep his shirt on, against all odds, but we’ll see if that holds true when Kelce returns for the final match of the regular season on Tuesday.\"}],\"data\":{\"class\":\"p1\"}},{\"type\":\"paragraph\",\"children\":[{\"__typename\":\"Video\",\"path\":\"/videos/2026/03/02/jason-kelce-to-claire-rogers--awesome-experience-at-sofi-center-\",\"id\":\"6390286338112\",\"title\":\"Jason Kelce to Claire Rogers: Awesome Experience at SoFi Center So Far\",\"image\":\"brightcove-video/v1/static/6415719604001/957813cb-4d96-4e2d-974d-dbed6e300eb9/62e6e34e-033e-49f4-ada7-d9bbdf5ab4c4/1280x720/match/image.jpg\",\"duration\":195285,\"shortTitle\":null,\"description\":null,\"shortDescription\":\"Jason Kelce chats to Matchup Live's Claire Rogers ahead of another match at SoFi Center.\",\"date\":\"2026-03-02T23:57:36.491Z\",\"tags\":[{\"__typename\":\"Tag\",\"id\":\"tgl:tags/matchup-live\",\"title\":\"Matchup Live\"},{\"__typename\":\"Tag\",\"id\":\"tgl:franchise/highlights\",\"title\":\"Highlights\"},{\"__typename\":\"Tag\",\"id\":\"tgl:leagues/tgl\",\"title\":\"TGL\"}],\"hideSponsor\":true,\"hideAD\":false,\"metadata\":{\"description\":\"The official site of TGL, featuring TGL news and video highlights, match day coverage, schedules, stats, scores, teams and rosters.\",\"keywords\":\"TGL, TGL golf, TGL golf league, The Golf League, TGL news, TGL highlights, TGL schedule, TGL teams, TGL videos, TGL Championship, TGL playoffs, TGL shop, TGL standings, TGL stats, TGL scores\"},\"type\":\"video\"}],\"data\":{\"class\":\"p1\"}},{\"type\":\"paragraph\",\"children\":[{\"type\":\"text\",\"value\":\"“It’s incredible,” Kelce said. “The scale of it, you don’t get a good grasp when you’re watching on TV. It is massive. The technology, everything they put into this place is sort of on another level. It is superb.”\"}],\"data\":{\"class\":\"p1\"}},{\"type\":\"header\",\"children\":[{\"type\":\"text\",\"value\":\"TRIPLES \",\"format\":{\"variants\":[\"bold\"]}}],\"style\":\"h4\",\"data\":{\"class\":\"p1\"}},{\"type\":\"paragraph\",\"children\":[{\"type\":\"text\",\"value\":\"Los Angeles took a 4-1 lead entering entering Singles thanks to a perfect tee shot from Fleetwood and a stellar approach from Morikawa to five feet at No. 8, Stinger. LAGC then threw the Hammer and New York declined to lose their third consecutive hole.\"}],\"data\":{\"class\":\"p1\"}},{\"type\":\"paragraph\",\"children\":[{\"__typename\":\"Video\",\"path\":\"/videos/2026/03/03/nice-approach-by-tommy-fleetwood\",\"id\":\"6390288221112\",\"title\":\"Nice Approach by Tommy Fleetwood\",\"image\":\"brightcove-video/v1/static/6415719604001/ef7ef6ac-b573-4534-ae0d-580fb13f0b0a/957a7276-55ca-4248-9e26-462f6cd808e8/1280x720/match/image.jpg\",\"duration\":19819,\"shortTitle\":null,\"description\":null,\"shortDescription\":\"Tommy Fleetwood gets LAGC up and running with a great approach vs. New York Golf Club.\",\"date\":\"2026-03-03T00:14:54.279Z\",\"tags\":[{\"__typename\":\"Tag\",\"id\":\"tgl:players/tommy-fleetwood\",\"title\":\"Tommy Fleetwood\"},{\"__typename\":\"Tag\",\"id\":\"tgl:teams/lagc\",\"title\":\"Los Angeles Golf Club\"},{\"__typename\":\"Tag\",\"id\":\"tgl:franchise/highlights\",\"title\":\"Highlights\"},{\"__typename\":\"Tag\",\"id\":\"tgl:leagues/tgl\",\"title\":\"TGL\"}],\"hideSponsor\":true,\"hideAD\":false,\"metadata\":{\"description\":\"The official site of TGL, featuring TGL news and video highlights, match day coverage, schedules, stats, scores, teams and rosters.\",\"keywords\":\"TGL, TGL golf, TGL golf league, The Golf League, TGL news, TGL highlights, TGL schedule, TGL teams, TGL videos, TGL Championship, TGL playoffs, TGL shop, TGL standings, TGL stats, TGL scores\"},\"type\":\"video\"}],\"data\":{\"class\":\"p1\"}},{\"type\":\"paragraph\",\"children\":[{\"type\":\"text\",\"value\":\"New York had a chance to get back in the match at the ninth, throwing the Hammer after Morikawa hit his drive in the rough. Fitzpatrick had a 15-footer for eagle to win two points but couldn’t convert, and Morikawa matched with a five-foot birdie make to tie the hole and maintain a three-point lead.\"}],\"data\":{\"class\":\"p1\"}},{\"type\":\"paragraph\",\"children\":[{\"type\":\"text\",\"value\":\"LAGC took a 2-1 lead at the par-4 sixth, Temple, as New York made a mess of things after Rickie Fowler hit his approach into the penalty area. They added another at No. 7 when Rose hit his approach to two feet at the par-3 Cliffhanger to make it 3-1.\"}],\"data\":{\"class\":\"p1\"}},{\"type\":\"paragraph\",\"children\":[{\"__typename\":\"Video\",\"path\":\"/videos/2026/03/03/justin-rose-hits-a-great-tee-shot-on-cliffhanger\",\"id\":\"6390290262112\",\"title\":\"Justin Rose Hits a Great Tee Shot on Cliffhanger\",\"image\":\"brightcove-video/v1/static/6415719604001/3ede5bed-81db-4221-835f-5514ca919147/40030b4b-2371-46e5-9399-ab0b3ef5a7f1/1280x720/match/image.jpg\",\"duration\":25387,\"shortTitle\":null,\"description\":null,\"shortDescription\":\"It was so close from Los Angeles Golf Club star Justin Rose...\",\"date\":\"2026-03-03T01:04:14.143Z\",\"tags\":[{\"__typename\":\"Tag\",\"id\":\"tgl:teams/lagc\",\"title\":\"Los Angeles Golf Club\"},{\"__typename\":\"Tag\",\"id\":\"tgl:franchise/highlights\",\"title\":\"Highlights\"},{\"__typename\":\"Tag\",\"id\":\"tgl:leagues/tgl\",\"title\":\"TGL\"}],\"hideSponsor\":true,\"hideAD\":false,\"metadata\":{\"description\":\"The official site of TGL, featuring TGL news and video highlights, match day coverage, schedules, stats, scores, teams and rosters.\",\"keywords\":\"TGL, TGL golf, TGL golf league, The Golf League, TGL news, TGL highlights, TGL schedule, TGL teams, TGL videos, TGL Championship, TGL playoffs, TGL shop, TGL standings, TGL stats, TGL scores\"},\"type\":\"video\"}],\"data\":{\"class\":\"p1\"}},{\"type\":\"paragraph\",\"children\":[{\"type\":\"text\",\"value\":\"Los Angeles put the pressure on early, throwing the Hammer at the first with New York in for par and LAGC facing a seven-footer for birdie to win the hole. NYGC declined to fall behind 1-0. New York got one back at the next, Caverns, with a conceded birdie to tie it up at 1-1.\"}],\"data\":{\"class\":\"p1\"}},{\"type\":\"header\",\"children\":[{\"type\":\"text\",\"value\":\"SINGLES \",\"format\":{\"variants\":[\"bold\"]}}],\"style\":\"h4\",\"data\":{\"class\":\"p1\"}},{\"type\":\"paragraph\",\"children\":[{\"type\":\"text\",\"value\":\"While already eliminated from the postseason having run out of holes for a potential tiebreaker scenario, New York continued to battle in Singles and picked up a point when Fowler hit his approach to eight feet. Fitzpatrick heaved the Hammer and showed off some impressive arm strength, and Los Angeles declined the Hammer to cut their lead to 4-2.\"}],\"data\":{\"class\":\"p1\"}},{\"type\":\"paragraph\",\"children\":[{\"type\":\"text\",\"value\":\"Los Angeles held it down at the 11\"},{\"type\":\"span\",\"children\":[{\"type\":\"text\",\"value\":\"th\",\"format\":{\"variants\":[\"superscript\"]}}],\"data\":{\"class\":\"s1\"}},{\"type\":\"text\",\"value\":\" and 12\"},{\"type\":\"span\",\"children\":[{\"type\":\"text\",\"value\":\"th\",\"format\":{\"variants\":[\"superscript\"]}}],\"data\":{\"class\":\"s1\"}},{\"type\":\"text\",\"value\":\", carding a birdie and par to match New York and tie both holes. New York missed another chance to cut into the lead at the 13\"},{\"type\":\"span\",\"children\":[{\"type\":\"text\",\"value\":\"th\",\"format\":{\"variants\":[\"superscript\"]}}],\"data\":{\"class\":\"s1\"}},{\"type\":\"text\",\"value\":\" when Fowler missed a birdie putt, keeping the match 4-2 with two to play.\"}],\"data\":{\"class\":\"p1\"}},{\"type\":\"paragraph\",\"children\":[{\"type\":\"text\",\"value\":\"New York continued to battle as Fitzpatrick holed out from 23 feet to win a point at No. 14 and stay alive, down 4-3 entering the final hole.\"}],\"data\":{\"class\":\"p1\"}},{\"type\":\"paragraph\",\"children\":[{\"__typename\":\"Video\",\"path\":\"/videos/2026/03/03/matt-fitzpatrick-keeps-the-dream-alive-for-nygc\",\"id\":\"6390292316112\",\"title\":\"Matt Fitzpatrick Keeps the Dream Alive for NYGC\",\"image\":\"brightcove-video/v1/static/6415719604001/f8e5d9a5-5930-454b-8a1f-ccc01ef5ffa0/5adc971f-1fe2-4247-8a3e-a252b53bba01/1280x720/match/image.jpg\",\"duration\":16917,\"shortTitle\":null,\"description\":null,\"shortDescription\":\"Matt Fitzpatrick makes an important putt for New York Golf Club but ultimately they miss the playoffs.\",\"date\":\"2026-03-03T01:54:36.765Z\",\"tags\":[{\"__typename\":\"Tag\",\"id\":\"tgl:players/matt-fitzpatrick\",\"title\":\"Matt Fitzpatrick\"},{\"__typename\":\"Tag\",\"id\":\"tgl:teams/new-york-golf-club\",\"title\":\"New York Golf Club\"},{\"__typename\":\"Tag\",\"id\":\"tgl:franchise/highlights\",\"title\":\"Highlights\"},{\"__typename\":\"Tag\",\"id\":\"tgl:leagues/tgl\",\"title\":\"TGL\"}],\"hideSponsor\":true,\"hideAD\":false,\"metadata\":{\"description\":\"The official site of TGL, featuring TGL news and video highlights, match day coverage, schedules, stats, scores, teams and rosters.\",\"keywords\":\"TGL, TGL golf, TGL golf league, The Golf League, TGL news, TGL highlights, TGL schedule, TGL teams, TGL videos, TGL Championship, TGL playoffs, TGL shop, TGL standings, TGL stats, TGL scores\"},\"type\":\"video\"}],\"data\":{\"class\":\"p1\"}},{\"type\":\"paragraph\",\"children\":[{\"type\":\"text\",\"value\":\"But Los Angeles picked up another win worth two points at the final hole to clinch the victory.\"}],\"data\":{\"class\":\"p1\"}},{\"type\":\"header\",\"children\":[{\"type\":\"text\",\"value\":\"THEY SAID IT\",\"format\":{\"variants\":[\"bold\"]}}],\"style\":\"h4\",\"data\":{\"class\":\"p1\"}},{\"type\":\"paragraph\",\"children\":[{\"type\":\"text\",\"value\":\"Los Angeles Golf Club:\",\"format\":{\"variants\":[\"bold\"]}},{\"type\":\"text\",\"value\":\" “When you’ve got that firepower on your bench, it’s easy to kind of say, ‘Hey, I’ll trust my team and we’ll take a gamble.’” - Justin Rose on Los Angeles’ Hammer strategy.\"}],\"data\":{\"class\":\"p1\"}},{\"type\":\"paragraph\",\"children\":[{\"type\":\"text\",\"value\":\"New York Golf Club:\",\"format\":{\"variants\":[\"bold\"]}},{\"type\":\"text\",\"value\":\" “I felt we played really well for three of the five matches we played, and we got one win.” - Matt Fitzpatrick\"}],\"data\":{\"class\":\"p1\"}},{\"type\":\"header\",\"children\":[{\"type\":\"text\",\"value\":\"NEXT AT SOFI CENTER \",\"format\":{\"variants\":[\"bold\"]}}],\"style\":\"h4\",\"data\":{\"class\":\"p1\"}},{\"type\":\"paragraph\",\"children\":[{\"type\":\"text\",\"value\":\"The Bay Golf Club and Jupiter Links Golf Club are ready to go at 9 p.m. ET Tuesday in the Season 2 regular season finale. This is now officially a win-and-in match for both teams, with the victor clinching the final playoff spot.\"}],\"data\":{\"class\":\"p1\"}},{\"type\":\"paragraph\",\"children\":[{\"type\":\"text\",\"value\":\"The Semifinals are set with a March 17 doubleheader at SoFi Center. The best-of-three Finals begins with Match 1 at 9 p.m. ET March 23. Match 2 will be played at 7 p.m. March 24, followed by Match 3, if necessary, at 9 p.m.\"}],\"data\":{\"class\":\"p1\"}}]",
+            "recapTopVideo": {
+                "id": "6390293830112",
+                "hideAd": false,
+                "path": "/videos/2026/03/03/match-recap--los-angeles-golf-club-vs--new-york-golf-club",
+                "videoTitle": "Match Recap: Los Angeles Golf Club vs. New York Golf Club",
+                "shortTitle": null,
+                "videoDescription": null,
+                "shortDescription": "Watch all the best moments from Los Angeles Golf Club's win over New York Golf Club at SoFi Center.",
+                "videoImage": "brightcove-video/v1/static/6415719604001/83d8e21b-3918-48b2-9623-f9ecc53e24c0/c8b2f5d1-eaf1-4773-96a7-819cfe5d76d3/1280x720/match/image.jpg",
+                "date": "2026-03-03T02:40:49.790Z",
+                "duration": 133525,
+                "tags": [
+                    {
+                        "id": "tgl:teams/lagc",
+                        "title": "Los Angeles Golf Club",
+                        "__typename": "Tag"
+                    },
+                    {
+                        "id": "tgl:teams/new-york-golf-club",
+                        "title": "New York Golf Club",
+                        "__typename": "Tag"
+                    },
+                    {
+                        "id": "tgl:franchise/highlights",
+                        "title": "Highlights",
+                        "__typename": "Tag"
+                    },
+                    {
+                        "id": "tgl:leagues/tgl",
+                        "title": "TGL",
+                        "__typename": "Tag"
+                    }
+                ],
+                "__typename": "Video"
+            },
+            "headerInfoCards": [
+                {
+                    "cardColor": "#18496B",
+                    "title": "Match Predictor",
+                    "description": "Put your TGL knowledge to the test by answering 7 questions ahead of the match.",
+                    "buttons": [
+                        {
+                            "__typename": "CrossPlatformButton",
+                            "text": "Play Now",
+                            "link": "https://tglgolf.com/activations/match-predictor/play?experience=match-predictor",
+                            "deepLink": "tglgolf://more/liveLikeMatchPredictor"
+                        }
+                    ],
+                    "__typename": "InfoCard"
+                },
+                {
+                    "cardColor": "#E8204F",
+                    "title": "Get In On The Action",
+                    "description": "Limited tickets are available for this match at SoFi Center. Act fast to secure yours today.",
+                    "buttons": [
+                        {
+                            "__typename": "CustomButton",
+                            "text": "Buy Tickets",
+                            "buttonType": "Tickets"
+                        }
+                    ],
+                    "__typename": "InfoCard"
+                },
+                {
+                    "cardColor": "#006B87",
+                    "title": "Season 2 Schedule",
+                    "description": "Take a look at the full schedule for Season 2 of TGL presented by SoFi...",
+                    "buttons": [
+                        {
+                            "__typename": "CrossPlatformButton",
+                            "text": "View Schedule",
+                            "link": "/schedule",
+                            "deepLink": "https://tglgolf.com/schedule"
+                        }
+                    ],
+                    "__typename": "InfoCard"
+                }
+            ],
+            "afterTeamRosterContent": [],
+            "__typename": "Match"
+        },
+        "liveTeamsStats": {
+            "matchId": 114,
+            "teams": [
+                {
+                    "teamId": "lagc",
+                    "abbreviation": "LA",
+                    "designation": "Away",
+                    "stats": [
+                        {
+                            "statName": "hammerWinCount",
+                            "statNameAlias": "HAMMERS WON",
+                            "value": "3",
+                            "__typename": "DataApiLiveTeamsStat"
+                        },
+                        {
+                            "statName": "avgDriverBallSpeedMph",
+                            "statNameAlias": "AVG DRIVER BALL SPEED (MPH)",
+                            "value": "175.9",
+                            "__typename": "DataApiLiveTeamsStat"
+                        },
+                        {
+                            "statName": "highestDriverBallSpeedMph",
+                            "statNameAlias": "max speed",
+                            "value": "177.9",
+                            "__typename": "DataApiLiveTeamsStat"
+                        },
+                        {
+                            "statName": "avgDriverTotalYards",
+                            "statNameAlias": "AVG DRIVER DISTANCE (YDS)",
+                            "value": "322.6",
+                            "__typename": "DataApiLiveTeamsStat"
+                        },
+                        {
+                            "statName": "longestDriverTotalYards",
+                            "statNameAlias": "max distance",
+                            "value": "353.6",
+                            "__typename": "DataApiLiveTeamsStat"
+                        },
+                        {
+                            "statName": "avgDriverClubSpeedMph",
+                            "statNameAlias": "AVG DRIVER SWING SPEED (MPH)",
+                            "value": "121.0",
+                            "__typename": "DataApiLiveTeamsStat"
+                        },
+                        {
+                            "statName": "highestDriverClubSpeedMph",
+                            "statNameAlias": "max speed",
+                            "value": "124.9",
+                            "__typename": "DataApiLiveTeamsStat"
+                        },
+                        {
+                            "statName": "firConsistency",
+                            "statNameAlias": "FAIRWAY CONSISTENCY",
+                            "value": "80.0 %",
+                            "__typename": "DataApiLiveTeamsStat"
+                        },
+                        {
+                            "statName": "scramblingCapability",
+                            "statNameAlias": "SCRAMBLING",
+                            "value": "50.0 %",
+                            "__typename": "DataApiLiveTeamsStat"
+                        },
+                        {
+                            "statName": "girConsistency",
+                            "statNameAlias": "GREEN CONSISTENCY",
+                            "value": "66.7 %",
+                            "__typename": "DataApiLiveTeamsStat"
+                        },
+                        {
+                            "statName": "avgDistanceToPinFromSandFeet",
+                            "statNameAlias": "SAND SAVES",
+                            "value": "5.7 FEET",
+                            "__typename": "DataApiLiveTeamsStat"
+                        },
+                        {
+                            "statName": "shortPuttEfficiency",
+                            "statNameAlias": "SHORT PUTTS (0-10 FT)",
+                            "value": "66.7 %",
+                            "__typename": "DataApiLiveTeamsStat"
+                        },
+                        {
+                            "statName": "midPuttEfficiency",
+                            "statNameAlias": "MEDIUM PUTTS (10-30 FT)",
+                            "value": "0.0 %",
+                            "__typename": "DataApiLiveTeamsStat"
+                        },
+                        {
+                            "statName": "longPuttEfficiency",
+                            "statNameAlias": "LONG PUTTS (>30 FT)",
+                            "value": "0.0 %",
+                            "__typename": "DataApiLiveTeamsStat"
+                        },
+                        {
+                            "statName": "shotClockPenaltyCount",
+                            "statNameAlias": "SHOT CLOCK VIOLATIONS",
+                            "value": "0",
+                            "__typename": "DataApiLiveTeamsStat"
+                        },
+                        {
+                            "statName": "timeoutsUsed",
+                            "statNameAlias": "TIMEOUTS USED",
+                            "value": "0",
+                            "__typename": "DataApiLiveTeamsStat"
+                        },
+                        {
+                            "statName": "timeoutsRemaining",
+                            "statNameAlias": "TIMEOUTS REMAINING",
+                            "value": "2",
+                            "__typename": "DataApiLiveTeamsStat"
+                        }
+                    ],
+                    "__typename": "DataApiLiveTeamsStatsTeam"
+                },
+                {
+                    "teamId": "tglnyc",
+                    "abbreviation": "NY",
+                    "designation": "Home",
+                    "stats": [
+                        {
+                            "statName": "hammerWinCount",
+                            "statNameAlias": "HAMMERS WON",
+                            "value": "1",
+                            "__typename": "DataApiLiveTeamsStat"
+                        },
+                        {
+                            "statName": "avgDriverBallSpeedMph",
+                            "statNameAlias": "AVG DRIVER BALL SPEED (MPH)",
+                            "value": "176.9",
+                            "__typename": "DataApiLiveTeamsStat"
+                        },
+                        {
+                            "statName": "highestDriverBallSpeedMph",
+                            "statNameAlias": "max speed",
+                            "value": "184.1",
+                            "__typename": "DataApiLiveTeamsStat"
+                        },
+                        {
+                            "statName": "avgDriverTotalYards",
+                            "statNameAlias": "AVG DRIVER DISTANCE (YDS)",
+                            "value": "311.9",
+                            "__typename": "DataApiLiveTeamsStat"
+                        },
+                        {
+                            "statName": "longestDriverTotalYards",
+                            "statNameAlias": "max distance",
+                            "value": "345.0",
+                            "__typename": "DataApiLiveTeamsStat"
+                        },
+                        {
+                            "statName": "avgDriverClubSpeedMph",
+                            "statNameAlias": "AVG DRIVER SWING SPEED (MPH)",
+                            "value": "123.4",
+                            "__typename": "DataApiLiveTeamsStat"
+                        },
+                        {
+                            "statName": "highestDriverClubSpeedMph",
+                            "statNameAlias": "max speed",
+                            "value": "127.0",
+                            "__typename": "DataApiLiveTeamsStat"
+                        },
+                        {
+                            "statName": "firConsistency",
+                            "statNameAlias": "FAIRWAY CONSISTENCY",
+                            "value": "60.0 %",
+                            "__typename": "DataApiLiveTeamsStat"
+                        },
+                        {
+                            "statName": "scramblingCapability",
+                            "statNameAlias": "SCRAMBLING",
+                            "value": "75.0 %",
+                            "__typename": "DataApiLiveTeamsStat"
+                        },
+                        {
+                            "statName": "girConsistency",
+                            "statNameAlias": "GREEN CONSISTENCY",
+                            "value": "73.3 %",
+                            "__typename": "DataApiLiveTeamsStat"
+                        },
+                        {
+                            "statName": "avgDistanceToPinFromSandFeet",
+                            "statNameAlias": "SAND SAVES",
+                            "value": "0.9 FEET",
+                            "__typename": "DataApiLiveTeamsStat"
+                        },
+                        {
+                            "statName": "shortPuttEfficiency",
+                            "statNameAlias": "SHORT PUTTS (0-10 FT)",
+                            "value": "50.0 %",
+                            "__typename": "DataApiLiveTeamsStat"
+                        },
+                        {
+                            "statName": "midPuttEfficiency",
+                            "statNameAlias": "MEDIUM PUTTS (10-30 FT)",
+                            "value": "0.0 %",
+                            "__typename": "DataApiLiveTeamsStat"
+                        },
+                        {
+                            "statName": "longPuttEfficiency",
+                            "statNameAlias": "LONG PUTTS (>30 FT)",
+                            "value": "0.0 %",
+                            "__typename": "DataApiLiveTeamsStat"
+                        },
+                        {
+                            "statName": "shotClockPenaltyCount",
+                            "statNameAlias": "SHOT CLOCK VIOLATIONS",
+                            "value": "0",
+                            "__typename": "DataApiLiveTeamsStat"
+                        },
+                        {
+                            "statName": "timeoutsUsed",
+                            "statNameAlias": "TIMEOUTS USED",
+                            "value": "1",
+                            "__typename": "DataApiLiveTeamsStat"
+                        },
+                        {
+                            "statName": "timeoutsRemaining",
+                            "statNameAlias": "TIMEOUTS REMAINING",
+                            "value": "1",
+                            "__typename": "DataApiLiveTeamsStat"
+                        }
+                    ],
+                    "__typename": "DataApiLiveTeamsStatsTeam"
+                }
+            ],
+            "__typename": "DataApiLiveTeamsStats"
+        },
+        "__typename": "Query"
+    }
+}
