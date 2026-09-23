@@ -180,7 +180,7 @@ def build_hammer_opportunity_model():
 
     # Define model features + target
     features = ["win_prob", "holes_remaining"]
-    target = "future_hammer_rate"
+    target = "future_hammer_ev"
     trials = "holes_remaining"
 
     # Pull data (no hammer opportunities after the last hole)
@@ -203,13 +203,14 @@ def build_hammer_opportunity_model():
 
         # Fit model
         binomial_gam.fit(train_df[features], train_df[target])#, weights=train_df[trials])
+        train_preds = binomial_gam.predict(train_df[features])
+        test_preds = binomial_gam.predict(test_df[features])
     else:
-        gam = LinearGAM(te(0, 1, constraints=("concave", "monotonic_dec")))
+        gam = LinearGAM(te(0, 1), constraints=("concave", None))
         gam.fit(train_df[features], train_df[target])
+        train_preds = gam.predict(train_df[features])
+        test_preds = gam.predict(test_df[features])
 
-    # Evaluate
-    train_preds = binomial_gam.predict(train_df[features])
-    test_preds = binomial_gam.predict(test_df[features])
 
     if target == "future_hammer_rate":
         train_counts = train_preds * train_df[trials]
@@ -242,8 +243,8 @@ def build_hammer_opportunity_model():
         plot_partial_dependence(gam)
 
         # Plot calibration
-        test_df["preds"] = test_preds
-        utils.visualize_count_calibration(test_df, target, "preds")
+        train_df["preds"] = train_preds
+        utils.visualize_count_calibration(train_df, target, "preds")
 
         # Save model
         with open('hammer_ev_model.pkl', 'wb') as handle:
