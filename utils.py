@@ -7,6 +7,7 @@ import json
 import re
 import pickle
 from typing import List
+import os
 
 import pandas as pd
 import numpy as np
@@ -20,11 +21,57 @@ from sklearn.ensemble import GradientBoostingClassifier
 from pygam import LogisticGAM, te, s
 
 from sklearn.calibration import calibration_curve
+from sklearn.preprocessing import KBinsDiscretizer
+
 from statsmodels.miscmodels.ordinal_model import OrderedModel, OrderedResults
 
 import matplotlib.pyplot as plt
+from matplotlib.offsetbox import OffsetImage, AnnotationBbox
+from matplotlib.ticker import PercentFormatter
+from PIL import Image
 
 import sg_data
+
+
+# ================================================================
+# CONFIGURATION
+# ================================================================
+
+LOGO_DIR = "images"
+
+# Same color family:
+#   Observed = lighter
+#   Optimal  = darker
+OBSERVED_COLOR = "#8BAFD1"
+OPTIMAL_COLOR = "#245A9C"
+
+TEXT_COLOR = "#222222"
+SECONDARY_TEXT = "#666666"
+GRID_COLOR = "#D9D9D9"
+SEPARATOR_COLOR = "#E8E8E8"
+ZERO_LINE_COLOR = "#444444"
+
+FONT_FAMILY = "DejaVu Sans"
+
+TITLE_SIZE = 20
+SUBTITLE_SIZE = 11
+LEGEND_SIZE = 9
+AXIS_SIZE = 10
+
+FIG_WIDTH = 11
+FIG_HEIGHT = 8
+
+BAR_HEIGHT = 0.28
+BAR_GAP = 0.10
+
+# Controls the physical size of the logos.
+# Increase slightly if you want larger logos.
+LOGO_SIZE = 0.38
+LOGO_BOX_SIZE = 72
+
+# Maximum fraction of the box that the actual logo can occupy.
+# Leaving some padding prevents logos from feeling crowded.
+LOGO_FILL = 0.82
 
 def read_json_obj(file_path: str):
     """
@@ -869,6 +916,51 @@ def visualize_calibration(data_df, result_type="win"):
     plt.close(fig)
 
 
+def visualize_count_calibration(data_df, target_label, pred_label):
+    """
+    This function visualizes calibration for a continuous variable prediction
+
+    @param data_df (DataFrame): DataFrame containing
+        columns for target_label and pred_label
+    @param target_label (str): Name of the column holding the target variable
+    @param pred_label (str): Name of the column holding the predicted variable
+
+    Returns:
+
+        fig (plt.figure): Figure object of the calibration
+            visualization
+    """
+
+    # Initialize discretizer
+    overall_est = KBinsDiscretizer(n_bins=10, encode='ordinal', strategy='quantile', subsample=None)
+
+    # Fit and transform to bins
+    pred_bin = overall_est.fit_transform(data_df[[pred_label]])
+
+    # Store
+    data_df["bin"] = [x[0] for x in pred_bin]
+    overall_viz = pd.DataFrame(data_df.groupby("bin")[[target_label, pred_label]].mean()).reset_index()
+
+    fig, ax = plt.subplots()
+
+    # Plot
+    ax.plot(overall_viz[pred_label], overall_viz[target_label], linestyle='-', marker='o', markersize=3, color='gray')
+
+    # Add a diagonal line for perfect calibration
+    min_val = min(overall_viz[pred_label].min(), overall_viz[target_label].min())
+    max_val = max(overall_viz[pred_label].max(), overall_viz[target_label].max())
+    ax.plot([min_val, max_val], [min_val, max_val], linestyle='--', color='red', label="Perfect Calibration")
+
+    # Labels
+    ax.set_xlabel('Predicted')
+    ax.set_ylabel('Actual')
+    ax.set_title('Calibration Plot')
+    ax.legend()
+
+    plt.savefig(f"{target_label}_value_calibration.png")
+    plt.close(fig)
+
+
 def analyze_hammer_usage(season: int):
     """
     This function analyzes hammer usage in TGL matches, namely
@@ -932,6 +1024,7 @@ def analyze_hammer_usage(season: int):
             hammer_df["actionType"]
         )
     ]
+    hammer_df["optimal_decision_ev"] = abs(hammer_df["decision_ev"])
 
     # Should you throw the hammer?
     hammer_df["throw_ev"] = [
@@ -960,4 +1053,457 @@ def analyze_hammer_usage(season: int):
         -hole_value for winning_team_id, hole_value, team_id in zip(hammer_df["winning_team_id"], hammer_df["hole_value"], hammer_df["teamId"])
     ]
 
+    hammer_df["other_team"] = [
+        winning_team if winning_team != team else 
+        losing_team for winning_team, losing_team, team in zip(hammer_df["winning_team_id"],
+                                                               hammer_df["losing_team_id"],
+                                                               hammer_df["teamId"])
+    ]
+
     return hammer_df
+
+
+def prepare_logo(logo_path, box_size=LOGO_BOX_SIZE, fill=LOGO_FILL):
+    """
+    Load a logo and place it inside a standardized transparent
+    square canvas.
+
+    Every returned image has exactly the same dimensions,
+    regardless of the source image's dimensions or aspect ratio.
+
+    The logo itself is scaled proportionally and centered within
+    the box, preserving its original aspect ratio.
+    """
+
+    img = Image.open(logo_path).convert("RGBA")
+
+    # ------------------------------------------------------------
+    # Remove completely transparent borders from the source.
+    #
+    # This is important because some logo files may contain a large
+    # amount of transparent padding around the actual logo.
+    # ------------------------------------------------------------
+
+
+    # ------------------------------------------------------------
+    # Determine maximum dimensions for the actual logo.
+    # ------------------------------------------------------------
+
+    max_logo_size = int(box_size * fill)
+
+    width, height = img.size
+
+    scale = min(
+        max_logo_size / width,
+        max_logo_size / height,
+        1.0,  # Never enlarge a low-resolution source image
+    )
+
+    new_width = max(1, int(width * scale))
+    new_height = max(1, int(height * scale))
+
+    # Only resample when we actually need to resize.
+    if scale < 1:
+        img = img.resize(
+            (new_width, new_height),
+            Image.Resampling.LANCZOS,
+        )
+
+    # ------------------------------------------------------------
+    # Create standardized transparent canvas.
+    # ------------------------------------------------------------
+
+    canvas = Image.new(
+        "RGBA",
+        (box_size, box_size),
+        (255, 255, 255, 0),
+    )
+
+    # Center the logo within the standardized canvas.
+    x = (box_size - img.width) // 2
+    y = (box_size - img.height) // 2
+
+    canvas.alpha_composite(
+        img,
+        (x, y),
+    )
+
+    return np.asarray(canvas)
+
+def get_logo_labels(ax, values, positions):
+    """
+    Add percentage-point labels to the end of each bar.
+    """
+
+    # Determine an appropriate offset based on the chart range.
+    xmin, xmax = ax.get_xlim()
+    offset = (xmax - xmin) * 0.008
+
+    x_val = []
+    y_val = []
+
+    for value, y_pos in zip(values, positions):
+
+        if value >= 0:
+            x = value + offset + 0.05
+            ha = "left"
+        else:
+            x = value - offset + 0.05
+            ha = "right"
+
+        x_val.append(x)
+        y_val.append(y_pos)
+
+    return x_val, y_val
+        
+
+
+def add_team_logo(ax, logo_path, x, y, zoom=LOGO_ZOOM):
+    """
+    Add a team logo at (x, y), with all logos normalized to the
+    same maximum physical dimension.
+    """
+
+    img = Image.open(logo_path).convert("RGBA")
+
+    # High-quality initial resize via Pillow (Keep this)
+    max_dimension = 500
+    width, height = img.size
+    scale = max_dimension / max(width, height)
+    new_width = int(width * scale)
+    new_height = int(height * scale)
+
+    img = img.resize(
+        (new_width, new_height),
+        Image.Resampling.LANCZOS,
+    )
+
+    # 2. CHANGE: Switch interpolation to "nearest" to prevent double-smoothing
+    imagebox = OffsetImage(
+        img,
+        zoom=zoom,
+        interpolation="nearest", 
+    )
+
+    annotation = AnnotationBbox(
+        imagebox,
+        (x, y),
+        xycoords="data",
+        frameon=False,
+        box_alignment=(0.5, 0.5),
+        pad=0,
+    )
+
+    ax.add_artist(annotation)
+
+
+
+def viz_wpa(data_df):
+    """
+    """
+
+    data_df["gap"] = data_df["optimal_wpa"] - data_df["observed_wpa"]
+
+    data_df = data_df.sort_values(
+        "optimal_wpa",
+        ascending=True
+    ).reset_index(drop=True)
+
+    teams = data_df["teamId"].tolist()
+    observed = data_df["observed_wpa"].tolist()
+    optimal = data_df["optimal_wpa"].tolist()
+
+    n_teams = len(data_df)
+
+    # ================================================================
+    # MATPLOTLIB SETTINGS
+    # ================================================================
+
+    plt.rcParams.update({
+        "font.family": FONT_FAMILY,
+        "font.size": AXIS_SIZE,
+        "figure.dpi": 150,
+        "savefig.dpi": 300,
+    })
+
+
+    # ================================================================
+    # FIGURE
+    # ================================================================
+
+    fig, ax = plt.subplots(
+        figsize=(FIG_WIDTH, FIG_HEIGHT)
+    )
+
+
+    # ================================================================
+    # Y POSITIONS
+    # ================================================================
+
+    y = np.arange(n_teams)
+
+    observed_y = y - (
+        BAR_HEIGHT / 2 + BAR_GAP / 2
+    )
+
+    optimal_y = y + (
+        BAR_HEIGHT / 2 + BAR_GAP / 2
+    )
+
+    y_vals = y
+
+
+    # ================================================================
+    # BARS
+    # ================================================================
+
+    ax.barh(
+        observed_y,
+        observed,
+        height=BAR_HEIGHT,
+        color=OBSERVED_COLOR,
+        edgecolor="none",
+        label="Observed usage",
+        zorder=3,
+    )
+
+    ax.barh(
+        optimal_y,
+        optimal,
+        height=BAR_HEIGHT,
+        color=OPTIMAL_COLOR,
+        edgecolor="none",
+        label="Optimal usage",
+        zorder=3,
+    )
+
+
+    # ================================================================
+    # X-AXIS RANGE
+    # ================================================================
+
+    all_values = np.concatenate([
+        observed,
+        optimal,
+    ])
+
+    data_min = all_values.min()
+    data_max = all_values.max()
+
+    data_range = data_max - data_min
+
+    if data_range == 0:
+        data_range = 0.01
+
+    # Padding around the actual data
+    left_padding = data_range * 0.12
+    right_padding = data_range * 0.08
+
+    xmin = min(0, data_min) - left_padding
+    xmax = max(0, data_max) + right_padding
+
+    ax.set_xlim(xmin, xmax)
+
+
+    # ================================================================
+    # ZERO LINE
+    # ================================================================
+
+    ax.axvline(
+        0,
+        color=ZERO_LINE_COLOR,
+        linewidth=1.1,
+        zorder=2,
+    )
+
+
+    # ================================================================
+    # HORIZONTAL SEPARATORS
+    # ================================================================
+
+    for y_pos in np.arange(n_teams - 1) + 0.5:
+
+        ax.axhline(
+            y_pos,
+            color=SEPARATOR_COLOR,
+            linewidth=0.7,
+            zorder=1,
+        )
+
+
+    # ================================================================
+    # GRID
+    # ================================================================
+
+    ax.grid(
+        axis="x",
+        color=GRID_COLOR,
+        linewidth=0.7,
+        linestyle="-",
+        zorder=0,
+    )
+
+    ax.set_axisbelow(True)
+
+
+    # ================================================================
+    # AXES
+    # ================================================================
+
+    # No team labels.
+    ax.set_yticks(y)
+    ax.set_yticklabels([])
+
+    ax.tick_params(
+        axis="y",
+        which="both",
+        left=False,
+        right=False,
+        labelleft=False,
+    )
+
+    # X-axis
+    ax.tick_params(
+        axis="x",
+        which="major",
+        length=0,
+        pad=8,
+        colors=SECONDARY_TEXT,
+        labelsize=AXIS_SIZE,
+    )
+
+    # WPA displayed as percentage points
+    ax.xaxis.set_major_formatter(
+        lambda x, pos: f"{x:.0%}"
+    )
+
+    ax.set_xlabel(
+        "Win Probability Added",
+        fontsize=AXIS_SIZE,
+        color=SECONDARY_TEXT,
+        labelpad=10,
+    )
+
+
+    # ================================================================
+    # SPINES
+    # ================================================================
+
+    ax.spines["top"].set_visible(False)
+    ax.spines["right"].set_visible(False)
+    ax.spines["left"].set_visible(False)
+
+    ax.spines["bottom"].set_color("#BDBDBD")
+    ax.spines["bottom"].set_linewidth(0.8)
+
+
+    # ================================================================
+    # LOGO COLUMN
+    # ================================================================
+
+    # The logo column is independent of the data scale.
+    #
+    # This means that changing the magnitude of WPA doesn't change
+    # the relative position of the logos.
+
+    logo_x, logo_y = get_logo_labels(
+                ax,
+                optimal,
+                y_vals,
+            )
+
+    for i, team in enumerate(teams):
+        clean_team = team.replace("tgl", "")
+        logo_path = os.path.join(
+            LOGO_DIR,
+            f"{clean_team}.avif",
+        )
+
+        if not os.path.exists(logo_path):
+            print(
+                f"Warning: logo not found for {team}: "
+                f"{logo_path}"
+            )
+            continue
+
+        add_team_logo(
+            ax,
+            logo_path,
+            logo_x[i],
+            logo_y[i],
+        )
+
+
+    # Give the logo column some breathing room.
+    # ax.set_xlim(
+    #     logo_x - data_range * 0.08,
+    #     xmax,
+    # )
+
+
+    # ================================================================
+    # TITLE
+    # ================================================================
+
+    fig.text(
+        0.075,
+        0.965,
+        "Hammer Usage Win Probability Added",
+        ha="left",
+        va="top",
+        fontsize=TITLE_SIZE,
+        fontweight="bold",
+        color=TEXT_COLOR,
+    )
+
+
+    # ================================================================
+    # SUBTITLE
+    # ================================================================
+
+    fig.text(
+        0.075,
+        0.925,
+        "Observed versus optimal hammer usage by team in the 2026 TGL season",
+        ha="left",
+        va="top",
+        fontsize=SUBTITLE_SIZE,
+        color=SECONDARY_TEXT,
+    )
+
+
+    # ================================================================
+    # LEGEND
+    # ================================================================
+
+    ax.legend(
+        loc="upper right",
+        bbox_to_anchor=(1.0, 1.075),
+        ncol=2,
+        frameon=False,
+        fontsize=LEGEND_SIZE,
+        handlelength=1.3,
+        handleheight=0.8,
+        columnspacing=1.5,
+        borderaxespad=0,
+    )
+
+
+    # ================================================================
+    # LAYOUT
+    # ================================================================
+
+    plt.subplots_adjust(
+        left=0.075,
+        right=0.965,
+        top=0.84,
+        bottom=0.10,
+    )
+
+    plt.savefig(
+        f"wpa.png",
+        dpi=300,
+        bbox_inches="tight",
+        facecolor="white"
+        )
+    plt.close(fig)

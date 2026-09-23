@@ -14,6 +14,14 @@ import pickle
 
 import pandas as pd
 import numpy as np
+
+from pygam import s, GAM, te, LinearGAM
+from pygam.distributions import BinomialDist
+from statsmodels.miscmodels.ordinal_model import OrderedModel
+
+
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import mean_absolute_error
 from sklearn.metrics import log_loss
 
 import matplotlib.pyplot as plt
@@ -157,5 +165,90 @@ def main():
     with open('hammer_model.pkl', 'wb') as handle:
         pickle.dump(model_dict, handle)
 
-if __name__ == "__main__":
-    main()
+
+def build_hammer_opportunity_model():
+    """ This function constructs a model to
+    predict the probability of a hammer opportunity
+    arising as a function of win probability
+
+    Returns:
+        - prob_df (pd.DataFrame): DataFrame containing
+            predicted probabilities of a hammer arising
+            and the expected number of hammers given
+            win probability and hammers remaining
+    """
+
+    # Define model features + target
+    features = ["win_prob", "holes_remaining"]
+    target = "future_hammer_rate"
+    trials = "holes_remaining"
+
+    # Pull data (no hammer opportunities after the last hole)
+    hammer_df = sg_data.pull_future_hammer_value()
+    hammer_df = hammer_df[hammer_df["hole_number"] < 15]
+
+    # Define proportions
+    hammer_df["holes_remaining"] = 15 - hammer_df["hole_number"]
+    hammer_df["future_hammer_rate"] = (
+        hammer_df["future_hammer_opportunities"] /
+        hammer_df["holes_remaining"]
+    )
+
+    # Split data
+    train_df, test_df = train_test_split(hammer_df, test_size=0.2, random_state=42)
+
+    # Define model
+    if target == "future_hammer_rate":
+        binomial_gam = GAM(te(0, 1, constraints=("concave", "monotonic_dec")), distribution=BinomialDist(), link='logit')
+
+        # Fit model
+        binomial_gam.fit(train_df[features], train_df[target])#, weights=train_df[trials])
+    else:
+        gam = LinearGAM(te(0, 1, constraints=("concave", "monotonic_dec")))
+        gam.fit(train_df[features], train_df[target])
+
+    # Evaluate
+    train_preds = binomial_gam.predict(train_df[features])
+    test_preds = binomial_gam.predict(test_df[features])
+
+    if target == "future_hammer_rate":
+        train_counts = train_preds * train_df[trials]
+        test_counts = test_preds * test_df[trials]
+
+
+    print("Training MAE: " + str(round(mean_absolute_error(train_df[target],
+                                                           train_preds), 3)))
+    print("Test MAE: " + str(round(mean_absolute_error(test_df[target],
+                                                        test_preds), 3)))
+
+    if target == "future_hammer_rate":
+        print("Training Counts MAE: " + str(round(mean_absolute_error(train_df[target] * train_df[trials],
+                                                                train_counts), 3)))
+        print("Test Counts MAE: " + str(round(mean_absolute_error(test_df[target] * test_df[trials],
+                                                            test_counts), 3)))
+
+        # Plot partial dependence
+        plot_partial_dependence(binomial_gam)
+
+        # Plot calibration
+        test_df["preds"] = test_counts
+        utils.visualize_count_calibration(test_df, "future_hammer_opportunities", "preds")
+
+        # Save model
+        with open('hammer_opps_model.pkl', 'wb') as handle:
+            pickle.dump(binomial_gam, handle)
+    else:
+        # Plot partial dependence
+        plot_partial_dependence(gam)
+
+        # Plot calibration
+        test_df["preds"] = test_preds
+        utils.visualize_count_calibration(test_df, target, "preds")
+
+        # Save model
+        with open('hammer_ev_model.pkl', 'wb') as handle:
+            pickle.dump(gam, handle)
+
+
+# if __name__ == "__main__":
+#     main()
