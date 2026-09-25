@@ -10,7 +10,6 @@ from typing import List
 
 import pandas as pd
 import numpy as np
-from scipy.special import expit
 from sklearn.model_selection import train_test_split
 
 from pygam import LogisticGAM, te, s
@@ -176,7 +175,7 @@ def process_shots(shot_df: pd.DataFrame):
         start_distance.append(start_value)
         end_distance.append(end_value)
         location.append(end_location)
-
+        
     # Store the distance values and return the DataFrame
     shot_df = shot_df.copy()
     shot_df["shot_distance"] = start_distance
@@ -326,117 +325,6 @@ def parse_json_data(json_obj: dict):
     return sessions_df, holes_df, shots_df, holes_info_df, team_df, players_df
 
 
-def get_putt_ex_strokes(shot_df: pd.DataFrame) -> pd.DataFrame:
-    """
-    This function derives the expected strokes from the shot-level data
-    for putts to serve a downstream hole win probability model.
-
-    Args:
-        shot_df (pd.DataFrame): A DataFrame containing the shot-level data.
-    
-    Returns:
-        pd.DataFrame: A DataFrame with expected strokes
-            for putts only
-    """
-
-    # Unpack putt models
-    with open('putt_model.pkl', 'rb') as file:
-        putt_models = pickle.load(file)
-
-    def calc_putts(putt_models, distance, putt_number):
-        """
-        Calculate expected strokes for a putt based on the distance.
-        """
-        assert putt_number in [1, 3] 
-        suffix = "_p" if putt_number == 1 else "_t"
-
-        distance_ft = distance * 3.0  # Convert yards to feet
-
-        # Unpack model parameters
-        intercept = putt_models["coef" + suffix]["Intercept"]
-        slope = putt_models["coef" + suffix]["distance_float"]
-        spline_coef = np.array(putt_models["coef" + suffix].iloc[2:])
-
-        # Transform distance using spline basis functions
-        distance_transformed = putt_models["splines"].transform(np.array(distance_ft).reshape(-1, 1))
-
-        # Calculate expected strokes
-        log_odds = intercept + (slope * distance_ft) + np.dot(spline_coef, distance_transformed.T)
-
-        return expit(log_odds)[0]  # Add 1 to account for the current putt
-        
-
-    # Filter for putt shots (assuming putts are the last shot of each hole)
-    shot_df["one_putt"] = [
-        np.nan if shot_location != "Green"
-        else calc_putts(putt_models, distance, 1)
-        for shot_location, distance in zip(
-            shot_df["shot_location"],
-            shot_df["end_distance"]
-            )
-    ]
-
-    shot_df["three_putt"] = [
-            np.nan if shot_location != "Green"
-            else calc_putts(putt_models, distance, 3)
-            for shot_location, distance in zip(
-                shot_df["shot_location"],
-                shot_df["end_distance"]
-                )
-        ]
-
-    shot_df["putt_ex_strokes"] = shot_df["one_putt"] + shot_df["three_putt"]*3 + 2*(1 - (shot_df["one_putt"] + shot_df["three_putt"]))
-
-    return shot_df
-
-
-def get_approach_ex_strokes(shot_df: pd.DataFrame) -> pd.DataFrame:
-    """
-    This function derives the expected strokes from the shot-level data
-    for approach shots to serve a downstream hole win probability model.
-
-    Args:
-        shot_df (pd.DataFrame): A DataFrame containing the shot-level data.
-    
-    Returns:
-        pd.DataFrame: A DataFrame with expected strokes
-            for approach shots only
-    """
-
-    # Unpack approach models
-    with open('approach_objs.pkl', 'rb') as file:
-            approach_model = pickle.load(file)
-
-    approach_df = shot_df[
-        (shot_df["shot_location"].isin(["Fairway", "Rough", "Bunker", "Native Area", "Free Drop Area", "Penalty Area"])) &
-        (shot_df["strokeType"] == "SHOT")
-    ]
-    features = ["distance_norm", "fairway", "rough", "bunker", "native_area", "other"]
-    approach_df["distance_norm"] = approach_model["distance_scaler"].transform(np.array(approach_df["end_distance"]).reshape(-1, 1))
-    approach_df["fairway"] = [1 if loc in ["Fairway", "Free Drop Area"] else 0 for loc in approach_df["shot_location"]]
-    approach_df["rough"] = [1 if loc == "Rough" else 0 for loc in approach_df["shot_location"]]
-    approach_df["bunker"] = [1 if loc == "Bunker" else 0 for loc in approach_df["shot_location"]]
-    approach_df["native_area"] = [1 if loc == "Native Area" else 0 for loc in approach_df["shot_location"]]
-    approach_df["other"] = [1 if loc not in ["Fairway", "Rough", "Bunker", "Native Area", "Free Drop Area"] else 0 for loc in approach_df["shot_location"]]
-
-    approach_df["approach_ex_strokes"] = approach_model["ex_strokes_model"].predict(approach_df[features])
-
-    preds = approach_model["prob_model"].predict(approach_df[["approach_ex_strokes", "fairway", "bunker", "rough"]])
-    strokes = np.array(range(1, len(preds.columns)+1))
-    for stroke in strokes:
-        approach_df[f"{stroke}_app_stroke_prob"] = preds[stroke-1]
-
-    shot_df = shot_df.merge(approach_df[
-        ["match_id", "hole_config_id", "hole_id", "hole_number",
-         "sequence", "shot_number", "playerId", "teamId", "approach_ex_strokes"] + [col for col in approach_df.columns if col.endswith('_app_stroke_prob')]
-    ],
-    on=["match_id", "hole_config_id", "hole_id", "hole_number",
-        "sequence", "shot_number", "playerId", "teamId"],
-    how="left")
-
-    return shot_df
-
-
 def process_shot_data(shot_df: pd.DataFrame) -> pd.DataFrame:
     """
     This function processes the shot-level data to derive expected strokes
@@ -449,18 +337,43 @@ def process_shot_data(shot_df: pd.DataFrame) -> pd.DataFrame:
         pd.DataFrame: A DataFrame with expected strokes for drives, putts, and approach shots.
     """
 
-    shot_df = sg_utils.get_drive_ex_strokes(shot_df)
-    shot_df = get_putt_ex_strokes(shot_df)
-    shot_df = get_approach_ex_strokes(shot_df)
+    def next_stroke_func(x):
+        """quick-and-dirty util to get next ex strokes"""
+        return x["approach_ex_strokes"] if pd.notnull(x["approach_ex_strokes"]) else \
+                0 if str(x["shot_location"]) == "Hole" or str(x["strokeType"])=="GIMME" else \
+                x["putt_ex_strokes"]
 
+    def next_putt_func(x, putt_type):
+        """quick-and-dirty util to get next putt probs"""
+        return np.nan if pd.notnull(x["approach_ex_strokes"]) else \
+                1 if str(x["shot_location"]) == "Hole" or str(x["strokeType"]) == "GIMME" else \
+                x[putt_type]
+    
+
+    # Apply ex strokes models
+    shot_df = sg_utils.get_drive_ex_strokes(shot_df)
+    shot_df = sg_utils.get_putt_ex_strokes(shot_df)
+    shot_df = sg_utils.get_approach_ex_strokes(shot_df)
+
+    # Grab holes and initialize DataFrame
     unique_holes = list(set(shot_df["hole_number"]))
     strokes_df = pd.DataFrame()
 
+    # This loop is a bit confusing, but because the end_distance value on
+    # a hole is used as a feature for the approach and putting shots, we must
+    # do the following:
+    # - For the first shot by each team, we automatically pass the length of the hole
+    #   through the drive ex strokes model and use those probabilities
+    # - For every other shot, we take the location and end_distance of the prior shot
+    #   (denoted as the "next" variables below) and use those to determine whether we should use
+    #   the approach or putting ex strokes predictions for each subsequent shot
     for hole in unique_holes:
+        # Isolate to hole and order by time
         hole_shots = shot_df[shot_df["hole_number"] == hole]
         hole_shots = hole_shots.sort_values("shot_number", ascending=True)
         unique_teams = list(set(hole_shots["teamId"]))
         for team in unique_teams:
+            # Isolate to team and initialize storage
             team_shots = hole_shots[(hole_shots["teamId"] == team)]
             ex_strokes = []
             one_putt_prob = []
@@ -469,19 +382,32 @@ def process_shot_data(shot_df: pd.DataFrame) -> pd.DataFrame:
             stroke_prob_rows = []
             for _, shot in team_shots.iterrows():
                 shot_number.append(shot["shot_number"])
+                # If this is our first shot, we're using drive ex strokes
                 if pd.notnull(shot["shot_number"]) and shot["shot_number"] == 1:
+                    # Grab drive and approach probability columns
                     drive_prob_cols = list(dict.fromkeys(
                         col for col in shot_df.columns if "drive_stroke_prob" in col
                     ))
                     app_prob_cols = list(dict.fromkeys(
                         col for col in shot_df.columns if "app_stroke_prob" in col
                     ))
+
+                    # Store drive ex strokes
                     ex_strokes.append(shot["drive_ex_strokes"])
                     one_putt_prob.append(np.nan)
                     three_putt_prob.append(np.nan)
-                    next_stroke = shot["approach_ex_strokes"] if pd.notnull(shot["approach_ex_strokes"]) else 0 if str(shot["shot_location"]) == "Hole" or str(shot["strokeType"])=="GIMME" else shot["putt_ex_strokes"]
-                    next_one_putt = np.nan if pd.notnull(shot["approach_ex_strokes"]) else 1 if str(shot["shot_location"]) == "Hole" or str(shot["strokeType"]) == "GIMME" else shot["one_putt"]
-                    next_three_putt = np.nan if pd.notnull(shot["approach_ex_strokes"]) else 0 if str(shot["shot_location"]) == "Hole" or str(shot["strokeType"]) == "GIMME" else shot["three_putt"]
+                    
+                    # If approach_ex_strokes exists, we know the next shot is on approach
+                    # If not, look for key words designating a hole out. Otherwise, we're puttin'
+                    next_stroke = next_stroke_func(shot)
+                    
+                    # Store putts if we're puttin'
+                    next_one_putt = next_putt_func(shot, "one_putt")
+                    next_three_putt = next_putt_func(shot, "three_putt")
+
+                    # Use the drive columns as our shot-type agnostic probability columns
+                    # Store the approach probabilities as our next probability columns
+                    # Note this doesn't get used if we're puttin'
                     stroke_prob_rows.append({
                         col.replace("drive_", ""): shot[col]
                         for col in drive_prob_cols
@@ -491,22 +417,28 @@ def process_shot_data(shot_df: pd.DataFrame) -> pd.DataFrame:
                         for col in app_prob_cols
                     }
                 else:
+                    # Store our values of interest that we defined above
+                    # or here from the last shot
                     ex_strokes.append(next_stroke)
                     one_putt_prob.append(next_one_putt)
                     three_putt_prob.append(next_three_putt)
                     stroke_prob_rows.append(next_probs)
 
+                    # If this isn't a penalty stroke, define the relevant values for the next shot
+                    # If it's a penalty stroke, we just reuse the prior values
                     if shot["strokeType"] != "PENALTY":
-                        next_stroke = shot["approach_ex_strokes"] if pd.notnull(shot["approach_ex_strokes"]) else 0 if str(shot["shot_location"]) == "Hole" or str(shot["strokeType"]) == "GIMME" else shot["putt_ex_strokes"]
-                        next_one_putt = np.nan if pd.notnull(shot["approach_ex_strokes"]) else 1 if str(shot["shot_location"]) == "Hole" or str(shot["strokeType"]) == "GIMME" else shot["one_putt"]
-                        next_three_putt = np.nan if pd.notnull(shot["approach_ex_strokes"]) else 0 if str(shot["shot_location"]) == "Hole" or str(shot["strokeType"]) == "GIMME" else shot["three_putt"]
+                        next_stroke = next_stroke_func(shot)
+                        next_one_putt = next_putt_func(shot, "one_putt")
+                        next_three_putt = next_putt_func(shot, "three_putt")
                         next_probs = {
                             col.replace("app_", ""): shot[col]
                             for col in app_prob_cols
                         }
 
+            # Convert stroke probabilities to a DataFrame
             prob_df = pd.DataFrame(stroke_prob_rows)
 
+            # Store ex strokes and putting probabilities
             team_hole_df = pd.DataFrame(
                 {
                     "ex_strokes": ex_strokes,
@@ -517,13 +449,19 @@ def process_shot_data(shot_df: pd.DataFrame) -> pd.DataFrame:
             )
             team_hole_df["teamId"] = team
             team_hole_df["hole_number"] = hole
+
+            # Copy over probabilities
             for col in prob_df.columns:
                 team_hole_df[col] = prob_df[col].values
             strokes_df = pd.concat([strokes_df, team_hole_df])
 
+    # Remove columns from shot_df since we'll be overwriting those
+    # based on the logic detailed above at the start of the loop
     for col in prob_df.columns:
         if col in shot_df.columns:
             del shot_df[col]
+    
+    # Maintain a left join in case we missed anything
     shot_df = shot_df.merge(
         strokes_df,
         on=["teamId", "hole_number", "shot_number"],
