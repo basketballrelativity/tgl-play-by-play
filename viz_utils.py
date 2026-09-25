@@ -6,6 +6,9 @@ import os
 
 import numpy as np
 
+from sklearn.calibration import calibration_curve
+from sklearn.preprocessing import KBinsDiscretizer
+
 import matplotlib.pyplot as plt
 from matplotlib.offsetbox import OffsetImage, AnnotationBbox
 from PIL import Image
@@ -40,6 +43,95 @@ FIG_HEIGHT = 8
 
 BAR_HEIGHT = 0.28
 BAR_GAP = 0.10
+
+
+def visualize_calibration(data_df, result_type="win"):
+    """ This function visualizes calibration for the
+    hole win probability model
+
+    @param data_df (DataFrame): DataFrame containing
+        win, loss, and tie indicators and game time remaining
+    @param result_type (str): Type of result to visualize. Options are "win" or "tie".
+
+    Returns:
+
+        fig (plt.figure): Figure object of the win probability
+            visualization
+    """
+
+    # Narrow to valid predictions
+    data_df = data_df[pd.notnull(data_df[result_type + "_probability"])]
+ 
+    prob_true, prob_pred = calibration_curve(data_df[result_type],
+                                             data_df[result_type + "_probability"], n_bins=10)
+
+    fig = plt.figure(0, figsize=(10, 10))
+    ax1 = plt.subplot2grid((3, 1), (0, 0), rowspan=2)
+    ax2 = plt.subplot2grid((3, 1), (2, 0))
+
+    ax1.plot([0, 1], [0, 1], "k:", label="Perfectly calibrated")
+
+    ax1.plot(prob_pred, prob_true, "s-",)
+
+    ax2.hist(data_df[result_type + "_probability"], range=(0, 1), bins=10,
+            histtype="step", lw=2)
+
+    ax1.set_ylim([-0.05, 1.05])
+    ax1.set_title(f"Hole {result_type.title()} Probability Calibration", fontsize=16)
+    ax2.set_xlabel("Predicted Probability", fontsize=14)
+    ax1.set_ylabel("Actual Probability", fontsize=14)
+    ax2.set_ylabel("Count", fontsize=14)
+    plt.xticks(fontsize=12)
+    plt.yticks(fontsize=12)
+
+    plt.savefig(f"hole_{result_type}_probability_calibration.png")
+    plt.close(fig)
+
+
+def visualize_count_calibration(data_df, target_label, pred_label):
+    """
+    This function visualizes calibration for a continuous variable prediction
+
+    @param data_df (DataFrame): DataFrame containing
+        columns for target_label and pred_label
+    @param target_label (str): Name of the column holding the target variable
+    @param pred_label (str): Name of the column holding the predicted variable
+
+    Returns:
+
+        fig (plt.figure): Figure object of the calibration
+            visualization
+    """
+
+    # Initialize discretizer
+    overall_est = KBinsDiscretizer(n_bins=10, encode='ordinal', strategy='quantile', subsample=None)
+
+    # Fit and transform to bins
+    pred_bin = overall_est.fit_transform(data_df[[pred_label]])
+
+    # Store
+    data_df["bin"] = [x[0] for x in pred_bin]
+    overall_viz = pd.DataFrame(data_df.groupby("bin")[[target_label, pred_label]].mean()).reset_index()
+
+    fig, ax = plt.subplots()
+
+    # Plot
+    ax.plot(overall_viz[pred_label], overall_viz[target_label], linestyle='-', marker='o', markersize=3, color='gray')
+
+    # Add a diagonal line for perfect calibration
+    min_val = min(overall_viz[pred_label].min(), overall_viz[target_label].min())
+    max_val = max(overall_viz[pred_label].max(), overall_viz[target_label].max())
+    ax.plot([min_val, max_val], [min_val, max_val], linestyle='--', color='red', label="Perfect Calibration")
+
+    # Labels
+    ax.set_xlabel('Predicted')
+    ax.set_ylabel('Actual')
+    ax.set_title('Calibration Plot')
+    ax.legend()
+
+    plt.savefig(f"{target_label}_value_calibration.png")
+    plt.close(fig)
+
 
 def get_logo_labels(ax, values, positions):
     """

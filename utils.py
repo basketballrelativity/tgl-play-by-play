@@ -7,22 +7,17 @@ import json
 import re
 import pickle
 from typing import List
-import os
 
 import pandas as pd
 import numpy as np
-from scipy.stats import skellam, poisson
 from scipy.special import expit
 from sklearn.model_selection import train_test_split
 
 from pygam import LogisticGAM, te, s
 
-from sklearn.calibration import calibration_curve
-from sklearn.preprocessing import KBinsDiscretizer
-
-import matplotlib.pyplot as plt
 
 import sg_data
+import sg_utils
 
 
 def read_json_obj(file_path: str):
@@ -43,92 +38,43 @@ def read_json_obj(file_path: str):
     return data
 
 
-def convert_distance_to_yards(distance_value):
-    """Convert a standardized golf distance string into yards.
-
-    Supported examples include:
-      - "120 yds" -> 120.0
-      - "79 ft 6 in." -> 26.5
-      - "5 ft 2 in" -> 1.722222...
-      - "18 in." -> 0.5
-      - "--" -> 0.0
-    """
-    if pd.isna(distance_value):
-        return np.nan
-
-    value = str(distance_value).strip()
-    if not value:
-        return np.nan
-
-    value = re.sub(r"\s+", " ", value)
-    value = value.rstrip(".")
-
-    if value in {"--", "-", "—"}:
-        return 0.0
-
-    yd_match = re.fullmatch(
-        r"(?P<yards>\d+(?:\.\d+)?)\s*(?:yd|yds)",
-        value,
-        re.IGNORECASE,
-    )
-    if yd_match:
-        return float(yd_match.group("yards"))
-
-    ft_in_match = re.fullmatch(
-        r"(?P<feet>\d+(?:\.\d+)?)\s*ft\s+(?P<inches>\d+(?:\.\d+)?)\s*in",
-        value,
-        re.IGNORECASE,
-    )
-    if ft_in_match:
-        feet = float(ft_in_match.group("feet"))
-        inches = float(ft_in_match.group("inches"))
-        return (feet + inches / 12.0) / 3.0
-
-    ft_match = re.fullmatch(r"(?P<feet>\d+(?:\.\d+)?)\s*ft", value, re.IGNORECASE)
-    if ft_match:
-        return float(ft_match.group("feet")) / 3.0
-
-    in_match = re.fullmatch(r"(?P<inches>\d+(?:\.\d+)?)\s*in", value, re.IGNORECASE)
-    if in_match:
-        return float(in_match.group("inches")) / 36.0
-
-    numeric_match = re.fullmatch(r"\d+(?:\.\d+)?", value)
-    if numeric_match:
-        return float(value)
-
-    return np.nan
-
-
-def convert_distance_column(distance_series: pd.Series) -> pd.Series:
-    """Apply the yard conversion to an entire distance column."""
-    return distance_series.apply(convert_distance_to_yards)
-
-
-def process_shots(shot_df: pd.DataFrame) -> pd.DataFrame:
+def process_shots(shot_df: pd.DataFrame):
     """
     This function processes the shot description to get
     the starting and finishing distance of the shot,
     and the location the shot finishes in.
+
+    Args:
+        shot_df (pd.DataFrame): DataFrame containing shot-level
+            data
+
+    Returns:
+        - None if a valid distance value can't be found, otherwise
+            distance in units of yards
     """
 
     def _parse_distance(distance_text: str):
         if not isinstance(distance_text, str) or not distance_text.strip():
             return np.nan
 
+        # Search for yds and return if found
         distance_text = distance_text.strip()
         yd_match = re.match(r"^(?P<yards>\d+)\s*yds?$", distance_text)
         if yd_match:
             return float(yd_match.group("yards"))
 
+        # Search for feet and inches
         ft_match = re.match(
             r"^(?P<feet>\d+)\s*ft(?:\s*(?P<inches>\d+)\s*in)?$",
             distance_text,
         )
+        # Return if found
         if ft_match:
             feet = float(ft_match.group("feet"))
             inches = float(ft_match.group("inches") or 0)
             return (feet + inches / 12.0) / 3.0
 
+        # Search for inches only
         in_match = re.match(r"^(?P<inches>\d+)\s*in$", distance_text)
         if in_match:
             inches = float(in_match.group("inches"))
@@ -136,22 +82,29 @@ def process_shots(shot_df: pd.DataFrame) -> pd.DataFrame:
 
         return np.nan
 
+    # Initialize lists for storage of start and end distance,
+    # along with where the shot ends up (location)
     start_distance = []
     end_distance = []
     location = []
 
+    # Loop through shots
     for _, shot in shot_df.iterrows():
         text = str(shot.get("pbpText", ""))
+        
+        # Is "assessed" is in the pbp text, this is a penalty stroke
         if "assessed" in text.lower():
             start_distance.append(np.nan)
             end_distance.append(np.nan)
             location.append(np.nan)
             continue
 
+        # Initialize with NaN
         start_value = np.nan
         end_value = np.nan
         end_location = np.nan
 
+        # Core distance pattern
         distance_pattern = r"\d+\s*(?:yds?|ft(?:\s*\d+\s*in)?|in)"
 
         # standard shot: hits <club> <distance> to <location>, <distance> left to hole
@@ -160,9 +113,11 @@ def process_shots(shot_df: pd.DataFrame) -> pd.DataFrame:
             text,
             re.IGNORECASE,
         )
+        # Parses start distance (which is really shot distance)
         if start_match:
             start_value = _parse_distance(start_match.group(1))
 
+        # Insert the core distance pattern after "to"
         end_match = re.search(
             rf"to\s+([^,]+?),\s*({distance_pattern})\s*left to hole",
             text,
@@ -194,6 +149,7 @@ def process_shots(shot_df: pd.DataFrame) -> pd.DataFrame:
             re.IGNORECASE,
         )
 
+        # Handle the differnt putt or chip outcomes
         if hole_out_match:
             start_value = _parse_distance(hole_out_match.group(1))
             end_value = 0.0
@@ -221,6 +177,7 @@ def process_shots(shot_df: pd.DataFrame) -> pd.DataFrame:
         end_distance.append(end_value)
         location.append(end_location)
 
+    # Store the distance values and return the DataFrame
     shot_df = shot_df.copy()
     shot_df["shot_distance"] = start_distance
     shot_df["end_distance"] = end_distance
@@ -243,13 +200,14 @@ def parse_json_data(json_obj: dict):
             play-by-play data for TGL matches
     """
 
+    # Unpack the data stored in various lists
     session_list = json_obj["data"]["playByPlayList"]["sessions"]
     half_list = json_obj["data"]['matchDetailsGeoDetect']["sessions"]
     match_id = json_obj["data"]['matchDetailsGeoDetect']["matchId"]
     season_year = json_obj["data"]['matchDetailsGeoDetect']["seasonYear"]
-    start_date = json_obj["data"]['matchDetailsGeoDetect']["startDate"]
-    overtime = json_obj["data"]['matchDetailsGeoDetect']["overtime"]
     teams = json_obj["data"]['matchDetailsGeoDetect']["teams"]
+
+    # Initialize team and player DataFrames
     team_df = pd.DataFrame()
     players_df = pd.DataFrame()
     for team in teams:
@@ -282,16 +240,20 @@ def parse_json_data(json_obj: dict):
             )
             players_df = pd.concat([players_df, player_df])
 
-
+    # Initialize session, hole, and shot DataFrames
     sessions_df = pd.DataFrame()
     holes_df = pd.DataFrame()
     holes_info_df = pd.DataFrame()
     shots_df = pd.DataFrame()
+
+    # Two sessions per match (triples followed by singles)
     for session in session_list:
         session_id = session["sessionId"]
         sequence = session["sequence"]
         session_score = session["sessionScore"]
 
+        # Note that the second session score is cumulative
+        # (includes the first session score)
         session_df = pd.DataFrame(
             {
                 "match_id": [match_id],
@@ -302,10 +264,12 @@ def parse_json_data(json_obj: dict):
             }
         )
 
+        # Separate out home and away scores
         session_df["away_score"] = [int(txt.split(" - ")[0]) if pd.notnull(txt) and " - " in txt else None for txt in session_df["session_score"]]
         session_df["home_score"] = [int(txt.split(" - ")[1]) if pd.notnull(txt) and " - " in txt else None for txt in session_df["session_score"]]
         sessions_df = pd.concat([sessions_df, session_df])
 
+        # Loop through each hole
         holes = session["playByPlay"]
         for hole in holes:
             hole_number = hole["holeNumber"]
@@ -318,8 +282,11 @@ def parse_json_data(json_obj: dict):
                 shot_df["hole_number"] = hole_number
                 shot_df["match_id"] = match_id
                 shot_df["season_year"] = season_year
+                # Extract shot distance, along with end distance and
+                # location
                 shot_df = process_shots(shot_df)
 
+            # Store hole information
             hole_df = pd.DataFrame(
                 {
                     "match_id": [match_id],
@@ -335,9 +302,11 @@ def parse_json_data(json_obj: dict):
             shots_df = pd.concat([shots_df, shot_df])
             holes_df = pd.concat([holes_df, hole_df])
         
+        # Loop through each session
         for half in half_list:
             holes = half['holes']
             for hole in holes:
+                # Extract and store hole information
                 hole_info_df = pd.DataFrame(
                     {
                         "match_id": [match_id],
@@ -353,54 +322,8 @@ def parse_json_data(json_obj: dict):
                 )
                 holes_info_df = pd.concat([holes_info_df, hole_info_df])
 
+    # Return it all, cowboy!
     return sessions_df, holes_df, shots_df, holes_info_df, team_df, players_df
-
-
-def get_drive_ex_strokes(shot_df: pd.DataFrame) -> pd.DataFrame:
-    """
-    This function derives the expected strokes from the shot-level data
-    for drives to serve a downstream hole win probability model.
-
-    Args:
-        shot_df (pd.DataFrame): A DataFrame containing the shot-level data.
-    
-    Returns:
-        pd.DataFrame: A DataFrame with expected strokes
-            off the tee only
-    """
-
-    # Unpack drive models
-    # Just copying these from the notebook
-    with open('drive_models.pkl', 'rb') as file:
-        drive_models = pickle.load(file)
-
-    # Filter for drive shots (assuming drive shots are the first shot of each hole)
-    par_dict = {}
-    alt_shot_df = pd.DataFrame()
-    for par in [3, 4, 5]:
-        par_df = shot_df[shot_df["hole_par"] == par]
-        if len(par_df) > 0:
-            par_df = par_df.rename({"yards" : "distance"}, axis=1)
-            par_df["distance"] = pd.to_numeric(par_df["distance"])
-            preds = drive_models[f"par_{par}"].predict(par_df[["distance"]])
-            if par < 5:
-                strokes = np.array(range(1, len(preds.columns)+1))
-            else:
-                strokes = np.array(range(2, len(preds.columns)+2))
-            par_df["drive_ex_strokes"] = np.dot(preds.values, strokes)
-            for stroke in strokes:
-                if par < 5:
-                    par_df[f"{stroke}_drive_stroke_prob"] = preds[stroke-1]
-                else:
-                    par_df[f"{stroke}_drive_stroke_prob"] = preds[stroke-2]
-            par_dict[par] = par_df.copy()
-        else:
-            par_dict[par] = pd.DataFrame()
-    
-    for par in [3, 4, 5]:
-        alt_shot_df = pd.concat([alt_shot_df, par_dict[par]])
-
-    return alt_shot_df
 
 
 def get_putt_ex_strokes(shot_df: pd.DataFrame) -> pd.DataFrame:
@@ -526,7 +449,7 @@ def process_shot_data(shot_df: pd.DataFrame) -> pd.DataFrame:
         pd.DataFrame: A DataFrame with expected strokes for drives, putts, and approach shots.
     """
 
-    shot_df = get_drive_ex_strokes(shot_df)
+    shot_df = sg_utils.get_drive_ex_strokes(shot_df)
     shot_df = get_putt_ex_strokes(shot_df)
     shot_df = get_approach_ex_strokes(shot_df)
 
@@ -608,48 +531,6 @@ def process_shot_data(shot_df: pd.DataFrame) -> pd.DataFrame:
     )
 
     return shot_df
-
-
-def prob_x_greater_than_y_skellam(stroke_diff, mu1, mu2):
-    # Z = X - Y follows a Skellam distribution with parameters mu1 and mu2
-    # P(X > Y) = P(X - Y >= 1) = 1 - P(X - Y <= 0)
-    # Probability that x > y is the probability that y wins the hole
-    return 1 - skellam.cdf(stroke_diff, mu1, mu2)
-
-
-def poisson_greater_than_x(x: int, mu: float) -> float:
-    """
-    Calculates the probability that a Poisson random variable 
-    is strictly greater than x.
-    
-    Parameters:
-    x (int): The threshold value (non-negative integer).
-    mu (float): The mean rate (lambda) of the distribution.
-    
-    Returns:
-    float: Probability P(X > x)
-    """
-    # sf(x) handles the calculation as 1 - cdf(x) internally with high precision
-    return poisson.sf(x, mu)
-
-
-def poisson_less_than_x(x, mu):
-    """
-    Calculates the probability that a Poisson variable is strictly less than x.
-    P(X < x) = P(X <= x - 1)
-    
-    Parameters:
-    x (int): The upper limit (exclusive)
-    mu (float): The expected mean rate (lambda) of the distribution
-    
-    Returns:
-    float: The cumulative probability
-    """
-    # If x is 0 or negative, probability of being strictly less than it is 0
-    if x <= 0:
-        return 0.0
-        
-    return poisson.cdf(x - 1, mu)
 
 
 def get_probability_vectors(shot: pd.Series, team: str):
@@ -823,94 +704,6 @@ def build_hammer_gam(df: pd.DataFrame, target_col: str = "hammer_used_on_hole", 
         "y_train": y_train,
         "y_test": y_test,
     }
-
-
-def visualize_calibration(data_df, result_type="win"):
-    """ This function visualizes calibration for the
-    hole win probability model
-
-    @param data_df (DataFrame): DataFrame containing
-        win, loss, and tie indicators and game time remaining
-    @param result_type (str): Type of result to visualize. Options are "win" or "tie".
-
-    Returns:
-
-        fig (plt.figure): Figure object of the win probability
-            visualization
-    """
-
-    # Narrow to valid predictions
-    data_df = data_df[pd.notnull(data_df[result_type + "_probability"])]
- 
-    prob_true, prob_pred = calibration_curve(data_df[result_type],
-                                             data_df[result_type + "_probability"], n_bins=10)
-
-    fig = plt.figure(0, figsize=(10, 10))
-    ax1 = plt.subplot2grid((3, 1), (0, 0), rowspan=2)
-    ax2 = plt.subplot2grid((3, 1), (2, 0))
-
-    ax1.plot([0, 1], [0, 1], "k:", label="Perfectly calibrated")
-
-    ax1.plot(prob_pred, prob_true, "s-",)
-
-    ax2.hist(data_df[result_type + "_probability"], range=(0, 1), bins=10,
-            histtype="step", lw=2)
-
-    ax1.set_ylim([-0.05, 1.05])
-    ax1.set_title(f"Hole {result_type.title()} Probability Calibration", fontsize=16)
-    ax2.set_xlabel("Predicted Probability", fontsize=14)
-    ax1.set_ylabel("Actual Probability", fontsize=14)
-    ax2.set_ylabel("Count", fontsize=14)
-    plt.xticks(fontsize=12)
-    plt.yticks(fontsize=12)
-
-    plt.savefig(f"hole_{result_type}_probability_calibration.png")
-    plt.close(fig)
-
-
-def visualize_count_calibration(data_df, target_label, pred_label):
-    """
-    This function visualizes calibration for a continuous variable prediction
-
-    @param data_df (DataFrame): DataFrame containing
-        columns for target_label and pred_label
-    @param target_label (str): Name of the column holding the target variable
-    @param pred_label (str): Name of the column holding the predicted variable
-
-    Returns:
-
-        fig (plt.figure): Figure object of the calibration
-            visualization
-    """
-
-    # Initialize discretizer
-    overall_est = KBinsDiscretizer(n_bins=10, encode='ordinal', strategy='quantile', subsample=None)
-
-    # Fit and transform to bins
-    pred_bin = overall_est.fit_transform(data_df[[pred_label]])
-
-    # Store
-    data_df["bin"] = [x[0] for x in pred_bin]
-    overall_viz = pd.DataFrame(data_df.groupby("bin")[[target_label, pred_label]].mean()).reset_index()
-
-    fig, ax = plt.subplots()
-
-    # Plot
-    ax.plot(overall_viz[pred_label], overall_viz[target_label], linestyle='-', marker='o', markersize=3, color='gray')
-
-    # Add a diagonal line for perfect calibration
-    min_val = min(overall_viz[pred_label].min(), overall_viz[target_label].min())
-    max_val = max(overall_viz[pred_label].max(), overall_viz[target_label].max())
-    ax.plot([min_val, max_val], [min_val, max_val], linestyle='--', color='red', label="Perfect Calibration")
-
-    # Labels
-    ax.set_xlabel('Predicted')
-    ax.set_ylabel('Actual')
-    ax.set_title('Calibration Plot')
-    ax.legend()
-
-    plt.savefig(f"{target_label}_value_calibration.png")
-    plt.close(fig)
 
 
 def analyze_hammer_usage(season: int):
