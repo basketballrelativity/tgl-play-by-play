@@ -13,11 +13,9 @@ probability model on TGL data
 import pickle
 
 import pandas as pd
-import numpy as np
 
-from pygam import s, GAM, te, LinearGAM
+from pygam import s, GAM, te, LinearGAM, LogisticGAM
 from pygam.distributions import BinomialDist
-from statsmodels.miscmodels.ordinal_model import OrderedModel
 
 
 from sklearn.model_selection import train_test_split
@@ -27,12 +25,62 @@ from sklearn.metrics import log_loss
 import matplotlib.pyplot as plt
 
 import sg_data
-import utils
+import viz_utils
 
 MAX_HAMMERS = 3 # Maximum number of hammers available to use in a match
 # Model features (must be left in this order per the pygam setup)
 FEATURES = ["score_diff", "holes_remaining_prior", "hammers_used_prior"]
 TARGET = "hammer_used_on_hole"
+
+def build_hammer_gam(df: pd.DataFrame, target_col: str = "hammer_used_on_hole", feature_cols: List = [], test_size: float = 0.2, random_state: int = 42):
+    """
+    Fit a LogisticGAM using the requested features, with a
+    train/test split and cross-validated hyperparameter tuning.
+
+    Parameters:
+        df (pd.DataFrame): DataFrame containing the modeling features and target.
+        target_col (str): Column name for the target variable.
+        test_size (float): Fraction of rows reserved for the test set.
+        random_state (int): Random seed used for reproducibility.
+
+    Returns:
+        dict: A dictionary with the trained model and test
+              split components.
+    """
+
+    # Break if we're missing required columns
+    if not all(col in df.columns for col in feature_cols + [target_col]):
+        missing = [col for col in feature_cols + [target_col] if col not in df.columns]
+        raise ValueError(f"Missing required columns: {missing}")
+
+    # Design matrix
+    X = df[feature_cols]
+    y = df[target_col]
+
+    # Split 'em
+    X_train, X_test, y_train, y_test = train_test_split(
+        X,
+        y,
+        test_size=test_size,
+        random_state=random_state,
+        stratify=y,
+    )
+
+    # Fit the model
+    gam = LogisticGAM(s(0, n_splines=15, constraints="monotonic_dec") +
+                     te(feature=(1, 2),
+                        n_splines=(15, 15),
+                        constraints=("monotonic_dec", "monotonic_dec")
+                        ), lam=0.6).fit(X_train[feature_cols], y_train)
+
+    return {
+        "model": gam,
+        "X_train": X_train,
+        "X_test": X_test,
+        "y_train": y_train,
+        "y_test": y_test,
+    }
+
 
 def plot_partial_dependence(gam):
     """
@@ -124,7 +172,7 @@ def main():
     hammer_df = hammer_df[hammer_df["hammers_used_prior"] < MAX_HAMMERS]
 
     # Construct the model
-    model_dict = utils.build_hammer_gam(hammer_df, TARGET, FEATURES)
+    model_dict = build_hammer_gam(hammer_df, TARGET, FEATURES)
 
     # Evaluate performance
     train_preds = model_dict["model"].predict_proba(model_dict["X_train"])
@@ -140,7 +188,7 @@ def main():
     test_df = pd.DataFrame(model_dict["X_test"], columns=FEATURES)
     test_df[TARGET] = list(model_dict["y_test"])
     test_df[TARGET + "_probability"] = test_preds
-    utils.visualize_calibration(test_df, TARGET)
+    viz_utils.visualize_calibration(test_df, TARGET)
 
     # Partial dependence
     plot_partial_dependence(model_dict["model"])
@@ -233,7 +281,7 @@ def build_hammer_opportunity_model():
 
         # Plot calibration
         test_df["preds"] = test_counts
-        utils.visualize_count_calibration(test_df, "future_hammer_opportunities", "preds")
+        viz_utils.visualize_count_calibration(test_df, "future_hammer_opportunities", "preds")
 
         # Save model
         with open('hammer_opps_model.pkl', 'wb') as handle:
@@ -244,7 +292,7 @@ def build_hammer_opportunity_model():
 
         # Plot calibration
         train_df["preds"] = train_preds
-        utils.visualize_count_calibration(train_df, target, "preds")
+        viz_utils.visualize_count_calibration(train_df, target, "preds")
 
         # Save model
         with open('hammer_ev_model.pkl', 'wb') as handle:

@@ -301,25 +301,25 @@ def parse_json_data(json_obj: dict):
             shots_df = pd.concat([shots_df, shot_df])
             holes_df = pd.concat([holes_df, hole_df])
         
-        # Loop through each session
-        for half in half_list:
-            holes = half['holes']
-            for hole in holes:
-                # Extract and store hole information
-                hole_info_df = pd.DataFrame(
-                    {
-                        "match_id": [match_id],
-                        "season_year": [season_year],
-                        "hole_config_id": [hole["holeConfigId"]],
-                        "hole_id": [hole["holeId"]],
-                        "hole_name": [hole["holeName"]],
-                        "hole_number": [hole["holeNumber"]],
-                        "hole_par": [hole["holePar"]],
-                        "hole_value": [hole["holeValue"]],
-                        "yards": [hole["yards"]]
-                    }
-                )
-                holes_info_df = pd.concat([holes_info_df, hole_info_df])
+    # Loop through each session
+    for half in half_list:
+        holes = half['holes']
+        for hole in holes:
+            # Extract and store hole information
+            hole_info_df = pd.DataFrame(
+                {
+                    "match_id": [match_id],
+                    "season_year": [season_year],
+                    "hole_config_id": [hole["holeConfigId"]],
+                    "hole_id": [hole["holeId"]],
+                    "hole_name": [hole["holeName"]],
+                    "hole_number": [hole["holeNumber"]],
+                    "hole_par": [hole["holePar"]],
+                    "hole_value": [hole["holeValue"]],
+                    "yards": [hole["yards"]]
+                }
+            )
+            holes_info_df = pd.concat([holes_info_df, hole_info_df])
 
     # Return it all, cowboy!
     return sessions_df, holes_df, shots_df, holes_info_df, team_df, players_df
@@ -471,52 +471,6 @@ def process_shot_data(shot_df: pd.DataFrame) -> pd.DataFrame:
     return shot_df
 
 
-def build_hammer_gam(df: pd.DataFrame, target_col: str = "hammer_used_on_hole", feature_cols: List = [], test_size: float = 0.2, random_state: int = 42):
-    """
-    Fit a LogisticGAM using the requested features, with a
-    train/test split and cross-validated hyperparameter tuning.
-
-    Parameters:
-        df (pd.DataFrame): DataFrame containing the modeling features and target.
-        target_col (str): Column name for the target variable.
-        test_size (float): Fraction of rows reserved for the test set.
-        random_state (int): Random seed used for reproducibility.
-
-    Returns:
-        dict: A dictionary with the trained model and test
-              split components.
-    """
-
-    if not all(col in df.columns for col in feature_cols + [target_col]):
-        missing = [col for col in feature_cols + [target_col] if col not in df.columns]
-        raise ValueError(f"Missing required columns: {missing}")
-
-    X = df[feature_cols]
-    y = df[target_col]
-
-    X_train, X_test, y_train, y_test = train_test_split(
-        X,
-        y,
-        test_size=test_size,
-        random_state=random_state,
-        stratify=y,
-    )
-
-    gam = LogisticGAM(s(0, n_splines=15, constraints="monotonic_dec") +
-                     te(feature=(1, 2),
-                        n_splines=(15, 15),
-                        constraints=("monotonic_dec", "monotonic_dec")
-                        ), lam=0.6).fit(X_train[feature_cols], y_train)
-
-    return {
-        "model": gam,
-        "X_train": X_train,
-        "X_test": X_test,
-        "y_train": y_train,
-        "y_test": y_test,
-    }
-
-
 def analyze_hammer_usage(season: int):
     """
     This function analyzes hammer usage in TGL matches, namely
@@ -573,6 +527,8 @@ def analyze_hammer_usage(season: int):
             hammer_df["shooting_win_probability_hammer_accepted"]
         )
     ]
+
+    # Flip the sign based on result (original is relative to accepting)
     hammer_df["decision_ev"] = [
         accept_win_ev if y == "HAD_HAMMER_ACCEPTED" else
         -accept_win_ev for accept_win_ev, y in zip(
@@ -603,12 +559,14 @@ def analyze_hammer_usage(season: int):
         )
     ]
 
+    # How the hole actually ended up
     hammer_df["realized_value"] = [
         0 if pd.isnull(winning_team_id) else
         hole_value if team_id == winning_team_id else
         -hole_value for winning_team_id, hole_value, team_id in zip(hammer_df["winning_team_id"], hammer_df["hole_value"], hammer_df["teamId"])
     ]
 
+    # Non-shooting team
     hammer_df["other_team"] = [
         winning_team if winning_team != team else 
         losing_team for winning_team, losing_team, team in zip(hammer_df["winning_team_id"],

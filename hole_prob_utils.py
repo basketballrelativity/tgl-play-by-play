@@ -133,7 +133,7 @@ def calculate_win_loss_tie_probability(shot: pd.Series):
 
     # The other team has already holed out
     if shot["other_team_ex_strokes"] == 0:
-       win_prob, tie_prob, loss_prob = finish_hole_one_team(
+        win_prob, tie_prob, loss_prob = finish_hole_one_team(
             shooting_team_probs, shooting_team_strokes, other_team_strokes
         )
         return win_prob, loss_prob, tie_prob
