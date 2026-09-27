@@ -12,7 +12,7 @@ Several expected strokes models (off-the-tee, approach, and putting generalized 
 
 ## Results
 
-By comparing the win probability of hammer decisions with the optimal decision based on the above framework, this study finds that teams fall considerably short of optimal behavior. The figure below shows the observed and optimal win probability added for TGL teams during the 2026 season when throwing or responding to a hammer. This indicates that four out of five teams left more than half a win on the table with their hammer decision-making, with a mean gap of 70% win probability added across the league.
+By comparing the win probability of hammer decisions with the optimal decision based on the above framework, this study finds that teams fall considerably short of optimal behavior. The figure below shows the observed and optimal win probability added for TGL teams during the 2026 season when throwing or responding to a hammer. This indicates that five out of six teams left more than half a win on the table with their hammer decision-making, with a mean gap of 70% win probability added across the league.
 
 <img src="images/wpa.png" width="700">
 
