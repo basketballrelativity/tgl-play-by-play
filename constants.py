@@ -11,3 +11,6 @@ SEASON = 2026
 # Metadata
 NUM_HOLES = 15
 MAX_HAMMERS = 3
+
+# Last match played under prior hammer rules
+OLD_RULES_MATCH = 5

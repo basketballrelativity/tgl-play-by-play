@@ -74,10 +74,10 @@ def finish_hole_one_team(team_probs, team_strokes, opponent_strokes):
         total = team_strokes + putts
 
         # Win
-        if total < opponent_team_strokes:
+        if total < opponent_strokes:
             win_prob += prob
         # Lose
-        elif total > opponent_team_strokes:
+        elif total > opponent_strokes:
             loss_prob += prob
         # Draw
         else:

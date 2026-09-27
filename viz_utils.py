@@ -4,6 +4,7 @@ visualizations for the TGL models
 """
 import os
 
+import pandas as pd
 import numpy as np
 
 from sklearn.calibration import calibration_curve
@@ -482,3 +483,92 @@ def viz_wpa(data_df):
         facecolor="white"
         )
     plt.close(fig)
+
+
+def plot_partial_dependence(gam):
+    """ This function plots the partial dependence of all features
+
+    Args:
+        gam (pygam.GAM): Trained GAM model
+
+    Returns:
+        None, but saves partial dependence functions locally
+    """
+
+    # Loop through each team
+    for i, term in enumerate(gam.terms):
+        if term.isintercept:
+            continue
+
+        # Tensors require a 3D plot
+        if "te" in repr(term):
+            meshgrid = True
+            XX = gam.generate_X_grid(term=i, meshgrid=meshgrid)
+            pdep, confi = gam.partial_dependence(term=i, X=XX, width=0.95, meshgrid=meshgrid)
+            ax = plt.axes(projection="3d")
+            ax.plot_surface(XX[0], XX[1], pdep, cmap="viridis")
+        # Otherwise, 2D suffices
+        else:
+            meshgrid = False
+            XX = gam.generate_X_grid(term=i, meshgrid=meshgrid)
+            pdep, confi = gam.partial_dependence(term=i, X=XX, width=0.95, meshgrid=meshgrid)
+
+            plt.figure()
+            plt.plot(XX[:, term.feature], pdep)
+            plt.plot(XX[:, term.feature], confi, c="r", ls="--")
+
+        # Write title and save
+        plt.title(repr(term))
+        plt.savefig(f"{repr(term)}_partial_dependence.png")
+        plt.close()
+
+
+def visualize_hole_and_hammer_effects(pred_df: pd.DataFrame):
+    """ This function visualizes model output as a function
+    of holes and hammers remaining
+
+    Args:
+        pred_df (pd.DataFrame): DataFrame containing model features
+            and predicted output
+
+    Returns:
+        matplotlib chart saved locally
+    """
+
+    # Subset data
+    zero_hammers_used = pred_df[
+        pred_df["hammers_used_prior"]==0
+    ]
+    one_hammers_used = pred_df[
+        pred_df["hammers_used_prior"]==1
+    ]
+    two_hammers_used = pred_df[
+        pred_df["hammers_used_prior"]==2
+    ]
+
+    # Plot each trend line
+    fig = plt.figure()
+    plt.plot(
+        zero_hammers_used["holes_remaining_prior"],
+        zero_hammers_used["preds"], label="0 Hammers Used", color='tab:blue', linestyle="-"
+    )
+    plt.plot(
+        one_hammers_used["holes_remaining_prior"],
+        one_hammers_used["preds"], label="1 Hammer Used", color='tab:blue', linestyle="--"
+    )
+    plt.plot(
+        two_hammers_used["holes_remaining_prior"],
+        two_hammers_used["preds"], label="2 Hammers Used", color='tab:blue', linestyle="-."
+    )
+
+    # Title and axes
+    plt.title("Hammer Use Probability by Holes and Hammers Reamining")
+    plt.xlabel("Holes Remaining")
+    plt.ylabel("Hammer Use Probability (tie score)")
+
+    # Legend
+    plt.legend()
+
+    # Wrap it up
+    plt.savefig("hammer_use_probabiliy.png")
+    plt.close()
