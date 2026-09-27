@@ -31,7 +31,7 @@ def get_drive_ex_strokes(shot_df: pd.DataFrame) -> pd.DataFrame:
 
     # Unpack drive models
     # Just copying these from the notebook
-    with open('drive_models.pkl', 'rb') as file:
+    with open('models/drive_models.pkl', 'rb') as file:
         drive_models = pickle.load(file)
 
     # Filter for drive shots (assuming drive shots are the first shot of each hole)
@@ -79,7 +79,7 @@ def get_putt_ex_strokes(shot_df: pd.DataFrame) -> pd.DataFrame:
     """
 
     # Unpack putt models
-    with open('putt_model.pkl', 'rb') as file:
+    with open('models/putt_model.pkl', 'rb') as file:
         putt_models = pickle.load(file)
 
     def calc_putts(putt_models, distance, putt_number):
@@ -143,7 +143,7 @@ def get_approach_ex_strokes(shot_df: pd.DataFrame) -> pd.DataFrame:
     """
 
     # Unpack approach models
-    with open('approach_objs.pkl', 'rb') as file:
+    with open('models/approach_objs.pkl', 'rb') as file:
             approach_model = pickle.load(file)
 
     # Filter to possible approach shots

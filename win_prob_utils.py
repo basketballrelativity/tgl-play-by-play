@@ -24,7 +24,7 @@ def load_hammer_probability_model():
             the hammer probability model
     """
 
-    with open('hammer_model.pkl', 'rb') as handle:
+    with open('models/hammer_model.pkl', 'rb') as handle:
         model_dict = pickle.load(handle)
 
     return model_dict

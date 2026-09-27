@@ -210,7 +210,7 @@ def main():
     visualize_hole_and_hammer_effects(temp_df)
 
     # Save model
-    with open('hammer_model.pkl', 'wb') as handle:
+    with open('models/hammer_model.pkl', 'wb') as handle:
         pickle.dump(model_dict, handle)
 
 
@@ -284,7 +284,7 @@ def build_hammer_opportunity_model():
         viz_utils.visualize_count_calibration(test_df, "future_hammer_opportunities", "preds")
 
         # Save model
-        with open('hammer_opps_model.pkl', 'wb') as handle:
+        with open('models/hammer_opps_model.pkl', 'wb') as handle:
             pickle.dump(binomial_gam, handle)
     else:
         # Plot partial dependence
