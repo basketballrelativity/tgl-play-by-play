@@ -10,14 +10,8 @@ import pandas as pd
 
 from hammer_model import FEATURES
 import utils
+import constants
 
-# This is simply used to derive the empirical point value of
-# a hole when a hammer is thrown relative to the throwing team
-SEASON = 2026
-
-# Metadata
-NUM_HOLES = 15
-MAX_HAMMERS = 3
 
 def load_hammer_probability_model():
     """ This function loads and returns the hammer
@@ -50,7 +44,7 @@ def get_hammer_value():
     """
 
     # This ignores three-point holes where both teams use the hammer
-    hammer_df = utils.analyze_hammer_usage(SEASON)
+    hammer_df = utils.analyze_hammer_usage(constants.SEASON)
     hammer_df["realized_value"] = [max(-2, min(2, x)) for x in hammer_df["realized_value"]]
 
     # Probability of the throwing team realizing
@@ -91,7 +85,7 @@ def get_hammer_deployment_probabilities(hole: pd.Series, score_dict: dict, score
         scores = pd.DataFrame(score_dict).sum(axis=1) + score_diff
 
     # Calculate holes remaining
-    holes_remaining = NUM_HOLES - hole["hole_number"] + 1
+    holes_remaining = constants.NUM_HOLES - hole["hole_number"] + 1
 
     # Store in a DataFrame to get hammer usage probability
     hammer_df = pd.DataFrame(
@@ -104,13 +98,13 @@ def get_hammer_deployment_probabilities(hole: pd.Series, score_dict: dict, score
 
     # Override hammer probability to 0 if they have 0 left
     hammer_df["hammer_probability"] = model_dict["model"].predict_proba(hammer_df[FEATURES])
-    hammer_df["hammer_probability"] = [0 if hammer_count >= MAX_HAMMERS else x for hammer_count, x in zip(hammer_df["hammers_used_prior"], hammer_df["hammer_probability"])]
+    hammer_df["hammer_probability"] = [0 if hammer_count >= constants.MAX_HAMMERS else x for hammer_count, x in zip(hammer_df["hammers_used_prior"], hammer_df["hammer_probability"])]
 
     # Now for the other team (need to flip the score and pull hammers used for the right team)
     hammer_df["score_diff"] = -hammer_df["score_diff"]
     hammer_df["hammers_used_prior"] = list(other_hammers)
     hammer_df["other_hammer_probability"] = model_dict["model"].predict_proba(hammer_df[FEATURES])
-    hammer_df["other_hammer_probability"] = [0 if hammer_count >= MAX_HAMMERS else x for hammer_count, x in zip(hammer_df["hammers_used_prior"], hammer_df["other_hammer_probability"])]
+    hammer_df["other_hammer_probability"] = [0 if hammer_count >= constants.MAX_HAMMERS else x for hammer_count, x in zip(hammer_df["hammers_used_prior"], hammer_df["other_hammer_probability"])]
 
     return hammer_df
 
@@ -207,7 +201,7 @@ def simulate_match(
         hole_df = hole_df[hole_df["hole_number"] >= current_hole]
 
     # Get ex strokes and probabilities off the tee for the remaining holes
-    if (current_hole < NUM_HOLES) or (not complete_hole):
+    if (current_hole < constants.NUM_HOLES) or (not complete_hole):
 
         # Pull ex strokes and rename columns accordingly
         hole_df = utils.get_drive_ex_strokes(hole_df).sort_values("hole_number")
@@ -252,7 +246,7 @@ def simulate_match(
             for h_sample, oh_sample, h_used, oh_used in zip(hammer_samples, other_hammer_samples, hammers, other_hammers):
                 # Both teams threw the hammer, so we sample one binomial trail to determine
                 # which team "threw it first" since our framework doesn't allow for three-point holes
-                if (h_sample == 1 and h_used < MAX_HAMMERS) and (oh_sample == 1 and oh_used < MAX_HAMMERS):
+                if (h_sample == 1 and h_used < constants.MAX_HAMMERS) and (oh_sample == 1 and oh_used < constants.MAX_HAMMERS):
                     mask.append(True)
                     # Randomize which team actually uses the hammer
                     binom_sample = np.random.binomial(n=1, p=0.5)
@@ -273,7 +267,7 @@ def simulate_match(
                     hammer_sample = np.random.choice(hammer_outcomes, size=1, p=hammer_probs)
                     hammer_sample_list.append(hammer_sample[0])
                 # Shooting team throws the hammer
-                elif h_sample == 1 and h_used < MAX_HAMMERS:
+                elif h_sample == 1 and h_used < constants.MAX_HAMMERS:
                     mask.append(True)
                     hammer_outcomes = list(value_df["realized_value"])
                     hammer_probs = list(value_df["probs"])
@@ -283,7 +277,7 @@ def simulate_match(
                     hammer_used_hole.append(1)
                     other_hammer_used_hole.append(0)
                 # Other team throws the hammer
-                elif oh_sample == 1 and oh_used < MAX_HAMMERS:
+                elif oh_sample == 1 and oh_used < constants.MAX_HAMMERS:
                     mask.append(True)
                     hammer_outcomes = list(-value_df["realized_value"])
                     hammer_probs = list(value_df["probs"])

@@ -5,15 +5,9 @@ TGL glof matches
 """
 import json
 import re
-import pickle
-from typing import List
 
 import pandas as pd
 import numpy as np
-from sklearn.model_selection import train_test_split
-
-from pygam import LogisticGAM, te, s
-
 
 import sg_data
 import sg_utils
